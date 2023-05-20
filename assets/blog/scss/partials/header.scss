@@ -1,0 +1,48 @@
+.site-header{
+    padding: 2rem 0;
+    background-color: var(--header-bg-color);
+
+    .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo{
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
+
+    .nav-item{
+        padding: 1rem;
+        margin-right: 1rem;
+        text-decoration: none;
+        color: var(--header-text-color);
+        font-size: 1rem;
+    }
+    .nav-item:hover{
+        color: var(--header-text-hover-color);
+    }
+
+}
+
+@media screen and (max-width: 540px){
+    .site-header{
+        position: relative;
+        top: 10px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        margin-bottom: 10px;
+        &:before{
+            content: '';
+            position: absolute;
+            top: -10px;
+            bottom: 10px;
+            left: 0;
+            right: 0;
+            background-color: black;
+            z-index: -10;
+            opacity: 1;
+        }
+    }
+}

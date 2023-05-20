@@ -1,0 +1,42 @@
+@import './defaults.scss';
+@import './skins/light.scss';
+@import './skins/dark.scss';
+@import './css-components/_all.scss';
+@import './helpers/all';
+@import './layouts/default.scss';
+
+@import './components/_all.scss';
+@import './partials/_all.scss';
+@import './page/all.scss';
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+@font-face {
+    font-display: swap;
+    font-family: Alaska;
+    src: url('~/assets/fonts/alaska.ttf') format("truetype");
+}
+
+
+
+:root{
+    font-size: 16px;
+    --lato : 'Lato', sans-serif;
+
+
+    // breakpoints
+    --breakpoint-medium: 1070px;
+    --breakpoint-small: 735px;
+    --breakpoint-xsmall: 540px;
+}
+body{
+    font-family: 'Lato', sans-serif;
+}
+
+@media screen and (max-width: 735px){
+    :root{
+        font-size: 14px;
+    }
+}
+
+
+
