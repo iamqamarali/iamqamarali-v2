@@ -18,3 +18,16 @@
 
     }
 }
+
+@media screen and (max-width: 735px){
+    .article-author{
+        .author-image{
+            width: 25px;
+            height: 25px;
+            margin-right: 10px;
+        }
+        .author-name{
+            font-size: 1.1rem;
+        }
+    }
+}

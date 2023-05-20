@@ -2,9 +2,8 @@
     display: flex;
     .nav-item{
         display: inline-block;
-        margin-right: 1.5rem;
-        &:last-child{
-            margin-right: 0;
-        }        
+    }
+    .nav-item:not(:last-of-type){
+        margin-right: 2rem;
     }
 }
