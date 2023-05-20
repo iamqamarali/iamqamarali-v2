@@ -5,8 +5,8 @@
                 <img src="~/assets/logos/logo-code.svg" class="logo-image" alt="">
             </NuxtLink>
             <div class="nav">
-                <a href="" class="nav-item">Articles</a>    
-                <a href="" class="nav-item">Work</a>    
+                <NuxtLink to="/articles" class="nav-item">Articles</NuxtLink>    
+                <a href="/work" class="nav-item">Work</a>    
             </div>
         </div>
         

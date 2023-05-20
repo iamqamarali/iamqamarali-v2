@@ -1,21 +1,21 @@
 <script setup>
 defineProps({
-    post: Object
+    article: Object
 })
 
 </script>
 
 <template>
-    <NuxtLink :to="'/article/' + post.slug" class="article-link">
+    <NuxtLink :to="'/article/' + article.slug" class="article-link">
         <div class="article-data-container">
             <div class="article-image-container">
-                <img :src="post.main_image" :alt="post.title" class="article-image">
+                <img :src="article.main_image" :alt="article.title" class="article-image">
             </div>
             <div class="article-data">
-                <h2 class="article-title" > {{ post.title }}</h2>
-                <p class="article-description">{{ post.description }} </p>
+                <h2 class="article-title" > {{ article.title }}</h2>
+                <p class="article-description">{{ article.description }} </p>
                 <div class="article-metadata">
-                    {{ dateUtil.diffForHumans(post.created_at) }}
+                    {{ dateUtil.diffForHumans(article.created_at) }}
                 </div>
             </div>
         </div>

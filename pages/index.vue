@@ -1,6 +1,6 @@
 <script setup>
 
-const {data : posts, error, pending, refresh } = await useFetch('/api/posts/latest')
+const {data : articles, error, pending, refresh } = await useFetch('/api/posts/latest')
 
 </script>
 
@@ -14,9 +14,9 @@ const {data : posts, error, pending, refresh } = await useFetch('/api/posts/late
                 </header>
                 <div class="two-columns-grid articles-grid">
                     <Article-link
-                        v-for="post in posts" 
-                        :key="post.id"
-                        :post="post" 
+                        v-for="article in articles" 
+                        :key="article.id"
+                        :article="article" 
                     />
                 </div>
             </div>
