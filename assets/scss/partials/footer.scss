@@ -2,7 +2,7 @@
     background-color: var(--footer-bg-color);
     .footer-contact-section{
         text-align: center;
-        padding: 10rem 0 4rem;
+        padding: calc(7rem + 2.5vw) 0 4rem;
     }
     .footer-bottom{
         display: flex;
@@ -27,7 +27,7 @@
 
     @media screen and (max-width: 735px){
         .footer-contact-section{
-            padding: 6rem 0 0rem;
+            padding: 7rem 0 0rem;
 
         }
         .footer-bottom{
