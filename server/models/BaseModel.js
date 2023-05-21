@@ -144,8 +144,8 @@ export default class BaseModel {
      * get latest posts
      */
     static async latest(skip = 0, limit = 10){
-        let sql = 'SELECT * FROM '+ this.getTable() +' ORDER BY id DESC LIMIT ?,?';
-        const [rows, fields] = await this.getConnection().execute(sql, [skip, limit]);
+        let sql = 'SELECT * FROM '+ this.getTable() +' ORDER BY id DESC LIMIT ? OFFSET ? ';
+        const [rows, fields] = await this.getConnection().execute(sql, [limit, skip])
         for (let i = 0; i < rows.length; i++) {
             rows[i] = new this(rows[i]);
         }
