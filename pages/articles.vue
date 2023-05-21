@@ -4,7 +4,7 @@ const route = useRoute();
 const router = useRouter();
 
 const page = useState(() => route.query.page ? parseInt(route.query.page) : 1)
-const {data : articles } = await useFetch(() => `/api/posts?page=${page.value}`)
+const {data : articles } = await useFetch(() => `/api/posts?page=${page.value}&limit=20`)
 
 watch(page, () => {
     router.push({
