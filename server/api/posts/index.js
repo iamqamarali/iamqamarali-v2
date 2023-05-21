@@ -5,7 +5,7 @@ export default defineEventHandler(async (event) => {
     page = parseInt(page) || 1
     page--
 
-    let queryLimit = 10
+    let queryLimit = limit
     if(!limit){
         queryLimit = parseInt(limit) || 10
     }
