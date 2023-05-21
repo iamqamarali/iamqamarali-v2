@@ -1,5 +1,5 @@
 <template>
-    <div class="admin-dashboard">
+    <div class="site-layout base-skin skin-dark">
         <slot></slot>
     </div>
 </template>

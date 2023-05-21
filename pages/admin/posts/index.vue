@@ -9,13 +9,17 @@ definePageMeta({
 
 <template>
     <main class="posts-page">
-        <h1>Posts</h1>
+        <section class="section">
+            <div class="container">
+                <h1 >Posts</h1>
+                <p>Amazing posts about coding that you wanna read everyday to grow your coding career to next level, that you're trying every hard to achieve.</p>
+                
 
-        <p>This route should be protected</p>
-
-        <NuxtLink to="/admin/posts/create" class="btn btn-primary">
-            Create Post
-        </NuxtLink>
+                <NuxtLink class="button" to="/admin/posts/create">
+                    Create Post
+                </NuxtLink>
+            </div>
+        </section>
 
     </main>
 </template>

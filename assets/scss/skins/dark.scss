@@ -1,0 +1,38 @@
+.skin-dark{
+    --dark-skin-color: #09101d;
+
+    --primary-light: #89c989;
+    --primary : #259925;
+    --primary-dark: #259925;
+
+    --gray-text-color: #73737D;
+    --body-bg-color: var(--dark-skin-color);
+    --body-text-color: #fff;
+    --anchor-color: #259925;
+    --anchor-color-hover: #259925;
+
+    --selection-bg-color: #bfeebf;    
+    --selection-text-color: #000; 
+
+
+    // header
+    --header-bg-color: var(--dark-skin-color);
+    --header-text-color: #fff;
+    --header-text-hover-color: #000;
+
+    // footer
+    --footer-bg-color: #121522;
+
+    // article page
+    --articleText: #f0f0f0;
+    //#2b363c
+
+
+    // forms
+    // input
+    --input-border-color: #b2b2b2;
+    --input-border-color-focus: #259925;
+    --input-text-color: #000;
+    // button
+}
+

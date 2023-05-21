@@ -9,8 +9,9 @@
     }
 
     .logo{
-        font-size: 1.2rem;
-        font-weight: 600;
+        .logo-image{
+            fill: var(--header-text-color);
+        }
     }
 
     .nav-item{

@@ -1,0 +1,19 @@
+::placeholder{
+    color: var(--gray-text-color);
+}
+input[type=text],
+input[type=password],
+input[type=number]{
+    width: 100%;
+    height: var(--input-height);
+    padding: 0 1.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--input-border-color);
+    font-size: 1rem;
+    color: var(--input-text-color);
+    margin-bottom: 1.5rem;
+    &:focus{
+        outline: none;
+        border: 1px solid var(--input-border-color-focus);
+    }
+}

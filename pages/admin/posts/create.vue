@@ -11,11 +11,14 @@ definePageMeta({
 
 <template>
     <main class="posts-page">
-        <h1>Create Post</h1>
 
-        <p>This route should be protected</p>
-
-        <Tiptap />
+        <section class="section">
+            <div class="container">
+                <h1>Create Post</h1>
+                
+                <Tiptap />                
+            </div>        
+        </section>
 
     </main>
 </template>

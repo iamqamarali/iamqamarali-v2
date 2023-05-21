@@ -1,9 +1,9 @@
 @import './defaults.scss';
-@import './skins/light.scss';
-@import './skins/dark.scss';
+@import './skins/all.scss';
 @import './css-components/_all.scss';
 @import './helpers/all';
 @import './layouts/default.scss';
+@import './layouts/admin.scss';
 
 @import './components/_all.scss';
 @import './partials/_all.scss';
