@@ -56,7 +56,7 @@ const parseBody = (body) => {
                     <p>Each product link is appended with the product id (/details/), and when shared on social media we get the product’s image, title and description. Just like this example below product id (/details/), and when shared on social media we get the product’s image, title and description. Just like this example below:</p>
 
                     <blockquote class="no-border">
-                        <h5>Understanding that you are the most doggy shit person i've every meet.</h5>
+                        <h4>Understanding that you are the most doggy shit person i've every meet.</h4>
                     </blockquote>
 
                     <p>Each product link is appended with the product id (/details/), and when shared on social media we get the product’s image, title and description. Just like this example below product id (/details/), and when shared on social media we get the product’s image, title and description. Just like this example below:</p>

@@ -8,7 +8,7 @@ definePageMeta({
 const articles = useState(() => [])
 
 const page = useState(() => 1 )
-const {data} = await useLazyFetch(()=>{
+const {data} = await useFetch(()=>{
     return '/api/posts?page=' + page.value
 }, {
     query: {
