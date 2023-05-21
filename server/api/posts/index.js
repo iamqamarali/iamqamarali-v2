@@ -11,6 +11,6 @@ export default defineEventHandler(async (event) => {
         limit = parseInt(limit)
     }
 
-    const posts = await Post.latest(page * queryLimit, queryLimit)
+    const posts = await Post.latest(page * limit, limit)
     return  posts.map(post => post.except([]))
 })
