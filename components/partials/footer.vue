@@ -1,21 +1,21 @@
 <template>
     <footer class="site-footer ">
         <div class="container">
-            <section class="contact-section">
-                <div>
-                    Want to contact me ? feel free to send a email at <a href="mailto:iamqamarali1@gmail.com" class="email">iamqamarali1@gmail.com</a>
-                </div>
+            <section class="footer-contact-section">
+                <h3 class="section-title">Contact</h3>
+                <p> 
+                    Want to contact me ? feel free to send a email at <a href="mailto:iamqamarali1@gmail.com" class="email ">iamqamarali1@gmail.com</a>
+                </p>
             </section>
-            <section class="nav-container">
-                <div class="left">
+            <section class="footer-bottom">
+                <div class="footer-bottom-copy">
                     <span>&copy; {{ new Date().getFullYear() }}</span> Qamar Ali
                 </div>
-                <div class="right">
-                    <div class="nav">
-                        <a href="" class="nav-link">Github</a>
-                        <a href="" class="nav-link">Work</a>
-                        <a href="" class="nav-link">Articles</a>
-                    </div>
+                <div class="footer-nav nav">
+                    <a href="https://github.com/iamqamarali" target="_blank" class="nav-item">Github</a>
+                    <a href="https://www.linkedin.com/in/iamqamarali/" target="_blank" class="nav-item">LinkedIn</a>
+                    <a href="" class="nav-item">Work</a>
+                    <NuxtLink to="/articles" class="nav-item">Articles</NuxtLink>
                 </div>
             </section>
         </div>

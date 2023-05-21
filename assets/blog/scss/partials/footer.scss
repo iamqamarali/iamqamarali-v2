@@ -1,0 +1,40 @@
+.site-footer{
+    background-color: var(--footer-bg-color);
+    .footer-contact-section{
+        text-align: center;
+        padding: 5rem 0 5rem;
+    }
+    .footer-bottom{
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem 0 4rem;
+    }
+    .footer-bottom-copy{
+        
+    }
+    .footer-nav{
+        .nav-item{
+            text-decoration: none;
+            color: var(--body-text-color);
+        }
+    }
+
+
+    @media screen and (max-width: 735px){
+        .footer-bottom{
+            padding: 1rem 0 3rem;
+            gap: 2rem;
+            flex-direction: column-reverse;  
+        }
+        .footer-nav{
+            flex-direction: column;
+            .nav-item{
+                padding: 0;
+                margin-bottom: 1rem;
+                text-decoration: none;
+                color: var(--body-text-color);
+            }
+        }    
+    }
+
+}

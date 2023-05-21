@@ -1,20 +1,24 @@
 .skin-light{
-    --primary : #a2dfa2;
+    --primary-light: #89c989;
+    --primary : #259925;
+    --primary-dark: #259925;
 
     --gray-text-color: #73737D;
     --body-text-color: #000;
+    --anchor-color: #259925;
+    --anchor-color-hover: #259925;
 
-    --selection-bg-color: #d1e7d1 ;    
+    --selection-bg-color: #bfeebf;    
     --selection-text-color: #000; 
 
-    // links
-    --link-color: pink;
-    --link-hover-color: palevioletred;
 
     // header
     --header-bg-color: #fff;
     --header-text-color: #000;
     --header-text-hover-color: #000;
+
+    // footer
+    --footer-bg-color: rgba(250, 250, 250, 1);
 
     // article page
     --articleText: #28343a;

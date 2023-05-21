@@ -7,12 +7,12 @@
     &:hover{
         color: var(--body-text-color);
         .article-title{
-            color: var(--link-color);
+            color: var(--anchor-color-hover);
         }
     }
     &:focus{
         .article-title{
-            color: var(--link-color);
+            color: var(--anchor-color);
             text-decoration: underline;
         }
     }
