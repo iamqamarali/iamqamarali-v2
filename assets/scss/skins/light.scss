@@ -1,6 +1,6 @@
 .skin-light{
     --primary-light: #89c989;
-    --primary : #259925;
+    --primary : #45b545;
     --primary-dark: #259925;
     --primary-text-color: #fff;
 
@@ -9,7 +9,7 @@
     --body-bg-color: #fff;
     --body-text-color: #000;
     --anchor-color: var(--primary);
-    --anchor-color-hover: #2ecb2e;
+    --anchor-color-hover: var(--primary-dark);
 
     --selection-bg-color: #bfeebf;    
     --selection-text-color: #000; 
