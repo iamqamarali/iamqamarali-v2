@@ -5,9 +5,10 @@ export default defineEventHandler(async (event) => {
     page = parseInt(page) || 1
     page--
 
-    let queryLimit = limit
-    if(!limit){
-        queryLimit = parseInt(limit) || 10
+    if(!limit || isNaN(limit)){
+        limit = parseInt(limit) || 10
+    }else{
+        limit = parseInt(limit)
     }
 
     const posts = await Post.latest(page * queryLimit, queryLimit)
