@@ -8,8 +8,13 @@ definePageMeta({
 const articles = useState(() => [])
 
 const page = useState(() => 1 )
-const {data} = await useFetch(()=>{
+const {data, error} = await useFetch(()=>{
     return '/api/posts?page=' + page.value + '&limit=20'
+})
+
+console.log(error.value)
+watch(error, ()=>{
+    console.log(error.value)
 })
 
 if(data.value){
