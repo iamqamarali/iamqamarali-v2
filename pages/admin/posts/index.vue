@@ -12,15 +12,10 @@ const {data, error} = await useFetch(()=>{
     return '/api/posts?page=' + page.value + '&limit=20'
 })
 
-console.log(error.value)
-watch(error, ()=>{
-    console.log(error.value)
-})
 
 if(data.value){
     articles.value = [...data.value]
 }
-
 watch(data, ()=>{
     if(data.value){
         articles.value = [...articles.value, ...data.value]
