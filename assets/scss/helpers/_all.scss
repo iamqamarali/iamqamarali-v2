@@ -1,3 +1,16 @@
 @import './spacings.scss';
 @import './font.scss';
 @import './text.scss';
+@import './display.scss';
+
+
+
+.float-left{
+    float: left;
+}
+.float-right{
+    float: right;
+}
+.clear-both{
+    clear: both;
+}

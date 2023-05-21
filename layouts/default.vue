@@ -1,5 +1,5 @@
 <template>
-    <div class="site-layout base-skin skin-dark">
+    <div class="site-layout base-skin skin-light">
         <PartialsHeader />
         <slot></slot>
         <PartialsFooter />

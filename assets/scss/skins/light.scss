@@ -8,8 +8,8 @@
     --gray-text-color: #73737D;
     --body-bg-color: #fff;
     --body-text-color: #000;
-    --anchor-color: #259925;
-    --anchor-color-hover: #259925;
+    --anchor-color: var(--primary);
+    --anchor-color-hover: #2ecb2e;
 
     --selection-bg-color: #bfeebf;    
     --selection-text-color: #000; 
@@ -18,7 +18,7 @@
     // header
     --header-bg-color: #fff;
     --header-text-color: #000;
-    --header-text-hover-color: #000;
+    --header-text-hover-color: var(--primary-dark);
 
     // footer
     --footer-bg-color: rgba(250, 250, 250, 1);

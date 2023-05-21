@@ -13,7 +13,9 @@ input[type=number]{
     color: var(--input-text-color);
     background-color: var(--input-background-color);
     margin-bottom: 1.5rem;
-    &:focus{
+    outline: none;
+    &:focus,
+    &:active{
         outline: none;
         border: 1px solid var(--input-border-color-focus);
     }

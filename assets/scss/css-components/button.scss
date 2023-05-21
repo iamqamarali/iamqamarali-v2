@@ -13,8 +13,13 @@ button,
     font-weight: 600;
     text-decoration: none;
     transition: all 0.3s ease-in-out;
+    outline: none;
     cursor: pointer;
-    &:hover{
+    &:hover,
+    &:focus,
+    &:active{
+        outline: none;
+        border: 2px solid var(--btn-primary-color);
         background-color: var(--btn-primary-color);
         color: var(--btn-primary-text-color);
     }

@@ -5,19 +5,68 @@ definePageMeta({
     layout: 'admin',
 })
 
+const articles = useState(() => [])
+
+const page = useState(() => 1 )
+const {data} = await useLazyFetch(()=>{
+    return '/api/posts?page=' + page.value
+}, {
+    query: {
+        limit: 20
+    }
+})
+
+if(data.value){
+    articles.value = [...data.value]
+}
+
+watch(data, ()=>{
+    if(data.value){
+        articles.value = [...articles.value, ...data.value]
+    }
+})
+
+
+
 </script>
 
 <template>
     <main class="posts-page">
         <section class="section">
             <div class="container">
-                <h1 >Posts</h1>
-                <p>Amazing posts about coding that you wanna read everyday to grow your coding career to next level, that you're trying every hard to achieve.</p>
-                
+                <header>
+                    <h1 class="d-inline-block">Posts</h1>
+                    <NuxtLink class="button float-right" to="/admin/posts/create">
+                        Create New Post
+                    </NuxtLink>
+                </header>
 
-                <NuxtLink class="button" to="/admin/posts/create">
-                    Create Post
-                </NuxtLink>
+
+                <table class="mt-75">
+                    <thead>
+                        <th>ID</th>
+                        <th>Featured</th>
+                        <th>Title</th>
+                        <th>Description</th>
+                        <th>Actions</th>
+                    </thead>
+                    <tbody>
+                        <tr v-for="article in articles">
+                            <td>{{ article.id }}</td>
+                            <td>{{ article.featured ? 'featured' : '' }}</td>
+                            <td>{{ article.title }}</td>
+                            <td>{{ article.description }}</td>
+                            <td>
+                                <!-- <NuxtLink :to="`/admin/posts/${article.id}/edit`">Edit</NuxtLink>
+                                <button @click="deletePost(article.id)">Delete</button> -->
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <button @click="page++" class="mt-75 float-right">Load More</button>
+                <div class="clear-both"></div>
+
             </div>
         </section>
 

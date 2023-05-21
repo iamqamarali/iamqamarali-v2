@@ -1,18 +1,21 @@
 .skin-dark{
     --dark-skin-color: #09101d;
 
-    --primary-light: #a6ffa6;
-    --primary : #a6ffa6;
-    --primary-dark: #569456;
+    --primary-light: #86ed8e;
+    --primary : #86ed8e;
+    --primary-dark: #58c958;
+    
     --primary-text-color: #09101d;
 
     --gray-text-color: #73737D;
     --body-bg-color: var(--dark-skin-color);
     --body-text-color: #fff;
-    --anchor-color: #a6ffa6;
-    --anchor-color-hover: #569456;
 
-    --selection-bg-color: #8fe28f;
+    // anchor
+    --anchor-color: var(--primary);
+    --anchor-color-hover: var(--primary-dark);
+
+    --selection-bg-color: var(--primary-light);
     --selection-text-color: #000; 
 
 
@@ -33,7 +36,7 @@
     // input
     --input-background-color: #09101d;
     --input-border-color: #b2b2b2;
-    --input-border-color-focus: #a6ffa6;
+    --input-border-color-focus: var(--primary);
     --input-text-color: #fff;
     // button
     --btn-primary-color: var(--primary);
