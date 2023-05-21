@@ -9,11 +9,7 @@ const articles = useState(() => [])
 
 const page = useState(() => 1 )
 const {data} = await useFetch(()=>{
-    return '/api/posts?page=' + page.value
-}, {
-    query: {
-        limit: 20
-    }
+    return '/api/posts?page=' + page.value + '&limit=20'
 })
 
 if(data.value){
