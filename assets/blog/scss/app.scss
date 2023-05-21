@@ -19,15 +19,22 @@
 
 
 :root{
-    font-size: 16px;
-    --lato : 'Lato', sans-serif;
+   --lato : 'Lato', sans-serif;
 
     // breakpoints
     --breakpoint-lg: 1300px
     --breakpoint-medium: 1070px;
     --breakpoint-small: 735px;
     --breakpoint-xsmall: 540px;
+
+    font-size: 16px;
+    text-rendering: optimizeLegibility; 
 }
+::selection{
+    background-color: var(--selection-bg-color);
+    color: var(--selection-text-color);
+}
+
 body{
     font-family: 'Lato', sans-serif;
 }
@@ -35,9 +42,6 @@ body{
     width: 140px;
 }
 
-@media screen and (max-width: 1070px){
-
-}
 
 @media screen and (max-width: 735px){
     .logo-image{
@@ -46,12 +50,6 @@ body{
     :root{
         font-size: 14px;
     }
-}
-
-@media screen and (max-width: 540px){
-    .logo-image{
-        width: 90px;
-    }    
 }
 
 

@@ -50,10 +50,17 @@ const parseBody = (body) => {
                     <blockquote>
                     <p>This article assumes you have basic knowledge of Vue js and Nuxt.</p>
                     </blockquote>
-                    <p>As much as SPA frameworks allow us quickly prototype web applications, they, unfortunately, come with their bottlenecks, one of which is SEO management. As the name implies, <strong>Single-Page</strong> Applications are single-paged. This means only a single page (entry point) is rendered while data (template/JSON) is updated on demand using Javascript. However, when building applications like e-commerce/blog sites with dynamic metadata information, SPAs don’t quite get the job done neatly.</p>
+                    <p>As much <strong> as SPA frameworks allow us quickly </strong> prototype web applications, they, unfortunately, come with their bottlenecks, one of which is SEO management. As the name implies, <strong>Single-Page</strong> Applications are single-paged. This means only a single page (entry point) is rendered while data (template/JSON) is updated on demand using Javascript. However, when building applications like e-commerce/blog sites with dynamic metadata information, SPAs don’t quite get the job done neatly.</p>
                     <p>In this article, I’ll show you how to set up an SEO-friendly application in Nuxt and at the end, we will have built this mini e-commerce app in Nuxt:</p>
                     <p><img src="https://cdn-images-1.medium.com/max/1600/1*zB2OkI4ZcHZ0c03CPWAzEg.gif" alt="preview application gif" title="application preview"></p>
-                    <p>Each product link is appended with the product id (/details/), and when shared on social media we get the product’s image, title and description. Just like this example below:</p>
+                    <p>Each product link is appended with the product id (/details/), and when shared on social media we get the product’s image, title and description. Just like this example below product id (/details/), and when shared on social media we get the product’s image, title and description. Just like this example below:</p>
+
+                    <blockquote class="no-border">
+                        <h5>Understanding that you are the most doggy shit person i've every meet.</h5>
+                    </blockquote>
+
+                    <p>Each product link is appended with the product id (/details/), and when shared on social media we get the product’s image, title and description. Just like this example below product id (/details/), and when shared on social media we get the product’s image, title and description. Just like this example below:</p>
+
                     <div class="link">
                     <a href="https://profuse-wind.surge.sh/details/1/" target="_blank">
                     <div class="card">
@@ -108,10 +115,19 @@ const parseBody = (body) => {
                     </section>
                     <p>Right off the installation, we get just the basic files. We’ll create a pages folder to house our pages. Next, we move the entry <code>app.vue</code> file from the root folder into the pages folder and rename this file to <code>index.vue</code>. You don’t have to configure anything else, as Nuxt knows where to look to find the routes.</p>
                     <blockquote>
-                    <p><strong>TIP</strong>: Restart the server if Nuxt doesn’t automatically pick up your new entry file.</p>
+                    <p><strong>TIP</strong>: Restart the server if Nuxt doesn’t automatically pick up your new entry file. </p>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima quidem cum at dignissimos commodi, eveniet enim necessitatibus quisquam ad rerum, itaque sequi mollitia totam non qui quis corrupti tempora alias? </p>
                     </blockquote>
-                    <p>We’ll also need a second page to show the product detail when clicked. We can name this page <code>[id].vue</code>&nbsp;. This is how we create dynamic routes in Nuxt 3. We’ll also move this new file into a <code>details</code> folder.</p>
+                    <h6>
+                        Thi is fucking last level heading
+                    </h6>
+                    <p>We’ll also <strong> need a second page to show the product </strong> detail when clicked. We can name this page <code>[id].vue</code>&nbsp;. This is how we create dynamic routes in Nuxt 3. We’ll also move this new file into a <code>details</code> folder.</p>
                     <p>Our new directory structure should look something like this now:</p>
+                    <h5>
+                        Third level heading
+                    </h5>
+                    <p>Our new directory structure should look something like this now:  new directory structure should look something like this now:  new directory structure should look something like this now:  new directory structure should look something like this now:</p>
+
                     <div class="highlight"><div class="code-toolbar"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4" class="language-js line-numbers"><code class="language-js" data-lang="js">📂 node_modules
                     📂 pages
                     <span class="token operator">|</span>__ index<span class="token punctuation">.</span>vue

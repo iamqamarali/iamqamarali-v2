@@ -1,7 +1,12 @@
 .skin-light{
+    --primary : #a2dfa2;
+
     --gray-text-color: #73737D;
     --body-text-color: #000;
-    
+
+    --selection-bg-color: #d1e7d1 ;    
+    --selection-text-color: #000; 
+
     // links
     --link-color: pink;
     --link-hover-color: palevioletred;
@@ -12,6 +17,7 @@
     --header-text-hover-color: #000;
 
     // article page
-    --articleText: #263238;
+    --articleText: #28343a;
+    //#2b363c
 }
 

@@ -42,12 +42,26 @@
         padding-bottom: calc(1rem + 1vw);
         font-size: 1.2rem;
         color: var(--articleText);
-        & > p{
+        p{
+            font-size: inherit;
         }
-        & > h3{
+        h2{
+            margin: 1rem 0 0.6rem;
+        }
+        h3{
             margin: 1.2rem 0 0.6rem;
         }
-        & > ul{
+        h4{
+            margin: 1.4rem 0 0.6rem;
+        }
+        h5{
+            margin: 1.7rem 0 0.6rem;
+        }
+        h6{
+            margin: 2rem 0 0.6rem;
+        }
+
+        ul{
             list-style: none;
             counter-reset: list;
             position: relative;
@@ -71,6 +85,11 @@
                 }
             }
         }
+        blockquote{
+            p{
+                padding-right: 5rem;
+            }
+        }        
     }
 
 
@@ -97,10 +116,21 @@
         }
         .article-body{
             padding: 0 .5rem 1rem;
+            blockquote{
+                p{
+                    padding-right: 2rem;
+                }
+            } 
         }
     }
 
     @media screen and (max-width: 540px){
+        .article-body{
+            blockquote{
+                margin-left: 0rem;
+                padding-left: 1rem;
+            }     
+        }
     }
 
 

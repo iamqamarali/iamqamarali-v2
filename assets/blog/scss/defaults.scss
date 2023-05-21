@@ -48,12 +48,52 @@ h3 {
  }
 h4{
     font-size: 1.6rem;
+    line-height: 1.5;
 }
-h5 { font-size: 1.4rem }
-h6 { font-size: 1.2rem }
+h5 { 
+    font-size: 1.4rem;
+    line-height: 1.55;
+}
+h6 { 
+    font-size: 1.2rem;
+    line-height: 1.75;
+ }
 p{
     font-size: 1.15rem;
     line-height: 1.756;
     margin-bottom: 2rem;
+}
+
+blockquote{
+    margin: calc(1rem + 1vw) auto calc(2rem + 1.3vw);
+    margin-left: calc(-1rem - 4px);
+    padding-left: 1rem;
+    color: inherit;
+    border-left: 4px solid var(--primary);
+    font-size: 1.2rem;
+    line-height: 1.7;
+    h3, h4, h5{
+        margin-top: 0;
+        padding: 0 1rem;
+        font-weight: 400;
+        color: var(--gray-text-color);
+    }
+    p{
+        font-size: inherit;
+        padding-right: 2rem;
+        padding-bottom: 0;
+        margin: 0 auto;
+        font-style: italic;
+    }
+}
+
+
+@media screen and (max-width: 735px){
+    blockquote{
+        h3{
+            padding: 0 4rem;
+        }
+    }
+    
 }
 
