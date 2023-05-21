@@ -11,6 +11,7 @@ input[type=number]{
     border: 1px solid var(--input-border-color);
     font-size: 1rem;
     color: var(--input-text-color);
+    background-color: var(--input-background-color);
     margin-bottom: 1.5rem;
     &:focus{
         outline: none;

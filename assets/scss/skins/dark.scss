@@ -1,24 +1,25 @@
 .skin-dark{
     --dark-skin-color: #09101d;
 
-    --primary-light: #89c989;
-    --primary : #259925;
-    --primary-dark: #259925;
+    --primary-light: #a6ffa6;
+    --primary : #a6ffa6;
+    --primary-dark: #569456;
+    --primary-text-color: #09101d;
 
     --gray-text-color: #73737D;
     --body-bg-color: var(--dark-skin-color);
     --body-text-color: #fff;
-    --anchor-color: #259925;
-    --anchor-color-hover: #259925;
+    --anchor-color: #a6ffa6;
+    --anchor-color-hover: #569456;
 
-    --selection-bg-color: #bfeebf;    
+    --selection-bg-color: #8fe28f;
     --selection-text-color: #000; 
 
 
     // header
     --header-bg-color: var(--dark-skin-color);
     --header-text-color: #fff;
-    --header-text-hover-color: #000;
+    --header-text-hover-color: var(--primary);
 
     // footer
     --footer-bg-color: #121523;
@@ -30,9 +31,13 @@
 
     // forms
     // input
+    --input-background-color: #09101d;
     --input-border-color: #b2b2b2;
-    --input-border-color-focus: #259925;
-    --input-text-color: #000;
+    --input-border-color-focus: #a6ffa6;
+    --input-text-color: #fff;
     // button
+    --btn-primary-color: var(--primary);
+    --btn-primary-text-color: var(--primary-text-color)
+
 }
 

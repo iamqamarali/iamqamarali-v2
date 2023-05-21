@@ -2,6 +2,8 @@
     --primary-light: #89c989;
     --primary : #259925;
     --primary-dark: #259925;
+    --primary-text-color: #fff;
+
 
     --gray-text-color: #73737D;
     --body-bg-color: #fff;
@@ -28,9 +30,12 @@
 
     // forms
     // input
+    --input-background-color: #fff;
     --input-border-color: #b2b2b2;
     --input-border-color-focus: #259925;
     --input-text-color: #000;
     // button
+    --btn-primary-color: var(--primary);
+    --btn-primary-text-color: var(--primary-text-color)
 }
 
