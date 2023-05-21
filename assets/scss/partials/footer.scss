@@ -26,9 +26,13 @@
 
 
     @media screen and (max-width: 735px){
+        .footer-contact-section{
+            padding: 6rem 0 0rem;
+
+        }
         .footer-bottom{
-            gap: 6rem;
-            padding: 6rem 0 7rem;
+            gap: 5rem;
+            padding: 5rem 0 5rem;
             flex-direction: column;
             align-items: center;
         }
