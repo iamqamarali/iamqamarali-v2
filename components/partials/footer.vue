@@ -1,11 +1,9 @@
 <template>
-    <footer class="site-footer ">
+    <footer class="site-footer " style="background-image:url('/images/sides-waves.svg')"  >
         <div class="container">
             <section class="footer-contact-section">
                 <h3 class="section-title">Contact</h3>
-                <p> 
-                    Want to contact me ? feel free to send a email at <a href="mailto:iamqamarali1@gmail.com" class="email ">iamqamarali1@gmail.com</a>
-                </p>
+                <p> Have a project for me? Shoot me a email at  <a href="mailto:iamqamarali1@gmail.com" class="email ">iamqamarali1@gmail.com</a> </p>
             </section>
             <section class="footer-bottom">
                 <div class="footer-bottom-copy">

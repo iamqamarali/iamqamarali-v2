@@ -1,11 +1,11 @@
 .skin-dark{
-    --dark-skin-color: #09101d;
+    --dark-skin-color: #161616;
 
     --primary-light: #86ed8e;
     --primary : #86ed8e;
     --primary-dark: #58c958;
     
-    --primary-text-color: #09101d;
+    --primary-text-color: var(--dark-skin-color);
 
     --gray-text-color: #73737D;
     --body-bg-color: var(--dark-skin-color);
@@ -21,11 +21,12 @@
 
     // header
     --header-bg-color: var(--dark-skin-color);
+    --header-opposite-bg-color: #fff;
     --header-text-color: #fff;
     --header-text-hover-color: var(--primary);
 
     // footer
-    --footer-bg-color: #121523;
+    --footer-bg-color: #1a1d22;
 
     // article page
     --articleText: #f0f0f0;
@@ -34,7 +35,7 @@
 
     // forms
     // input
-    --input-background-color: #09101d;
+    --input-background-color: var(--dark-skin-color);
     --input-border-color: #b2b2b2;
     --input-border-color-focus: var(--primary);
     --input-text-color: #fff;

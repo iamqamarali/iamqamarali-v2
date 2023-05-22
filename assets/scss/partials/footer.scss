@@ -1,5 +1,9 @@
 .site-footer{
     background-color: var(--footer-bg-color);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
     .footer-contact-section{
         text-align: center;
         padding: calc(7rem + 2.5vw) 0 4rem;
@@ -11,7 +15,7 @@
     }
     .footer-bottom-copy{
         font-size: 1.1rem;
-        color: var(--gray-text-color);
+        color: var(--primary-text-color);
     }
     .footer-nav{
         .nav-item{
@@ -37,7 +41,6 @@
             align-items: center;
         }
         .footer-bottom-copy{
-            font-size: 1.2rem;
             color: var(--gray-text-color);
         }
     
