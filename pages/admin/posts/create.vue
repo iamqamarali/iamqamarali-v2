@@ -14,7 +14,7 @@ definePageMeta({
 
         <section class="section">
             <div class="container">
-                <h1>Create Post</h1>
+                <h1 class="section-title">Create Post</h1>
                 
                 <Tiptap />                
             </div>        

@@ -24,3 +24,36 @@ button,
         color: var(--btn-primary-text-color);
     }
 }
+
+
+.button-opposite-skin{
+    background-color: transparent;
+    border-color: var(--body-text-color);
+    color: var(--body-text-color);
+    &:hover,
+    &:active{
+        background-color: transparent;
+        background-color: var(--body-text-color);
+        border-color: var(--body-text-color);
+        color: var(--body-bg-color);
+    }
+}
+.button-gray{
+    background-color: transparent;
+    border-color: var(--gray-text-color);
+    color: var(--gray-text-color);
+    &:hover,
+    &:active{
+        background-color: transparent;
+        background-color: var(--gray-text-color);
+        border-color: var(--gray-text-color);
+        color: var(--body-bg-color);
+    }
+}
+
+.button-sm{
+    height: 35px;
+    padding: 0 1rem;
+    font-size: .9rem;
+
+}

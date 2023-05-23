@@ -2,31 +2,21 @@
     .controls{
         display: flex;
         flex-wrap: wrap;
-        gap: .5rem;
-        margin-bottom: 1.5rem;
+        gap: .6rem;
+        margin-bottom: 2rem;
     }
     .control-button{
-        background-color: transparent;
-        border-color: var(--body-text-color);
-        color: var(--body-text-color);
-        height: 35px;
-        padding: 0 1rem;
-        font-size: .9rem;
-        &:hover,
-        &:active{
-            background-color: transparent;
-            border-color: var(--body-text-color);
-            color: var(--body-text-color);
-        }
-        &.is-active{
-            background-color: var(--body-text-color);
-            color: var(--body-bg-color);
-        }
+        // border-color: var(--gray-text-color);
+
+        // &.is-active{
+        //     background-color: var(--gray-text-color);;
+        //     color: var(--body-bg-color);
+        // }
     }
 
     .ProseMirror{
         padding: 1rem 2rem;
-        max-height: 650px;
+        max-height: 550px;
         overflow: auto;
         border: 1px solid var(--body-text-color);
         

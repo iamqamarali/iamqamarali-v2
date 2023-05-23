@@ -8,7 +8,7 @@
 
     --gray-text-color: #86868e;
     --body-bg-color: #fff;
-    --body-text-color: #000;
+    --body-text-color: #111;
 
     --anchor-color: var(--primary);
     --anchor-color-hover: var(--primary-dark);
@@ -38,8 +38,17 @@
     --input-border-color: #b2b2b2;
     --input-border-color-focus: #259925;
     --input-text-color: #000;
+
     // button
     --btn-primary-color: var(--primary);
-    --btn-primary-text-color: var(--primary-text-color)
+    --btn-primary-text-color: var(--primary-text-color);
+
+    // code
+    --code-bg-color: #e4e4e4;
+    --code-text-color: #000;
+
+    --pre-bg-color: #dedede7a;
+    --pre-text-color: #000;
+
 }
 

@@ -1,5 +1,5 @@
 .skin-dark{
-    --dark-skin-color: #161616;
+    --dark-skin-color: #181818;
 
     --primary-light: #86ed8e;
     --primary : #86ed8e;
@@ -10,7 +10,7 @@
 
     --gray-text-color: #86868e;
     --body-bg-color: var(--dark-skin-color);
-    --body-text-color: #fff;
+    --body-text-color: #f6f6f6;
 
     // anchor
     --anchor-color: var(--primary);
@@ -42,7 +42,15 @@
     --input-text-color: #fff;
     // button
     --btn-primary-color: var(--primary);
-    --btn-primary-text-color: var(--primary-text-color)
+    --btn-primary-text-color: var(--primary-text-color);
+
+    // code
+    --code-bg-color: #e8e8e8;
+    --code-text-color: #111;
+
+    // pre
+    --pre-bg-color: #bcbcbc2e;
+    --pre-text-color: #fff;
 
 }
 

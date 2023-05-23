@@ -128,13 +128,17 @@ hr {
 }
 
 code {
-    background-color: rgba(#616161, 0.1);
-    color: var(--gray-text-color);
+    background-color: var(--code-bg-color);
+    color: var(--code-text-color);
+    padding: .2rem .4rem;
+    margin: 0 .4rem;
+    border-radius: 4px;
 }
 
 pre {
-    background: var(--body-text-color);
-    color: var(--body-bg-color);
+
+    background: var(--pre-bg-color);
+    color: var(--pre-text-color);
     font-family: 'JetBrainsMono', monospace;
     border-radius: 7px;
     padding: 0.75rem 1rem;
@@ -144,7 +148,7 @@ pre {
         color: inherit;
         padding: 0;
         background: none;
-        font-size: 0.8rem;
+        font-size: 1rem;
     }
 }
 
