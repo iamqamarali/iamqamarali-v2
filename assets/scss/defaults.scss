@@ -41,27 +41,60 @@ h1 {
 h2 { 
     font-size: 2.2rem; 
     line-height: 1.333em;
+    margin: 1rem 0 0.6rem;
 }
 h3 { 
     font-size: 1.8rem;
     line-height: 1.45;
- }
+    margin: 1.2rem 0 0.6rem;
+}
 h4{
     font-size: 1.6rem;
     line-height: 1.5;
+    margin: 1.4rem 0 0.6rem;
 }
 h5 { 
     font-size: 1.4rem;
     line-height: 1.55;
+    margin: 1.7rem 0 0.6rem;
 }
 h6 { 
     font-size: 1.2rem;
     line-height: 1.75;
- }
+    margin: 2rem 0 0.6rem;
+}
 p{
     font-size: 1.15rem;
     line-height: 1.756;
     margin-bottom: 2rem;
+}
+ul,
+ol{
+    list-style: none;
+    counter-reset: list;
+    position: relative;
+    padding: .8rem 0 1.8rem 1.8rem;
+    li{
+        position: relative;
+        padding-bottom: 1rem;
+        &:before{
+            width: 3rem;
+            display: inline-block;
+            position: absolute;
+            color: var(--body-text-color);
+            content: "";
+            position: absolute;
+            left: -30px;
+            top: 8px;
+            height: 8px;
+            width: 8px;
+            border-radius: 50%;
+            background: var(--body-text-color);
+        }
+    }
+    li :is(p, strong, span){
+        margin: 0;
+    }
 }
 
 blockquote{
@@ -72,28 +105,66 @@ blockquote{
     border-left: 4px solid var(--primary-light);
     font-size: 1.2rem;
     line-height: 1.7;
-    h3, h4, h5{
-        margin-top: 0;
-        padding: 0 1rem;
+    h3, h4, h5, h6{
+        margin: 0;
         font-weight: 400;
         color: var(--gray-text-color);
+        padding: 0 1rem;
+        padding-right: 5rem;
     }
     p{
         font-size: inherit;
-        padding-right: 2rem;
-        padding-bottom: 0;
-        margin: 0 auto;
         font-style: italic;
+        margin: 0 auto;
+        padding-right: 5rem;
+        padding-bottom: 0;
+    }
+}
+
+hr {
+    border: none;
+    border-top: 2px solid rgba(#0D0D0D, 0.1);
+    margin: 2rem 0;
+}
+
+code {
+    background-color: rgba(#616161, 0.1);
+    color: var(--gray-text-color);
+}
+
+pre {
+    background: var(--body-text-color);
+    color: var(--body-bg-color);
+    font-family: 'JetBrainsMono', monospace;
+    border-radius: 7px;
+    padding: 0.75rem 1rem;
+    margin: 1rem 0  2rem;
+
+    code {
+        color: inherit;
+        padding: 0;
+        background: none;
+        font-size: 0.8rem;
     }
 }
 
 
+
+
+
+
 @media screen and (max-width: 735px){
     blockquote{
-        h3{
-            padding: 0 4rem;
+        p, h3, h4, h5,h6{
+            padding-right: 2rem;
         }
     }
-    
+}
+
+@media screen and (max-width: 540px){
+    blockquote{
+        margin-left: 0rem;
+        padding-left: 1rem;
+    }
 }
 

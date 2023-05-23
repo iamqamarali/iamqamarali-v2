@@ -46,50 +46,24 @@
             font-size: inherit;
         }
         h2{
-            margin: 1rem 0 0.6rem;
+
         }
         h3{
-            margin: 1.2rem 0 0.6rem;
         }
         h4{
-            margin: 1.4rem 0 0.6rem;
         }
         h5{
-            margin: 1.7rem 0 0.6rem;
         }
         h6{
-            margin: 2rem 0 0.6rem;
         }
-
         ul{
-            list-style: none;
-            counter-reset: list;
-            position: relative;
-            padding: .8rem 0 1.8rem 1.8rem;
             li{
-                position: relative;
-                padding-bottom: 1rem;
                 &:before{
-                    width: 3rem;
-                    display: inline-block;
-                    position: absolute;
                     color: var(--articleText);
-                    content: "";
-                    position: absolute;
-                    left: -30px;
-                    top: 8px;
-                    height: 8px;
-                    width: 8px;
-                    border-radius: 50%;
                     background: var(--articleText);
                 }
             }
         }
-        blockquote{
-            p{
-                padding-right: 5rem;
-            }
-        }        
     }
 
 
@@ -116,20 +90,12 @@
         }
         .article-body{
             padding: 0 .5rem 1rem;
-            blockquote{
-                p{
-                    padding-right: 2rem;
-                }
-            } 
         }
     }
 
     @media screen and (max-width: 540px){
         .article-body{
-            blockquote{
-                margin-left: 0rem;
-                padding-left: 1rem;
-            }     
+            
         }
     }
 

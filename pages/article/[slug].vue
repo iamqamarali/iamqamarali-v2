@@ -55,8 +55,8 @@ const parseBody = (body) => {
                     <p><img src="https://cdn-images-1.medium.com/max/1600/1*zB2OkI4ZcHZ0c03CPWAzEg.gif" alt="preview application gif" title="application preview"></p>
                     <p>Each product link is appended with the product id (/details/), and when shared on social media we get the product’s image, title and description. Just like this example below product id (/details/), and when shared on social media we get the product’s image, title and description. Just like this example below:</p>
 
-                    <blockquote class="no-border">
-                        <h4>Understanding that you are the most doggy shit person i've every meet.</h4>
+                    <blockquote >
+                        <h3>Understanding that you are the most doggy shit person i've every meet.</h3>
                     </blockquote>
 
                     <p>Each product link is appended with the product id (/details/), and when shared on social media we get the product’s image, title and description. Just like this example below product id (/details/), and when shared on social media we get the product’s image, title and description. Just like this example below:</p>
