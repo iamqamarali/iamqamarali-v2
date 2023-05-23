@@ -1,0 +1,44 @@
+.logo-image,
+.logo-svg{
+    width: 140px;
+    path {
+        fill: var(--logo-color);
+        transition: var(--skin-change-transition);
+    }
+}
+@media screen and (max-width: 735px){
+    .logo-image,
+    .logo-svg{
+        width: 100px;
+        path {
+            fill: var(--logo-color);
+        }
+    
+    }    
+}
+
+/**
+*
+* ICONS
+*/
+.svg-icon{
+    path{
+        transition: var(--skin-change-transition);
+    }
+}
+
+
+/**
+ * floats
+*/
+
+.float-left{
+    float: left;
+}
+.float-right{
+    float: right;
+}
+.clear-both{
+    clear: both;
+}
+

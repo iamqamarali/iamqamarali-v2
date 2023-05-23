@@ -11,6 +11,7 @@ const {data : articles, error, pending, refresh } = await useFetch('/api/posts/l
             <div class="container">
                 <header class="section-header">
                     <h1 class="section-title">Explore Practical Software Development Articles.</h1>
+
                 </header>
                 <div class="two-columns-grid articles-grid">
                     <Article-link

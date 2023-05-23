@@ -5,7 +5,5 @@
     // button
     --btn-height: 50px;
 
-    --skin-change-transition: background-color 0.3s linear , color  0.3s linear;
-
-    transition: var(--skin-change-transition);
+    --skin-change-transition: background-color 0.3s linear , color  0.3s linear, fill .3s linear;
 }

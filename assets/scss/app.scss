@@ -34,15 +34,8 @@
 body{
     font-family: 'Lato', sans-serif;
 }
-.logo-image{
-    width: 140px;
-}
-
 
 @media screen and (max-width: 735px){
-    .logo-image{
-        width: 100px;
-    }    
     :root{
         font-size: 14px;
     }

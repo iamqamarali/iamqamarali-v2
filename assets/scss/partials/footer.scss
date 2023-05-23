@@ -1,21 +1,14 @@
 .site-footer{
     background-color: var(--footer-bg-color);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-
-    .footer-contact-section{
-        text-align: center;
-        padding: calc(7rem + 2.5vw) 0 4rem;
-    }
-    .footer-bottom{
+    
+    .footer-inner-wrapper{
         display: flex;
         justify-content: space-between;
         padding: 5rem 0;
     }
-    .footer-bottom-copy{
+    .footer-copyright{
         font-size: 1.1rem;
-        color: var(--primary-text-color);
+        color: var(--gray-text-color);
     }
     .footer-nav{
         .nav-item{
@@ -30,20 +23,12 @@
 
 
     @media screen and (max-width: 735px){
-        .footer-contact-section{
-            padding: 7rem 0 0rem;
-
-        }
-        .footer-bottom{
+        .footer-inner-wrapper{
             gap: 5rem;
-            padding: 5rem 0 5rem;
+            padding: 5rem 0;
             flex-direction: column;
             align-items: center;
-        }
-        .footer-bottom-copy{
-            color: var(--gray-text-color);
-        }
-    
+        }    
     }
 
 }

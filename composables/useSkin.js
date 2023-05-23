@@ -9,13 +9,34 @@ export default () => {
         else
             skin.value = 'skin-light'
     }
+
+    // toggle skin
     const toggleSkin = () => {
         skin.value = skin.value == 'skin-light' ? 'skin-dark' : 'skin-light'
-        console.log(skin.value)
     }
+
+    // computed property to check if skin is light
+    const isLight = computed(() => skin.value == 'skin-light')
+
+    // watch skin value and store it in local storage
+    watch(skin, (newVal, oldVal) => {
+        localStorage.setItem('skin', newVal)
+    })
+
+    // on mounted, get skin from local storage
+    onMounted(()=>{
+        let s = localStorage.getItem('skin')
+        if(s){
+            skin.value = s
+        }
+    })
+
+
+
     return {
         skin,
         setSkin,
-        toggleSkin
+        toggleSkin,
+        isLight
     }
 }

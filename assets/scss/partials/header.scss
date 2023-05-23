@@ -27,24 +27,27 @@
         align-items: center;
     }
 
-    .logo{
-        .logo-image{
-            fill: var(--header-text-color);
-        }
-    }
-
     .nav-item{
         padding: 1rem 0;
         color: var(--header-text-color);
         font-size: 0.9rem;
         text-decoration: none;
         text-transform: uppercase;   
-        &:not(:last-of-type){
+        cursor: pointer;
+        &:not(:last-child){
             margin-right: 2.5rem;
         }
     }
     .nav-item:hover{
         color: var(--header-text-hover-color);
+    }
+
+    .svg-icon{
+        path{
+            fill: var(--header-text-color);
+        }
+        width: 3.5rem;
+        height: 3.5rem;
     }
 
 }
@@ -79,9 +82,13 @@
         .nav-item{
             font-size: .85rem;
         }
-        .nav-item:not(:last-of-type){
+        .nav-item:not(:last-child){
             margin-right: 1.5rem;
-        }    
+        }
+        .svg-icon{
+            width: 2.5rem;
+            height: 2.5rem;
+        }
 
     }
 }

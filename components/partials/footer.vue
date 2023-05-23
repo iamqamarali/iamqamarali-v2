@@ -1,12 +1,8 @@
 <template>
-    <footer class="site-footer " style="background-image:url('/images/sides-waves.svg')"  >
+    <footer class="site-footer" >
         <div class="container">
-            <section class="footer-contact-section">
-                <h3 class="section-title">Contact</h3>
-                <p> Have a project for me? Shoot me a email at  <a href="mailto:iamqamarali1@gmail.com" class="email ">iamqamarali1@gmail.com</a> </p>
-            </section>
-            <section class="footer-bottom">
-                <div class="footer-bottom-copy">
+            <section class="footer-inner-wrapper">
+                <div class="footer-copyright">
                     <span>&copy; {{ new Date().getFullYear() }}</span> Qamar Ali
                 </div>
                 <div class="footer-nav nav">
@@ -19,4 +15,5 @@
         </div>
     </footer>
 </template>
+
 
