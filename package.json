@@ -16,6 +16,7 @@
     "@tiptap/starter-kit": "^2.0.3",
     "@tiptap/vue-3": "^2.0.3",
     "@types/node": "^18",
+    "backblaze-b2": "^1.7.0",
     "bcrypt": "^5.1.0",
     "jsonwebtoken": "^9.0.0",
     "mysql2": "^3.3.1",

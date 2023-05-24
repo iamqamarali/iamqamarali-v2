@@ -1,4 +1,5 @@
 <script setup>
+import B2 from 'backblaze-b2'
 
 // define page meta data
 definePageMeta({
@@ -19,7 +20,7 @@ const uploadFile = async (file)=>{
     }
 
     try {
-        const data = await $fetch('/api/backblaze/get-signed-url', {
+        const data = await $fetch('/api/backblaze/get-upload-url', {
             method: 'POST',
             body: {
                 file_name: file.name,
@@ -30,22 +31,45 @@ const uploadFile = async (file)=>{
             },
         });
         console.log(data)
-        const signedUrl = data.signedUrl;
 
+        //const sha1 = await file.arrayBuffer().then(buffer => crypto.subtle.digest('SHA-1', buffer)).then(hash => hex(hash));
+        //var sha1 = crypto.createHash('sha1').update(source).digest("hex");
 
-        const uploadResponse = await $fetch(signedUrl, {
-            method: 'PUT',
-            headers: {
-                'Access-Control-Allow-Origin': '*',
-                'Access-Control-Allow-Headers': 'Content-Type',
-                'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
+        //console.log(sha1);
 
-                'Content-Type': file.type,
-            },
+        const uploadResponse = await $fetch(data.uploadUrl, {
+            method: 'POST',
             body: file,
-        });
+
+            headers: {
+                Authorization: data.authorizationToken,
+                'X-Bz-File-Name': data.path,
+                'Content-Type': file.type,
+                'Content-Length' : file.size,
+            }
+
+        })
 
         console.log(uploadResponse);
+
+        // const b2 = new B2({
+        //     applicationKeyId: '0053084658a37890000000003',
+        //     applicationKey: 'K005AM9hIHVB4LoUAJxNnIc5YctqTys',
+
+        // })
+        // let res= await b2.uploadFile({
+        //     uploadUrl: data.uploadUrl,
+        //     uploadAuthToken: data.authorizationToken,
+        //     fileName: data.path,
+        //     contentLength: file.size, // optional data length, will default to data.byteLength or data.length if not provided
+        //     mime: file.type, // optional mime type, will default to 'b2/x-auto' if not provided
+        //     data: file, // this is expecting a Buffer, not an encoded string
+        //     hash: 'sha1-hash', // optional data hash, will use sha1(data) if not provided
+        //     onUploadProgress: (event) => {} // progress monitoring
+        // })
+
+        console.log(res);
+
 
         if (uploadResponse.ok) {
             console.log('Image uploaded successfully.');
