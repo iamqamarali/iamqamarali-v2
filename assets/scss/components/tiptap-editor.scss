@@ -19,6 +19,7 @@
         max-height: 550px;
         overflow: auto;
         border: 1px solid var(--body-text-color);
+        border-radius: 0.5rem;
         
         .ProseMirror-gapcursor{
             border-left: 1px solid #000;

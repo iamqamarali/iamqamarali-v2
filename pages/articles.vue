@@ -4,7 +4,11 @@ const route = useRoute();
 const router = useRouter();
 
 const page = useState(() => route.query.page ? parseInt(route.query.page) : 1)
-const {data : articles } = await useFetch(() => `/api/posts?page=${page.value}`)
+const {data : articles } = await useFetch(`/api/posts`, {
+    params:{
+        page: page
+    }
+})
 
 watch(page, () => {
     router.push({
@@ -30,7 +34,7 @@ watch(page, () => {
                     />
                 </div>
 
-                <button @click.prevent="page--">Previous</button>
+                <button @click.prevent="page > 0 ? page-- : ''">Previous</button>
                 <button @click.prevent="page++">Next</button>
 
             </div>

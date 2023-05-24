@@ -1,7 +1,10 @@
 
 export default defineEventHandler((event) => {
     if(!event.context.user)
-        return { error: 'You Are Not Signed In' }
+        throw createError({
+            statusCode: 401,
+            statusMessage: 'You are not authorized to access this resource'
+        });
 
 
     auth.logout(event)

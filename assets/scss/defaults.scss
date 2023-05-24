@@ -5,7 +5,10 @@
 }
 
 body{
-    
+    font-size: 1rem;   
+}
+input, textarea, div{
+    font-size: 1rem;
 }
 img{
     max-width: 100%;
@@ -29,7 +32,13 @@ a.link-default, .link-default {
         color: var(--body-text-color);
     }
 }
-
+label{
+    color: var(--body-text-color);
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+    display: inline-block;
+}
 h1, h2, h3, h4 , h5, h6{
     margin-bottom: 0.8em;
     font-weight: 900;

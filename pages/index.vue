@@ -1,6 +1,9 @@
 <script setup>
 
-const {data : articles, error, pending, refresh } = await useFetch('/api/posts/latest')
+const {data : articles } = await useFetch(() => `/api/posts?limit=8`)
+
+
+
 
 </script>
 

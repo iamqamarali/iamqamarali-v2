@@ -5,9 +5,9 @@ button,
     justify-content: center;
     height: var(--btn-height);
     background-color: transparent;
-    color: var(--btn-primary-color);
     padding: 0 2rem;
     border: 2px solid var(--btn-primary-color);
+    color: var(--btn-primary-color);
     border-radius: 50px;
     font-size: 1rem;
     font-weight: 600;
@@ -22,6 +22,18 @@ button,
         border: 2px solid var(--btn-primary-color);
         background-color: var(--btn-primary-color);
         color: var(--btn-primary-text-color);
+    }
+}
+
+.button-filled{
+    color: var(--primary-text-color);
+    background-color: var(--btn-primary-color);
+    border-color: var(--btn-primary-color);
+    &:hover,
+    &:focus,
+    &:active{
+        background-color: var(--btn-primaru-color-hover);
+        border-color: var(--btn-primaru-color-hover);
     }
 }
 

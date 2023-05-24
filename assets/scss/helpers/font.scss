@@ -18,3 +18,28 @@ $font-weights: (
 }
 
 
+// generate scss code for creating font size classes in rem
+
+$font-sizes: (
+    "xs": 0.75rem,
+    "sm": 0.875rem,
+    "base": 1rem,
+    "lg": 1.15rem,
+    "xl": 1.25rem,
+    "2xl": 1.5rem,
+    "3xl": 1.875rem,
+    "4xl": 2.25rem,
+    "5xl": 3rem,
+    "6xl": 4rem,
+    "7xl": 5rem,
+    "8xl": 6rem,
+    "9xl": 7rem,
+    "10xl": 8rem
+);
+
+@each $name, $size in $font-sizes {
+    .font-size-#{$name} {
+        font-size: $size;
+    }
+}
+

@@ -1,0 +1,60 @@
+
+.toggle-switch{
+  font-size: 0;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 5px;
+  
+  label{
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+    background-color: #f2f2f2;
+    border-radius: 20px;
+    transition: all 0.15s ease;
+    cursor: pointer;
+    border: 2px solid #ccc;
+    -webkit-tap-highlight-color: transparent;
+    
+    &:after{
+      content: "";
+      position: relative;
+      display: block;
+      height: 20px;
+      width: 20px;
+      background-color: #fff;
+      border: 2px solid #ccc;
+      border-radius: 20px;
+      transition: left .1s cubic-bezier( 0.175, 0.7, 0.35, 1.4), width .1s ease, margin .1s ease, border .1s ease;
+      top: -2px;
+      left: -2px;
+    }
+    
+    &:hover, &:hover:after{
+      border: 2px solid #999;
+      will-change: padding;
+    }
+    
+    &:active:after{
+      width: 28px;
+    }
+  }  
+  input{
+    display: none;
+    
+    &:checked ~ label{
+      background-color: #1b9925;
+      border: 2px solid #12b21e;
+      
+      &:after{
+        border: 2px solid #12b21e;
+        left: 19px;
+      }
+      
+      &:active:after{
+        margin-left: -8px;
+      }
+    }
+  }
+}

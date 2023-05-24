@@ -1,0 +1,14 @@
+.create-posts-page{
+    .form-container{
+        display: grid;
+        grid-template-columns: 1fr 300px;
+        gap: 2.5rem;
+    }
+
+
+    @media screen and (max-width: 735px){
+        .form-container{
+            grid-template-columns: 1fr;
+        }
+    }
+}

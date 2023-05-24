@@ -1,9 +1,17 @@
 ::placeholder{
     color: var(--gray-text-color);
 }
+.input-group{
+    margin-bottom: 1.5rem;
+    label{
+
+    }
+}
+
 input[type=text],
 input[type=password],
 input[type=number]{
+    display: block;
     width: 100%;
     height: var(--input-height);
     padding: 0 1.5rem;

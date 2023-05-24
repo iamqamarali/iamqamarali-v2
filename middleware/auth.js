@@ -3,10 +3,13 @@ export default defineNuxtRouteMiddleware(async (to, from) => {
 
     let check = await auth.check()
     if(!check){
-        throw createError({
-            statusCode : 401 ,
-            statusMessage: 'You are not Authorized'
-        })
+
+        return navigateTo('/auth/signin');
+
+        // throw createError({
+        //     statusCode : 401 ,
+        //     statusMessage: 'You are not Authorized'
+        // })
     }
     
 });

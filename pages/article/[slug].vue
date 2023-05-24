@@ -5,7 +5,6 @@ const { slug } = route.params
 const { data : post, error, pending, refresh } = await useFetch('/api/posts/' + slug)
 
 
-
 if(!post.value){
     throw createError({
         statusCode: 404,
