@@ -1,4 +1,4 @@
-import B2 from 'backblaze-B2';
+import B2 from 'backblaze-b2';
 
 export default defineEventHandler(async (event)=>{
     if(!event.context.user){
