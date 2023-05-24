@@ -77,7 +77,7 @@ const uploadFile = async (file)=>{
             console.error('Image upload failed.');
         }
     } catch (error) {
-        console.error('Request failed:', error);
+        console.error('Request failed:', error.response);
     }
 }
 
