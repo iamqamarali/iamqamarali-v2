@@ -1,4 +1,4 @@
-import aws from 'aws-sdk'
+
 
 export default defineEventHandler(async (event)=>{
     if(!event.context.user){
