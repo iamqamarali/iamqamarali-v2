@@ -3,11 +3,10 @@ import { make } from 'simple-body-validator';
 
 export default defineEventHandler(async (event) => {
     if(!event.context.user){
-        throw createError({
-            statusCode: 401,
-            statusMessage: 'Unauthorized',
-        })
+        setResponseStatus(event , 401)
+        return { error : 'You are not authorized to access this resource' }
     }
+
 
     // get the body from event
     const body = await readBody(event);
@@ -31,7 +30,6 @@ export default defineEventHandler(async (event) => {
     }
 
     // if everything is good then save the post
-
 
     const post = new Post({
         title: body.title,

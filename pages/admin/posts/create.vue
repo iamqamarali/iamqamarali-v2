@@ -8,80 +8,6 @@ definePageMeta({
 }) 
 
 
-
-/**
- * uploads file through signed url
- */
-const uploadFile = async (file)=>{
-
-    if (!file) {
-        console.error('No image selected.');
-        return;
-    }
-
-    try {
-        const data = await $fetch('/api/backblaze/get-upload-url', {
-            method: 'POST',
-            body: {
-                file_name: file.name,
-                content_type: file.type,
-
-                post_id: 1,
-                post_slug: 'test-post',
-            },
-        });
-        console.log(data)
-
-        //const sha1 = await file.arrayBuffer().then(buffer => crypto.subtle.digest('SHA-1', buffer)).then(hash => hex(hash));
-        //var sha1 = crypto.createHash('sha1').update(source).digest("hex");
-
-        //console.log(sha1);
-
-        const uploadResponse = await $fetch(data.uploadUrl, {
-            method: 'POST',
-            body: file,
-
-            headers: {
-                Authorization: data.authorizationToken,
-                'X-Bz-File-Name': data.path,
-                'Content-Type': file.type,
-                'Content-Length' : file.size,
-            }
-
-        })
-
-        console.log(uploadResponse);
-
-        // const b2 = new B2({
-        //     applicationKeyId: '0053084658a37890000000003',
-        //     applicationKey: 'K005AM9hIHVB4LoUAJxNnIc5YctqTys',
-
-        // })
-        // let res= await b2.uploadFile({
-        //     uploadUrl: data.uploadUrl,
-        //     uploadAuthToken: data.authorizationToken,
-        //     fileName: data.path,
-        //     contentLength: file.size, // optional data length, will default to data.byteLength or data.length if not provided
-        //     mime: file.type, // optional mime type, will default to 'b2/x-auto' if not provided
-        //     data: file, // this is expecting a Buffer, not an encoded string
-        //     hash: 'sha1-hash', // optional data hash, will use sha1(data) if not provided
-        //     onUploadProgress: (event) => {} // progress monitoring
-        // })
-
-        console.log(res);
-
-
-        if (uploadResponse.ok) {
-            console.log('Image uploaded successfully.');
-        } else {
-            console.error('Image upload failed.');
-        }
-    } catch (error) {
-        console.error('Request failed:', error.response);
-    }
-}
-
-
 const content = `
             <h2>
                 Hi there,
@@ -113,40 +39,61 @@ const content = `
             </blockquote>
         `;
 
+
+const { uploadFile } = useBackBlaze();
+
+// stores the image file
+let image = null
+let mainImageBlog = ref(null); // for previewing image
+function onImageChange(e){
+    image = e.target.files[0]
+    // reader
+    const reader = new FileReader()
+    reader.onload = (e) => {
+        mainImageBlog.value = e.target.result
+    }
+    reader.readAsDataURL(image)
+}
+
+
 let form = reactive({
-    title: "",
+    title: "default title",
     description: "",
     body: content,
     featured: false,
     slug : '',
 });
 
-// stores the image file
-let image = null
-function onImageChange(e){
-    image = e.target.files[0]
-}
-
-
 // when form is submitted
 const submitForm = async () => {
     form.slug = toSlug(form.title)
 
     try{
-        // const res = await $fetch('/api/admin/posts', {
-        //     method: 'POST',
-        //     body: toRaw(form)
-        // })
-        // console.log(res)
+        const { post } = await $fetch('/api/admin/posts', {
+            method: 'POST',
+            body: toRaw(form)
+        })
 
         // upload image
-        uploadFile(image)
+        const fileExtension = image.name.split('.').pop()
+    
+        const fname = `${form.slug}_${Date.now()}_${Math.random()*10}.${fileExtension}`
+        const fileFullName = `${post.id}/${fname}`;
+        
+        const { fileFullPath, message } = await uploadFile(image, fileFullName)
+        
+        console.log(fileFullPath);
+        // update post with image 
+        const res = await $fetch(`/api/admin/posts/${post.id}`, {
+            method: 'PUT',
+            body: { main_image: fileFullPath }
+        })        
+        console.log(res)
 
     }catch(e){
+        console.error(e)
         console.log(e.response)
     }
-
-
 }
         
 
@@ -182,6 +129,7 @@ const submitForm = async () => {
                     <div class="right">
                         <div class="input-group">
                             <label for="">Post Main Image</label>
+                            <img :src="mainImageBlog" class="mt-10 mb-10" v-if="mainImageBlog" alt="">
                             <input type="file" @change="onImageChange" />
                         </div>
                         <br>
@@ -205,4 +153,6 @@ const submitForm = async () => {
         </section>
 
     </main>
+
+    
 </template>

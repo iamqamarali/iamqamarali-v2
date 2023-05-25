@@ -2,16 +2,12 @@ import B2 from 'backblaze-b2';
 
 export default defineEventHandler(async (event)=>{
     if(!event.context.user){
-        throw createError({
-            statusCode: 401,
-            statusMessage: 'You are not authorized to access this resource'
-        });        
+        setResponseStatus(event , 401)
+        return { error : 'You are not authorized to access this resource' }
     }
 
     // get data from request body
-    let { post_id, post_slug, file_name, content_type } = await readBody(event)
-
-    const file_extension = file_name.split('.').pop()
+    let {  fileName, contentType } = await readBody(event)
 
     // create a new B2 instance
     const b2 = new B2({
@@ -22,25 +18,21 @@ export default defineEventHandler(async (event)=>{
     // authorize with B2
     await b2.authorize(); 
 
-    const fileName = `${post_slug}_${Date.now()}.${file_extension}`
-    const full_path = `${post_id}/${fileName}`;
-
     const options = {
         bucketId:  process.env.BUCKET_ID,
-        fileName: full_path,
-        contentType: content_type,
-
-        'Access-Control-Allow-Origin': '*',
-        
-        'X-Bz-Content-Sha1': 'do_not_verify',
+        fileName: fileName,
+        contentType: contentType,        
     };
     
+    // get the url
     const res = await b2.getUploadUrl(options);
 
+    
     return { 
         authorizationToken: res.data.authorizationToken,
         uploadUrl: res.data.uploadUrl, 
-        path: full_path
+        fileName: fileName,
+        fileFullPath: process.env.BLACK_BLAZE_BASE_URL + '/' + fileName,
     };
 
 })

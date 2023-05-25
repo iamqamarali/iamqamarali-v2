@@ -1,7 +1,10 @@
 export default defineEventHandler((event) => {
     let user = event.context.user
     if(!user){
-        throw createError(401, 'Unauthorized')
+        setResponseStatus(event , 401)
+        return {
+            error : 'You are not Authorized'
+        }
     }
     
     return {

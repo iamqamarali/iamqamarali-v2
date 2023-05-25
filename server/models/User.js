@@ -33,12 +33,12 @@ export default class User extends BaseModel{
     async findOrCreate(){
         let user = await User.find({email : this.get('email')})
         if(user){
-            await User.update(user.get('id'), this.data);
             this.set('id', user.get('id'))
+            await this.save();
             return user.get('id')
         }
  
-        return await super.save();
+        return await this.save();
     }
 
     /**

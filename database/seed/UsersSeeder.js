@@ -3,7 +3,6 @@ import User from '../../server/models/User.js';
 import bcrypt from 'bcrypt'
 
 const seedUsers = async ( count) => {
-User.truncate();
 
     let user = new User({
         first_name : 'Qamar',

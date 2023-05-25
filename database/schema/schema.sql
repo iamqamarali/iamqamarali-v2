@@ -12,6 +12,7 @@ CREATE TABLE IF NOT EXISTS users (
     avatar text null,
     created_at timestamp default current_timestamp,
     updated_at timestamp default current_timestamp on update current_timestamp
+    
 );
 
 CREATE TABLE IF NOT exists posts(

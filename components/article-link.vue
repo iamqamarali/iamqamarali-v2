@@ -3,6 +3,8 @@ defineProps({
     article: Object
 })
 
+
+
 </script>
 
 <template>

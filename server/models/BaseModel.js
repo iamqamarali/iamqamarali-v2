@@ -37,7 +37,19 @@ export default class BaseModel {
      * 
      */
     fill(data){
+        const oldData = this.data
         this.data = data
+        const newData = this.only(this.properties)
+        // ignore undefined values
+        for (const key in newData) {
+            if(newData[key] === undefined){
+                delete newData[key]
+            }
+        }
+        this.data = {
+            ...oldData,
+            ...newData
+        }
     }
 
     // set get any property
@@ -104,7 +116,7 @@ export default class BaseModel {
                 return model;    
             }
         } 
-        let changedRows = await this.update(this.data.id, this.data);
+        let changedRows = await this.constructor.update(this.data.id, this.data);
         return {
             changedRows
         };
@@ -178,9 +190,11 @@ export default class BaseModel {
      * return the number of updated rows
      * */
     static async update(id, data){
+        delete data.id;
+
         const sql = `UPDATE ${this.getTable()} SET `+ this.getKeysForSetStatement(data)
                     +` WHERE id = ?`;
-        const result = await this.getConnection().execute(sql, [ ...this.getValues(data) , id]);
+        const result = await this.getConnection().execute(sql, [ ...this.getValues(data), id]);
         return result[0]['changedRows']
     }
 
@@ -190,7 +204,7 @@ export default class BaseModel {
      * */
     static async find(query, select = null){
 
-        if(typeof query === 'number'){
+        if(typeof query == 'number'){
             query = { id : query }
         }
         
@@ -203,6 +217,7 @@ export default class BaseModel {
 
         // create the sql query
         let sql = `SELECT * FROM ${this.getTable()} where ${str}`
+
 
         // replace the * with the select columns
         if(select instanceof Array ){

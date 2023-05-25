@@ -30,7 +30,7 @@ const changeSkin = () => {
                     <a href="/work" class="nav-item">Work</a>    
                     <div class="nav-item">
 
-                        <svg version="1.0"
+                        <!-- <svg version="1.0"
                             @click.prevent="changeSkin"
                             v-if="isLight" 
                             class="svg-icon"
@@ -62,8 +62,30 @@ const changeSkin = () => {
                             <path d="M410 577 c0 -8 9 -22 20 -32 16 -14 23 -16 32 -7 9 9 7 16 -7 32 -21
                             23 -45 26 -45 7z"/>
                             </g>
-                        </svg>
+                        </svg> -->
 
+
+                        <svg version="1.0" 
+                            @click.prevent="changeSkin"
+                            v-if="isLight" 
+   
+                            class="svg-icon"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="100.000000pt" height="100.000000pt" viewBox="0 0 100.000000 100.000000"
+                            preserveAspectRatio="xMidYMid meet">
+
+                            <g transform="translate(0.000000,100.000000) scale(0.100000,-0.100000)"
+                            fill="#000000" stroke="none">
+                            <path d="M303 861 c-3 -11 -13 -21 -24 -24 -10 -3 -19 -10 -19 -17 0 -7 9 -14
+                            19 -17 11 -3 21 -13 24 -24 3 -10 10 -19 17 -19 7 0 14 9 17 19 3 11 13 21 24
+                            24 10 3 19 10 19 17 0 7 -9 14 -19 17 -11 3 -21 13 -24 24 -7 25 -27 25 -34 0z"/>
+                            <path d="M510 731 c-158 -48 -241 -200 -196 -356 35 -119 165 -205 291 -192
+                            59 6 126 36 168 76 34 31 73 103 82 152 l6 35 -41 -4 c-70 -7 -129 16 -186 72
+                            -56 57 -79 116 -72 185 4 44 -1 47 -52 32z"/>
+                            <path d="M135 620 c-18 -20 -18 -21 3 -43 l22 -21 22 21 c21 22 21 23 3 43
+                            -10 11 -21 20 -25 20 -4 0 -15 -9 -25 -20z"/>
+                            </g>
+                        </svg>
                         <svg version="1.0"  
                             @click.prevent="changeSkin"
                             v-else
