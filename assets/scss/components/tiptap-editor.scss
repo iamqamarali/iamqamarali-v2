@@ -3,15 +3,15 @@
         display: flex;
         flex-wrap: wrap;
         gap: .6rem;
-        margin-bottom: 2rem;
+        margin-bottom: 1rem;
     }
     .control-button{
         // border-color: var(--gray-text-color);
 
-        // &.is-active{
-        //     background-color: var(--gray-text-color);;
-        //     color: var(--body-bg-color);
-        // }
+        &.is-active{
+            background-color: var(--gray-text-color);;
+            color: var(--body-bg-color);
+        }
     }
 
     .ProseMirror{

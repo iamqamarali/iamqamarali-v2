@@ -10,17 +10,6 @@ export default () => {
         });
     }
 
-    const getSha1 = async (file) => {
-        // create sha1 of file
-        const buffer = await file.arrayBuffer()
-        const hash = await crypto.subtle.digest('SHA-1', buffer)
-        const sha1 = Array.from(new Uint8Array(hash))
-            .map(v => v.toString(16).padStart(2, '0'))
-            .join('');
-
-        return sha1;        
-    }
-
     /**
     * uploads file through signed url
      */
@@ -30,12 +19,18 @@ export default () => {
             return;
         }
 
-        // get the signed URL
+        // get the signed URL from api
         const data = await getUploadUrl(file, fileName)
 
-        const sha1 = await getSha1(file);
+        // create SHA1 hash of file
+        const buffer = await file.arrayBuffer()
+        const hash = await crypto.subtle.digest('SHA-1', buffer)
+        const sha1 = Array.from(new Uint8Array(hash))
+            .map(v => v.toString(16).padStart(2, '0'))
+            .join('');
 
-        // upload file to signed url
+
+        // upload file to back blazesigned url
         const response = await $fetch(data.uploadUrl, {
             method: 'POST',
             body: file,
@@ -50,15 +45,15 @@ export default () => {
         })
 
         return {
-            ...data,
-            message: 'File uploaded successfully.',
+            fileName: data.fileName,
+            fileFullPath: data.fileFullPath,
+            message:  "File uploaded successfully"
         }
     }
 
 
     return {
         getUploadUrl,
-        getSha1,
         uploadFile,
     }
 

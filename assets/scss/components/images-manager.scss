@@ -1,0 +1,38 @@
+.images-manager{
+    --image-width: 150px;
+    --image-height: 150px;
+
+    margin-top: 2rem;
+    .images-container{
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+        margin: 0.5rem 0 1rem;
+    }
+    .images-manager-image{  
+        position: relative;
+        width: var(--image-width);
+        img{
+            width: var(--image-width);
+            height: var(--image-height);
+            object-fit: cover;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .close-button{
+
+        }
+        .image-url-input{
+            max-width: 100%;
+            height: auto;
+            padding: 5px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            color: var(--gray-text-color);
+        }
+    }
+    .input-group{
+
+    }
+
+}

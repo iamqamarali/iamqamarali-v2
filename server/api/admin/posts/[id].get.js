@@ -8,9 +8,7 @@ export default defineEventHandler(async (event) => {
 
     // get the post
     const { id } = event.context.params;
-    const post = await Post.find(Number.parseInt(id), [
-        'id', 'published', 'slug',
-    ]);
+    const post = await Post.find(Number.parseInt(id));
 
     // if not found throw error
     if(!post){
@@ -20,22 +18,7 @@ export default defineEventHandler(async (event) => {
         })
     }
 
-    // get the body from event
-    const body = await readBody(event);
 
-    // if post is already published then disallow changing slug
-    if(post.get('published')){
-        delete body.slug
-    }
-
-    // save post
-    post.fill(body)
-    await post.save();
-
-    
-    return {
-        message: 'Post updated successfully',
-        post: post.data
-    }
+    return post.data
 
 })

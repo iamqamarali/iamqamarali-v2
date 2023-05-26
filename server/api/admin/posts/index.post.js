@@ -15,7 +15,7 @@ export default defineEventHandler(async (event) => {
     const validator = make(body, {
         title: 'required|string',
         description: 'required|string',
-        body: 'required|string',
+        //body: 'required|string',
         slug: 'required|string',
         featured: 'required|boolean',
     })

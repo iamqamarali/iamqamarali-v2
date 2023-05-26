@@ -21,16 +21,19 @@ CREATE TABLE IF NOT exists posts(
     description text null,
     body text null,
     slug varchar(250) null,
-    main_image text null,
     user_id integer null,
     seo_data JSON null,
     featured boolean default false,
+    published boolean default false,
+    main_image text null,
+    images JSON default null,
     created_at timestamp default current_timestamp,
     updated_at timestamp default current_timestamp on update current_timestamp,
 
     Index (slug),
-    INDEX (featured),
     Index (user_id)
+    INDEX (featured),
+    Index (published), 
 );
 
 CREATE TABLE IF NOT exists comments(
@@ -40,7 +43,7 @@ CREATE TABLE IF NOT exists comments(
     post_id integer null,
     created_at timestamp default current_timestamp,
     updated_at timestamp default current_timestamp on update current_timestamp,
-
+    
     INDEX (user_id),
     INDEX (post_id)
 );

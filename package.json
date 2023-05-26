@@ -12,6 +12,9 @@
   },
   "devDependencies": {
     "@faker-js/faker": "^8.0.1",
+    "@tiptap/extension-highlight": "^2.0.3",
+    "@tiptap/extension-image": "^2.0.3",
+    "@tiptap/extension-typography": "^2.0.3",
     "@tiptap/pm": "^2.0.3",
     "@tiptap/starter-kit": "^2.0.3",
     "@tiptap/vue-3": "^2.0.3",

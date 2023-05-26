@@ -6,11 +6,18 @@ export default class Post extends BaseModel{
     properties = [
         'id',
         'title',
+        'description',
         'body',
         'main_image',
         'slug',
         'user_id',
+        
+        'featured',
+        'published',
+
+        'images',
         'seo_data',
+
         'created_at',
         'updated_at ',
     ];

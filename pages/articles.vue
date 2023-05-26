@@ -1,7 +1,6 @@
 <script setup>
 
 const route = useRoute();
-const router = useRouter();
 
 const page = useState(() => route.query.page ? parseInt(route.query.page) : 1)
 const {data : articles } = await useFetch(`/api/posts`, {
@@ -10,10 +9,8 @@ const {data : articles } = await useFetch(`/api/posts`, {
     }
 })
 
-watch(page, () => {
-    router.push({
-        query: { page: page.value }
-    })
+onUpdated(() => {
+    page.value = Number.parseInt(route.query.page) || 1
 })
 
 
@@ -34,8 +31,8 @@ watch(page, () => {
                     />
                 </div>
 
-                <button @click.prevent="page > 0 ? page-- : ''">Previous</button>
-                <button @click.prevent="page++">Next</button>
+                <NuxtLink :to="page > 1 ? '/articles?page=' + (page - 1) : ''" class="button">Previous</NuxtLink>
+                <NuxtLink :to="'/articles?page=' + (page + 1)" class="button">Next</NuxtLink>
 
             </div>
         </section>
