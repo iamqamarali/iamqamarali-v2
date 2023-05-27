@@ -55,7 +55,7 @@ watch(data, ()=>{
                             <td>
                                 <div class="buttons-group">
                                     <NuxtLink :to="`/admin/posts/create-update?post=${article.id}`" class="button button-sm" >Edit</NuxtLink>
-                                    <button @click="deletePost(article.id)" class="button-sm">Delete</button>
+                                    <button @click="deletePost(article.id)" class="button button-sm">Delete</button>
                                 </div>
                             </td>
                         </tr>

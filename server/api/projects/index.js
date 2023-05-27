@@ -1,4 +1,4 @@
-import Post from '../../models/Post'
+import Project from '../../models/Project'
 
 export default defineEventHandler(async (event) => {
     let { page, limit } = getQuery(event)
@@ -11,8 +11,6 @@ export default defineEventHandler(async (event) => {
         limit = parseInt(limit)
     }
 
-    const posts = await Post.latest(page * limit, limit, {
-        is_project: false
-    })
-    return  posts.map(post => post.except([]))
+    const projects = await Project.latest(page * limit, limit)
+    return  projects.map(project => project.except([]))
 })

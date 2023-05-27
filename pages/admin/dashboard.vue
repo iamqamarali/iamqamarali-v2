@@ -16,7 +16,7 @@ const { signout } = useAuth()
                 <h1 >Dashboard</h1>
                 <p>This route should be protected</p>
 
-                <button @click="signout">Logout</button>
+                <button class="button" @click="signout">Logout</button>
             </div>
         </section>
 

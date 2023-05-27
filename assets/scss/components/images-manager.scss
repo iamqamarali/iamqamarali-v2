@@ -1,8 +1,8 @@
 .images-manager{
-    --image-width: 150px;
-    --image-height: 150px;
-
+    --image-width: 144px;
+    --image-height: 143px;
     margin-top: 2rem;
+
     .images-container{
         display: flex;
         gap: 1rem;
@@ -35,4 +35,9 @@
 
     }
 
+
+    @media screen and (max-width: 540px){
+        --image-width: 100px;
+        --image-height: 100px;            
+    }
 }

@@ -37,7 +37,7 @@ const attemptSignin = async () => {
 
                     <input type="text" v-model="form.email" placeholder="Email" />
                     <input type="password" v-model="form.password" placeholder="Password" />
-                    <button type="submit">Sign in</button>
+                    <button type="submit" class="button">Sign in</button>
 
                 </form>
             </section>

@@ -2,102 +2,104 @@
     --article-max-width: 750px;
     --article-max-width-medium: 520px;
     --article-hero-large: 944px;
+}
 
-    .article-hero{
-        margin-bottom: calc(3rem + 2.5vw) ;
+.article-hero{
+    margin-bottom: calc(3rem + 2.5vw) ;
+}
+.article-header{
+    max-width: calc(var(--article-max-width) - 100px);
+    margin: 0 auto;
+    padding: calc(4rem + 2vw) 0 calc(6rem + 2vw);
+}
+.article-title{
+    font-size: calc(2.4rem + 1vw);
+    font-weight: 500;
+    margin-bottom: 2rem;
+}
+.article-subtitle{
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+    color: var(--gray-text-color);
+}
+.article-hero-image-container{
+    max-width: var(--article-hero-large);
+    box-shadow: 0 1px 3px transparent,0 1px 2px rgba(0,0,0,.1);
+    border-radius: 5px;
+    margin: 0 auto;
+    overflow: hidden;
+    img{
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        object-position: center;
     }
-    .article-header{
-        max-width: calc(var(--article-max-width) - 100px);
-        margin: 0 auto;
-        padding: calc(4rem + 2vw) 0 calc(6rem + 2vw);
-    }
-    .article-title{
-        font-size: calc(2.4rem + 1vw);
-        font-weight: 500;
-        margin-bottom: 2rem;
-    }
-    .article-subtitle{
-        display: flex;
-        align-items: center;
-        font-size: 1.1rem;
-        color: var(--gray-text-color);
-    }
-    .article-hero-image-container{
-        max-width: var(--article-hero-large);
-        box-shadow: 0 1px 3px transparent,0 1px 2px rgba(0,0,0,.1);
-        border-radius: 5px;
-        margin: 0 auto;
-        overflow: hidden;
-        img{
-            width: 100%;
-            height: auto;
-            object-fit: cover;
-            object-position: center;
-        }
-    }
+}
 
-    .article-body{
-        max-width: var(--article-max-width);
-        margin: 0 auto;
-        padding-bottom: calc(1rem + 1vw);
+.article-body{
+    max-width: var(--article-max-width);
+    margin: 0 auto;
+    padding-bottom: calc(1rem + 1vw);
+    font-size: 1.2rem;
+    color: var(--articleText);
+    img{
+        display: block;
+        margin: 2rem 0;
+    }
+    p{
         font-size: 1.2rem;
-        color: var(--articleText);
-        p{
-            font-size: inherit;
-        }
-        h2{
+    }
+    h2{
 
-        }
-        h3{
-        }
-        h4{
-        }
-        h5{
-        }
-        h6{
-        }
-        ul{
-            li{
-                &:before{
-                    color: var(--articleText);
-                    background: var(--articleText);
-                }
+    }
+    h3{
+    }
+    h4{
+    }
+    h5{
+    }
+    h6{
+    }
+    ul{
+        li{
+            &:before{
+                color: var(--articleText);
+                background: var(--articleText);
             }
         }
     }
+}
 
 
-    @media screen and (max-width: 1070px){
-        .article-header{
-            max-width: var(--article-max-width-medium);
-        }    
-        .article-body{
-            max-width: var(--article-max-width-medium);
-        }
+@media screen and (max-width: 1070px){
+    .article-header{
+        max-width: var(--article-max-width-medium);
+    }    
+    .article-body{
+        max-width: var(--article-max-width-medium);
     }
-    @media screen and (max-width: 735px){
-        .article-hero{
-            margin-bottom: 1.5rem;
-            padding: 0 0.5rem;
-        }
-        .article-header{
-            padding: 3.5rem 0 1.5rem;
-        }
-        .article-title{
-            font-size: 2rem;
-            margin-bottom: 1.5rem;
-            line-height: 1.35;
-        }
-        .article-body{
-            padding: 0 .5rem 1rem;
-        }
+}
+@media screen and (max-width: 735px){
+    .article-hero{
+        margin-bottom: 1.5rem;
+        padding: 0 0.5rem;
     }
-
-    @media screen and (max-width: 540px){
-        .article-body{
-            
-        }
+    .article-header{
+        padding: 3.5rem 0 1.5rem;
     }
+    .article-title{
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+        line-height: 1.35;
+    }
+    .article-body{
+        padding: 0 .5rem 1rem;
+    }
+}
 
-
+@media screen and (max-width: 540px){
+    .article-body{
+        
+    }
 }

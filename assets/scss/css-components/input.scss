@@ -22,6 +22,7 @@ input[type=number]{
     background-color: var(--input-background-color);
     margin-bottom: 1.5rem;
     outline: none;
+    transition: var(--skin-change-transition); 
     &:focus,
     &:active{
         outline: none;

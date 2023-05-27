@@ -32,6 +32,13 @@ export default class BaseModel {
         return this.db;
     }
 
+    /**
+     * 
+     * instance method
+     */    
+    getConnection(){
+        return this.constructor.getConnection();
+    }    
 
     /**
      * 
@@ -66,7 +73,7 @@ export default class BaseModel {
      * 
      * SQL query helpers
      */
-    static getKeysForSetStatement(data){
+    static getKeysWithQuestions(data){
         let str = "";
         for (const key in data) {
             str += `${key} = ? , `;
@@ -83,6 +90,14 @@ export default class BaseModel {
     static getQuestionMarks(data){
         let str = Object.values(data).map( v => '?');
         return str.join(',');
+    }
+
+    static createWhereClause(conditions){
+        let str = "";
+        for (const key in conditions) {
+            str += `${key} = ? AND `;
+        }
+        return str.slice(0, -5);       
     }
 
 
@@ -155,9 +170,21 @@ export default class BaseModel {
     /**
      * get latest posts
      */
-    static async latest(skip = 0, limit = 10){
+    static async latest(skip = 0, limit = 10, conditions = null){
+
         let sql = 'SELECT * FROM '+ this.getTable() +' ORDER BY id DESC LIMIT ?,?';
-        const [rows, fields] = await this.getConnection().execute(sql, [skip, limit]);
+        if(conditions){
+            let where = this.createWhereClause(conditions);
+            sql = `SELECT * FROM ${this.getTable()} 
+                    WHERE ${where} ORDER BY id DESC LIMIT ?,?`;
+        }
+
+        const params = [ 
+            ...this.getValues(conditions ? conditions : {}), 
+            skip, 
+            limit
+        ]
+        const [rows, fields] = await this.getConnection().execute(sql, params);
         for (let i = 0; i < rows.length; i++) {
             rows[i] = new this(rows[i]);
         }
@@ -180,7 +207,7 @@ export default class BaseModel {
      * return model ID
      * */
     static async create(data){
-        const sql = `INSERT INTO ${this.getTable()} SET `+ this.getKeysForSetStatement(data)
+        const sql = `INSERT INTO ${this.getTable()} SET `+ this.getKeysWithQuestions(data)
         const result = await this.getConnection().execute(sql, this.getValues(data));
         return result[0]['insertId'] ? this.find(result[0]['insertId']) : null;
     }
@@ -192,7 +219,7 @@ export default class BaseModel {
     static async update(id, data){
         delete data.id;
 
-        const sql = `UPDATE ${this.getTable()} SET `+ this.getKeysForSetStatement(data)
+        const sql = `UPDATE ${this.getTable()} SET `+ this.getKeysWithQuestions(data)
                     +` WHERE id = ?`;
         const result = await this.getConnection().execute(sql, [ ...this.getValues(data), id]);
         return result[0]['changedRows']
@@ -207,16 +234,11 @@ export default class BaseModel {
         if(typeof query == 'number'){
             query = { id : query }
         }
-        
-        // create the query string
-        let str = ''
-        for (const key in query) {
-            str += `${key} = ? AND `;
-        }
-        str = str.slice(0, -4);
 
+        let where = this.createWhereClause(query);
+        
         // create the sql query
-        let sql = `SELECT * FROM ${this.getTable()} where ${str}`
+        let sql = `SELECT * FROM ${this.getTable()} where ${where}`
 
 
         // replace the * with the select columns

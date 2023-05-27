@@ -37,7 +37,8 @@ export default defineEventHandler(async (event) => {
         body:  body.body,
         slug: body.slug,
         featured: body.featured,
-        user_id : auth.user.get('id')
+        user_id : auth.user.get('id'),
+        images: JSON.stringify([]),
     })
 
     await post.save();

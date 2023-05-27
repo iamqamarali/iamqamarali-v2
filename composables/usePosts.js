@@ -13,20 +13,11 @@ export default () => {
             body: data
         })
     }
-    
-    const publishPost = async (post_id) => {
-        return await $fetch('/api/admin/posts/publish', {
-            method: 'POST',
-            body: { 
-                id: post_id,
-            }
-        })
-    }
+
 
     return {
         getPost,
         createPost,
         updatePost,
-        publishPost,        
     }
 }

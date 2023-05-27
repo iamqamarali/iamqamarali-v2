@@ -1,6 +1,10 @@
 <script setup>
 defineProps({
-    article: Object
+    article: Object,
+    urlPrefix:{
+        type: String,
+        default: '/article/'
+    }
 })
 
 
@@ -8,7 +12,7 @@ defineProps({
 </script>
 
 <template>
-    <NuxtLink :to="'/article/' + article.slug" class="article-link">
+    <NuxtLink :to="urlPrefix + article.slug" class="article-link">
         <div class="article-data-container">
             <div class="article-image-container">
                 <img :src="article.main_image" :alt="article.title" class="article-image">

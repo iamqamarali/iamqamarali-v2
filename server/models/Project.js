@@ -1,7 +1,7 @@
 import BaseModel from './BaseModel.js'
 
 export default class Post extends BaseModel{
-    table = 'posts';
+    table = 'projects';
 
     properties = [
         'id',
@@ -30,7 +30,7 @@ export default class Post extends BaseModel{
     
 
     static getTable(){
-        return 'posts';
+        return 'projects';
     }
 
     /** */

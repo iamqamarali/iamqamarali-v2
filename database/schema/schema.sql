@@ -30,10 +30,13 @@ CREATE TABLE IF NOT exists posts(
     created_at timestamp default current_timestamp,
     updated_at timestamp default current_timestamp on update current_timestamp,
 
+    is_project boolean default false,
+
+    Index (is_project),
     Index (slug),
-    Index (user_id)
+    Index (user_id),
     INDEX (featured),
-    Index (published), 
+    Index (published) 
 );
 
 CREATE TABLE IF NOT exists comments(
@@ -48,14 +51,5 @@ CREATE TABLE IF NOT exists comments(
     INDEX (post_id)
 );
 
-CREATE TABLE IF NOT exists projects(
-    id integer primary key auto_increment,
-    title text null,
-    body text null,
-    main_image text null,
-    user_id integer null,
-    created_at timestamp default current_timestamp,
-    updated_at timestamp default current_timestamp on update current_timestamp,
 
-    INDEX (user_id)
-);
+CREATE VIEW IF NOT EXISTS projects as select * from posts where is_project = true;

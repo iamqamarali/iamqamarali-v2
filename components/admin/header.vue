@@ -28,6 +28,7 @@ const changeSkin = () => {
                 <div class="nav">
                     <NuxtLink to="/admin/dashboard" class="nav-item">Dashboard</NuxtLink>    
                     <NuxtLink to="/admin/posts" class="nav-item">Posts</NuxtLink>    
+                    <NuxtLink to="/admin/projects" class="nav-item">Projects</NuxtLink>    
                     <div class="nav-item">
                         <svg version="1.0" 
                             @click.prevent="changeSkin"

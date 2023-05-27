@@ -32,7 +32,7 @@ export default defineEventHandler(async (event)=>{
         authorizationToken: res.data.authorizationToken,
         uploadUrl: res.data.uploadUrl, 
         fileName: fileName,
-        fileFullPath: process.env.BLACK_BLAZE_BASE_URL + '/' + fileName,
+        fileUrl: process.env.BLACK_BLAZE_BASE_URL + '/' + fileName,
     };
 
 })

@@ -1,13 +1,15 @@
 export default () => {
 
     const getUploadUrl = async(file, fileName) => {
-        return await $fetch('/api/backblaze/get-upload-url', {
+        const data = await $fetch('/api/backblaze/getUploadUrl', {
             method: 'POST',
             body: {
                 fileName: fileName,
                 contentType: file.type,
             },
         });
+
+        return data;
     }
 
     /**
@@ -36,7 +38,7 @@ export default () => {
             body: file,
 
             headers: {
-                Authorization: data.authorizationToken,
+                'Authorization': data.authorizationToken,
                 'X-Bz-File-Name': data.fileName,
                 'Content-Type': file.type ,
                 'Content-Length' : file.size + 40,
@@ -45,16 +47,31 @@ export default () => {
         })
 
         return {
-            fileName: data.fileName,
-            fileFullPath: data.fileFullPath,
+            fileId: response.fileId,
+            fileName: response.fileName,
+            fileUrl: data.fileUrl,
+            
             message:  "File uploaded successfully"
         }
+    }
+
+
+    /**
+     * 
+     * remove File from backblaze
+     */
+    const deleteFile = async (data)=>{
+        return await $fetch('/api/backblaze/deleteFile', {
+            method: 'POST',
+            body: data,
+        });
     }
 
 
     return {
         getUploadUrl,
         uploadFile,
+        deleteFile 
     }
 
 }

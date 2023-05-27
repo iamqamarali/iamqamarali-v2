@@ -1,4 +1,5 @@
 <script setup>
+
 const props = defineProps({
     images: {
         type: Array,
@@ -9,44 +10,66 @@ const props = defineProps({
         default: ''
     }
 })
-const emit = defineEmits(['fileUploaded', 'fileRemoved'])
+const emit = defineEmits(['fileUploaded', 'fileDeleted'])
 
 
-const allImages = ref(props.images)
+const { uploadFile, deleteFile } = useBackBlaze();
+const allImages = ref(props.images ? props.images : [])
+
 
 /**
  * Upload Images
  */
 const uploadImage = async (image) => {
     
-    const { uploadFile } = useBackBlaze();
-
     const fileExtension = image.name.split('.').pop()
 
     const fname = `${Date.now()}_${Math.random()*10}.${fileExtension}`
     const fileFullName = `${props.uploadUrlPrefix}_${fname}`;
+    
+    uploadFile(image, fileFullName)
+    .then(imageData => {
+        const imageObj = {
+            id: imageData.fileId,
+            name: imageData.fileName,
+            url: imageData.fileUrl
+        }
+        
+        if (imageData.fileUrl) {
+            allImages.value.push(imageObj)
+        }
+        emit('fileUploaded', imageObj)
 
-    const { fileFullPath, fileName, message } = await uploadFile(image, fileFullName)
+    }).catch(err = console.error(err.response))
 
-    if (fileFullPath) {
-        allImages.value.push(fileFullPath)
-    }
-    emit('fileUploaded', {
-        fileFullPath,
-        fileName,
-    })
+}
+
+/**
+ * Remove Image
+ */
+const removeImage = async function(image, index){
+    emit('fileDeleted', image)
+    deleteFile({
+        fileId: image.id,
+        fileName: image.name
+    }).then(() => {
+        allImages.value.splice(index, 1)
+    }).catch(e => console.error(e.response))
 }
 
 
 // when image input value is changed
-const onImageChange = () => {
-    const files = event.target.files || event.dataTransfer.files;
+const onImageChange = (e) => {
+    const files = e.target.files || e.dataTransfer.files;
     if (!files.length)
         return;
 
-    Array.from(files).forEach(file => {
-        uploadImage(file);
+    Array.from(files).forEach((file, index) => {
+        setTimeout(() => {
+            uploadImage(file)
+        }, 200 * index);
     })
+    e.target.value = "";
 }
 
 
@@ -58,10 +81,10 @@ const onImageChange = () => {
 
         <div class="images-container" v-if="allImages.length">
             <div class="images-manager-image" v-for="(image, index) in allImages" :key="index">
-                <img :src="image" alt="">
+                <img :src="image.url" alt="">
 
-                <button class="close-button">&times;</button>
-                <input type="text" class="image-url-input" :value="image">
+                <button class="close-button" @click="removeImage(image, index)">&times;</button>
+                <input type="text" class="image-url-input" :value="image.url">
             </div>
         </div>
         

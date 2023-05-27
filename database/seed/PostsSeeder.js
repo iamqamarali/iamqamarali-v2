@@ -1,9 +1,9 @@
 import { faker } from '@faker-js/faker';
 import Post from '../../server/models/Post.js'
 import User from '../../server/models/User.js'
+import Project from '../../server/models/Project.js';
 
 const seedPosts = async ( count) => {
-
     Post.truncate();
 
     let user = await User.first();

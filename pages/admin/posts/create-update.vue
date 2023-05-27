@@ -1,5 +1,6 @@
 <script setup>
 import B2 from 'backblaze-b2'
+import Post from '~/server/models/Post';
 
 // define page meta data
 definePageMeta({
@@ -9,45 +10,48 @@ definePageMeta({
 
 const route = useRoute();
 const post = useState(() => { return {} })
-// fetch post data if post id is provided
 
-if(route.query.post){
-    const { data } = await useFetch(`/api/admin/posts/`+ route.query.post)
-    if(!data.value){
-        throw createError({ statusCode: 404, statusMessage: "Post not found" });
-    }
-    post.value = data.value
+// fetch INITIAL post data if post id is provided
+const { data } = await useFetch(()=>`/api/admin/posts/`+ route.query.post)
+if(!data.value && route.query.post){
+    throw createError({ statusCode: 404, statusMessage: "Post not found" });
 }
+post.value = data.value ? data.value : {};
 
 let form = reactive({
     title: post.value.title || '',
     description: post.value.description || '' ,
     body: post.value.body || '',
-    featured: (post.value.featured ? true : false),
     slug : post.value.slug || '',
     main_image: post.value.main_image || '',
+    featured: (post.value.featured ? true : false),
+    is_project: (post.value.is_project ? true : false),
 });
 
+// update slug when title changes
 watchEffect(()=>{
     form.slug = toSlug(form.title)
 })
 
 
-const {getPost, createPost, updatePost, publishPost} = usePosts();
-
+/**
+ * 
+ * Post API Functions
+ */
+const {getPost, createPost, updatePost} = usePosts();
 
 const publish = async () => {
     try{
-        const data = await updatePost(post.value.id, form)
-        console.log(data);
+        const data = await updatePost(post.value.id, {
+            ...form,
+            published: true
+        })
         post.value = {
             ...post.value,
             ...data.post
         };
-        await publishPost(post.value.id)
-        post.value.published = true;
-    }catch(err) {  console.error(err.response) }
 
+    }catch(err) {  console.error(err.response) }
 }
 
 
@@ -65,7 +69,6 @@ const createOrUpdatePost = async () => {
             const router = useRouter();
             router.push({ query: { post: post.value.id } })
 
-            console.log(post.value)
             return 
         }
         // update post
@@ -75,38 +78,40 @@ const createOrUpdatePost = async () => {
             ...data.post
         };
         console.log(post.value)
+        alert(data.message)
 
     }catch(err) {  console.error(err.response) }
 
 }
 
-const onFileUploaded = () => {
-
+/**
+ * when a file is uploaded
+ */
+const onImageUploaded = async ({ id, url, name }) => {
+    updatePost(post.value.id, {
+        add_image: true,
+        image: { id, url, name }
+    }).then(data => {
+        post.value.images = data.post.images
+    }).catch(err => console.error(e.response))
 }
 
+/**
+ * when a file is deleted 
+ */
+const onImageDeleted = async (image) => {
+    updatePost(post.value.id, {
+        remove_image: true,
+        image: image
+    }).then(data => {
+        console.log(data);
+        post.value.images = data.post.images
+    }).catch(err => console.error(e.response))
+}
 
-// when they leave page
 onUnmounted(()=>{
     post.value = {}
 })
-onMounted(async ()=>{
-    if(route.query.post && !post.value.id){
-        const data = await getPost(route.query.post)
-        if(!data){
-            throw createError({ statusCode: 404, statusMessage: "Post not found" });
-        }
-        post.value = data
-        form = reactive({
-            title: post.value.title || '',
-            description: post.value.description || '' ,
-            body: post.value.body || '',
-            featured: (post.value.featured ? true : false),
-            slug : post.value.slug || '',
-            main_image: post.value.main_image || '',
-        });
-    }
-})
-
 
 
 </script>
@@ -117,7 +122,9 @@ onMounted(async ()=>{
         <section class="section">
             <div class="container">
                 
-                <h1 class="section-title">Create Post</h1>
+                <h1 class="section-title">
+                    {{ post.id ? 'Edit Post' : 'Create Post' }}
+                </h1>
 
                 <div class="form-container">
                     <div class="left">
@@ -139,8 +146,10 @@ onMounted(async ()=>{
 
                         <!--  images -->
                         <ImagesManager v-if="post.id"
+                            :images="JSON.parse(post.images)"
                             :uploadUrlPrefix="`${post.id}/${post.slug}`"
-                            :fileUploaded="onFileUploaded"
+                            @fileUploaded="onImageUploaded"
+                            @fileDeleted="onImageDeleted"
                             >
                             <template #title>
                                 <label>Post Images</label>
@@ -151,21 +160,37 @@ onMounted(async ()=>{
                     </div>
                     <div class="right">
                         <div class="input-group">
-                            <label for="">Post Main Image</label>
-                            <input type="text" v-model="form.main_image" placeholder="Main image url" />
+                            <NuxtLink class="button button-sm" :to="'/article/' + post.slug" target="_blank" >View Post</NuxtLink>
                         </div>
-                        <br>
+                        <br/>
+                        
                         <div class="input-group ">
-                            <label for="">Featured</label>
+                            <label for="">Featured Post</label>
                             <div class="toggle-switch float-right">
                                 <input type="checkbox" v-model="form.featured" id="featured-1">
                                 <label for="featured-1"></label>
                             </div>
                             <div class="clear-both"></div>
                         </div>
+
+                        <div class="input-group ">
+                            <label for="">Is Project </label>
+                            <div class="toggle-switch float-right">
+                                <input type="checkbox" v-model="form.is_project" id="is_project">
+                                <label for="is_project"></label>
+                            </div>
+                            <div class="clear-both"></div>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="">Post Main Image</label>
+                            <input type="text" v-model="form.main_image" placeholder="Main image url" />
+                        </div>
+                        <br>
+
                         <div class=" input-group">
-                            <button class="button-filled button-sm " @click.prevent="createOrUpdatePost">{{ post.id ? 'Update' : "Create" }}</button>
-                            <button class=" button-sm float-right" :disabled="!post.id || post.published" @click="publish">Publish</button>
+                            <button class="button button-filled button-sm " @click.prevent="createOrUpdatePost">{{ post.id ? 'Update' : "Create" }}</button>
+                            <button class="button button-sm float-right" :disabled="!post.id || post.published" @click="publish">Publish</button>
                         </div>
 
                     </div>
