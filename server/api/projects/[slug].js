@@ -5,5 +5,5 @@ export default defineEventHandler(async (event) => {
     const project = await Project.find({
         slug : slug
     })
-    return  project.except([])
+    return projects ? project.except([]) : null
 })

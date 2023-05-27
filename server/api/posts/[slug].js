@@ -6,5 +6,5 @@ export default defineEventHandler(async (event) => {
         slug : slug,
         is_project: false
     })
-    return  post.except([])
+    return post ? post.except([]) : null
 })
