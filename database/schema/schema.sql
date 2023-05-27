@@ -39,6 +39,12 @@ CREATE TABLE IF NOT exists posts(
     Index (published) 
 );
 
+
+CREATE VIEW projects as 
+select * from posts where is_project = true;
+
+
+
 CREATE TABLE IF NOT exists comments(
     id integer primary key auto_increment,
     body text null,
@@ -51,5 +57,3 @@ CREATE TABLE IF NOT exists comments(
     INDEX (post_id)
 );
 
-
-CREATE VIEW IF NOT EXISTS projects as select * from posts where is_project = true;
