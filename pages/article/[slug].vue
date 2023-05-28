@@ -2,7 +2,7 @@
 const route = useRoute()
 const { slug } = route.params
 
-const { data : post, error, pending, refresh } = await useFetch('/api/posts/' + slug)
+const { data : post, error, pending, refresh } = await useFetch(`/api/posts/${slug}`)
 
 
 if(!post.value){
@@ -11,6 +11,28 @@ if(!post.value){
         message: 'Post not found'
     });
 }
+
+useSeoMeta({
+
+    title: post.value.title,
+    description: post.value.description,
+    robots: 'index, follow',
+
+    ogTitle: post.value.title,
+    ogDescription: post.value.description,
+    ogUrl: useAppConfig().APP_BASE_URL + route.path,
+    ogImage: post.value.main_image,
+    ogType: 'article',
+    twitterCard: 'summary_large_image',
+    twitterImage: post.value.main_image,
+
+    'article:published_time': post.value.created_at,
+})
+useHead({
+    link: [
+        { rel: 'canonical', href: useAppConfig().APP_BASE_URL + route.path }
+    ]
+})
 
 
 </script>
@@ -39,9 +61,10 @@ if(!post.value){
             <article class="article-body" v-html="post.body"></article>
 
 
-            <div >
+            <!--  Create this section published by my picture and then some info about tme -->
+            <!-- <div >
                 <h4>Published By</h4>
-            </div>
+            </div> -->
 
         </div>
     </main>

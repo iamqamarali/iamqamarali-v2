@@ -12,6 +12,28 @@ if(!project.value){
     });
 }
 
+useSeoMeta({
+    title: project.value.title,
+    description: project.value.description,
+    robots: 'index, follow',
+
+    ogTitle: project.value.title,
+    ogDescription: project.value.description,
+    ogUrl: useAppConfig().APP_BASE_URL + route.path,
+    ogImage: project.value.main_image,
+    ogType: 'article',
+    twitterCard: 'summary_large_image',
+    twitterImage: project.value.main_image,
+
+    'article:published_time': project.value.created_at,
+})
+useHead({
+    link: [
+        { rel: 'canonical', href: useAppConfig().APP_BASE_URL + route.path }
+    ]
+})
+
+
 
 </script>
 

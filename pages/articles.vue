@@ -5,7 +5,8 @@ const route = useRoute();
 const page = useState(() => route.query.page ? parseInt(route.query.page) : 1)
 const {data : articles } = await useFetch(`/api/posts`, {
     params:{
-        page: page
+        page: page,
+        published: true,
     }
 })
 

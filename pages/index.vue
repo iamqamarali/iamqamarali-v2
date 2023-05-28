@@ -1,6 +1,11 @@
 <script setup>
 
-const {data : articles } = await useFetch(() => `/api/posts?limit=8`)
+const {data : articles } = await useFetch(() => `/api/posts`, {
+    params:{
+        limit: 8,
+        published: true,
+    }
+})
 
 
 

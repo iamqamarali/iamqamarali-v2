@@ -22,6 +22,9 @@ const seedPosts = async ( count) => {
                 width: 800,
                 height: 500
             }),
+            published: true,
+            featured: faker.datatype.boolean(),
+            is_project: faker.datatype.boolean(),
             user_id : user.get('id')
         })
         let result = await post.save();

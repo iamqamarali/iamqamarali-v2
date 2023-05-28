@@ -42,6 +42,7 @@ watch(data, ()=>{
                     <thead>
                         <th>ID</th>
                         <th>Featured</th>
+                        <th>Published</th>
                         <th>Title</th>
                         <th>Description</th>
                         <th>Actions</th>
@@ -50,6 +51,7 @@ watch(data, ()=>{
                         <tr v-for="article in articles">
                             <td>{{ article.id }}</td>
                             <td>{{ article.featured ? 'featured' : '' }}</td>
+                            <td>{{ article.published ? 'published' : '' }}</td>
                             <td>{{ article.title }}</td>
                             <td>{{ article.description }}</td>
                             <td>
