@@ -15,7 +15,7 @@ const {data : articles } = await useFetch(() => `/api/posts`, {
 <template>
     <main class="home-page site-content ">
 
-        <section class="articles-section section">
+        <section class="articles-section section pb-5">
             <div class="container">
                 <header class="section-header">
                     <h1 class="section-title">Explore Practical Software Development Articles.</h1>
