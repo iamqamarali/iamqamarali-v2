@@ -26,7 +26,9 @@
         justify-content: space-between;
         align-items: center;
     }
-
+    .nav{
+        gap: 3.5rem;
+    }
     .nav-item{
         padding: 1rem 0;
         color: var(--header-text-color);
@@ -34,9 +36,6 @@
         text-decoration: none;
         text-transform: uppercase;   
         cursor: pointer;
-        &:not(:last-child){
-            margin-right: 2.5rem;
-        }
     }
     .nav-item:hover{
         color: var(--header-text-hover-color);
@@ -82,9 +81,9 @@
         .nav-item{
             font-size: .85rem;
         }
-        .nav-item:not(:last-child){
-            margin-right: 1.5rem;
-        }
+        .nav{
+            gap: 1.5rem;
+        }    
         .svg-icon{
             width: 2.5rem;
             height: 2.5rem;

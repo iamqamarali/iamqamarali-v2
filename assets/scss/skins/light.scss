@@ -1,12 +1,14 @@
 .skin-light{
     --primary-light: #89c989;
-    --primary : #45b545;
+    --primary : #39aa39;
     --primary-dark: #259925;
     --primary-text-color: #fff;
+    --primary-gray-background-color: #eeeeee;
 
     --logo-color: #000;
 
     --gray-text-color: #86868e;
+    --dark-gray-text-color: #595959;
     --body-bg-color: #fff;
     --body-text-color: #111;
 
@@ -25,7 +27,7 @@
 
 
     // footer
-    --footer-bg-color: #f1f1f1;
+    --footer-bg-color: var(--primary-gray-background-color);
 
     // article page
     --articleText: #28343a;

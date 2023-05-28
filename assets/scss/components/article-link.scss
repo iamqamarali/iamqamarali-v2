@@ -6,12 +6,12 @@
     cursor: pointer;
     &:hover{
         color: var(--body-text-color);
-        .article-title{
+        .article-link-title{
             color: var(--anchor-color);
         }
     }
     &:focus{
-        .article-title{
+        .article-link-title{
             color: var(--anchor-color);
             text-decoration: underline;
         }
@@ -35,31 +35,50 @@
     .article-data{
 
     }
-    .article-title{
+    .article-link-title{
         font-size: 1.5rem;
         font-weight: 500;
         margin: 1.2rem 0 .6rem;
     }
-    .article-description{
+    .article-link-description{
         font-size: 1.1rem;
         color: var(--gray-text-color);
         margin-bottom: 1em;
     }
-    .article-metadata{
+    .article-link-metadata{
         font-size: 0.9rem;
         color: var(--gray-text-color);
         font-weight: 700;
     }
 }
 
+@media screen and (max-width: 1070px){
+    .article-link{
+        .article-image-container{
+            height: 250px;
+        }    
+    }
+}
+
 @media screen and (max-width: 735px){
     .article-link{
         margin-bottom: 4.5em;
-
-        .article-title{
-            margin-top: 1.7rem;
+        .article-image-container{
+            height: 320px;
+        }    
+        .article-link-title{
+            margin-top: 1.7rem; 
         }
     
+    }
+
+}
+
+@media screen and (max-width: 540px){
+    .article-link{
+        .article-image-container{
+            height: 220px;
+        }        
     }
 
 }

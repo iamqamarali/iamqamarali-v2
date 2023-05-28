@@ -5,10 +5,12 @@
     --primary : #6ae474;
     --primary-dark: #47c452;
     --primary-text-color: var(--dark-skin-color);
-
+    --primary-gray-background-color: #1a1d22;
     --logo-color: #fff;
 
     --gray-text-color: #86868e;
+    --dark-gray-text-color: #bfbfbf;
+
     --body-bg-color: var(--dark-skin-color);
     --body-text-color: #f6f6f6;
 
@@ -27,7 +29,7 @@
     --header-text-hover-color: var(--primary);
 
     // footer
-    --footer-bg-color: #1a1d22;
+    --footer-bg-color: var(--primary-gray-background-color);
 
     // article page
     --articleText: #f0f0f0;

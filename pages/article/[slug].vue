@@ -38,6 +38,11 @@ if(!post.value){
 
             <article class="article-body" v-html="post.body"></article>
 
+
+            <div >
+                <h4>Published By</h4>
+            </div>
+
         </div>
     </main>
 </template>
