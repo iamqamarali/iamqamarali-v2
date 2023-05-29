@@ -52,26 +52,21 @@ const {data : articles } = await useFetch(() => `/api/posts`, {
             </div>
         </section>
 
-        <section class="  skills-section">
-            <div class=" section skills-section-inner ">
-                <div class="container">
-                    <header class="section-header">
-                        <h2 class="section-title">
-                            <span class="section-count">02.</span> Skills
-                        </h2>
-                        <p class="section-subtitle">
-                            There are countless technologies and frameworks that one can use as a Web Developer 
-                            and i love learning and would love to learn them all, but if you want to master something
-                            you cannot jump from one technology to another the next day. Mastering a technology requires time and practice 
-                            and below are the technologies that i can proudly say <strong>i've mastered in my 7 year career (for future more is comming)</strong>. 
-                            To simplify (Vue.js, Nuxt.js, Laravel, Node).
-                        </p>
-                    </header>
-                </div>
-            </div>
-            <div class="container-big">
+        <section class="section  skills-section">
+            <div class="container-small">
+                <header class="section-header">
+                    <h2 class="section-title">
+                        <span class="section-count">02.</span> Skills
+                    </h2>
+                    <p class="section-subtitle">
+                        There are countless technologies and frameworks that one can use as a Web Developer 
+                        and i love learning and would love to learn them all, but if you want to master something
+                        you cannot jump from one technology to another the next day. Mastering a technology requires time and practice 
+                        and below are the technologies that i can proudly say <strong>i've mastered in my 7 year career (for future more is comming)</strong>. 
+                        To simplify (Vue.js, Nuxt.js, Laravel, Node).
+                    </p>
+                </header>
                 <Skills></Skills>
-
             </div>
         </section>
 

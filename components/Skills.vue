@@ -7,54 +7,45 @@
         <section class="main-skill">
             <h5 class="main-skill-title">Font-End Development</h5>
             <p class="main-skill-description">I like to code things from scratch, and enjoy bringing ideas to life in the browser.</p>
-            <p class="sub-skills-heading">
-                Languages I speak:
-            </p>
-            <div class="sub-skills-list">
-                <span>JavaScript (ES6)</span>
-                <span>Vue.js</span>
-                <span>CSS3</span>
-                <span>Nuxt 3</span>
-                <span>Bootstrap</span>
-                <span>Bulma</span>
-                <span>Webpack</span>
-            </div>
+            <ul class="sub-skills-list">
+                <li>JavaScript (ES6)</li>
+                <li>Vue.js</li>
+                <li>CSS3</li>
+                <li>Nuxt 3</li>
+                <li>Bootstrap</li>
+                <li>Bulma</li>
+                <li>Webpack</li>
+            </ul>
         </section>
         <section class="main-skill">
             <h5 class="main-skill-title">Back-End Development</h5>
             <p class="main-skill-description">I like to code things from scratch, and enjoy bringing ideas to life in the browser.</p>
-            <p class="sub-skills-heading">
-                Languages I speak:
-            </p>
-            <div class="sub-skills-list">
-                <span>JavaScript (ES6)</span>
-                <span>Vue.js</span>
-                <span>CSS3</span>
-                <span>Nuxt 3</span>
-                <span>Bootstrap</span>
-                <span>Bulma</span>
-                <span>Webpack</span>
-                <span>Node.js</span>
-                <span>ExpressJS</span>
-                <span>Laravel</span>
-                <span>PHP</span>
-            </div>
+            <ul class="sub-skills-list">
+                <li>JavaScript (ES6)</li>
+                <li>Vue.js</li>
+                <li>CSS3</li>
+                <li>Nuxt 3</li>
+                <li>Bootstrap</li>
+                <li>Bulma</li>
+                <li>Webpack</li>
+                <li>Node.js</li>
+                <li>ExpressJS</li>
+                <li>Laravel</li>
+                <li>PHP</li>
+            </ul>
         </section>
         <section class="main-skill">
             <h5 class="main-skill-title">Deployment & Maintainance </h5>
             <p class="main-skill-description">I like to code things from scratch, and enjoy bringing ideas to life in the browser.</p>
-            <p class="sub-skills-heading">
-                Tools I use for deployment:
-            </p>            
-            <div class="sub-skills-list">
-                <span>JavaScript (ES6)</span>
-                <span>Vue.js</span>
-                <span>CSS3</span>
-                <span>Nuxt 3</span>
-                <span>Bootstrap</span>
-                <span>Bulma</span>
-                <span>Webpack</span>
-            </div>
+            <ul class="sub-skills-list">
+                <li>JavaScript (ES6)</li>
+                <li>Vue.js</li>
+                <li>CSS3</li>
+                <li>Nuxt 3</li>
+                <li>Bootstrap</li>
+                <li>Bulma</li>
+                <li>Webpack</li>
+            </ul>
         </section>
     </div>
 </template>

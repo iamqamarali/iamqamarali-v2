@@ -11,52 +11,46 @@
 }
 
 .skills{
-    display: flex;
+    display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    text-align: center;
     gap: 1rem;
     .main-skill{
-        flex: 1;
-        background-color: white;
-        padding: 3rem 2rem;
-        box-shadow: 0 3px 13px -3px rgba(0,0,0,.1);
-        border-radius: 15px;
         &:not(:last-of-type){ 
+            
         }
     }
     .main-skill-title{
         display: inline-block;
         padding: 0 .5rem;
-        font-size: 1.3rem;
-        margin-bottom: 1.5rem;
         color: inherit;
         border-radius: 5px;
+        margin-bottom: 1.5rem;
     }
     .main-skill-description{
         font-size: 1.1rem;
-        margin-bottom: 2.5rem;
+        margin-bottom: 1.5rem;
     }
 
-    .sub-skills-heading{
-        color: var(--primary);
-        font-weight: bold;
-    }
     .sub-skills-list{
-        span{
-            display: block;
-            text-align: center;
-            font-size: 1rem ;
-            line-height: 2;
-
-        }
+        
     }
 
 }
 
 
-@media screen and (max-width: 850px){
+@media screen and (max-width: 1024px){
     .skills{
-        flex-direction: column;
+        grid-template-columns: 1fr 1fr;
+        gap: 2.5rem;
+        .main-skill{
+        }        
+    }        
+}
+
+@media screen and (max-width: 735px){
+    .skills{
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
         .main-skill{
         }        
     }        
