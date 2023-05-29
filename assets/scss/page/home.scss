@@ -44,16 +44,16 @@
     .skills-section{
         .skills-section-inner{
             padding: 5rem 0rem 11rem;
-            background-color: #58a602;
-            color: var(--primary-text-color);    
+            background-color: var(--primary-darker);
+            color: white;    
         }
         .section-title{
             .section-count{
-                color: var(--primary-text-color);
+                color: var(--primary-light)
             }
         }
         .skills{
-            margin-top: -150px;
+            //margin-top: -150px;
         }
     }
 
@@ -96,6 +96,12 @@
         // projects
         .project{
             margin-bottom: 2rem;
+        }
+
+        .skills-section{
+            .skills-section-inner{
+                padding: 5rem 0rem 8rem;
+            }
         }
 
 

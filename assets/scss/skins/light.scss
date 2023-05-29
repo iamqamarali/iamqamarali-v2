@@ -1,23 +1,12 @@
 .skin-light{
-    --primary-light: #89c989;
-    --primary : #58a602; 
-    //#39aa39;
-    --primary-dark: #1e8a1e;
-    --primary-darker: #118511;
-    --primary-text-color: #fff;
-    --primary-gray-background-color: #efefef;
 
     --logo-color: #000;
-    --gray-border-color: #b2b2b2;
+    --gray-background-color: #ddd;
+    --light-gray-background-color: #eee;
 
-
-    --gray-text-color: #86868e;
-    --dark-gray-text-color: #595959;
     --body-bg-color: #fff;
     --body-text-color: #111;
 
-    --anchor-color: var(--primary);
-    --anchor-color-hover: var(--primary-dark);
 
     // selection
     --selection-bg-color: #bfeebf;    
@@ -36,7 +25,7 @@
 
 
     // footer
-    --footer-bg-color: var(--primary-gray-background-color);
+    --footer-bg-color: var(--gray-background-color);
 
     // article page
     --articleText: #28343a;

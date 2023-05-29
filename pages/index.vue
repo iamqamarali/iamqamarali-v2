@@ -54,7 +54,7 @@
 
         <section class="  skills-section">
             <div class=" section skills-section-inner ">
-                <div class="container-small">
+                <div class="container">
                     <header class="section-header">
                         <h2 class="section-title">
                             <span class="section-count">02.</span> Skills
@@ -67,10 +67,12 @@
                             To simplify (Vue.js, Nuxt.js, Laravel, Node).
                         </p>
                     </header>
+
+                    <Skills></Skills>
+
                 </div>
             </div>
             <div class="container-big">
-                <Skills></Skills>
             </div>
         </section>
 

@@ -1,5 +1,16 @@
 <template>
     <footer class="site-footer" >
+        
+        <section class="footer-contact-section">
+            <div class="container">
+                <div class="footer-contact-inner">
+                    <h3 class="start-a-project">Start a project</h3>
+                    <p>Interested in working together? Feel free to email me at <a href="mailto:get@qamarali.space" class="email font-weight-semi-bold ">Get@qamarali.space</a> </p>
+                    <button class="button button-lg  button-light-primary cto-button ">Let's do this</button>
+                </div>
+            </div>
+        </section>
+
         <div class="container">
             <div class="footer-inner-wrapper">
                 <div class="findme-elsewhere">

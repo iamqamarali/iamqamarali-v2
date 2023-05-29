@@ -58,6 +58,18 @@
 * Button COLORS
 *
 */
+
+.button.button-light-primary{
+    border-color: var(--primary-light);
+    color: var(--primary-light);
+    &:hover,
+    &:focus,
+    &:active{
+        background-color: var(--primary-light);
+        border-color: var(--primary-light);
+        color: var(--primary-light-text-color);
+    }
+}
 .button-opposite-skin{
     background-color: transparent;
     border-color: var(--body-text-color);
@@ -91,6 +103,10 @@
     height: 35px;
     padding: 0 1rem;
     font-size: .9rem;
+}
+.button-lg{
+    height: 60px;
+    padding: 0 2.5rem;
 }
 
 .close-button{
