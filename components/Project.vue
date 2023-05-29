@@ -4,9 +4,9 @@
 
 <template>
     <div class="project" >
-        <div class="project-image-container">
-            <img class="" src="https://webneel.com/daily/sites/default/files/images/daily/02-2014/24-beautiful-web-design.jpg" alt="">
-        </div>
+        <a class="project-image-container">
+            <img class="" src="https://f005.backblazeb2.com/file/iamqamarali-blog/201/marvels-comics_1685361055625_2.215492926565288.png" alt="">
+        </a>
 
         <div class="project-content">
             <div class="project-featured">Featured Project</div>
@@ -23,7 +23,7 @@
             </div>
             <div class="project-links">
                 <a href="" class="project-link button button-sm">View Project</a>
-                <a href="" class="project-link github">
+                <!-- <a href="" class="project-link github">
                     <svg 
                         class="project-link-icon svg-icon"
                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="100px" height="100px">
@@ -46,7 +46,7 @@
                                 x2="9" y2="15" />
                         </g>
                     </svg>
-                </a>
+                </a> -->
 
             </div>
 

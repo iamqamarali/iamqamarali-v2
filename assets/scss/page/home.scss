@@ -31,14 +31,16 @@
     }
 
 
+    // proejcts
     .things-ive-built-section{
-        // background-color: var(--dark-skin-color);
-        // color: var(--dark-skin-text-color);
-        // padding: 6rem;
-        // h2,h3, h4{
-        //     color: var(--dark-skin-text-color);
-        // }
     }
+    .project{
+        margin-bottom: 10rem;
+    }
+
+
+
+    // skills
     .skills-section{
         .skills-section-inner{
             padding: 5rem 0rem 11rem;
@@ -90,6 +92,12 @@
         }
         .home-hero-content{
         }
+
+        // projects
+        .project{
+            margin-bottom: 2rem;
+        }
+
 
     }
    

@@ -1,32 +1,41 @@
 .project{
-    --description-background-color: #1f2e3b;
-    --image-overlay-color: #263236;
+    --project-image-overlay-color: var(--primary);
 
-    margin-bottom: 4rem;
-    overflow: hidden;
     color: var(--body-text-color);
+    transition: var(--skin-change-transition);
     text-decoration: none;
     display: flex;
     width: 100%;
     position: relative;
     &:hover{
         color: var(--body-text-color);
+        .project-image-container{
+            transform: translateY(-50%) scale(1.05);
+            &:after{
+                opacity: 0;
+            }
+        }
     }
     .project-image-container{
         position: absolute;
         right: 0;
         top: 50%;
-        transform: translateY(-50%);
+        transform: translateY(-50%) scale(1);
+        box-shadow: 0 1px 3px transparent,0 1px 2px rgba(0,0,0,.1);
+        cursor: pointer;
+        transition: all .2s ease-in-out;
         width: auto;
         min-width: 470px;
         max-width: 60%;
         max-height: 100%;
         height: auto;
-        image{
+        border-radius: 6px;
+        overflow: hidden;
+        img{
             height: 100%;
             width: 100%;
             object-fit: cover;
-            object-position: center;    
+            object-position: top center;
         }
         &:after{
             content: "";
@@ -35,8 +44,9 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: var(--image-overlay-color);
-            opacity: .5;
+            background-color: var(--project-image-overlay-color);
+            opacity: .1;
+            transition: all .2s linear ;
         }
     }
     .project-content{
@@ -61,8 +71,9 @@
         margin: 0;
     }
     .project-description{
-        background-color: #1f2e3b;
-        color: var(--primary-text-color);
+        background-color: var(--primary-gray-background-color);
+        transition: var(--skin-change-transition);
+
         margin: .3rem 0 .2rem;
         padding: 1.5rem ;
         border-radius: 4px;
@@ -74,7 +85,7 @@
         display: flex;
         gap: 1rem;
         span{
-            font-size: 1.1rem;
+            font-size: 1.05rem;
             font-weight: 500;
         }
     }
@@ -114,23 +125,31 @@
 @media screen and (max-width: 780px){
     .project,
     .project.project-right{
+        --project-image-overlay-color: #0a1b09;
+
         display: grid;
         grid-template-columns: 1fr;
         text-align: left;
+        &:hover{
+            .project-image-container{
+                transform: translateY(-50%) scale(1);
+                &:after{
+                    opacity: .9;
+                }
+            }
+        }
         .project-image-container{
+            transform: translateY(-50%) scale(1);
             max-width: initial;
             min-width: auto;
             position: relative;
             grid-column: 1 / -1;
             grid-row: 1 / -1;
             img{
-                height: 100%;
-                width: 100%;
-                object-fit: cover;
-                object-position: center;
+                max-height: 380px;
             }
             &:after{
-                opacity: .85;
+                opacity: .9;
             }
         }
         .project-content{
@@ -168,6 +187,20 @@
 
     }
 }
+
+@media screen and (max-width: 535px){
+    .project,
+    .project.project-right{
+        .project-image-container{
+            img{
+                max-height: 350px;
+            }
+        }
+        .project-content{
+        }
+    }
+}
+
 
 // when skin is dark
 .skin-dark{

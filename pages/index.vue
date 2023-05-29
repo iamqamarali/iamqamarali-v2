@@ -47,14 +47,13 @@
                     <Project></Project>
                     <Project class="project-right"></Project>
                     <Project></Project>
-                    <Project class="project-right"></Project>
 
                 </div>
             </div>
         </section>
 
-        <section class=" skills-section">
-            <div class="skills-section-inner section">
+        <section class="  skills-section">
+            <div class=" section skills-section-inner ">
                 <div class="container-small">
                     <header class="section-header">
                         <h2 class="section-title">
