@@ -31,9 +31,6 @@
         margin-bottom: 1.5rem;
     }
 
-    .sub-skills-list{
-        
-    }
 
 }
 
@@ -52,6 +49,11 @@
         grid-template-columns: 1fr;
         gap: 1.5rem;
         .main-skill{
+        
         }        
+        .sub-skills-list{
+            margin-left: .5rem;
+        }
+
     }        
 }

@@ -40,7 +40,7 @@ const {data : articles } = await useFetch(() => `/api/posts`, {
             <div class="container-small">
                 <header class="section-header">
                     <h2 class="section-title">
-                        <span class="section-count">01.</span> Things I've Built
+                        <span class="section-count">01.</span> Things I've Built.
                     </h2>
                 </header>
                 <div class="section-content ">
@@ -52,11 +52,30 @@ const {data : articles } = await useFetch(() => `/api/posts`, {
             </div>
         </section>
 
+        <section class="articles-section section" v-if="articles.length">
+            <div class="container">
+                <header class="section-header section-header-small">
+                    <h2 class="section-title">
+                        <span class="section-count">03.</span> 
+                        Blog.
+                    </h2>
+                </header>
+                <div class="two-columns-grid articles-grid">
+                    <Article-link
+                        v-for="article in articles" 
+                        :key="article.id"
+                        :article="article" 
+                    />
+                </div>
+            </div>
+        </section>
+
+
         <section class="section  skills-section">
             <div class="container-small">
                 <header class="section-header">
                     <h2 class="section-title">
-                        <span class="section-count">02.</span> Skills
+                        <span class="section-count">02.</span> Skills.
                     </h2>
                     <p class="section-subtitle">
                         There are countless technologies and frameworks that one can use as a Web Developer 
@@ -67,24 +86,6 @@ const {data : articles } = await useFetch(() => `/api/posts`, {
                     </p>
                 </header>
                 <Skills></Skills>
-            </div>
-        </section>
-
-        <section class="articles-section section" v-if="articles.length">
-            <div class="container">
-                <header class="section-header section-header-small">
-                    <h2 class="section-title">
-                        <span class="section-count">03.</span> 
-                        Explore Practical Software Development Articles.
-                    </h2>
-                </header>
-                <div class="two-columns-grid articles-grid">
-                    <Article-link
-                        v-for="article in articles" 
-                        :key="article.id"
-                        :article="article" 
-                    />
-                </div>
             </div>
         </section>
 
