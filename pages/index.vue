@@ -73,19 +73,21 @@ const {data : articles } = await useFetch(() => `/api/posts`, {
 
         <section class="section  skills-section">
             <div class="container-small">
-                <header class="section-header">
+                <header class="">
                     <h2 class="section-title title-dashed">
                         <span class="section-count">03.</span> Skills
                     </h2>
-                    <p class="section-subtitle">
+                </header>
+                <div class="section-content">
+                    <p>
                         There are countless technologies and frameworks that one can use as a Web Developer 
                         and i love learning and would love to learn them all, but if you want to master something
                         you cannot jump from one technology to another the next day. Mastering a technology requires time and practice 
                         and below are the technologies that i can proudly say <strong>i've mastered in my 7 year career (for future more is comming)</strong>. 
                         To simplify (Vue.js, Nuxt.js, Laravel, Node).
                     </p>
-                </header>
-                <Skills></Skills>
+                    <Skills></Skills>
+                </div>
             </div>
         </section>
 

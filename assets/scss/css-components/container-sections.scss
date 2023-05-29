@@ -66,6 +66,7 @@
     display: inline-flex;
     align-items: center;
     gap: 1.5rem;
+    
     &:after{
         content: '';
         display: inline-block;
@@ -83,7 +84,7 @@
         padding: 3rem 0 ;
     }    
     .section-header{
-        margin-bottom: 3rem;
+        margin-bottom: 2.5rem;
     }
     .section-title{
         font-size: 1.8rem;
