@@ -27,7 +27,7 @@
                 <li>Nuxt 3</li>
                 <li>Bootstrap</li>
                 <li>Bulma</li>
-                <li>Webpack</li>
+                <li>Webpack</li> 
                 <li>Node.js</li>
                 <li>ExpressJS</li>
                 <li>Laravel</li>

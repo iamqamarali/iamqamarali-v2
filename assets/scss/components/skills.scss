@@ -21,10 +21,11 @@
     }
     .main-skill-title{
         display: inline-block;
-        padding: 0 .5rem;
         color: inherit;
         border-radius: 5px;
         margin-bottom: 1.5rem;
+        font-size: 1.3rem;
+        font-weight: 500;
     }
     .main-skill-description{
         font-size: 1.1rem;
@@ -47,7 +48,7 @@
 @media screen and (max-width: 735px){
     .skills{
         grid-template-columns: 1fr;
-        gap: 1.5rem;
+        gap: 0rem;
         .main-skill{
         
         }        

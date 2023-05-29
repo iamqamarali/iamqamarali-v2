@@ -39,8 +39,8 @@ const {data : articles } = await useFetch(() => `/api/posts`, {
         <section class="section things-ive-built-section">
             <div class="container-small">
                 <header class="section-header">
-                    <h2 class="section-title">
-                        <span class="section-count">01.</span> Things I've Built.
+                    <h2 class="section-title title-dashed">
+                        <span class="section-count">01.</span> Things I've Built
                     </h2>
                 </header>
                 <div class="section-content ">
@@ -55,9 +55,9 @@ const {data : articles } = await useFetch(() => `/api/posts`, {
         <section class="articles-section section" v-if="articles.length">
             <div class="container">
                 <header class="section-header section-header-small">
-                    <h2 class="section-title">
-                        <span class="section-count">03.</span> 
-                        Blog.
+                    <h2 class="section-title title-dashed">
+                        <span class="section-count">02.</span> 
+                        Blog
                     </h2>
                 </header>
                 <div class="two-columns-grid articles-grid">
@@ -74,8 +74,8 @@ const {data : articles } = await useFetch(() => `/api/posts`, {
         <section class="section  skills-section">
             <div class="container-small">
                 <header class="section-header">
-                    <h2 class="section-title">
-                        <span class="section-count">02.</span> Skills.
+                    <h2 class="section-title title-dashed">
+                        <span class="section-count">03.</span> Skills
                     </h2>
                     <p class="section-subtitle">
                         There are countless technologies and frameworks that one can use as a Web Developer 
