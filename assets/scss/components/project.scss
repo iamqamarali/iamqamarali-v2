@@ -111,7 +111,6 @@
     }
 }
 
-
 @media screen and (max-width: 780px){
     .project,
     .project.project-right{
@@ -167,5 +166,23 @@
             }
         }
 
+    }
+}
+
+// when skin is dark
+.skin-dark{
+    .project{
+        .project-links{
+            .svg-icon{
+                path{
+                    fill: white;
+                }
+            }
+            .website-icon{
+                path, polyline, line{
+                    stroke: white!important;
+                }
+            }
+        }
     }
 }

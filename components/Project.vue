@@ -10,7 +10,7 @@
 
         <div class="project-content">
             <div class="project-featured">Featured Project</div>
-            <h4 class="project-name">Caa Financial</h4>
+            <h4 class="project-name">Google Keeps</h4>
             <p class="project-description">
                 A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and more. Available on Visual Studio Marketplace, Package Control, Atom Package Manager, and npm.
             </p>

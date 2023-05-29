@@ -24,8 +24,8 @@
     &:focus:not(:disabled),
     &:active:not(:disabled){
         outline: none;
-        border: 2px solid var(--btn-primary-color-hover);
-        background-color: var(--btn-primary-color-hover);
+        border: 2px solid var(--btn-primary-color);
+        background-color: var(--btn-primary-color);
         color: var(--btn-primary-text-color);
     }
 

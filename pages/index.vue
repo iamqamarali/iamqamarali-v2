@@ -29,13 +29,12 @@
                             I'm A Full Stack Web Developer
                         </h1>
                         <p class="home-hero-subtitle">
-                            I’m a software engineer specializing in building (and occasionally designing) exceptional digital experiences. Currently, I’m focused on building accessible, human-centered products at Caafinancial.
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis ratione quasi ut error quas. Vero, nobis odit. Reiciendis ea delectus eius vitae, consequatur dignissimos sunt commodi doloremque, officia ad incidunt.
                         </p>
                     </header>
                 </div>
             </div>
         </section>
-
 
         <section class="section things-ive-built-section">
             <div class="container-small">
@@ -54,7 +53,6 @@
             </div>
         </section>
 
-
         <section class=" skills-section">
             <div class="skills-section-inner section">
                 <div class="container-small">
@@ -63,8 +61,11 @@
                             <span class="section-count">02.</span> Skills
                         </h2>
                         <p class="section-subtitle">
-                            For the past 7 years i've learned a lot of things and i'm still learning new things everyday.
-                            I use modern technologies to create beautiful and responsive websites, web apps and mobile apps.
+                            There are countless technologies and frameworks that one can use as a Web Developer 
+                            and i love learning and would love to learn them all, but if you want to master something
+                            you cannot jump from one technology to another the next day. Mastering a technology requires time and practice 
+                            and below are the technologies that i can proudly say <strong>i've mastered in my 7 year career (for future more is comming)</strong>. 
+                            To simplify (Vue.js, Nuxt.js, Laravel, Node).
                         </p>
                     </header>
                 </div>
@@ -73,6 +74,7 @@
                 <Skills></Skills>
             </div>
         </section>
+
 
     </main>
 </template>

@@ -39,7 +39,7 @@
 
 // SECTION
 .section{
-    padding: 4.5rem 0;
+    padding: 5rem 0;
 }
 .section-header{
     margin-bottom: 4.5rem ;
@@ -58,13 +58,12 @@
     }
 }
 .section-subtitle{
-    font-size: 1.15rem;
+    font-size: 1.2rem;
     margin-bottom: 0;
 }
 
 @media screen and (max-width: 735px){
     .section{
-        padding: 2rem 0 2.5rem;
     }    
     .section-header{
         margin-bottom: 2.5rem;
