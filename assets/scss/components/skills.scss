@@ -1,7 +1,7 @@
 .skin-light{
     --skills-bg-color: var(--body-bg-color);
     --skills-text-color: var(--body-text-color);
-    --skills-border-color: #ccc;
+    --skills-border-color: #ddd;
 }
 .skin-dark{
     --skills-bg-color: var(--gray-background-color);
@@ -15,14 +15,13 @@
     grid-template-columns: 1fr 1fr 1fr;
     text-align: center;
     gap: 1rem;
-
     .main-skill{
         flex: 1;
-        //background-color: rgba(0, 0, 0, .1);
-        border-radius: 15px;
+        background-color: white;
         padding: 3rem 2rem;
+        box-shadow: 0 3px 13px -3px rgba(0,0,0,.1);
+        border-radius: 15px;
         &:not(:last-of-type){ 
-            
         }
     }
     .main-skill-title{
@@ -39,6 +38,7 @@
     }
 
     .sub-skills-heading{
+        color: var(--primary);
         font-weight: bold;
     }
     .sub-skills-list{

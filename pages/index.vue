@@ -67,12 +67,11 @@ const {data : articles } = await useFetch(() => `/api/posts`, {
                             To simplify (Vue.js, Nuxt.js, Laravel, Node).
                         </p>
                     </header>
-
-                    <Skills></Skills>
-
                 </div>
             </div>
             <div class="container-big">
+                <Skills></Skills>
+
             </div>
         </section>
 

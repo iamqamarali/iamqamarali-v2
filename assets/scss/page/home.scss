@@ -43,7 +43,8 @@
     // skills
     .skills-section{
         .skills-section-inner{
-            background-color: var(--primary-dark);
+            padding: 5rem 0rem 11rem;
+            background-color: var(--primary);
             color: var(--primary-text-color); 
         }
         .section-title{
@@ -52,7 +53,7 @@
             }
         }
         .skills{
-            //margin-top: -150px;
+            margin-top: -150px;
         }
     }
 
