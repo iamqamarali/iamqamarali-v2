@@ -18,7 +18,7 @@
 
     .main-skill{
         flex: 1;
-        background-color: rgba(0, 0, 0, .1);
+        //background-color: rgba(0, 0, 0, .1);
         border-radius: 15px;
         padding: 3rem 2rem;
         &:not(:last-of-type){ 
@@ -30,7 +30,7 @@
         padding: 0 .5rem;
         font-size: 1.3rem;
         margin-bottom: 1.5rem;
-        color: white;
+        color: inherit;
         border-radius: 5px;
     }
     .main-skill-description{
@@ -39,14 +39,13 @@
     }
 
     .sub-skills-heading{
-        color: var(--primary-light);
         font-weight: bold;
     }
     .sub-skills-list{
         span{
             display: block;
             text-align: center;
-            font-size: 1.1rem ;
+            font-size: 1rem ;
             line-height: 2;
 
         }
@@ -55,7 +54,7 @@
 }
 
 
-@media screen and (max-width: 780px){
+@media screen and (max-width: 850px){
     .skills{
         flex-direction: column;
         .main-skill{

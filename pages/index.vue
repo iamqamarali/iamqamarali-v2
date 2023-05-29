@@ -1,11 +1,11 @@
 <script setup>
 
-// const {data : articles } = await useFetch(() => `/api/posts`, {
-//     params:{
-//         limit: 8,
-//         published: true,
-//     }
-// })
+const {data : articles } = await useFetch(() => `/api/posts`, {
+    params:{
+        limit: 4,
+        published: true,
+    }
+})
 
 
 
@@ -73,6 +73,24 @@
                 </div>
             </div>
             <div class="container-big">
+            </div>
+        </section>
+
+        <section class="articles-section section" v-if="articles.length">
+            <div class="container">
+                <header class="section-header section-header-small">
+                    <h2 class="section-title">
+                        <span class="section-count">03.</span> 
+                        Explore Practical Software Development Articles.
+                    </h2>
+                </header>
+                <div class="two-columns-grid articles-grid">
+                    <Article-link
+                        v-for="article in articles" 
+                        :key="article.id"
+                        :article="article" 
+                    />
+                </div>
             </div>
         </section>
 

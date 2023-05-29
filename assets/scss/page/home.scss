@@ -43,18 +43,22 @@
     // skills
     .skills-section{
         .skills-section-inner{
-            padding: 5rem 0rem 11rem;
-            background-color: var(--primary-darker);
-            color: white;    
+            background-color: var(--primary-dark);
+            color: var(--primary-text-color); 
         }
         .section-title{
             .section-count{
-                color: var(--primary-light)
+                color: black;
             }
         }
         .skills{
             //margin-top: -150px;
         }
+    }
+
+    .articles-section{
+        padding: 5rem 0rem 11rem;
+
     }
 
 }
@@ -98,7 +102,7 @@
             margin-bottom: 2rem;
         }
 
-        .skills-section{
+        .articles-section{
             .skills-section-inner{
                 padding: 5rem 0rem 8rem;
             }
