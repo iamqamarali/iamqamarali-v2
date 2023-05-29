@@ -1,2 +1,96 @@
 .home-page{
+    .home-hero{
+        padding: 7rem 0 6rem;
+        display: grid;
+        align-items: center;        
+    }
+    .home-hero-wrapper{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 4rem;
+    }
+    .home-hero-avatar-container{
+        width: 200px;
+        margin: 0 auto;
+    }
+    .home-hero-content{
+        flex: 1;
+    }
+    .home-hero-title{
+
+    }
+    .home-hero-subtitle{
+        font-size: 1.25rem;
+    }
+
+    // sections
+    .section-header{
+    }
+    .section-title{
+    }
+
+
+    .things-ive-built-section{
+        // background-color: var(--dark-skin-color);
+        // color: var(--dark-skin-text-color);
+        // padding: 6rem;
+        // h2,h3, h4{
+        //     color: var(--dark-skin-text-color);
+        // }
+    }
+    .skills-section{
+        .skills-section-inner{
+            padding: 5rem 0rem 11rem;
+            // background-color: var(--primary);
+            // color: var(--primary-text-color);    
+        }
+        .section-title{
+            .section-count{
+                //color: var(--primary-text-color);
+            }
+        }
+        .skills{
+            margin-top: -150px;
+        }
+    }
+
+}
+
+@media screen and (max-width: 850px){
+    .home-page{
+        .home-hero{
+            padding: 5rem 0;
+        }
+        .home-hero-wrapper{
+            gap: 3rem;
+        }
+        .home-hero-avatar-container{
+            width: 170px;
+        }
+        .home-hero-content{
+
+        }
+
+    }
+   
+}
+
+@media screen and (max-width: 735px){
+    .home-page{
+        .home-hero{
+            padding: 2rem 0;
+        }
+        .home-hero-wrapper{
+            gap: 1.5rem;
+            flex-direction: column-reverse;
+        }
+        .home-hero-avatar-container{
+            width: 200px;
+        }
+        .home-hero-content{
+        }
+
+    }
+   
 }

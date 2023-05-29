@@ -1,11 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+// import poppins font
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+
+:root{
+    --lato : 'Lato', sans-serif;
+    --poppins : 'Poppins', sans-serif;
+
+    // breakpoints
+    --breakpoint-lg: 1300px
+    --breakpoint-medium: 1070px;
+    --breakpoint-small: 735px;
+    --breakpoint-xsmall: 540px;
+
+    font-size: 16px;
+    text-rendering: optimizeLegibility; 
+}
+::selection{
+    background-color: var(--selection-bg-color);
+    color: var(--selection-text-color);
+}
+
+body{
+    font-family: 'Lato', sans-serif;
+    font-size: 1.15rem;
+}
+
+@media screen and (max-width: 735px){
+    :root{
+        font-size: 14px;
+    }
+}
+
 *, *:before, *:after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
-
-body{
-    font-size: 1rem;   
+mark{
+    background-color: var(--mark-bg-color);
+    color: var(--mark-text-color);
 }
 input, textarea, div{
     font-size: 1rem;
@@ -41,8 +75,9 @@ label{
     display: inline-block;
 }
 h1, h2, h3, h4 , h5, h6{
+    font-family: var(--poppins);
     margin-bottom: 0.8em;
-    font-weight: 900;
+    font-weight: 800;
 }
 h1 { 
     font-size: 2.6rem;

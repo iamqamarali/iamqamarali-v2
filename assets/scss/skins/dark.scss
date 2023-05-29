@@ -1,25 +1,31 @@
 .skin-dark{
-    --dark-skin-color: #181818;
 
     --primary-light: #86ed8e;
-    --primary : #6ae474;
-    --primary-dark: #47c452;
-    --primary-text-color: var(--dark-skin-color);
-    --primary-gray-background-color: #1a1d22;
+    --primary : #47c452;
+    --primary-dark: #39aa39;
+
+    --primary-text-color: #fff;
+    --primary-gray-background-color: #20252d;
     --logo-color: #fff;
+    --gray-border-color: #b2b2b2;
+
 
     --gray-text-color: #86868e;
     --dark-gray-text-color: #bfbfbf;
 
     --body-bg-color: var(--dark-skin-color);
-    --body-text-color: #f6f6f6;
+    --body-text-color: var(--dark-skin-text-color);
 
     // anchor
     --anchor-color: var(--primary);
     --anchor-color-hover: var(--primary-dark);
 
+    // selection
     --selection-bg-color: var(--primary-light);
     --selection-text-color: #000; 
+    // mark
+    --mark-bg-color: #aaffaa;    
+    --mark-text-color: #000; 
 
 
     // header
@@ -44,7 +50,7 @@
     --input-text-color: #fff;
     // button
     --btn-primary-color: var(--primary);
-    --btn-primaru-color-hover: var(--primary-dark);
+    --btn-primary-color-hover: var(--primary-dark);
     --btn-primary-text-color: var(--primary-text-color);
 
     // code

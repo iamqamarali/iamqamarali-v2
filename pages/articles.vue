@@ -21,8 +21,8 @@ onUpdated(() => {
     <main class="site-content">
         <section class="articles-section section" v-if="articles.length">
             <div class="container">
-                <header class="section-header">
-                    <h1 class="section-title">Explore Practical Software Development Articles.</h1>
+                <header class="section-header section-header-small">
+                    <h1 class="page-title">Explore Practical Software Development Articles.</h1>
                 </header>
                 <div class="two-columns-grid articles-grid">
                     <Article-link

@@ -10,6 +10,7 @@ definePageMeta({
 
 const route = useRoute();
 const post = useState(() => { return {} })
+const isProjectPage = useState(() => route.query.project ? true : false)
 
 // fetch INITIAL post data if post id is provided
 const { data } = await useFetch(()=>`/api/admin/posts/`+ route.query.post)
@@ -26,6 +27,7 @@ let form = reactive({
     main_image: post.value.main_image || '',
     featured: (post.value.featured ? true : false),
     is_project: (post.value.is_project ? true : false),
+    tags: post.value.tags || '',
 });
 
 // update slug when title changes
@@ -77,6 +79,10 @@ const createOrUpdatePost = async () => {
             ...post.value,
             ...data.post
         };
+        // update if we're on project page
+        isProjectPage.value = post.value.is_project
+
+
         console.log(post.value)
         alert(data.message)
 
@@ -123,7 +129,12 @@ onUnmounted(()=>{
             <div class="container">
                 
                 <h1 class="section-title">
-                    {{ post.id ? 'Edit Post' : 'Create Post' }}
+                    <template v-if="isProjectPage">
+                        {{ post.id ? 'Edit Project' : 'Create Project' }}
+                    </template>
+                    <template v-else>
+                        {{ post.id ? 'Edit Post' : 'Create Post' }}
+                    </template>
                 </h1>
 
                 <div class="form-container">
@@ -159,13 +170,14 @@ onUnmounted(()=>{
 
                     </div>
                     <div class="right">
-                        <div class="input-group">
-                            <NuxtLink class="button button-sm" :to="'/article/' + post.slug" target="_blank" >View Post</NuxtLink>
+                        <div class="input-group" v-if="post.id">
+                            <NuxtLink class="button button-sm" v-if="isProjectPage" :to="'/work/' + post.slug" target="_blank" >View Project</NuxtLink>
+                            <NuxtLink class="button button-sm" v-else :to="'/article/' + post.slug" target="_blank" >View Post</NuxtLink>
                         </div>
                         <br/>
                         
                         <div class="input-group ">
-                            <label for="">Featured Post</label>
+                            <label for="">Featured </label>
                             <div class="toggle-switch float-right">
                                 <input type="checkbox" v-model="form.featured" id="featured-1">
                                 <label for="featured-1"></label>
@@ -183,8 +195,17 @@ onUnmounted(()=>{
                         </div>
 
                         <div class="input-group">
-                            <label for="">Post Main Image</label>
+                            <label for=""> 
+                                {{ isProjectPage ? 'Project' : 'Post'  }} Main Image
+                            </label>
                             <input type="text" v-model="form.main_image" placeholder="Main image url" />
+                        </div>
+                        <br>
+                        <div class="input-group">
+                            <label for=""> 
+                                Tags <small>(comma separated)</small>
+                            </label>
+                            <input type="text" v-model="form.tags" placeholder="Tags" />
                         </div>
                         <br>
 

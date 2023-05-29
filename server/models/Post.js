@@ -22,6 +22,7 @@ export default class Post extends BaseModel{
         'updated_at ',
 
         'is_project',
+        'tags',
     ];
 
     hidden = [

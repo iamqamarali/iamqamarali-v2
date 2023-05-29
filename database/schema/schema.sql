@@ -31,6 +31,7 @@ CREATE TABLE IF NOT exists posts(
     updated_at timestamp default current_timestamp on update current_timestamp,
 
     is_project boolean default false,
+    tags TEXT default null,
 
     Index (is_project),
     Index (slug),

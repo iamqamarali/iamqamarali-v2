@@ -27,7 +27,7 @@ const changeSkin = () => {
                 </NuxtLink>
                 <div class="nav">
                     <NuxtLink to="/articles" class="nav-item">Articles</NuxtLink>    
-                    <a href="/work" class="nav-item">Work</a>    
+                    <NuxtLink href="/work" class="nav-item">Work</NuxtLink>    
                     <div class="nav-item">
 
                         <!-- <svg version="1.0"

@@ -32,7 +32,7 @@ watch(data, ()=>{
             <div class="container">
                 <header>
                     <h1 class="d-inline-block">Projects</h1>
-                    <NuxtLink class="button float-right" to="/admin/posts/create-update">
+                    <NuxtLink class="button float-right" to="/admin/posts/create-update?project=true">
                         Create New Project
                     </NuxtLink>
                 </header>
@@ -56,7 +56,7 @@ watch(data, ()=>{
                             <td>{{ article.description }}</td>
                             <td>
                                 <div class="buttons-group">
-                                    <NuxtLink :to="`/admin/posts/create-update?post=${article.id}`" class="button button-sm" >Edit</NuxtLink>
+                                    <NuxtLink :to="`/admin/posts/create-update?post=${article.id}&project=true`" class="button button-sm" >Edit</NuxtLink>
                                     <button @click="deletePost(article.id)" class="button button-sm">Delete</button>
                                 </div>
                             </td>

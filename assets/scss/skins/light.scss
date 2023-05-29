@@ -1,11 +1,13 @@
 .skin-light{
     --primary-light: #89c989;
     --primary : #39aa39;
-    --primary-dark: #259925;
+    --primary-dark: #1e7e1e;
     --primary-text-color: #fff;
-    --primary-gray-background-color: #eeeeee;
+    --primary-gray-background-color: #efefef;
 
     --logo-color: #000;
+    --gray-border-color: #b2b2b2;
+
 
     --gray-text-color: #86868e;
     --dark-gray-text-color: #595959;
@@ -15,8 +17,13 @@
     --anchor-color: var(--primary);
     --anchor-color-hover: var(--primary-dark);
 
+    // selection
     --selection-bg-color: #bfeebf;    
     --selection-text-color: #000; 
+
+    // mark
+    --mark-bg-color: #cfffcf;    
+    --mark-text-color: #000; 
 
 
     // header
@@ -43,7 +50,7 @@
 
     // button
     --btn-primary-color: var(--primary);
-    --btn-primaru-color-hover: var(--primary-dark);
+    --btn-primary-color-hover: var(--primary-dark);
     --btn-primary-text-color: var(--primary-text-color);
 
     // code

@@ -5,6 +5,16 @@
     margin: 0 auto;
     padding: 0 3rem;
 }
+.container-small{
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 3rem;
+}
+.container-big{
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
 
 @media screen and (max-width: 1070px){
     .container{
@@ -17,29 +27,38 @@
 }
 
 @media screen and (max-width: 540px){
-    .container {
+    .container ,
+    .container-big,
+    .container-small{
         max-width: 100%;
-        padding: 0 1.4rem;
+        padding: 0 1.5rem;
     }
+    
 }
 
 
 // SECTION
 .section{
-    padding: calc(2.5rem + 2vw) 0;
+    padding: 4.5rem 0;
 }
 .section-header{
-    margin-bottom: calc(3rem + 2vw) ;
+    margin-bottom: 4.5rem ;
+}
+.section-header-small{
     max-width: 750px;
 }
 .section-title{
-    font-size: calc(2rem + 1vw);
-    font-weight: 500;
-    margin-bottom: .8em;
-    line-height: 1.25;
+    font-size: calc(1.5rem + 1vw);
+    margin-bottom: 1.5rem;
+    line-height: 1.3;
+    font-weight: 600;
+    .section-count{
+        color: var(--primary);
+        font-size: calc(1.5rem + .3vw);
+    }
 }
 .section-subtitle{
-    font-size: 1.1rem;
+    font-size: 1.15rem;
     margin-bottom: 0;
 }
 
@@ -51,7 +70,19 @@
         margin-bottom: 2.5rem;
     }
     .section-title{
-        font-size: 2rem;
-        line-height: 1.35;
+        font-size: 1.8rem;
+        line-height: 1.4;
     }
+}
+
+/**
+*
+* Skewed Section
+*/
+.section-skewed{
+    transform: skewY(-1deg);
+    padding: 8rem 0;
+    .section-skewed-inner{
+        transform: skewY(1deg);
+    }    
 }
