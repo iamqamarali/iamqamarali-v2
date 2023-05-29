@@ -2,18 +2,15 @@
     background-color: var(--footer-bg-color);
     color: var(--dark-gray-text-color);
     position: relative;
-    padding-top: 8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    padding: 5rem 0 4rem;
     .footer-contact-section{
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        transform: translateY(-50%);
-        margin: 0 2rem;
-        padding: 4rem 1rem;
-        background-color: #222c25;
-        border-radius: 10px;
-        color: white;
+        margin-bottom: 3rem;
+        font-family: var(--poppins);
     }
     .footer-contact-inner{
         display: flex;
@@ -28,15 +25,9 @@
             flex: 1;
             max-width: 550px;
         }
-        p a{
-            color: white;
-        }
     }    
     @media screen and (max-width: 900px){
-        padding-top: 0;
         .footer-contact-section{
-            transform: translateY(-50px);
-            position: relative;
         }
         .footer-contact-inner{
             flex-direction: column;
@@ -48,19 +39,32 @@
         }    
     }
 
+    // logo
 
+    .logo-container{
+        text-align: center;
+    }
+
+    // bottom    
     .footer-inner-wrapper{
         display: flex;
-        padding: 3rem 0 3.5rem;
         flex-direction: column;
         align-items: center;
         gap: 1rem;
+        text-align: center;
     }
-    .findme-elsewhere{
-        font-size: 1.04rem;
+    .quote{
+        font-size: 1.3rem;
+        margin-bottom: 1.5rem;
+        text-align: center;
+        max-width: 300px;
+        font-family: var(--poppins);
+
     }
     .footer-nav{
         margin-bottom: 1.5rem;
+        font-family: var(--poppins);
+
         .nav-item{
             font-weight: 900;
             font-size: .95rem;
@@ -74,12 +78,18 @@
     }
     .footer-copyright{
         font-size: 1.05rem;
+        span{
+            display: block;
+        }
+    }
+    .made-width{
+        margin-top: 1rem;
+        font-size: .95rem;
     }
 
 
     @media screen and (max-width: 740px){
         .footer-inner-wrapper{
-            padding: 2.5rem 0 3rem;
             gap: .8rem;
         }
         .footer-nav{

@@ -5,7 +5,7 @@
 <template>
     <div class="project" >
         <a class="project-image-container">
-            <img class="" src="https://f005.backblazeb2.com/file/iamqamarali-blog/201/marvels-comics_1685361055625_2.215492926565288.png" alt="">
+            <img class="" src="https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2023/01/hostinger-website-builder-template-section-landing-page-1024x608.webp" alt="">
         </a>
 
         <div class="project-content">
@@ -22,7 +22,7 @@
                 <span>Vercel</span>
             </div>
             <div class="project-links">
-                <a href="" class="project-link button button-sm">View Project</a>
+                <a href="" class="project-link button button-filled ">View Project</a>
                 <!-- <a href="" class="project-link github">
                     <svg 
                         class="project-link-icon svg-icon"

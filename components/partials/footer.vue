@@ -6,15 +6,19 @@
                 <div class="footer-contact-inner">
                     <h3 class="start-a-project">Start a project</h3>
                     <p>Interested in working together? Feel free to email me at <a href="mailto:get@qamarali.space" class="email font-weight-semi-bold ">Get@qamarali.space</a> </p>
-                    <button class="button button-lg  button-light-primary cto-button ">Let's do this</button>
+                    <button class="button button-lg  cto-button ">Let's do this</button>
                 </div>
             </div>
         </section>
-
+        <div class="container ">
+            <div class="logo-container">
+                <logo></logo>
+            </div>
+        </div>
         <div class="container">
             <div class="footer-inner-wrapper">
-                <div class="findme-elsewhere">
-                    Find me elsewhere on the web as well:
+                <div class="quote">
+                    Living, learning, & leveling up one day at a time.
                 </div>
                 <nav class="footer-nav nav">
                     <a href="https://github.com/iamqamarali" target="_blank" class="nav-item">Github</a>
@@ -24,7 +28,8 @@
                     <a href="" class="nav-item">Work</a>
                 </nav>
                 <div class="footer-copyright">
-                    <span>&copy; {{ new Date().getFullYear() }}</span> Qamar Ali Media Inc.
+                    <span>Handcrafter by me &copy; {{ new Date().getFullYear() }} Qamar Ali Media Inc. </span> 
+                    <span class="made-width">Made with Nuxt 3</span>
                 </div>
             </div>
         </div> 
