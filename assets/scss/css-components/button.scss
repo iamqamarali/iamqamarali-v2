@@ -58,6 +58,17 @@
         color: var(--primary-light-text-color);
     }
 }
+.button.button-dark-primary{
+    border-color: var(--primary-dark);
+    color: var(--primary-dark);
+    &:hover,
+    &:focus,
+    &:active{
+        border-color: var(--primary-dark);
+        color: var(--primary-dark);
+    }
+}
+
 .button-opposite-skin{
     background-color: transparent;
     border-color: var(--body-text-color);

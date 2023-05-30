@@ -19,18 +19,12 @@ useHead({
 
 <template>
     <main class="home-page site-content ">
-
         <section class="home-hero ">
-
-
+            <BlobBlurInteractive></BlobBlurInteractive>
             <div class="container-small">            
                 <div class="home-hero-wrapper">
-                    <!-- <div class="home-hero-avatar-container">
-                        <img src="@/assets/images/avatar.svg" alt="">
-                    </div> -->
 
                     <header class="home-hero-content">
-
                         <h1 class="home-hero-title ">
                             Qamar Ali
                         </h1>
@@ -44,7 +38,6 @@ useHead({
                     </header>
 
                     <HangingCat></HangingCat>
-
                 </div>
             </div>        
         </section>
