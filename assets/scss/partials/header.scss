@@ -104,5 +104,23 @@
     &:before{
         display: none;
     }
+    .logo-svg{
+        path{
+            fill: var(--fixed-header-text-color);
+        }
+    }
+
+    .nav-item{
+        color: var(--fixed-header-text-color);
+    }
+    .nav-item:hover{
+        color: var(--fixed-header-text-hover-color);
+    }
+    .svg-icon{
+        path{
+            fill: var(--fixed-header-text-color);
+        }
+    }
+
     
 }

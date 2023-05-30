@@ -21,17 +21,17 @@ useHead({
     <main class="home-page site-content ">
 
         <section class="home-hero ">
-            <div class="container-small">
-            
+
+
+            <div class="container-small">            
                 <div class="home-hero-wrapper">
                     <!-- <div class="home-hero-avatar-container">
                         <img src="@/assets/images/avatar.svg" alt="">
                     </div> -->
 
                     <header class="home-hero-content">
-                        <FlyingPlane></FlyingPlane>
 
-                        <h1 class="home-hero-title page-title">
+                        <h1 class="home-hero-title ">
                             Qamar Ali
                         </h1>
                         <h3 class="home-hero-subtitle">
@@ -40,8 +40,10 @@ useHead({
                         <p class="home-hero-description">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro nesciunt quo voluptatum ipsam dignissimos quod.
                         </p>
-                        <a href="" class="button button-lg">Call To Action</a>
+                        <a href="" class="button button-lg ">Call To Action</a>
                     </header>
+
+                    <HangingCat></HangingCat>
 
                 </div>
             </div>        

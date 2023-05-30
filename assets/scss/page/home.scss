@@ -3,47 +3,64 @@
 .home-page{
 
     .home-hero{
-        background-color:#91d6ff;        
-        transform: skewY(-1deg);
-        position: relative;
+        background-color: #FBAB7E;
+        background-image: linear-gradient(110deg, #FBAB7E 0%, #F7CE68 100%);
+
+        background-color: #FAD961;
+        background-image: linear-gradient(90deg, #FAD961 0%, #F76B1C 100%);
+
+
         top: -20px;
         padding-top: 20px;
+        position: relative;
+        overflow: hidden;
+
     }
     .home-hero-wrapper{
-        transform: skewY(1deg);
         min-height: 75vh;
         min-height: 75dvh;
         padding: 7rem 0;
-
         height: 100%;
         
         display: flex;
         align-items: center;
-        justify-content: center;
-        gap: 4rem;
+        position: relative;
     }
+    
     .home-hero-avatar-container{
         width: 200px;
         margin: 0 auto;
     }
     .home-hero-content{
         flex: 1;
-        position: relative;
-        .flying-plane-wrapper{
-            position: absolute;
-            right: 10%;
-            top: -20px;
-        }    
+        max-width: 500px;
     }
+
+    // CAT
+    .hanging-cat{
+        position: absolute;
+        top: 5%;
+        right: 10%;
+    }
+
+
+
+
     .home-hero-title{
+        font-weight: 600;
         font-size: 3.5rem;
-        margin-bottom: 0rem;
+        margin-bottom: 1rem;
     }
     .home-hero-subtitle{
         font-weight: 600;
-        font-size: 1.4rem;
-        margin: .5em 0;
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
     }
+    .home-hero-description{
+        font-size: 1rem;
+        margin-bottom: 1.2rem;
+    }
+
     @media screen and (max-width: 735px){
 
         .home-hero-wrapper{
@@ -53,9 +70,6 @@
             width: 200px;
         }
         .home-hero-content{
-            .flying-plane-wrapper{
-                top: 0px;
-            }    
         }
         .home-hero-title{
             font-size: 2.7rem;

@@ -5,6 +5,9 @@
 }
 
 .button{
+    --button-box-shadow-hover: 3px 3px 0 0;
+
+
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -22,7 +25,6 @@
     color: var(--btn-primary-color);
     transition: all 0.1s ease-in-out;
     box-shadow: 0;
-    box-shadow: 2px 2px 0 0 var(--btn-primary-color);
 
     &:hover:not(:disabled),
     &:focus:not(:disabled),
@@ -30,7 +32,7 @@
         outline: none;
         border: 2px solid var(--btn-primary-color);
         color: var(--btn-primary-color);
-        box-shadow: 5px 5px 0 0 var(--btn-primary-color);
+        box-shadow: var(--button-box-shadow-hover) var(--btn-primary-color);
     }
 
     &:disabled{
@@ -38,6 +40,58 @@
         cursor: not-allowed;
     }
 }
+
+
+
+/**
+* Button COLORS
+*
+*/
+
+.button.button-light-primary{
+    border-color: var(--primary-light);
+    color: var(--primary-light);
+    &:hover,
+    &:focus,
+    &:active{
+        border-color: var(--primary-light);
+        color: var(--primary-light-text-color);
+    }
+}
+.button-opposite-skin{
+    background-color: transparent;
+    border-color: var(--body-text-color);
+    color: var(--body-text-color);
+    &:hover,
+    &:active{
+        background-color: transparent;
+        border-color: var(--body-text-color);
+        color: var(--body-bg-color);
+    }
+}
+.button.button-gray{
+    border-color: var(--gray-text-color);
+    color: var(--gray-text-color);
+    &:hover,
+    &:active{
+        border-color: var(--gray-text-color);
+        color: var(--body-bg-color);
+    }
+}
+
+.button.button-white{
+    border-color: white;
+    color: white;
+    box-shadow: none;
+
+    &:hover,
+    &:active{
+        border-color: white;
+        color: white;
+        box-shadow: var(--button-box-shadow-hover) white;
+    }
+}
+
 
 
 /**
@@ -57,47 +111,6 @@
     }
 }
 
-
-/**
-* Button COLORS
-*
-*/
-
-.button.button-light-primary{
-    border-color: var(--primary-light);
-    color: var(--primary-light);
-    &:hover,
-    &:focus,
-    &:active{
-        background-color: var(--primary-light);
-        border-color: var(--primary-light);
-        color: var(--primary-light-text-color);
-    }
-}
-.button-opposite-skin{
-    background-color: transparent;
-    border-color: var(--body-text-color);
-    color: var(--body-text-color);
-    &:hover,
-    &:active{
-        background-color: transparent;
-        background-color: var(--body-text-color);
-        border-color: var(--body-text-color);
-        color: var(--body-bg-color);
-    }
-}
-.button.button-gray{
-    background-color: transparent;
-    border-color: var(--gray-text-color);
-    color: var(--gray-text-color);
-    &:hover,
-    &:active{
-        background-color: transparent;
-        background-color: var(--gray-text-color);
-        border-color: var(--gray-text-color);
-        color: var(--body-bg-color);
-    }
-}
 
 /**
 * Button Sizes
