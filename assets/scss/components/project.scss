@@ -79,7 +79,7 @@
 
 
 .project{
-    --project-image-overlay-color: #333;
+    --project-image-overlay-color: var(--primary);
 
     color: var(--body-text-color);
     transition: var(--skin-change-transition);
@@ -127,7 +127,7 @@
         .project-image{
             width: 100%;
             height: 100%;
-            filter: grayscale(20%) contrast(1.3);
+            filter: grayscale(20%) contrast(1.4);
         }
 
 
@@ -152,7 +152,7 @@
         margin: .3rem 0 .2rem;
         padding: 1.5rem ;
         border-radius: 4px;
-        font-size: 1.1rem;
+        font-size: 1rem;
         line-height: 1.5;
     }
 
@@ -160,7 +160,7 @@
         display: flex;
         gap: 1rem;
         span{
-            font-size: 1.05rem;
+            font-size: 1rem;
             font-weight: 600;
         }
     }

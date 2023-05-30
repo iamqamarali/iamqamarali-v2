@@ -17,6 +17,15 @@
     }    
 }
 
+.logo-image-primary,
+.logo-svg-primary{
+    path {
+        fill: var(--primary);
+        transition: var(--primary);
+    }
+}
+
+
 /**
 *
 * ICONS
@@ -24,5 +33,12 @@
 .svg-icon{
     path{
         transition: var(--skin-change-transition);
+    }
+}
+
+.svg-icon-primary{
+    path{
+        transition: var(--skin-change-transition);
+        fill: var(--primary);
     }
 }

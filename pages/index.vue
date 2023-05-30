@@ -40,7 +40,7 @@ useHead({
                         <p class="home-hero-description">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro nesciunt quo voluptatum ipsam dignissimos quod.
                         </p>
-                        <a href="" class="button button-lg ">Call To Action</a>
+                        <a href="" class="button button-lg button-black">Call To Action</a>
                     </header>
 
                     <HangingCat></HangingCat>
