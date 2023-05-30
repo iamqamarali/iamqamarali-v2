@@ -15,26 +15,36 @@ const {data : articles } = await useFetch(() => `/api/posts`, {
 <template>
     <main class="home-page site-content ">
 
-        <section class="home-hero ">
-            <div class="container-small ">
+        <div class="container-small ">
+            <section class="home-hero ">
                 
-                <div class="home-hero-wrapper">
-                    <div class="home-hero-avatar-container">
-                        <img src="@/assets/images/avatar.svg" alt="">
-                    </div>
+                    <div class="home-hero-wrapper">
+                        <!-- <div class="home-hero-avatar-container">
+                            <img src="@/assets/images/avatar.svg" alt="">
+                        </div> -->
 
-                    <header class="home-hero-content">
-                        <h1 class="home-hero-title page-title">
-                            Hi, I'm Qamar Ali. <br> 
-                            I'm A Full Stack Web Developer
-                        </h1>
-                        <p class="home-hero-subtitle">
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis ratione quasi ut error quas. Vero, nobis odit. Reiciendis ea delectus eius vitae, consequatur dignissimos sunt commodi doloremque, officia ad incidunt.
-                        </p>
-                    </header>
-                </div>
-            </div>
-        </section>
+                        <header class="home-hero-content">
+                            <FlyingPlane></FlyingPlane>
+
+                            <h1 class="home-hero-title page-title">
+                                Qamar Ali
+                            </h1>
+                            <h3 class="home-hero-subtitle">
+                                Sr. Full Stack Web Developer
+                            </h3>
+                            <p class="home-hero-description">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro nesciunt quo voluptatum ipsam dignissimos quod.
+                            </p>
+                            <a href="" class="button button-lg">Call To Action</a>
+                        </header>
+
+                    </div>
+            </section>
+        </div>
+        <ClientOnly>
+            <DudeWalking></DudeWalking>
+        </ClientOnly>
+        
 
         <section class="section things-ive-built-section">
             <div class="container-small">
@@ -46,9 +56,9 @@ const {data : articles } = await useFetch(() => `/api/posts`, {
                     </h2>
                 </header>
                 <div class="section-content ">
-                    <Project></Project>
-                    <Project class="project-right"></Project>
-                    <Project></Project>
+                    <Project image="https://cxl.com/wp-content/uploads/2020/04/image-65-1024x594.png" ></Project>
+                    <Project class="project-right" image="https://uploads.toptal.io/blog/image/129115/toptal-blog-image-1549997512620-72eaff97494e5c220c505505fdfa11fb.jpg"></Project>
+                    <Project image="https://www.hostinger.in/tutorials/wp-content/uploads/sites/2/2018/09/how-to-design-a-website-9.png"></Project>
 
                 </div>
             </div>

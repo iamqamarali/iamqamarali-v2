@@ -9,24 +9,28 @@
     align-items: center;
     justify-content: center;
     height: var(--btn-height);
-    background-color: transparent;
-    padding: 0 2rem;
-    border: 2px solid var(--btn-primary-color);
-    color: var(--btn-primary-color);
-    border-radius: 50px;
-    font-size: 1rem;
+    padding: 0 1rem;
+    border-radius: 3px;
+    font-size: 0.95rem;
     font-weight: 600;
     text-decoration: none;
-    transition: all 0.3s ease-in-out;
     outline: none;
     cursor: pointer;
+
+    background-color: transparent;
+    border: 2px solid var(--btn-primary-color);
+    color: var(--btn-primary-color);
+    transition: all 0.1s ease-in-out;
+    box-shadow: 0;
+    box-shadow: 2px 2px 0 0 var(--btn-primary-color);
+
     &:hover:not(:disabled),
     &:focus:not(:disabled),
     &:active:not(:disabled){
         outline: none;
         border: 2px solid var(--btn-primary-color);
-        background-color: var(--btn-primary-color);
-        color: var(--btn-primary-text-color);
+        color: var(--btn-primary-color);
+        box-shadow: 5px 5px 0 0 var(--btn-primary-color);
     }
 
     &:disabled{
@@ -102,11 +106,12 @@
 .button-sm{
     height: 35px;
     padding: 0 1rem;
-    font-size: .9rem;
+    font-size: .87rem;
 }
 .button-lg{
     height: 60px;
     padding: 0 2.5rem;
+    font-size: 1.05rem;
 }
 
 .close-button{

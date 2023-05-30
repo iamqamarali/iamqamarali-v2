@@ -1,4 +1,5 @@
 .home-page{
+
     .home-hero{
         padding: 7rem 0 6rem;
         display: grid;
@@ -16,13 +17,29 @@
     }
     .home-hero-content{
         flex: 1;
+        position: relative;
+        .flying-plane-wrapper{
+            position: absolute;
+            right: 150px;
+            top: -20px;
+        }    
     }
     .home-hero-title{
-
+        font-size: 3.5rem;
+        margin-bottom: 0rem;
     }
     .home-hero-subtitle{
-        font-size: 1.25rem;
+        font-weight: 600;
+        font-size: 1.4rem;
+        margin: .5em 0;
     }
+    @media screen and (max-width: 735px){
+        .home-hero-title{
+            font-size: 2.7rem;
+        }
+    }
+
+
 
     // sections
     .section-header{
@@ -33,9 +50,6 @@
 
     // proejcts
     .things-ive-built-section{
-    }
-    .project{
-        margin-bottom: 10rem;
     }
 
 
@@ -85,20 +99,13 @@
         }
 
 
-        // projects
-        .project{
-            margin-bottom: 4rem;
-        }                
 
     }
    
 }
 
-@media screen and (max-width: 535){
+@media screen and (max-width: 535px){
     .home-page{
-        // projects
-        .project{
-            margin-bottom: 4rem;
-        }                
+
     }
 }
