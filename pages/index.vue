@@ -7,6 +7,11 @@ const {data : articles } = await useFetch(() => `/api/posts`, {
     }
 })
 
+useHead({
+    bodyAttrs: {
+        class: 'has-fixed-header'
+    },
+})
 
 
 
@@ -15,36 +20,32 @@ const {data : articles } = await useFetch(() => `/api/posts`, {
 <template>
     <main class="home-page site-content ">
 
-        <div class="container-small ">
-            <section class="home-hero ">
-                
-                    <div class="home-hero-wrapper">
-                        <!-- <div class="home-hero-avatar-container">
-                            <img src="@/assets/images/avatar.svg" alt="">
-                        </div> -->
+        <section class="home-hero ">
+            <div class="container-small">
+            
+                <div class="home-hero-wrapper">
+                    <!-- <div class="home-hero-avatar-container">
+                        <img src="@/assets/images/avatar.svg" alt="">
+                    </div> -->
 
-                        <header class="home-hero-content">
-                            <FlyingPlane></FlyingPlane>
+                    <header class="home-hero-content">
+                        <FlyingPlane></FlyingPlane>
 
-                            <h1 class="home-hero-title page-title">
-                                Qamar Ali
-                            </h1>
-                            <h3 class="home-hero-subtitle">
-                                Sr. Full Stack Web Developer
-                            </h3>
-                            <p class="home-hero-description">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro nesciunt quo voluptatum ipsam dignissimos quod.
-                            </p>
-                            <a href="" class="button button-lg">Call To Action</a>
-                        </header>
+                        <h1 class="home-hero-title page-title">
+                            Qamar Ali
+                        </h1>
+                        <h3 class="home-hero-subtitle">
+                            Sr. Full Stack Web Developer
+                        </h3>
+                        <p class="home-hero-description">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro nesciunt quo voluptatum ipsam dignissimos quod.
+                        </p>
+                        <a href="" class="button button-lg">Call To Action</a>
+                    </header>
 
-                    </div>
-            </section>
-        </div>
-        <ClientOnly>
-            <DudeWalking></DudeWalking>
-        </ClientOnly>
-        
+                </div>
+            </div>        
+        </section>
 
         <section class="section things-ive-built-section">
             <div class="container-small">

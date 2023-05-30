@@ -1,3 +1,4 @@
+
 .site-header{
     isolation: isolate;
     position: relative;
@@ -53,6 +54,8 @@
 
 }
 
+
+
 @media screen and (max-width: 735px){
     .site-header{
         .header-inner-wrapper{
@@ -85,4 +88,21 @@
         }
 
     }
+}
+
+
+.has-fixed-header .site-header{
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+
+    .header-inner-wrapper{
+        background-color: transparent;
+    }
+
+    // HIDE THE Black BG On Small screens;
+    &:before{
+        display: none;
+    }
+    
 }

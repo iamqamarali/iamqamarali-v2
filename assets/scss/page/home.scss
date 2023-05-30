@@ -1,11 +1,22 @@
+
+
 .home-page{
 
     .home-hero{
-        padding: 7rem 0 6rem;
-        display: grid;
-        align-items: center;        
+        background-color:#91d6ff;        
+        transform: skewY(-1deg);
+        position: relative;
+        top: -20px;
+        padding-top: 20px;
     }
     .home-hero-wrapper{
+        transform: skewY(1deg);
+        min-height: 75vh;
+        min-height: 75dvh;
+        padding: 7rem 0;
+
+        height: 100%;
+        
         display: flex;
         align-items: center;
         justify-content: center;
@@ -20,7 +31,7 @@
         position: relative;
         .flying-plane-wrapper{
             position: absolute;
-            right: 150px;
+            right: 10%;
             top: -20px;
         }    
     }
@@ -34,8 +45,29 @@
         margin: .5em 0;
     }
     @media screen and (max-width: 735px){
+
+        .home-hero-wrapper{
+            gap: 1.5rem;
+        }
+        .home-hero-avatar-container{
+            width: 200px;
+        }
+        .home-hero-content{
+            .flying-plane-wrapper{
+                top: 0px;
+            }    
+        }
         .home-hero-title{
             font-size: 2.7rem;
+        }
+
+    }
+    
+    @media screen and (max-width: 535px){
+        .home-hero-wrapper{
+            min-height: 75vh;
+            min-height: 75dvh;
+            padding: 10rem 0 7rem;
         }
     }
 
@@ -67,10 +99,9 @@
 @media screen and (max-width: 850px){
     .home-page{
         .home-hero{
-            padding: 5rem 0;
         }
         .home-hero-wrapper{
-            gap: 3rem;
+            gap: 2rem;
         }
         .home-hero-avatar-container{
             width: 170px;
@@ -81,31 +112,4 @@
 
     }
    
-}
-
-@media screen and (max-width: 735px){
-    .home-page{
-        .home-hero{
-            padding: 2rem 0;
-        }
-        .home-hero-wrapper{
-            gap: 1.5rem;
-            flex-direction: column-reverse;
-        }
-        .home-hero-avatar-container{
-            width: 200px;
-        }
-        .home-hero-content{
-        }
-
-
-
-    }
-   
-}
-
-@media screen and (max-width: 535px){
-    .home-page{
-
-    }
 }
