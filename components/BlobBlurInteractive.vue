@@ -41,7 +41,7 @@ watch([x, y], ()=>{
   left: 50%;
   top: 50%;
   translate: -50% -50%;
-  background: linear-gradient(to right, #fbeaba, #ffc47b);
+  background: linear-gradient(to right, #fcdf90, #ffcb3b);
   animation: rotate 2s ease-in-out infinite;
   /* z-index: -1; */
 }
