@@ -1,17 +1,22 @@
 .skin-light{
-
-    --logo-color: #000;
+    // GRAY background
     --gray-background-color: #ddd;
     --light-gray-background-color: #eee;
 
-    --body-bg-color: #fff;
-    --body-text-color: #111;
+    // GRAY colors
+    --gray-text-color: #838383;
+    --dark-gray-text-color: #606060;
+
+    // BORDER Colors
+    --gray-border-color: #d5d5d5;
+    --dark-gray-border-color: #909090;
 
 
-
+    // PRIMARY COLORS
     --primary-light: #333;
     --primary-light-text-color: #fff;
 
+    //#92850d
     --primary: #222;
     --primary-text-color: #f1f1f1;
 
@@ -19,11 +24,14 @@
     --primary-darker: #000;
 
 
-    // GRAY colors
-        
-    --gray-text-color: #86868e;
-    --dark-gray-text-color: #595959;
 
+    // BODY COLORS
+    --body-bg-color: #fff;
+    --body-text-color: #111;
+    --body-hazy-text-color: #444;
+
+    // logo color
+    --logo-color: #000;
 
 
     // ANCHOR
@@ -49,7 +57,7 @@
 
 
     // footer
-    --footer-bg-color: var(--gray-background-color);
+    --footer-bg-color: var(--light-gray-background-color);
 
     // article page
     --articleText: #28343a;

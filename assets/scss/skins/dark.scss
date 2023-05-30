@@ -1,25 +1,39 @@
 .skin-dark{
-    --logo-color: #fff;
+    // GRAY background
     --gray-background-color: #20252d;
     --light-gray-background-color: #20252d;
 
-    --body-bg-color: var(--dark-skin-color);
-    --body-text-color: var(--dark-skin-text-color);
+    // GRAY colors        
+    --gray-text-color: #838383;
+    --dark-gray-text-color: #9e9e9e;
 
+    // GRAY BORDER Colors
+    --gray-border-color: #515151;
+    --dark-gray-border-color: #484848;
+    
 
+    // primary
     --primary-light: #ddd;
     --primary-light-text-color: #000;
 
-    --primary: #eee;
+    //#92850d
+    --primary: #f2f2f2;
     --primary-text-color: #111;
 
     --primary-dark: #ffff;
     --primary-darker: #fff;
 
 
-    // GRAY colors        
-    --gray-text-color: #919191;
-    --dark-gray-text-color: #919191;
+
+    // BODY COLORS    
+    --body-bg-color: var(--dark-skin-color);
+    --body-text-color: var(--dark-skin-text-color);
+    --body-hazy-text-color: #d1d1d1;
+
+
+    // LOGO COLROS
+    --logo-color: #fff;
+
 
     // ANCHOR
     --anchor-color: #ccc;

@@ -1,14 +1,4 @@
-.skin-light{
-    --skills-bg-color: var(--body-bg-color);
-    --skills-text-color: var(--body-text-color);
-    --skills-border-color: #ddd;
-}
-.skin-dark{
-    --skills-bg-color: var(--gray-background-color);
-    --skills-text-color: var(--body-text-color);
 
-    --skills-border-color: #555;
-}
 
 .skills{
     display: grid;

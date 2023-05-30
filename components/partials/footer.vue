@@ -4,12 +4,13 @@
         <section class="footer-contact-section">
             <div class="container">
                 <div class="footer-contact-inner">
-                    <h3 class="start-a-project">Start a project</h3>
+                    <h3 class="start-a-project text-body">Start a project</h3>
                     <p>Interested in working together? Feel free to email me at <a href="mailto:get@qamarali.space" class="email font-weight-semi-bold ">Get@qamarali.space</a> </p>
-                    <button class="button button-lg  cto-button ">Let's do this</button>
+                    <button class="button button-lg  cto-button   ">Let's do this</button>
                 </div>
             </div>
         </section>
+        
         <div class="container ">
             <div class="logo-container">
                 <logo></logo>
