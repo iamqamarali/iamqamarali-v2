@@ -6,6 +6,15 @@ const {data : articles } = await useFetch(() => `/api/posts`, {
     }
 })
 
+const {data : projects } = await useFetch(`/api/projects`, {
+    params:{
+        limit: 3,
+        published: true,
+        featured: true,
+    }
+})
+
+
 useHead({
     bodyAttrs: {
         class: 'has-fixed-header'
@@ -37,9 +46,14 @@ useHead({
                     </h2>
                 </header>
                 <div class="section-content ">
-                    <Project image="https://cxl.com/wp-content/uploads/2020/04/image-65-1024x594.png" ></Project>
-                    <Project class="project-right" image="https://uploads.toptal.io/blog/image/129115/toptal-blog-image-1549997512620-72eaff97494e5c220c505505fdfa11fb.jpg"></Project>
-                    <Project image="https://www.hostinger.in/tutorials/wp-content/uploads/sites/2/2018/09/how-to-design-a-website-9.png"></Project>
+                    <Project
+                       v-for="(project, index) in projects" 
+                        :key="project.id"
+                        :project="project"  
+                        :class="{ 'project-right' : index % 2 == 0 }"
+                        image="https://uploads.toptal.io/blog/image/129115/toptal-blog-image-1549997512620-72eaff97494e5c220c505505fdfa11fb.jpg"
+                        >
+                    </Project>
 
                 </div>
             </div>

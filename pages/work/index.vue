@@ -1,13 +1,14 @@
 <script setup>
 
 const route = useRoute();
-const limit = useState(() => 20)
+const limit = useState(() => 10)
 
 const page = useState(() => route.query.page ? parseInt(route.query.page) : 1)
 const {data : projects } = await useFetch(`/api/projects`, {
     params:{
         page: page,
-        limit: limit
+        limit: limit,
+        published: true,
     }
 })
 
@@ -21,27 +22,41 @@ onUpdated(() => {
 <template>
     <main class="site-content">
         <section class="articles-section section" >
-            <div class="container">
+            <div class="container-small">
                 <header class="section-header">
                     <h1 class="section-title">My Recent Work.</h1>
                 </header>
-                <div class="two-columns-grid articles-grid" v-if="projects.length">
-                    <Article-link
-                        v-for="project in projects" 
+
+                <div class="section-content" v-if="projects.length">
+                    <Project
+                       v-for="(project, index) in projects" 
                         :key="project.id"
-                        :article="project" 
-                        urlPrefix="/work/"
-                    />
+                        :project="project"  
+                        :class="{ 'project-right' : index % 2 == 0 }"
+                        image="https://uploads.toptal.io/blog/image/129115/toptal-blog-image-1549997512620-72eaff97494e5c220c505505fdfa11fb.jpg"
+                        >
+                    </Project>
                 </div>
 
 
-                <div v-if="projects.length == limit">
-                    <NuxtLink :to="page > 1 ? '/work?page=' + (page - 1) : ''" class="button">Previous</NuxtLink>
-                    <NuxtLink :to="'/work?page=' + (page + 1)" class="button">Next</NuxtLink>
+                <div v-if="projects.length == limit" class="buttons-group float-right">
+                    <NuxtLink 
+                        :to="page > 1 ? '/work?page=' + (page - 1) : ''" 
+                        class="button button-black" 
+                        >
+                        Previous
+                    </NuxtLink>
+                    <NuxtLink 
+                        :to="'/work?page=' + (page + 1)" 
+                        class="button button-black" 
+                        >
+                        Next
+                    </NuxtLink>
                 </div>
                 <div class=" " v-if="limit > projects.length">
                     <h5 class="font-weight-medium">That's all for me for now</h5>
                 </div>
+                <div class="clear-both"></div>
 
 
             </div>

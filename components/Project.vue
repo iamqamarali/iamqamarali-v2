@@ -1,7 +1,12 @@
 <script setup>
-defineProps(['image'])
+const props = defineProps(['image', 'project'])
 
+const getTags = (tags) => {
+    if(tags && tags.length) 
+        return tags.split(',').map(tag => tag.trim())
 
+    return "";
+}
 
 </script>
 
@@ -13,16 +18,12 @@ defineProps(['image'])
         </div>
 
         <div class="project-content">
-            <h4 class="project-name">Google Keeps</h4>
+            <h4 class="project-name">{{ project.title }}</h4>
             <p class="project-description">
-                A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and more. Available on Visual Studio Marketplace, Package Control, Atom Package Manager, and npm.
+                {{ project.description }}
             </p>
             <div class="project-skills">
-                <span>Vue</span>
-                <span>Express</span>
-                <span>Nuxt</span>
-                <span>API</span>
-                <span>Vercel</span>
+                <span v-for="tag in getTags(project.tags)">{{ tag }}</span>
             </div>
             
             <!-- <a href="" class="project-link button button-sm  ">View Project</a> -->

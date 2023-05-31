@@ -1,7 +1,7 @@
 import Post from '../../models/Post'
 
 export default defineEventHandler(async (event) => {
-    let { page, limit, published } = getQuery(event)
+    let { page, limit, published, featured } = getQuery(event)
     page = parseInt(page) || 1
     page--
 
@@ -14,6 +14,9 @@ export default defineEventHandler(async (event) => {
     let queryParams = { is_project: false }
     if(published){
         queryParams.published = true
+    }
+    if(featured){
+        queryParams.featured = true
     }
 
     const posts = await Post.latest(page * limit, limit, queryParams)
