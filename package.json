@@ -29,6 +29,8 @@
     "simple-body-validator": "^1.2.13"
   },
   "dependencies": {
-    "gsap": "^3.11.5"
+    "gsap": "^3.11.5",
+    "tsparticles": "^2.9.3",
+    "vue3-particles": "^2.9.3"
   }
 }

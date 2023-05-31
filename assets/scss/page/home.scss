@@ -2,120 +2,14 @@
 
 .home-page{
 
-    .home-hero{
-
-        background: #f08f17;  /* fallback for old browsers */
-        background: -webkit-linear-gradient(to left, #ffd000, #ff9f29);  /* Chrome 10-25, Safari 5.1-6 */
-        background: linear-gradient(to left, #ffd000, #ff9f29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-
-        top: -20px;
-        padding-top: 20px;
-        position: relative;
-        overflow: hidden;
-
-    }
-    .home-hero-wrapper{
-        min-height: 100vh;
-        min-height: 100dvh;
-        padding: 7rem 0;
-        height: 100%;
-        
-        display: flex;
-        align-items: center;
-        position: relative;
-    }
-    
-    .home-hero-avatar-container{
-        width: 200px;
-        margin: 0 auto;
-    }
-    .home-hero-content{
-        flex: 1;
-        max-width: 500px;
-    }
-
-    // CAT
-    .hanging-cat{
-        position: absolute;
-        top: 5%;
-        right: 10%;
-    }
-
-
-
-
-    .home-hero-title{
-        font-weight: 600;
-        font-size: 4rem;
-        line-height: 1.1;
-        margin-bottom: 1rem;
-    }
-    .home-hero-subtitle{
-        font-weight: 600;
-        font-size: 1.25rem;
-        margin-bottom: 1rem;
-    }
-    .home-hero-description{
-        font-size: 1rem;
-        margin-bottom: 1.2rem;
-    }
-
-    @media screen and (max-width: 735px){
-
-        .home-hero-wrapper{
-            gap: 1.5rem;
-        }
-        .home-hero-avatar-container{
-            width: 200px;
-        }
-        .home-hero-content{
-        }
-        .home-hero-title{
-            font-size: 2.7rem;
-        }
+    .hero-fullscreen{
         
     }
-    
 
 
-    // sections
-    .section-header{
-    }
-    .section-title{
+    .projects-section{
+        padding-bottom: 0;
     }
 
 
-    // proejcts
-    .things-ive-built-section{
-    }
-
-
-
-    // skills
-    .skills-section{
-    }
-
-    .articles-section{
-
-    }
-
-}
-
-@media screen and (max-width: 850px){
-    .home-page{
-        .home-hero{
-        }
-        .home-hero-wrapper{
-            gap: 2rem;
-        }
-        .home-hero-avatar-container{
-            width: 170px;
-        }
-        .home-hero-content{
-
-        }
-
-    }
-   
 }

@@ -1,0 +1,88 @@
+.hero-fullscreen{
+
+    background: #ffb254;  /* fallback for old browsers */
+    background: -webkit-radial-gradient( #ffdb3a, #ffb254);  /* Chrome 10-25, Safari 5.1-6 */
+    background: radial-gradient( #ffdb3a, #ffb254); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    // background: -webkit-radial-gradient(#ebc51d, #de8111);  /* Chrome 10-25, Safari 5.1-6 */
+    // background: radial-gradient(#ebc51d, #de8111); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    
+
+    top: -20px;
+    padding-top: 20px;
+    position: relative;
+    overflow: hidden;
+
+    // CAT
+    .hanging-cat{
+        position: absolute;
+        top: 5%;
+        right: 26%;
+    }
+
+}
+.hero-fullscreen-wrapper{
+    min-height: 100vh;
+    min-height: 100dvh;
+    padding: 7rem 0;
+    height: 100%;
+    
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.hero-fullscreen-content{
+    flex: 1;
+    max-width: 500px;
+}
+
+
+
+
+
+.hero-fullscreen-title{
+    font-weight: 600;
+    font-size: 4rem;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+}
+.hero-fullscreen-subtitle{
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    opacity: .9;
+}
+.hero-fullscreen-description{
+    font-size: 1rem;
+    margin-bottom: 1.2rem;
+}
+
+@media screen and (max-width: 735px){
+    .hero-fullscreen{
+        .interactive-blob-container{
+            display: none;
+        }
+    }
+
+    .hero-fullscreen-wrapper{
+        gap: 1.5rem;
+    }
+    .hero-fullscreen-avatar-container{
+        width: 200px;
+    }
+    .hero-fullscreen-content{
+    }
+    .hero-fullscreen-title{
+        font-size: 2.7rem;
+    }    
+}
+@media screen and (max-width: 540px){
+    .hero-fullscreen{
+        .hanging-cat{
+            display: none;
+        }    
+    }
+}
+

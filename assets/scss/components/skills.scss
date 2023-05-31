@@ -1,27 +1,32 @@
 
+.skills-section{
+}
 
 .skills{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 1rem;
+    gap: 1.5rem;
+
+
     .main-skill{
+        max-width: 400px;
         &:not(:last-of-type){ 
             
         }
     }
     .main-skill-title{
+        margin-top: 0;
         display: inline-block;
         color: inherit;
         border-radius: 5px;
-        margin-bottom: 1.5rem;
         font-size: 1.3rem;
     }
     .main-skill-description{
+        display: none;
         font-size: 1rem;
         margin-bottom: 1.5rem;
     }
     .sub-skills-list{
-        font-size: 1rem;
     }
 
 

@@ -6,7 +6,7 @@
                 <div class="footer-contact-inner">
                     <h3 class="start-a-project  text-body">Start a project</h3>
                     <p>Interested in working together? Feel free to email me at <a href="mailto:get@qamarali.space" class="email text-body font-weight-semi-bold ">Get@qamarali.space</a> </p>
-                    <button class="button button-lg  cto-button  button-black ">Let's do this</button>
+                    <button class="button button-lg  cto-button  button-black  ">Let's do this</button>
                 </div>
             </div>
         </section>
@@ -14,7 +14,7 @@
         <div class="container ">
             <div class="logo-container">
                 <NuxtLink to="/" class="logo ">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="logo-svg svg-icon-primary" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" viewBox="7.5 6.49 184 41.94">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="logo-svg svg-icon-primary-dark" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" viewBox="7.5 6.49 184 41.94">
                         <g><path style="opacity:0.795" fill="#000000" d="M 160.5,6.5 C 161.496,6.41423 162.329,6.74756 163,7.5C 163.667,9.5 163.667,11.5 163,13.5C 159.667,24.1667 156.333,34.8333 153,45.5C 151.147,49.3977 149.313,49.3977 147.5,45.5C 151.385,32.2684 155.718,19.2684 160.5,6.5 Z"/></g>
                         <g><path style="opacity:0.875" fill="#000000" d="M 24.5,8.5 C 28.6772,7.84156 30.1772,9.50822 29,13.5C 24.3181,18.0148 19.8181,22.6815 15.5,27.5C 19.8181,32.3185 24.3181,36.9852 29,41.5C 29.8523,44.033 29.1856,46.033 27,47.5C 19.6186,41.6195 13.1186,34.9528 7.5,27.5C 12.7878,20.876 18.4545,14.5427 24.5,8.5 Z"/></g>
                         <g><path style="opacity:0.826" fill="#000000" d="M 169.5,8.5 C 171.199,8.33982 172.866,8.50649 174.5,9C 180.958,14.782 186.625,21.1154 191.5,28C 186.402,35.599 180.069,42.099 172.5,47.5C 169.911,46.2778 169.077,44.2778 170,41.5C 174.682,36.9852 179.182,32.3185 183.5,27.5C 179.182,22.6815 174.682,18.0148 170,13.5C 169.506,11.8659 169.34,10.1992 169.5,8.5 Z"/></g>

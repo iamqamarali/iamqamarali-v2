@@ -13,17 +13,21 @@
 
 
     // PRIMARY COLORS
-    --primary-light: #ffd8a8;
-    --primary-light-text-color: #fff;
+    --primary-lighter: #ffd8a8;
+    --primary-lighter-text-color: #000;
+
+    --primary-light: #ffc073;
+    --primary-light-text-color: #000;
 
     //
-    --primary: #eb870a;
-    --primary-text-color: #111;
+    --primary: #ffab44;
+    --primary-text-color: #000;
 
-    --primary-dark: #dd7e0a;
-    --primary-dark-text-color: #111;
-    --primary-darker: #000;
+    --primary-dark: #f78800;
+    --primary-dark-text-color: #fff;
+    --primary-darker: #d77904;
 
+    --secondary: #ffdb3a;
 
 
     // BODY COLORS

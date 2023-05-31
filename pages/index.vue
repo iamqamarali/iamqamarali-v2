@@ -1,5 +1,4 @@
 <script setup>
-
 const {data : articles } = await useFetch(() => `/api/posts`, {
     params:{
         limit: 4,
@@ -19,30 +18,16 @@ useHead({
 
 <template>
     <main class="home-page site-content ">
-        <section class="home-hero ">
-            <BlobBlurInteractive></BlobBlurInteractive>
-            <div class="container-small">            
-                <div class="home-hero-wrapper">
+        <hero-fullscreen
+            title="Qamar Ali"
+            subtitle="Sr. Full Stack Web Developer"
+            description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro nesciunt quo voluptatum ipsam dignissimos quod."
+            ctaText="Get in touch"
+        >
+        </hero-fullscreen>
 
-                    <header class="home-hero-content">
-                        <h1 class="home-hero-title ">
-                            Qamar Ali
-                        </h1>
-                        <h3 class="home-hero-subtitle">
-                            Sr. Full Stack Web Developer
-                        </h3>
-                        <p class="home-hero-description">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro nesciunt quo voluptatum ipsam dignissimos quod.
-                        </p>
-                        <a href="" class="button button-lg button-black">Call To Action</a>
-                    </header>
 
-                    <HangingCat></HangingCat>
-                </div>
-            </div>        
-        </section>
-
-        <section class="section things-ive-built-section">
+        <section class="section projects-section">
             <div class="container-small">
                 <header class="section-header">
                     <h2 class="section-title title-dashed">
@@ -60,28 +45,8 @@ useHead({
             </div>
         </section>
 
-
-        <section class="section  skills-section">
-            <div class="container-small">
-                <header class="">
-                    <h2 class="section-title title-dashed">
-                        <span>
-                            <span class="section-count">03.</span> Skills
-                        </span>
-                    </h2>
-                </header>
-                <div class="section-content">
-                    <p>
-                        There are countless technologies and frameworks that one can use as a Web Developer 
-                        and i love learning and would love to learn them all, but if you want to master something
-                        you cannot jump from one technology to another the next day. Mastering a technology requires time and practice 
-                        and below are the technologies that i can proudly say <strong>i've mastered in my 7 year career (for future more is comming)</strong>. 
-                        To simplify (Vue.js, Nuxt.js, Laravel, Node).
-                    </p>
-                    <Skills></Skills>
-                </div>
-            </div>
-        </section>
+        <skills></skills>
+        
 
         <section class="articles-section section" v-if="articles.length">
             <div class="container-small">
