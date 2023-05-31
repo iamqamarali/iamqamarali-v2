@@ -67,7 +67,7 @@ useHead({
                 <header class="section-header section-header-small">
                     <h2 class="section-title title-dashed">
                         <span>
-                            <span class="section-count">02.</span> 
+                            <span class="section-count">03.</span> 
                             Blog
                         </span>
                     </h2>

@@ -15,7 +15,7 @@ defineProps({
             <header class="">
                 <h2 class="section-title title-dashed">
                     <span>
-                        <span class="section-count">03.</span> Skills
+                        <span class="section-count">02.</span> Skills
                     </span>
                 </h2>
             </header>

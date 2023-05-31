@@ -23,6 +23,5 @@ export default defineEventHandler(async (event) => {
 
 
     const projects = await Project.latest(page * limit, limit, queryParams)
-    console.log(projects);
     return  projects.map(project => project.data)
 })
