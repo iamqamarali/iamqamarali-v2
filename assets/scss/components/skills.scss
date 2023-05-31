@@ -3,13 +3,10 @@
 }
 
 .skills{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 1.5rem;
+    margin-top: 3rem;
 
 
     .main-skill{
-        max-width: 400px;
         &:not(:last-of-type){ 
             
         }
@@ -19,39 +16,17 @@
         display: inline-block;
         color: inherit;
         border-radius: 5px;
-        font-size: 1.3rem;
+        font-size: 1.2rem;
     }
     .main-skill-description{
-        display: none;
         font-size: 1rem;
         margin-bottom: 1.5rem;
     }
     .sub-skills-list{
-    }
-
-
-}
-
-
-@media screen and (max-width: 1024px){
-    .skills{
-        grid-template-columns: 1fr 1fr;
-        gap: 2.5rem;
-        .main-skill{
-        }        
-    }        
-}
-
-@media screen and (max-width: 735px){
-    .skills{
-        grid-template-columns: 1fr;
-        gap: 0rem;
-        .main-skill{
-        
-        }        
-        .sub-skills-list{
-            margin-left: .5rem;
+        font-size: 1rem;
+        padding-bottom: 0;
+        li{
+            line-height: 1;
         }
-
-    }        
+    }
 }

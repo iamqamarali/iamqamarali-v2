@@ -1,6 +1,7 @@
 <template>
     <footer class="site-footer" >
-        
+        <RisingSquares :background="'rgba(100,100,100,.05)'"></RisingSquares>
+
         <section class="footer-contact-section">
             <div class="container">
                 <div class="footer-contact-inner">

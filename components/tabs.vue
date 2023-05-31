@@ -10,15 +10,13 @@ const activeTab = ref(0)
 
 <template>
     <div class="tabs-wrapper" :class="{ 'tabs-vertical' : $attrs.vertical }" >
-        <div class="tabs-nav-container">
-            <div class="tabs">
-                <div class="tab"
-                    v-for="(tab , index) in tabs"
-                    @click="activeTab = index" 
-                    :class="{ 'active' : activeTab == index}"
-                    >
-                    {{ tab }} 
-                </div>
+        <div class="tabs">
+            <div class="tab"
+                v-for="(tab , index) in tabs"
+                @click="activeTab = index" 
+                :class="{ 'active' : activeTab == index}"
+                >
+                {{ tab }} 
             </div>
         </div>
 

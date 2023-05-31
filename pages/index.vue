@@ -27,6 +27,7 @@ useHead({
 
 <template>
     <main class="home-page site-content ">
+
         <hero-fullscreen
             title="Qamar Ali"
             subtitle="Sr. Full Stack Web Developer"
@@ -59,7 +60,7 @@ useHead({
             </div>
         </section>
 
-        <skills></skills>
+        <Skills></Skills>
         
 
         <section class="articles-section section" v-if="articles.length">

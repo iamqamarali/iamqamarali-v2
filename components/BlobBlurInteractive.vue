@@ -22,6 +22,7 @@ watch([x, y], ()=>{
 onMounted(()=>{
     // set gradient  to blob
     if(props.background){
+        console.log(props.background)
         blob.value.style.background = props.background
     }
 

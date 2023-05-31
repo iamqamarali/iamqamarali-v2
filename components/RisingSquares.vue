@@ -1,6 +1,20 @@
+<script setup>
+const squaresContainer = ref(null)
+const props = defineProps(['background'])
+
+
+onMounted(() => {
+
+    Array.from(squaresContainer.value.children).forEach((square, index) => {
+        square.style.background = props.background
+    })
+})
+
+</script>
+
 <template>
 <div class="rising-squares-area" >
-   <ul class="circles">
+   <ul class="circles" ref="squaresContainer">
       <li></li>
       <li></li>
       <li></li>

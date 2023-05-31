@@ -1,27 +1,36 @@
 
 .tabs-wrapper{
     display: flex;
-    align-items: center;
     flex-direction: column;
-    gap: 3rem;
 }
 // vertical tabs
 .tabs-wrapper.tabs-vertical{
     flex-direction: row;
     align-items: flex-start;
+    gap: 1rem;
+
     .tabs{
         flex-direction: column;
+        padding: 0 ;
+        padding-right: 1rem;
+    }
+
+    @media screen and (max-width: 735px){
+        flex-direction: column;
+        align-items: stretch;
+        .tabs{
+            flex-direction: row;
+            padding-right: 0;
+            padding-bottom: 1rem;
+        }    
     }
 
 
 }
 
 
-.tabs-nav-container{
-    width: fit-content;
-    white-space: nowrap;
-}
 .tabs-content-container{
+    flex: 1;
 
 }
 
@@ -33,14 +42,16 @@
 .tabs {
     display: flex;
     gap: .6rem;
-
-
+    max-width: 100%;
+    overflow-x: auto;
+    padding-bottom: 1rem;
 
     .tab{
         font-weight: 600;
-        font-size: 1rem;
+        font-size: 0.9rem;
+        font-family: var(--poppins);
 
-        padding: .7rem 1rem;
+        padding: .7rem ;
         border-radius: 5px;
         transition: all .2s ease-in-out;
         cursor: pointer;
@@ -52,7 +63,7 @@
     }
 
     .tab.active{
-        background-color: var(--primary-light);
+        background-color: var(--primary);
         color: var(--primary-text-color);
     }
 
