@@ -11,3 +11,20 @@
 @import './partials/_all.scss';
 @import './page/all.scss';
 
+
+.page-enter-active {
+    transition: all .3s ease-in-out;
+}
+
+.page-leave-active {
+    transition: all .3s ease-in-out;
+}
+
+.page-enter-from{
+    transform: translateX(-50%);
+    opacity: 0;
+}
+.page-leave-to {
+    transform: translateX(50%);
+    opacity: 0;
+}
