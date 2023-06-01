@@ -9,7 +9,9 @@ nuxtApp.hook('page:finish', ()=>{
     if(initialPageLoad.value){
         setTimeout(() => {
             initialPageLoad.value = false
-        }, 900);
+            // bring scrollbar back
+            document.body.style.overflow = 'auto'
+        }, 1000);
      }
 });
 
