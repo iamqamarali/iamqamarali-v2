@@ -46,12 +46,14 @@ onBeforeMount(()=>{
                         {{ ctaText }}
                     </button>
 
-                    <slot name="default"></slot>
-                    
+                    <slot name="default"></slot>                    
                 </header>
 
             </div>
         </div>  
+
+        <ScrollDownArrow title="Things I've Built"></ScrollDownArrow>
+
 
     </section>
 </template>

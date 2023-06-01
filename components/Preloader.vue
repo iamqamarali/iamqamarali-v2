@@ -35,7 +35,7 @@ const stop = () => {
             document.body.style.overflow = 'auto'
         }
 
-    }, 1000);
+    }, 1100);
 
 }
 
