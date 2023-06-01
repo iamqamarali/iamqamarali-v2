@@ -48,3 +48,9 @@
         fill: var(--primary-dark);
     }
 }
+.svg-icon-primary-darker{
+    path{
+        transition: var(--skin-change-transition);
+        fill: var(--primary-darker);
+    }
+}

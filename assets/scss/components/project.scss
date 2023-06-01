@@ -5,6 +5,7 @@
 
 .project{
     --project-image-overlay-color: var(--primary);
+    //--project-image-overlay-color: transparent;
 
     color: var(--body-text-color);
     transition: var(--skin-change-transition);
@@ -14,6 +15,8 @@
     position: relative;
     min-height: 330px;
     margin-bottom: 10rem;
+
+    
 
 
     .project-image-container{
@@ -67,6 +70,7 @@
         justify-content: center;
         gap: 1rem;
     }
+
     .project-name{
         display: block;
         margin: 0;

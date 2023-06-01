@@ -13,19 +13,19 @@
 
 
     // PRIMARY COLORS
-    --primary-lighter: #ffd8a8;
+    --primary-lighter: #ffda8b;
     --primary-lighter-text-color: #000;
 
-    --primary-light: #ffc073;
+    --primary-light: #ffc548;
     --primary-light-text-color: #000;
 
     //
-    --primary: #ffab44;
+    --primary: #ffb921;
     --primary-text-color: #000;
 
-    --primary-dark: #f78800;
+    --primary-dark: #dd9613;
     --primary-dark-text-color: #fff;
-    --primary-darker: #d77904;
+    --primary-darker: #c5891b;
 
     --secondary: #ffdb3a;
     
@@ -34,7 +34,7 @@
 
 
     // BODY COLORS
-    --body-bg-color: #fff;
+    --body-bg-color: #fffbf4;
     --body-text-color: #111;
 
     // logo color
@@ -57,14 +57,14 @@
 
 
     // header
-    --header-bg-color: #fff;
+    --header-bg-color: #fffbf4;
     --header-opposite-bg-color: #000;
     --header-text-color: #000;
     --header-text-hover-color: var(--primary-dark);
 
 
     // footer
-    --footer-bg-color: var(--light-gray-background-color);
+    --footer-bg-color: var(--primary-gradient);
 
     // article page
     --articleText: #28343a;

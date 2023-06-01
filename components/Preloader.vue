@@ -9,54 +9,61 @@ const initialPageLoad = useState('initialLoad', () => true)
 
 const startAgain = () => {
     show.value = true
-
+    
     loader.value.animate({
-            transform: 'translateY(0%)'
-        }, {
-            duration: 200,
-            easing: 'ease-in-out',
-            fill: 'forwards'
-        }, function(){
-        })
+        transform: 'translateY(0%)'
+    }, {
+        duration: 200,
+        easing: 'ease-in-out',
+        fill: 'forwards'
+    })
 
 }
 
 const stop = () => {
     setTimeout(() => {
-        loader.value.animate({
+        let a = loader.value.animate({
             transform: 'translateY(-100%)'
         }, {
             duration: 300,
             easing: 'ease-in-out',
             fill: 'forwards'
-        }, function(){
-            show.value = false
         })
+        
+        a.onfinish = () => {
+            show.value = false
+            document.body.style.overflow = 'auto'
+        }
+
     }, 1000);
 
 }
 
 nuxtApp.hook('page:start', ()=>{
-    // startAgain()
+    //startAgain()
 });
 nuxtApp.hook('page:finish', ()=>{
     if(initialPageLoad.value){
-        stop();
         initialPageLoad.value = false
-    }
+        stop();
+     }
 });
 
 onBeforeUnmount(() => ()=>{
-    console.log("unmount")
     
 });
+
+onMounted(() => {
+    // hide scrollbar
+    document.body.style.overflow = 'hidden'
+})
 
 
 </script>
 
 <template>
-    <div class="preloader-wrapper" ref="loader" v-if="show">
-
+    <div class="preloader-wrapper" ref="loader" v-show="show">
+        <logo></logo>
 
         <section >
             <div class="dots"></div>
@@ -86,6 +93,9 @@ onBeforeUnmount(() => ()=>{
 </template>
 
 <style lang="scss">
+body{
+    overflow: hidden;
+}
 .preloader-wrapper{
     position: fixed;
     inset: 0;
@@ -102,7 +112,10 @@ onBeforeUnmount(() => ()=>{
         padding-top: 1rem;
         top: 5%;
         left: 50%;
-        transform: translateX(-50%)
+        transform: translateX(-50%);
+        .logo-svg{
+            width: 100px;
+        }
 
     }
 

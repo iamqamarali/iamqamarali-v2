@@ -32,7 +32,7 @@
 
 .hero-fullscreen-content{
     flex: 1;
-    max-width: 500px;
+    max-width: 600px;
 }
 
 
@@ -40,19 +40,22 @@
 
 
 .hero-fullscreen-title{
+    font-family: var(--poppins);
     font-weight: 600;
     font-size: 4rem;
     line-height: 1.1;
     margin-bottom: 1rem;
 }
 .hero-fullscreen-subtitle{
-    font-weight: 600;
-    font-size: 1.25rem;
-    margin-bottom: 1rem;
+    font-family: var(--poppins);
+    font-weight: 800;
+    font-size: 1.2rem;
+    margin-bottom: .9rem;
     opacity: .9;
 }
 .hero-fullscreen-description{
-    font-size: 1rem;
+    font-weight: 500;
+    font-size: 1.1rem;
     margin-bottom: 1.2rem;
 }
 

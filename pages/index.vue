@@ -1,4 +1,24 @@
 <script setup>
+
+useHead({
+    bodyAttrs: {
+        class: 'has-fixed-header'
+    },
+})
+
+useSeoMeta({
+    title: "Qamar Ali | Web Developer",
+    description: "A software enginner, web developer specializing in Developing & Deploying Full Stack Web Applications that scale to millions of users.",
+    robots: 'index, follow',
+    ogTitle: "Qamar Ali | Sr. Full Stack Web Developer",
+    ogDescription: "A software enginner, web developer specializing in Developing & Deploying Full stack Web Applications that scale to millions of users.",
+    ogUrl: useAppConfig().APP_BASE_URL ,
+    ogType: 'website',
+
+})
+
+
+
 const {data : articles } = await useFetch(() => `/api/posts`, {
     params:{
         limit: 4,
@@ -15,13 +35,6 @@ const {data : projects } = await useFetch(`/api/projects`, {
 })
 
 
-useHead({
-    bodyAttrs: {
-        class: 'has-fixed-header'
-    },
-})
-
-
 
 </script>
 
@@ -31,8 +44,8 @@ useHead({
         <hero-fullscreen
             title="Qamar Ali."
             subtitle="Sr. Full Stack Web Developer"
-            description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro nesciunt quo voluptatum ipsam dignissimos quod."
-            ctaText="Get in touch"
+            description="I'm a software enginner specializing in Developing & Deploying Full stack Web Applications and SAAS Products that scale to millions of users."
+            ctaText="Start a project"
         >
         </hero-fullscreen>
 
