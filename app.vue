@@ -1,10 +1,6 @@
 <script setup>
 useHead({
   htmlAttrs: { lang: 'en' },
-  script: [
-    {src: "https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"}
-  ]
-
 })
 
 </script>
