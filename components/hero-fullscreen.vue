@@ -6,6 +6,7 @@ const props = defineProps({
     title: String,
     subtitle: String,
     description: String,
+    arrowDownTitle: String,
 
     ctaText: String,
 })
@@ -18,6 +19,29 @@ onBeforeMount(()=>{
         hero.value.style.background = props.background
     }
 })
+
+onMounted(()=>{
+    setTimeout(() => {
+        animateHeaderText();
+    }, 1500);
+})
+
+
+
+const animateHeaderText = () => {
+    let elements = hero.value.querySelectorAll('.animate')
+
+
+    Array.from(elements).forEach((el, index) => {
+        setTimeout(() => {
+            el.classList.add('animate-slide-bar')
+        }, index * 200)
+    })    
+
+    
+}
+
+
 
 
 </script>
@@ -32,17 +56,17 @@ onBeforeMount(()=>{
             <div class="hero-fullscreen-wrapper">
 
                 <header class="hero-fullscreen-content">
-                    <h1 class="hero-fullscreen-title " v-if="title">
+                    <h1 class="hero-fullscreen-title animate before-slide-bar" v-if="title">
                         {{ title }}
                     </h1>
-                    <h3 class="hero-fullscreen-subtitle" v-if="subtitle">
+                    <h3 class="hero-fullscreen-subtitle animate before-slide-bar" v-if="subtitle">
                         {{ subtitle }}
                     </h3>
-                    <p class="hero-fullscreen-description" v-if="description">
+                    <p class="hero-fullscreen-description animate before-slide-bar" v-if="description">
                         {{ description }}
                     </p>
 
-                    <button class="button button-lg button-black" @click="$emit('cta-click')" v-if="ctaText">
+                    <button class="button button-lg button-black animate before-slide-bar" v-if="ctaText" @click="$emit('cta-click')" >
                         {{ ctaText }}
                     </button>
 
@@ -52,8 +76,8 @@ onBeforeMount(()=>{
             </div>
         </div>  
 
-        <ScrollDownArrow title="Things I've Built"></ScrollDownArrow>
 
+        <ScrollDownArrow v-if="arrowDownTitle" :title="arrowDownTitle"></ScrollDownArrow>
 
     </section>
 </template>
