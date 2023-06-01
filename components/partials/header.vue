@@ -12,7 +12,7 @@ const changeSkin = () => {
 <template>
     <header class="site-header">
         <div class="header-inner-wrapper">
-            <div class="container">
+            <div class="container-small">
                 <logo></logo>
                 <div class="nav">
                     <NuxtLink to="/articles" class="nav-item">Articles</NuxtLink>    

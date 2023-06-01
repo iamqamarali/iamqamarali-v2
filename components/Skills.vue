@@ -1,10 +1,4 @@
 <script setup>
-defineProps({
-    activeSkill : {
-        type: Number,
-        required: true,
-    }
-})
 
 
 </script>
@@ -41,8 +35,8 @@ defineProps({
                                 'Deployment & Other'
                             ]"
                             vertical="true">
-                            <template #content="{ activeTab: activeSkill }">
-                                <section class="main-skill tab-content" :class="{'active': activeSkill == 0}" >
+                            <template #content="{ activeTab }">
+                                <section class="main-skill tab-content" :class="{'active': activeTab == 0}" >
                                     <h5 class="main-skill-title mt-0">Font-End Development</h5>
                                     <p class="main-skill-description">I like to code things from scratch, and enjoy bringing ideas to life in the browser.</p>                                    
                                     <div class="skills-list">
@@ -56,7 +50,7 @@ defineProps({
                                         <span class="tag">Node.js</span>
                                     </div>
                                 </section>
-                                <section class="main-skill tab-content" :class="{'active': activeSkill == 1}">
+                                <section class="main-skill tab-content" :class="{'active': activeTab == 1}">
                                     <h5 class="main-skill-title mt-0">Back-End Development</h5>
                                     <p class="main-skill-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus enim repellendus dolores placeat beatae. Voluptatum labore velit quam quaerat cum consectetur animi. Odio id itaque omnis deleniti impedit repellat et!.</p>
                                     <div class="skills-list">
@@ -67,7 +61,7 @@ defineProps({
                                         <span class="tag">Bootstrap</span>
                                     </div>
                                 </section>
-                                <section class="main-skill tab-content" :class="{'active': activeSkill == 2}">
+                                <section class="main-skill tab-content" :class="{'active': activeTab == 2}">
                                     <h5 class="main-skill-title mt-0">Deployment & Other </h5>
                                     <p class="main-skill-description">I like to code things from scratch, and enjoy bringing ideas to life in the browser.</p>
                                     <div class="skills-list">

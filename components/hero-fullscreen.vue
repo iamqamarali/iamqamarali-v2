@@ -14,16 +14,24 @@ const emit = defineEmits(['cta-click'])
 
 
 const hero = ref(null)
+// set background if provided
 onBeforeMount(()=>{
     if(props.background){
         hero.value.style.background = props.background
     }
 })
 
+
+// On First time Mount only Animate header text
+const firstTimeMount = useState(() => true)
 onMounted(()=>{
-    setTimeout(() => {
-        animateHeaderText();
-    }, 1500);
+    if(firstTimeMount.value) {
+        setTimeout(() => {
+            animateHeaderText();
+            setTimeout(() => { firstTimeMount.value = false }, 4000)
+        }, 1500);
+    }
+
 })
 
 
@@ -56,17 +64,17 @@ const animateHeaderText = () => {
             <div class="hero-fullscreen-wrapper">
 
                 <header class="hero-fullscreen-content">
-                    <h1 class="hero-fullscreen-title animate before-slide-bar" v-if="title">
+                    <h1 class="hero-fullscreen-title"  :class="firstTimeMount ? 'animate before-slide-bar' : '' " v-if="title">
                         {{ title }}
                     </h1>
-                    <h3 class="hero-fullscreen-subtitle animate before-slide-bar" v-if="subtitle">
+                    <h3 class="hero-fullscreen-subtitle" :class="firstTimeMount ? 'animate before-slide-bar' : '' " v-if="subtitle">
                         {{ subtitle }}
                     </h3>
-                    <p class="hero-fullscreen-description animate before-slide-bar" v-if="description">
+                    <p class="hero-fullscreen-description " :class="firstTimeMount ? 'animate before-slide-bar' : '' " v-if="description">
                         {{ description }}
                     </p>
 
-                    <button class="button button-lg button-black animate before-slide-bar" v-if="ctaText" @click="$emit('cta-click')" >
+                    <button class="button button-lg button-black " :class="firstTimeMount ? 'animate before-slide-bar' : '' " v-if="ctaText" @click="$emit('cta-click')" >
                         {{ ctaText }}
                     </button>
 
