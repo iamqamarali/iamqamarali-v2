@@ -1,5 +1,19 @@
 <script setup>
 
+const {data : articles } = await useFetch(() => `/api/posts`, {
+    params:{
+        limit: 4,
+        published: true,
+    }
+})
+
+const {data : projects } = await useFetch(`/api/projects`, {
+    params:{
+        limit: 3,
+        published: true,
+        featured: true,
+    }
+})
 
 useHead({
     bodyAttrs: {
@@ -16,23 +30,6 @@ useSeoMeta({
     ogUrl: useAppConfig().APP_BASE_URL ,
     ogType: 'website',
 
-})
-
-
-
-const {data : articles } = await useFetch(() => `/api/posts`, {
-    params:{
-        limit: 4,
-        published: true,
-    }
-})
-
-const {data : projects } = await useFetch(`/api/projects`, {
-    params:{
-        limit: 3,
-        published: true,
-        featured: true,
-    }
 })
 
 
