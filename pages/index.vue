@@ -1,8 +1,5 @@
 <script setup>
 
-definePageMeta({
-    keepalive: true
-})
 
 useHead({
     bodyAttrs: {
