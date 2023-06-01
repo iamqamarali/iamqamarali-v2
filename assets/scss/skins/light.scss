@@ -72,12 +72,12 @@
     // input
     --input-background-color: #fff;
     --input-border-color: #b2b2b2;
-    --input-border-color-focus: #259925;
+    --input-border-color-focus: var(--primary-dark);
     --input-text-color: #000;
 
     // button
     --btn-primary-color: var(--primary);
-    --btn-primary-color-hover: var(--primary-dark);
+    --btn-primary-color-hover: var(--primary);
     --btn-primary-text-color: var(--primary-text-color);
 
     // code

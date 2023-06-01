@@ -29,13 +29,31 @@ useHead({
     <main class="home-page site-content ">
 
         <hero-fullscreen
-            title="Qamar Ali"
+            title="Qamar Ali."
             subtitle="Sr. Full Stack Web Developer"
             description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro nesciunt quo voluptatum ipsam dignissimos quod."
             ctaText="Get in touch"
         >
         </hero-fullscreen>
 
+        <!-- About Section -->
+        <!-- <div class="section pb-25">
+            <div class="container-small">
+                <div class="section-hea">
+                    <h2 class="section-title title-dashed">
+                        <span class="section-count">01.</span>About.
+                    </h2>
+                </div>
+                <div class="section-content">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint ea tenetur libero nobis, maiores sapiente officia cum voluptas, quam fugiat veniam adipisci consequuntur optio totam quas non deleniti ducimus ipsa.
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque amet distinctio omnis nesciunt quas officiis atque debitis, rerum expedita tempora
+                    </p>
+                </div>
+
+            </div>
+        </div>
+ -->
 
         <section class="section projects-section">
             <div class="container-small">

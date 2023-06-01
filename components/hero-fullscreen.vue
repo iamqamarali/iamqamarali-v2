@@ -13,7 +13,7 @@ const emit = defineEmits(['cta-click'])
 
 
 const hero = ref(null)
-onMounted(()=>{
+onBeforeMount(()=>{
     if(props.background){
         hero.value.style.background = props.background
     }

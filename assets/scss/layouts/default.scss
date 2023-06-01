@@ -3,13 +3,14 @@
     background-color: var(--body-bg-color);
     color: var(--body-text-color);
     transition: var(--skin-change-transition);
+    overflow-x: hidden;
+
 
     .site-header{
 
     }
     .site-content{
-        min-height: 100vh;
-        min-height: 100dvh;   
+        
     }
     .site-footer{
 

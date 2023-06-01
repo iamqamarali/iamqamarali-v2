@@ -1,12 +1,18 @@
 .site-footer{
     background-color: var(--footer-bg-color);
     color: var(--dark-gray-text-color);
-    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 2.5rem;
     padding: 0rem 0 6rem;
+    position: relative;
+    isolation: isolate;
+
+
+    .rising-squares-area{
+        z-index: -1;
+    }
 
     
     .footer-contact-section{

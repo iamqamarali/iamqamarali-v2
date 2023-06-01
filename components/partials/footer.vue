@@ -37,9 +37,9 @@
                 <nav class="footer-nav nav">
                     <a href="https://github.com/iamqamarali" target="_blank" class="nav-item">Github</a>
                     <a href="https://www.linkedin.com/in/iamqamarali/" target="_blank" class="nav-item">LinkedIn</a>
-                    <a href="https://codepen.io/iamqamarali" target="_blank" class="nav-item">CodePen</a>                    
                     <NuxtLink to="/articles" class="nav-item">Articles</NuxtLink>
                     <a href="" class="nav-item">Work</a>
+                    <NuxtLink to="/contact" class="nav-item">Contact</NuxtLink>
                 </nav>
                 <div class="footer-copyright">
                     <span>Handcrafter by me &copy; {{ new Date().getFullYear() }} Qamar Ali Media Inc. </span> 

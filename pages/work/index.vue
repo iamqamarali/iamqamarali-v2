@@ -24,7 +24,7 @@ onUpdated(() => {
         <section class="articles-section section" >
             <div class="container-small">
                 <header class="section-header">
-                    <h1 class="section-title">My Recent Work.</h1>
+                    <h1 class="page-title">My Recent Work.</h1>
                 </header>
 
                 <div class="section-content" v-if="projects.length">

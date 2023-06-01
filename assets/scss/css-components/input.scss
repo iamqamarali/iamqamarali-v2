@@ -8,9 +8,9 @@
     }
 }
 
-input[type=text],
-input[type=password],
-input[type=number]{
+.input,
+.input,
+.input{
     display: block;
     width: 100%;
     height: var(--input-height);
@@ -27,5 +27,27 @@ input[type=number]{
     &:active{
         outline: none;
         border: 1px solid var(--input-border-color-focus);
+        box-shadow: 0 0 5px -2px var(--input-border-color-focus);
+    }
+}
+
+.textarea{
+    font-family: var(--lato);
+    display: block;
+    width: 100%;
+    padding: 1rem 1.5rem;
+    border-radius: 4px;
+    border: 1px solid var(--input-border-color);
+    font-size: 1rem;
+    color: var(--input-text-color);
+    background-color: var(--input-background-color);
+    margin-bottom: 1.5rem;
+    outline: none;
+    transition: var(--skin-change-transition); 
+    &:focus,
+    &:active{
+        outline: none;
+        border: 1px solid var(--input-border-color-focus);
+        box-shadow: 0 0 5px -2px var(--input-border-color-focus);
     }
 }

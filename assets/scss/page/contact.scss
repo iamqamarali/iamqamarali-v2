@@ -1,0 +1,19 @@
+.contact-page{
+
+    .two-columns-grid{
+        gap: 3rem;
+    }
+    @media screen and (max-width: 735px){
+        .two-columns-grid{
+            gap: 1.5rem;
+        }
+        .contact-form{
+            order: 1;
+        }    
+    }
+
+    .contact-form{
+
+    }
+
+}
