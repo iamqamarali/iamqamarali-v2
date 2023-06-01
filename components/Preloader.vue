@@ -1,51 +1,15 @@
 <script setup>
 
 const nuxtApp = useNuxtApp();
+
+const initialPageLoad = useState( () => true)
 const loader = ref(null)
-const show = ref(true)
 
-const initialPageLoad = useState('initialLoad', () => true)
-
-
-const startAgain = () => {
-    show.value = true
-    
-    loader.value.animate({
-        transform: 'translateY(0%)'
-    }, {
-        duration: 200,
-        easing: 'ease-in-out',
-        fill: 'forwards'
-    })
-
-}
-
-const stop = () => {
-    setTimeout(() => {
-        let a = loader.value.animate({
-            transform: 'translateY(-100%)'
-        }, {
-            duration: 300,
-            easing: 'ease-in-out',
-            fill: 'forwards'
-        })
-        
-        a.onfinish = () => {
-            show.value = false
-            document.body.style.overflow = 'auto'
-        }
-
-    }, 1100);
-
-}
-
-nuxtApp.hook('page:start', ()=>{
-    //startAgain()
-});
 nuxtApp.hook('page:finish', ()=>{
     if(initialPageLoad.value){
-        initialPageLoad.value = false
-        stop();
+        setTimeout(() => {
+            initialPageLoad.value = false
+        }, 900);
      }
 });
 
@@ -62,7 +26,7 @@ onMounted(() => {
 </script>
 
 <template>
-    <div class="preloader-wrapper" ref="loader" v-show="show">
+    <div class="preloader-wrapper" :class="{'hide' : !initialPageLoad}" ref="loader">
         <logo></logo>
 
         <section >
@@ -96,6 +60,7 @@ onMounted(() => {
 body{
     overflow: hidden;
 }
+
 .preloader-wrapper{
     position: fixed;
     inset: 0;
@@ -106,6 +71,11 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all .5s cubic-bezier(0.71, 0.15, 0.19, 0.85);
+
+    &.hide{
+        transform: translateY(-100%);  
+    }
 
     .logo{
         position: absolute;
