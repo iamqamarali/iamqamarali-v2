@@ -30,28 +30,27 @@ const startPreloader = () => {
 }
 
 
-// onMounted(()=>{
-// })
 
 const nuxtApp = useNuxtApp();
-const show = ref(false)
 nuxtApp.hook('page:start', ()=>{
     show.value = true
     startPreloader()
 });
 nuxtApp.hook('page:finish', ()=>{
-    show.value = false
 });
 
 onBeforeUnmount(() => ()=>{
     
 });
 
+onMounted(()=>{
+    startPreloader()
+})
 
 </script>
 
 <template>      
-    <div class="preloader" ref="loader" v-show="show">
+    <div class="preloader" ref="loader" >
         <div class="logo-container">
             <logo></logo>
         </div>
@@ -72,13 +71,12 @@ onBeforeUnmount(() => ()=>{
     --primary: #ffab44; 
     
     --base-width: 150px;
-    --background-color: #ffebd3;
 
     @media screen and (max-width: 735px) {
         --base-width: 70px;
     }
 
-    background-color: var(--background-color);
+    background: var(--primary-gradient);
     position: fixed;
     inset: 0;
     z-index: 10;

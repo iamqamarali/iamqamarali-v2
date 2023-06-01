@@ -16,7 +16,7 @@ useHead({
       :throttle="0"
       :height="4"
     />
-    <Preloader></Preloader>
+    <Preloader-2></Preloader-2>
 
     <NuxtPage></NuxtPage>
   </NuxtLayout>
