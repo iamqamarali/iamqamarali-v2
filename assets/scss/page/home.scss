@@ -29,6 +29,12 @@
             justify-content: center;
             align-items: center;
         }
+        @media screen and (max-width: 735px){
+            .my-image-container{
+                margin-top: 2rem;
+            }
+    
+        }
         .my-image-wrapper-1{
             position: relative;
             isolation: isolate;

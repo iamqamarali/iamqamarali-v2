@@ -1,5 +1,12 @@
 <script setup>
 
+useHead({
+    bodyAttrs: {
+        class: 'has-fixed-header'
+    },
+})
+
+
 const {data : articles } = await useFetch(() => `/api/posts`, {
     params:{
         limit: 4,
@@ -15,11 +22,6 @@ const {data : projects } = await useFetch(`/api/projects`, {
     }
 })
 
-useHead({
-    bodyAttrs: {
-        class: 'has-fixed-header'
-    },
-})
 
 useSeoMeta({
     title: "Qamar Ali | Web Developer",
