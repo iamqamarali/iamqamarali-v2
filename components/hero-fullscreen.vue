@@ -10,6 +10,11 @@ const props = defineProps({
 
     ctaText: String,
     ctaLink: String,
+
+    shouldAnimate : {
+        type: Boolean,
+        default: true
+    }
 })
 const emit = defineEmits(['cta-click'])
 
@@ -27,14 +32,11 @@ const animateHeaderText = () => {
 }
 
 
-
-const firstTimeMount = useState(() => true)
 onMounted(()=>{
+    
     const initialPageLoad = useState('initial-page-load')
     setTimeout(() => {        
         animateHeaderText();
-        setTimeout(() => { firstTimeMount.value = false }, 4000)
-
     }, initialPageLoad.value ? 1100 : 0);
 
 })
@@ -62,17 +64,17 @@ onMounted(()=>{
             <div class="hero-fullscreen-wrapper">
 
                 <header class="hero-fullscreen-content">
-                    <h1 class="hero-fullscreen-title"  :class="firstTimeMount ? 'animate before-slide-bar' : '' " v-if="title">
+                    <h1 class="hero-fullscreen-title"  :class="shouldAnimate ? 'animate before-slide-bar' : '' " v-if="title">
                         {{ title }}
                     </h1>
-                    <h3 class="hero-fullscreen-subtitle" :class="firstTimeMount ? 'animate before-slide-bar' : '' " v-if="subtitle">
+                    <h3 class="hero-fullscreen-subtitle" :class="shouldAnimate ? 'animate before-slide-bar' : '' " v-if="subtitle">
                         {{ subtitle }}
                     </h3>
-                    <p class="hero-fullscreen-description " :class="firstTimeMount ? 'animate before-slide-bar' : '' " v-if="description">
+                    <p class="hero-fullscreen-description " :class="shouldAnimate ? 'animate before-slide-bar' : '' " v-if="description">
                         {{ description }}
                     </p>
 
-                    <NuxtLink :to="ctaLink" class="button button-lg button-black " :class="firstTimeMount ? 'animate before-slide-bar' : '' " v-if="ctaText" @click="$emit('cta-click')" >
+                    <NuxtLink :to="ctaLink" class="button button-lg button-black " :class="shouldAnimate ? 'animate before-slide-bar' : '' " v-if="ctaText" @click="$emit('cta-click')" >
                         {{ ctaText }}
                     </NuxtLink>
 

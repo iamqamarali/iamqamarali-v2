@@ -28,13 +28,10 @@ const animateHeaderText = () => {
 }
 
 
-const firstTimeMount = useState(() => true)
 onMounted(()=>{
     const initialPageLoad = useState('initial-page-load')
     setTimeout(() => {        
         animateHeaderText();
-        setTimeout(() => { firstTimeMount.value = false }, 4000)
-
     }, initialPageLoad.value ? 1100 : 0);
 
 })
@@ -59,17 +56,17 @@ onMounted(()=>{
             <div class="hero-simple-wrapper">
 
                 <header class="hero-simple-content">
-                    <h1 class="hero-simple-title"  :class="firstTimeMount ? 'animate before-slide-bar' : '' " v-if="title">
+                    <h1 class="hero-simple-title animate before-slide-bar"  v-if="title">
                         {{ title }}
                     </h1>
-                    <h3 class="hero-simple-subtitle" :class="firstTimeMount ? 'animate before-slide-bar' : '' " v-if="subtitle">
+                    <h3 class="hero-simple-subtitlemanimate before-slide-bar" v-if="subtitle">
                         {{ subtitle }}
                     </h3>
-                    <p class="hero-simple-description " :class="firstTimeMount ? 'animate before-slide-bar' : '' " v-if="description">
+                    <p class="hero-simple-description animate before-slide-bar" v-if="description">
                         {{ description }}
                     </p>
 
-                    <NuxtLink :to="ctaLink" class="button button-lg button-black " :class="firstTimeMount ? 'animate before-slide-bar' : '' " v-if="ctaText" @click="$emit('cta-click')" >
+                    <NuxtLink :to="ctaLink" class="button button-lg button-black animate before-slide-bar" v-if="ctaText" @click="$emit('cta-click')" >
                         {{ ctaText }}
                     </NuxtLink>
 

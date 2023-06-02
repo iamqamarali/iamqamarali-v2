@@ -36,7 +36,7 @@ onBeforeUnmount(()=>{
     <main class="site-content">
         <hero-simple
             title="Explore Practical Software Development Articles."
-            background="#f6c7bd"
+            background="#e9c3b8"
             >
         </hero-simple>
 
