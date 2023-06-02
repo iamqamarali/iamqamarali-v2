@@ -6,7 +6,7 @@
     .header-inner-wrapper{
         position: relative;
 
-        padding: 1.5rem 0 ;
+        padding: 1rem 0 ;
         background-color: var(--header-bg-color);
         transition: var(--skin-change-transition);
     }
@@ -109,7 +109,6 @@
             fill: var(--fixed-header-text-color);
         }
     }
-
     .nav-item{
         color: var(--fixed-header-text-color);
     }
@@ -120,7 +119,30 @@
         path{
             fill: var(--fixed-header-text-color);
         }
+    }    
+
+}
+
+
+.site-header.text-white{
+    .logo-svg{
+        path{
+            fill: white;
+        }
     }
 
-    
+    .nav-item{
+        color: white;
+    }
+    .nav-item:hover{
+        color: var(--primary);
+    }
+    .svg-icon{
+        path{
+            fill: white;
+        }
+    }    
+
 }
+
+

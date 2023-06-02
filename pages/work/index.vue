@@ -1,5 +1,12 @@
 <script setup>
 
+useHead({
+    bodyAttrs: {
+        class: 'has-fixed-header'
+    },
+})
+
+
 const route = useRoute();
 const limit = useState(() => 10)
 
@@ -17,17 +24,23 @@ onUpdated(() => {
 })
 
 
+
 </script>
 
 <template>
     <main class="site-content">
+        <hero-simple
+            title="My Recent Work."
+            >
+        </hero-simple>
+
+
         <section class="articles-section section" >
             <div class="container-small">
                 <header class="section-header">
-                    <h1 class="page-title">My Recent Work.</h1>
                 </header>
 
-                <div class="section-content" v-if="projects.length">
+                <div class="section-content" v-if="projects">
                     <Project
                        v-for="(project, index) in projects" 
                         :key="project.id"
@@ -39,7 +52,7 @@ onUpdated(() => {
                 </div>
 
 
-                <div v-if="projects.length == limit" class="buttons-group float-right">
+                <div v-if="projects && projects.length == limit" class="buttons-group float-right">
                     <NuxtLink 
                         :to="page > 1 ? '/work?page=' + (page - 1) : ''" 
                         class="button button-black" 
@@ -53,7 +66,7 @@ onUpdated(() => {
                         Next
                     </NuxtLink>
                 </div>
-                <div class=" " v-if="limit > projects.length">
+                <div class=" " v-if="projects && limit > projects.length">
                     <h5 class="font-weight-medium">That's all for me for now</h5>
                 </div>
                 <div class="clear-both"></div>

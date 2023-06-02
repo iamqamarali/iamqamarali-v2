@@ -6,14 +6,30 @@
 
 <template>
     <main class="site-content contact-page" >
+        <!-- <hero-simple
+            title="Get In Touch."
+            >
+        </hero-simple> -->
+
         <section class="section">
             <div class="container-small">
                 <div class="section-header">
-                    <h1 class="page-title">Contact.</h1>
+                    <h1 class="page-title">Get In Touch.</h1>
                 </div>
 
                 <div class="section-content">
                     <div class="two-columns-grid">
+
+                        <div>
+                            <p>
+                                <a href="mailto:get@qamarali.space" >Get@qamarali.space</a>
+                                My inbox is always open for new opportunities,
+                                If you have a project that you want to get started, 
+                                think you need my help with something or just fancy saying hey, 
+                                then feel free to get in touch, I will try my best to get back to you ASAP!
+                            </p>
+                        </div>
+
                         <form  class="contact-form">
                             <div class="input-group">
                                 <input type="text" class="input" placeholder="Name">
@@ -26,12 +42,6 @@
                             </div>
                         </form>
 
-                        <div>
-                            <h4 class="pt-0 mt-0 font-weight-semi-bold">About.</h4>
-                            <p >
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum itaque cupiditate natus quam, suscipit quibusdam blanditiis ab iure, eos obcaecati eum officiis! Aspernatur, quaerat. Tempore hic sed nobis laboriosam repudiandae!
-                            </p>
-                        </div>
                     </div>
 
                 </div>

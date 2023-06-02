@@ -3,6 +3,8 @@
 
 const props = defineProps({
     background: String,
+    textColor: String,
+
     title: String,
     subtitle: String,
     description: String,
@@ -14,8 +16,7 @@ const props = defineProps({
 const emit = defineEmits(['cta-click'])
 
 
-const hero = ref(null)
-
+const hero = useState(() => null)
 
 const animateHeaderText = () => {
     let elements = hero.value.querySelectorAll('.animate')
@@ -25,7 +26,6 @@ const animateHeaderText = () => {
         }, index * 200)
     })    
 }
-
 
 
 const firstTimeMount = useState(() => true)
@@ -43,10 +43,9 @@ onMounted(()=>{
 onMounted(()=>{
     if(props.background){
         hero.value.style.background = props.background
+        hero.value.style.color = props.textColor
     }
 })
-
-
 
 
 
@@ -54,21 +53,19 @@ onMounted(()=>{
 
 
 <template>
-    <section class="hero-fullscreen" ref="hero">
-        <RisingSquares></RisingSquares>
-        <HangingCat></HangingCat>
+    <section class="hero-simple" ref="hero">
 
         <div class="container-small">            
-            <div class="hero-fullscreen-wrapper">
+            <div class="hero-simple-wrapper">
 
-                <header class="hero-fullscreen-content">
-                    <h1 class="hero-fullscreen-title"  :class="firstTimeMount ? 'animate before-slide-bar' : '' " v-if="title">
+                <header class="hero-simple-content">
+                    <h1 class="hero-simple-title"  :class="firstTimeMount ? 'animate before-slide-bar' : '' " v-if="title">
                         {{ title }}
                     </h1>
-                    <h3 class="hero-fullscreen-subtitle" :class="firstTimeMount ? 'animate before-slide-bar' : '' " v-if="subtitle">
+                    <h3 class="hero-simple-subtitle" :class="firstTimeMount ? 'animate before-slide-bar' : '' " v-if="subtitle">
                         {{ subtitle }}
                     </h3>
-                    <p class="hero-fullscreen-description " :class="firstTimeMount ? 'animate before-slide-bar' : '' " v-if="description">
+                    <p class="hero-simple-description " :class="firstTimeMount ? 'animate before-slide-bar' : '' " v-if="description">
                         {{ description }}
                     </p>
 

@@ -1,4 +1,10 @@
 <script setup>
+useHead({
+    bodyAttrs: {
+        class: 'has-fixed-header'
+    },
+})
+
 
 const route = useRoute();
 
@@ -15,15 +21,33 @@ onUpdated(() => {
 })
 
 
+const { hasWhiteText } = useHeader();
+onMounted(()=>{
+    //hasWhiteText.value = true
+})
+onBeforeUnmount(()=>{
+    hasWhiteText.value = false
+})
+
+
 </script>
 
 <template>
     <main class="site-content">
-        <section class="articles-section section" v-if="articles.length">
+        <hero-simple
+            title="Explore Practical Software Development Articles."
+            background="#f6c7bd"
+            >
+        </hero-simple>
+
+        <!-- #c98181 -->
+
+        <section class="articles-section section" v-if="articles">
             <div class="container-small">
-                <header class="section-header section-header-small">
+                <!-- <header class="section-header section-header-small">
                     <h1 class="page-title">Explore Practical Software Development Articles.</h1>
-                </header>
+                </header> -->
+
                 <div class="two-columns-grid articles-grid">
                     <Article-link
                         v-for="article in articles" 
@@ -32,8 +56,21 @@ onUpdated(() => {
                     />
                 </div>
 
-                <NuxtLink :to="page > 1 ? '/articles?page=' + (page - 1) : ''" class="button">Previous</NuxtLink>
-                <NuxtLink :to="'/articles?page=' + (page + 1)" class="button">Next</NuxtLink>
+                
+                <div  class="buttons-group float-right">
+                    <NuxtLink 
+                        :to="page > 1 ? '/articles?page=' + (page - 1) : ''" 
+                        class="button button-black" >
+                        Previous
+                    </NuxtLink>
+                    <NuxtLink 
+                        :to="'/articles?page=' + (page + 1)" 
+                        class="button button-black" >
+                        Next
+                    </NuxtLink>
+                </div>
+                <div class="clear-both"></div>
+                
 
             </div>
         </section>

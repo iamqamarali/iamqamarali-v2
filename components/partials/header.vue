@@ -6,11 +6,16 @@ const changeSkin = () => {
     toggleSkin();
 }
 
+const { hasWhiteText } = useHeader();
+
+onMounted(()=>{
+    
+})
 
 
 </script>
 <template>
-    <header class="site-header">
+    <header class="site-header" :class="{ 'text-white' : hasWhiteText}">
         <div class="header-inner-wrapper">
             <div class="container-small">
                 <logo></logo>

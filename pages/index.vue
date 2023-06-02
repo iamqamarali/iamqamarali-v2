@@ -44,6 +44,7 @@ useSeoMeta({
             subtitle="Sr. Full Stack Web Developer"
             description="I'm a software enginner specializing in Developing & Deploying Full stack Web Applications and SAAS Products that scale to millions of users."
             ctaText="Start a project"
+            ctaLink="/contact"
             arrowDownTitle="Things I've Built"
         >
         </hero-fullscreen>

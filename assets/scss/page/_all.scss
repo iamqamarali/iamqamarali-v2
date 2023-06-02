@@ -3,3 +3,19 @@
 @import './home.scss';
 @import './article.scss';
 @import './contact.scss';
+
+
+
+.page-title{
+    font-size: calc(2rem + 1vw);
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    color: var(--body-text-color);
+}
+@media screen and (max-width: 735px){
+    .page-title{
+        font-size: 2rem;
+        line-height: 1.35;
+    }
+}

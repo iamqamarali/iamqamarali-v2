@@ -41,37 +41,43 @@
                                     <p class="main-skill-description">I like to code things from scratch, and enjoy bringing ideas to life in the browser.</p>                                    
                                     <div class="skills-list">
                                         <span class="tag">JavaScript (ES6)</span>
-                                        <span class="tag">Vue.js</span>
+                                        <span class="tag">Vue 3</span>
                                         <span class="tag">CSS3</span>
+                                        <span class="tag">Scss</span>
+                                        <span class="tag">Bootstrap</span>
                                         <span class="tag">Bulma</span>
+                                        <span class="tag">AnimeJS</span>
                                         <span class="tag">Webpack</span>
-                                        <span class="tag">PHP</span>
-                                        <span class="tag">Laravel</span>
-                                        <span class="tag">Node.js</span>
                                     </div>
                                 </section>
                                 <section class="main-skill tab-content" :class="{'active': activeTab == 1}">
                                     <h5 class="main-skill-title mt-0">Back-End Development</h5>
                                     <p class="main-skill-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus enim repellendus dolores placeat beatae. Voluptatum labore velit quam quaerat cum consectetur animi. Odio id itaque omnis deleniti impedit repellat et!.</p>
                                     <div class="skills-list">
-                                        <span class="tag">JavaScript (ES6)</span>
-                                        <span class="tag">Vue.js</span>
-                                        <span class="tag">CSS3</span>
+                                        <span class="tag">Node</span>
                                         <span class="tag">Nuxt 3</span>
-                                        <span class="tag">Bootstrap</span>
+                                        <span class="tag">Express</span>
+                                        <span class="tag">Laravel</span>
+                                        <span class="tag">PHP</span>
+                                        <span class="tag">MySQL</span>
+                                        <span class="tag">MongoDB</span>
+                                        <span class="tag">Websockets</span>
+                                        <span class="tag">Cloud Functions</span>
+                                        <span class="tag">Restful API</span>
                                     </div>
                                 </section>
                                 <section class="main-skill tab-content" :class="{'active': activeTab == 2}">
                                     <h5 class="main-skill-title mt-0">Deployment & Other </h5>
                                     <p class="main-skill-description">I like to code things from scratch, and enjoy bringing ideas to life in the browser.</p>
                                     <div class="skills-list">
-                                        <span class="tag">JavaScript (ES6)</span>
-                                        <span class="tag">Vue.js</span>
-                                        <span class="tag">CSS3</span>
-                                        <span class="tag">Nuxt 3</span>
-                                        <span class="tag">Bootstrap</span>
-                                        <span class="tag">Bulma</span>
-                                        <span class="tag">Webpack</span>
+                                        <span class="tag">Git</span>
+                                        <span class="tag">Docker</span>
+                                        <span class="tag">Google Cloud Platform (GCP)</span>
+                                        <span class="tag">Netlify</span>
+                                        <span class="tag">Vercel</span>
+                                        <span class="tag">Github</span>
+                                        <span class="tag">CICD</span>
+                                        <span class="tag">Linux</span>
                                     </div>
                                 </section>
                             </template>
