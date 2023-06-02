@@ -20,8 +20,25 @@ const {data : projects } = await useFetch(`/api/projects`, {
 })
 
 onUpdated(() => {
+    window.scrollTo({
+        top: 50,
+        behavior: 'smooth',
+    })
     page.value = Number.parseInt(route.query.page) || 1
 })
+
+// change footer background color
+const { footerStyles, showAnimation } = useFooter();
+onMounted(()=>{
+    page.value = 1;
+    footerStyles.value = {
+        background: '#f1dab1',
+    }
+})
+onBeforeUnmount(()=>{
+    footerStyles.value = {}
+})
+
 
 
 
@@ -30,6 +47,7 @@ onUpdated(() => {
 <template>
     <main class="site-content">
         <hero-simple
+            background="#f1dab1"
             title="My Recent Work."
             >
         </hero-simple>
@@ -40,7 +58,7 @@ onUpdated(() => {
                 <header class="section-header">
                 </header>
 
-                <div class="section-content" v-if="projects">
+                <div class="section-content" v-if="projects && projects.length">
                     <Project
                        v-for="(project, index) in projects" 
                         :key="project.id"

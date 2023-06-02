@@ -6,7 +6,6 @@ const props = defineProps({
     textColor: String,
 
     title: String,
-    subtitle: String,
     description: String,
     arrowDownTitle: String,
 
@@ -51,6 +50,7 @@ onMounted(()=>{
 
 <template>
     <section class="hero-simple" ref="hero">
+        <RisingSquares  ></RisingSquares>
 
         <div class="container-small">            
             <div class="hero-simple-wrapper">
@@ -59,9 +59,6 @@ onMounted(()=>{
                     <h1 class="hero-simple-title animate before-slide-bar"  v-if="title">
                         {{ title }}
                     </h1>
-                    <h3 class="hero-simple-subtitlemanimate before-slide-bar" v-if="subtitle">
-                        {{ subtitle }}
-                    </h3>
                     <p class="hero-simple-description animate before-slide-bar" v-if="description">
                         {{ description }}
                     </p>

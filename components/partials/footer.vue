@@ -1,6 +1,13 @@
+<script setup>
+
+const { footerStyles, showAnimation } = useFooter();
+
+
+</script>
+
 <template>
-    <footer class="site-footer" >
-        <RisingSquares :background="'rgba(100,100,100,.05)'"></RisingSquares>
+    <footer class="site-footer" :style="footerStyles" >
+        <RisingSquares  v-if="showAnimation"></RisingSquares>
 
         <section class="footer-contact-section">
             <div class="container">

@@ -2,20 +2,6 @@
 
 .home-page{
 
-    .home-hero{
-        color: #000;
-        .hero-fullscreen-wrapper{
-            min-height: auto;
-            padding: 10rem 0 8.5rem;
-        }
-        @media screen and (max-width: 540px){
-            .hero-fullscreen-wrapper{
-                min-height: 100vh;
-                min-height: 100dvh;
-            }
-    
-        }
-    }
 
     .projects-section{
         padding-bottom: 0;

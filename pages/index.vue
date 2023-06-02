@@ -45,6 +45,7 @@ useSeoMeta({
         <hero-fullscreen
             class="home-hero"
             title="Qamar Ali."
+            subtitle="Full Stack Web Developer"
             description="I'm a software enginner specializing in Developing & Deploying Full stack Web Applications and SAAS Products that scale to millions of users."
             ctaText="Start a project"
             ctaLink="/contact"
@@ -61,7 +62,7 @@ useSeoMeta({
                     <div class="two-columns-grid ">
                         <div class="left">
                             <h2 class="section-title title-dashed">
-                                <span class="section-count">04.</span>About.
+                                <span class="section-count">01.</span>About.
                             </h2>
 
                             <p>
@@ -90,7 +91,7 @@ useSeoMeta({
                 <header class="section-header">
                     <h2 class="section-title title-dashed">
                         <span>
-                            <span class="section-count">01.</span> Things I've Built
+                            <span class="section-count">02.</span> Things I've Built
                         </span>
                     </h2>
                 </header>
@@ -117,7 +118,7 @@ useSeoMeta({
                 <header class="section-header section-header-small">
                     <h2 class="section-title title-dashed">
                         <span>
-                            <span class="section-count">03.</span> 
+                            <span class="section-count">04.</span> 
                             Blog
                         </span>
                     </h2>
@@ -131,8 +132,6 @@ useSeoMeta({
                 </div>
             </div>
         </section>
-
-
 
     </main>
 </template>

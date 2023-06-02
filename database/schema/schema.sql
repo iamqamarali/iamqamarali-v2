@@ -58,3 +58,13 @@ CREATE TABLE IF NOT exists comments(
     INDEX (post_id)
 );
 
+
+CREATE Table IF NOT EXISTS contacts(
+    id integer primary key auto_increment,
+    
+    name varchar(255) null,
+    email varchar(255) null,
+    message text null,
+    created_at timestamp default current_timestamp,
+    updated_at timestamp default current_timestamp on update current_timestamp
+)

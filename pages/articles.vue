@@ -17,17 +17,25 @@ const {data : articles } = await useFetch(`/api/posts`, {
 })
 
 onUpdated(() => {
+    window.scrollTo({
+        top: 50,
+        behavior: 'smooth',
+    })
     page.value = Number.parseInt(route.query.page) || 1
 })
 
-
-const { hasWhiteText } = useHeader();
+// change footer background color
+const { footerStyles, showAnimation } = useFooter();
 onMounted(()=>{
-    //hasWhiteText.value = true
+    page.value = 1;
+    footerStyles.value = {
+        background: '#e9c3b8',
+    }
 })
 onBeforeUnmount(()=>{
-    hasWhiteText.value = false
+    footerStyles.value = {}
 })
+
 
 
 </script>
@@ -40,9 +48,8 @@ onBeforeUnmount(()=>{
             >
         </hero-simple>
 
-        <!-- #c98181 -->
 
-        <section class="articles-section section" v-if="articles">
+        <section class="articles-section section" v-if="articles && articles.length">
             <div class="container-small">
                 <!-- <header class="section-header section-header-small">
                     <h1 class="page-title">Explore Practical Software Development Articles.</h1>
@@ -84,4 +91,6 @@ onBeforeUnmount(()=>{
         </section>
 
     </main>
+
+
 </template>
