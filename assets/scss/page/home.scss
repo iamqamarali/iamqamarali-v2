@@ -2,14 +2,65 @@
 
 .home-page{
 
-    .hero-fullscreen{
-        color: 000;        
+    .home-hero{
+        color: #000;
+        .hero-fullscreen-wrapper{
+            min-height: auto;
+            padding: 12rem 0 10rem;
+        }
+        @media screen and (max-width: 540px){
+            .hero-fullscreen-wrapper{
+                min-height: 100vh;
+                min-height: 100dvh;
+            }
+    
+        }
     }
-
 
     .projects-section{
         padding-bottom: 0;
     }
 
+
+    .about-section{
+        padding: 7rem 0;
+        .my-image-container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .my-image-wrapper-1{
+            position: relative;
+            isolation: isolate;
+            &:after{
+                z-index: -1;
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 5%;
+                left: 5%;
+                border: 2px solid black;
+            }
+        }
+        .my-image-wrapper-2{
+            overflow: hidden;
+        }
+        .my-image{
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            object-position: top;
+            scale: 1.2;
+        }
+
+        @media screen and (max-width: 900px){
+            .my-image{
+                width: 250px;
+                height: 250px;
+            }
+    
+        }
+    }
 
 }

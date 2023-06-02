@@ -39,35 +39,50 @@ useSeoMeta({
 <template>
     <main class="home-page site-content ">
 
+        <!-- Hero Section -->
         <hero-fullscreen
+            class="home-hero"
             title="Qamar Ali."
-            subtitle="Sr. Full Stack Web Developer"
             description="I'm a software enginner specializing in Developing & Deploying Full stack Web Applications and SAAS Products that scale to millions of users."
             ctaText="Start a project"
             ctaLink="/contact"
-            arrowDownTitle="Things I've Built"
+            arrowDownTitle="About"
         >
         </hero-fullscreen>
 
+        <!-- subtitle="Sr. Full Stack Web Developer" -->
+    
         <!-- About Section -->
-        <!-- <div class="section pb-25">
+        <div class="section about-section">
             <div class="container-small">
-                <div class="section-hea">
-                    <h2 class="section-title title-dashed">
-                        <span class="section-count">01.</span>About.
-                    </h2>
-                </div>
                 <div class="section-content">
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint ea tenetur libero nobis, maiores sapiente officia cum voluptas, quam fugiat veniam adipisci consequuntur optio totam quas non deleniti ducimus ipsa.
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque amet distinctio omnis nesciunt quas officiis atque debitis, rerum expedita tempora
-                    </p>
+                    <div class="two-columns-grid ">
+                        <div class="left">
+                            <h2 class="section-title title-dashed">
+                                <span class="section-count">04.</span>About.
+                            </h2>
+
+                            <p>
+                                Hello! My name is Qamar and I build things that live on the internet.
+                            </p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, suscipit explicabo! Eligendi nemo ea eos delectus quia est sequi unde minima, labore, laboriosam aliquam non eaque ut nostrum fugit dignissimos?</p>
+                        </div>
+                        <div class="my-image-container">
+                            <div class="my-image-wrapper-1">
+                                <div class="my-image-wrapper-2">
+                                    <img class="my-image" src="https://iamqamarali-1.web.app/images/my-pics/me3.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
             </div>
         </div>
- -->
 
+
+
+        <!-- Projects Section -->
         <section class="section projects-section">
             <div class="container-small">
                 <header class="section-header">
@@ -91,9 +106,10 @@ useSeoMeta({
             </div>
         </section>
 
+        <!-- Skills Section -->
         <Skills></Skills>
         
-
+        <!-- Blog Section -->
         <section class="articles-section section" v-if="articles.length">
             <div class="container-small">
                 <header class="section-header section-header-small">
@@ -113,6 +129,7 @@ useSeoMeta({
                 </div>
             </div>
         </section>
+
 
 
     </main>
