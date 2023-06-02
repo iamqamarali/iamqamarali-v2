@@ -1,6 +1,6 @@
 <script setup>
 
-const { footerStyles, showAnimation } = useFooter();
+const { footerStyles, showAnimation, showContact } = useFooter();
 
 
 </script>
@@ -9,7 +9,7 @@ const { footerStyles, showAnimation } = useFooter();
     <footer class="site-footer" :style="footerStyles" >
         <RisingSquares  v-if="showAnimation"></RisingSquares>
 
-        <section class="footer-contact-section">
+        <section class="footer-contact-section" v-if="showContact">
             <div class="container">
                 <div class="footer-contact-inner">
                     <h3 class="start-a-project  text-body">Start a project</h3>
@@ -45,7 +45,7 @@ const { footerStyles, showAnimation } = useFooter();
                     <a href="https://github.com/iamqamarali" target="_blank" class="nav-item">Github</a>
                     <a href="https://www.linkedin.com/in/iamqamarali/" target="_blank" class="nav-item">LinkedIn</a>
                     <NuxtLink to="/articles" class="nav-item">Articles</NuxtLink>
-                    <a href="" class="nav-item">Work</a>
+                    <NuxtLink to="/work" class="nav-item">Work</NuxtLink>
                     <NuxtLink to="/contact" class="nav-item">Contact</NuxtLink>
                 </nav>
                 <div class="footer-copyright">

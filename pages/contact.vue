@@ -42,15 +42,17 @@ const sendMessage = async () => {
 
 
 // change footer background color
-const { footerStyles, showAnimation } = useFooter();
+const { footerStyles, showAnimation, showContact } = useFooter();
 onMounted(()=>{
     showSuccessMessage.value = false
     footerStyles.value = {
         background: '#d6dabf',
     }
+    showContact.value = false
 })
 onBeforeUnmount(()=>{
     footerStyles.value = {}
+    showContact.value = true
 })
 
 
