@@ -64,11 +64,21 @@ useSeoMeta({
                             <h2 class="section-title title-dashed">
                                 <span class="section-count">01.</span>About.
                             </h2>
-
                             <p>
-                                Hello! My name is Qamar and I build things that live on the internet.
+                                Hi, my name is Qamar, I’m a Sr. Full Stack Developer and I build things that live on the WEB.
                             </p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, suscipit explicabo! Eligendi nemo ea eos delectus quia est sequi unde minima, labore, laboriosam aliquam non eaque ut nostrum fugit dignissimos?</p>
+                            <p>
+                                My journey to web development started in 2016 when I saw a friend of mine trying to change the position of a button on a webpage, i thought of trying it out myself and i fall head first into the rabbit hole of web development and coding.
+                            </p>
+                            <p>
+                                Fast forward to today I’ve built web applications that gain traction from thousands of users ever day.
+                            </p>
+                            <p>
+                                These days i'm helping small businesses in cultivating a robust online presence, with my web development skills I empower entrepreneurs to expand their digital experiences and achieve remarkable growth in the ever-evolving online landscape.
+                            </p>
+                            <p>
+                                Other than that I occasionally contribute to open source on <a href="https://github.com/iamqamarali" target="_blank">GIthub</a>, and write <NuxtLink :to="'/articles'" target="_blank">articles</NuxtLink> about new and cool tech related stuff on my blog.
+                            </p>
                         </div>
                         <div class="my-image-container">
                             <div class="my-image-wrapper-1">
