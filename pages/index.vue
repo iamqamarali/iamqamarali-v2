@@ -72,8 +72,6 @@ useSeoMeta({
                             </p>
                             <p>
                                 Fast forward to today I’ve built web applications that gain traction from thousands of users ever day.
-                            </p>
-                            <p>
                                 These days i'm helping small businesses in cultivating a robust online presence, with my web development skills I empower entrepreneurs to expand their digital experiences and achieve remarkable growth in the ever-evolving online landscape.
                             </p>
                             <p>
