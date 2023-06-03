@@ -19,11 +19,6 @@ onBeforeUnmount(() => ()=>{
     
 });
 
-onMounted(() => {
-    // hide scrollbar
-    document.body.style.overflow = 'hidden'
-})
-
 
 </script>
 

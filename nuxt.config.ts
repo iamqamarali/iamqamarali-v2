@@ -1,7 +1,14 @@
 export default defineNuxtConfig({
     app:{
         pageTransition: { name: 'page', mode: 'out-in' },            
+        head:{
+            link: [
+                { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' },
+            ]
+        }
+
     },
+
 
     runtimeConfig:{
         

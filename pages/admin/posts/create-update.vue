@@ -90,11 +90,11 @@ const createOrUpdatePost = async () => {
 
 }
 
-/**
+/** 
  * when a file is uploaded
  */
 const onImageUploaded = async ({ id, url, name }) => {
-    updatePost(post.value.id, {
+    updatePost(post.value.id, { 
         add_image: true,
         image: { id, url, name }
     }).then(data => {

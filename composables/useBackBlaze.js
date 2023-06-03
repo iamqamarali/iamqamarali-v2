@@ -60,10 +60,10 @@ export default () => {
      * 
      * remove File from backblaze
      */
-    const deleteFile = async (data)=>{
+    const deleteFile = async ({fileId, fileName})=>{
         return await $fetch('/api/backblaze/deleteFile', {
             method: 'POST',
-            body: data,
+            body: {fileId, fileName},
         });
     }
 
