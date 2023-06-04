@@ -6,6 +6,22 @@ useHead({
     },
 })
 
+useSeoMeta({
+    title: "Qamar Ali | Work",
+    description: "Explore the most recent things i've built that live on the internet and serve thousands of users everyday.",
+    robots: 'index, follow',
+    ogTitle: "Qamar Ali | Work",
+    ogDescription: "Explore the most recent things i've built that live on the internet and serve thousands of users everyday.",
+    ogUrl: useAppConfig().APP_BASE_URL ,
+    ogType: 'website',
+})
+useHead({
+    link: [
+        { rel: 'canonical', href: useAppConfig().APP_BASE_URL + useRoute().path }
+    ]
+})
+
+
 
 const route = useRoute();
 const limit = useState(() => 10)
@@ -18,7 +34,6 @@ const {data : projects } = await useFetch(`/api/projects`, {
         published: true,
     }
 })
-console.log(projects.value)
 
 onUpdated(() => {
     window.scrollTo({

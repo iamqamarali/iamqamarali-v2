@@ -13,7 +13,6 @@ if(!post.value){
 }
 
 useSeoMeta({
-
     title: post.value.title,
     description: post.value.description,
     robots: 'index, follow',
@@ -28,6 +27,7 @@ useSeoMeta({
 
     'article:published_time': post.value.created_at,
 })
+
 useHead({
     link: [
         { rel: 'canonical', href: useAppConfig().APP_BASE_URL + route.path }

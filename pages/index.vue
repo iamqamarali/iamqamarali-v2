@@ -25,14 +25,19 @@ const {data : projects } = await useFetch(`/api/projects`, {
 
 useSeoMeta({
     title: "Qamar Ali | Web Developer",
-    description: "A software enginner, web developer specializing in Developing & Deploying Full Stack Web Applications that scale to millions of users.",
+    description: "A software enginner/web developer specializing in Developing & Deploying Full Stack Web Applications that scale to millions of users.",
     robots: 'index, follow',
-    ogTitle: "Qamar Ali | Sr. Full Stack Web Developer",
-    ogDescription: "A software enginner, web developer specializing in Developing & Deploying Full stack Web Applications that scale to millions of users.",
+    ogTitle: "Qamar Ali | Full Stack Web Developer",
+    ogDescription: "A software enginner/web developer specializing in Developing & Deploying Full stack Web Applications that scale to millions of users.",
     ogUrl: useAppConfig().APP_BASE_URL ,
     ogType: 'website',
-
 })
+useHead({
+    link: [
+        { rel: 'canonical', href: useAppConfig().APP_BASE_URL + useRoute().path }
+    ]
+})
+
 
 
 

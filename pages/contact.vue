@@ -6,6 +6,23 @@ useHead({
     },
 })
 
+useSeoMeta({
+    title: "Qamar Ali | Contact",
+    description: "My inbox is always open for new opportunities, If you have a project that you want to get started, think you need my help with something or just fancy saying hey, then feel free to get in touch, I will try my best to get back to you ASAP.",
+    robots: 'index, follow',
+    ogTitle: "Qamar Ali | Full Stack Web Developer",
+    ogDescription: "My inbox is always open for new opportunities, If you have a project that you want to get started, think you need my help with something or just fancy saying hey, then feel free to get in touch, I will try my best to get back to you ASAP.",
+    ogUrl: useAppConfig().APP_BASE_URL ,
+    ogType: 'website',
+})
+useHead({
+    link: [
+        { rel: 'canonical', href: useAppConfig().APP_BASE_URL + useRoute().path }
+    ]
+})
+
+
+
 const form = reactive({
     name: '',
     email: '',

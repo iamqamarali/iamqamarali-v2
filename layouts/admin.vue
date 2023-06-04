@@ -1,4 +1,9 @@
 <script setup>
+useSeoMeta({
+    title: "Qamar Ali | Dashboard",
+    robots: 'noindex, nofollow',
+})
+
 
 let { skin } = useSkin();
 

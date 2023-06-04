@@ -5,6 +5,22 @@ useHead({
     },
 })
 
+useSeoMeta({
+    title: "Qamar Ali | Articles",
+    description: "Explore practical web development articles from my arsenal",
+    robots: 'index, follow',
+    ogTitle: "Qamar Ali | Full Stack Web Developer",
+    ogDescription: "Explore practical web development articles from my arsenal",
+    ogUrl: useAppConfig().APP_BASE_URL ,
+    ogType: 'website',
+})
+useHead({
+    link: [
+        { rel: 'canonical', href: useAppConfig().APP_BASE_URL + useRoute().path }
+    ]
+})
+
+
 
 const route = useRoute();
 
