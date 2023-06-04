@@ -141,7 +141,7 @@ onUnmounted(()=>{
                     <div class="left">
 
                         <div class="input-group">
-                            <input type="text" class="mb-5" v-model="form.title"  placeholder="Post Title" />
+                            <input type="text"  class=" input mb-5" v-model="form.title"  placeholder="Post Title" />
                             <div class="m5-10">
                                 <span class="mr-5 ml-5 ">Slug: </span> {{ post.published ? post.slug : form.slug }}
                             </div>
@@ -149,7 +149,7 @@ onUnmounted(()=>{
                         </div>
 
                         <div class="input-group">
-                            <input type="text" v-model="form.description" placeholder="Description" />
+                            <input type="text" class="input" v-model="form.description" placeholder="Description" />
                         </div>
 
                         <h3 >Post Body</h3>
@@ -198,14 +198,14 @@ onUnmounted(()=>{
                             <label for=""> 
                                 {{ isProjectPage ? 'Project' : 'Post'  }} Main Image
                             </label>
-                            <input type="text" v-model="form.main_image" placeholder="Main image url" />
+                            <input type="text" class="input" v-model="form.main_image" placeholder="Main image url" />
                         </div>
                         <br>
                         <div class="input-group">
                             <label for=""> 
                                 Tags <small>(comma separated)</small>
                             </label>
-                            <input type="text" v-model="form.tags" placeholder="Tags" />
+                            <input type="text" class="input" v-model="form.tags" placeholder="Tags" />
                         </div>
                         <br>
 
