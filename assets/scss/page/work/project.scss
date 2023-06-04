@@ -5,9 +5,8 @@
 
 
     .project-hero{
-        margin-top: calc(2.4rem + 2vw);
         margin-bottom: 4rem ;
-        position: relative;
+        position: relative; 
     }
     .project-hero-image-container{
         max-width: var(--article-hero-large);
@@ -35,7 +34,7 @@
     .project-header{
         max-width: calc(var(--article-max-width) - 100px);
         margin: 0 auto;
-        padding: calc(4rem + 2vw) 0 calc(6rem + 2vw);
+        padding: calc(4rem + 2vw) 0 calc(5rem + 2vw);
     }
     .project-title{
         font-size: calc(2.4rem + 1vw);
@@ -63,17 +62,23 @@
 }
 
 
-
-
 @media screen and (max-width: 1070px){
     .project-page{
         --article-max-width : var(--article-max-width-medium);
     }
 }
 @media screen and (max-width: 735px){
-
-}
-
-@media screen and (max-width: 540px){
-
+    .project-page{
+        .project-hero{
+            margin-bottom: 1.5rem;
+        }
+        .project-header{
+            padding: 2.5rem 0 1.5rem;
+        }
+        .project-title{
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.35;
+        }
+    }
 }

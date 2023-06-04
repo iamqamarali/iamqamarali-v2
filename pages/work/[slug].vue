@@ -56,6 +56,7 @@ const getRandomColor = () => {
 
 <template>
     <main class="project-page site-content" v-if="project">
+        <div class="container">
             <div class="project-hero">
                 <div class="project-header">
                     <h1 class="project-title">{{ project.title }}</h1>
@@ -79,6 +80,7 @@ const getRandomColor = () => {
                 <article class="article-body" v-html="project.body"></article>
 
             </div>
+        </div>
             
 
 
