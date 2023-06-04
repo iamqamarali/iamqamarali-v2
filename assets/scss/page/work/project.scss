@@ -11,6 +11,7 @@
     }
     .project-hero-image-container{
         max-width: var(--article-hero-large);
+        
         box-shadow: 0 1px 3px transparent,0 1px 2px rgba(0,0,0,.1);
         border-radius: 5px;
         margin: 0 auto;
@@ -26,8 +27,8 @@
         .overlay{
             position: absolute;
             inset: 0;
-            background: #000;
-            opacity: .1;
+            // background: #dddddd;
+            // opacity: .2;
         }
 
     }
