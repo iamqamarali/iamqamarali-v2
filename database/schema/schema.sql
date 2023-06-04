@@ -65,6 +65,8 @@ CREATE Table IF NOT EXISTS contacts(
     name varchar(255) null,
     email varchar(255) null,
     message text null,
+    is_read boolean default false,
+
     created_at timestamp default current_timestamp,
     updated_at timestamp default current_timestamp on update current_timestamp
 )

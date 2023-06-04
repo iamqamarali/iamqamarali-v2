@@ -2,7 +2,7 @@
 
     background: #ffb254;  
     background: -webkit-radial-gradient( #ffdb3a, #ffb254);  
-    background: radial-gradient( #ffdb3a, #ffb254); 
+    background: var(--primary-gradient); 
 
 
     position: relative;

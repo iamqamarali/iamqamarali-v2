@@ -2,9 +2,29 @@
 
 .home-page{
 
+    // .home-hero{
+    //     background: radial-gradient(#ffed9a, #ffc561);
+    //     .hanging-cat{
+    //         top: -20px;
+    //     }
+    //     .hero-fullscreen-wrapper{
+    //         min-height: 75vh;
+    //     }
+    //     .scrolldown-arrow{
+    //         display: none;
+    //     }
+    //     .hero-fullscreen-content{
+    //         margin-top: 2rem;
+    //     }
+    //     .hero-fullscreen-subtitle{
+    //         display: none;
+    //     }
+    // }
 
     .projects-section{
-        padding-bottom: 0;
+        .show-more-button-wrapper{
+            margin-top: -1.5rem;
+        }
     }
 
 

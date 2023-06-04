@@ -1,7 +1,18 @@
 .text-decoration-none{
     text-decoration: none;
 }
+.text-left{
+    text-align: left;
+}
+.text-center{
+    text-align: center;
+}
+.text-right{
+    text-align: right;
+}
 
+
+//colors
 .text-body{
     color: var(--body-text-color) !important;
 }

@@ -110,8 +110,13 @@ useSeoMeta({
                         :project="project"  
                         :class="{ 'project-right' : index % 2 == 0 }"
                         image="https://uploads.toptal.io/blog/image/129115/toptal-blog-image-1549997512620-72eaff97494e5c220c505505fdfa11fb.jpg"
+                        :number="index+1"
                         >
                     </Project>
+
+                    <div class="text-center show-more-button-wrapper">
+                        <NuxtLink to="/work" class="button button-black ">More Projects</NuxtLink>
+                    </div>
 
                 </div>
             </div>
@@ -138,6 +143,12 @@ useSeoMeta({
                         :article="article" 
                     />
                 </div>
+
+                <div class="text-center show-more-button-wrapper">
+                    <NuxtLink to="/articles" class="button button-black ">More Articles</NuxtLink>
+                </div>
+
+
             </div>
         </section>
 

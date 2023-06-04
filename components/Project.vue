@@ -1,5 +1,5 @@
 <script setup>
-const props = defineProps(['image', 'project'])
+const props = defineProps(['image', 'project', 'number'])
 
 const getTags = (tags) => {
     if(tags && tags.length) 
@@ -12,9 +12,12 @@ const getTags = (tags) => {
 
 <template>
     <div class="project" >
-        <div class="project-image-container">
-            <img class="project-image" :src="image" alt="">
-            <NuxtLink :to="'/work/'+project.slug" class="overlay"></NuxtLink>
+        <div class="project-image-wrapper">
+            <div class="project-image-wrapper-inner">
+                <img class="project-image" :src="project.main_image" alt="">
+                <NuxtLink :to="'/work/'+project.slug" class="overlay"></NuxtLink>
+            </div>
+            <div class="project-number" v-if="number">{{ number }}</div>
         </div>
 
         <div class="project-content">
@@ -25,7 +28,7 @@ const getTags = (tags) => {
                 {{ project.description }}
             </p>
             <div class="project-skills">
-                <span v-for="tag in getTags(project.tags)">{{ tag }}</span>
+                <span v-for="tag in getTags(project.tags)" class="tag">{{ tag }}</span>
             </div>
         </div>
 

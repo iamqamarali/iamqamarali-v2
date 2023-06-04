@@ -18,6 +18,7 @@ const {data : projects } = await useFetch(`/api/projects`, {
         published: true,
     }
 })
+console.log(projects.value)
 
 onUpdated(() => {
     window.scrollTo({
@@ -65,6 +66,7 @@ onBeforeUnmount(()=>{
                         :project="project"  
                         :class="{ 'project-right' : index % 2 == 0 }"
                         image="https://uploads.toptal.io/blog/image/129115/toptal-blog-image-1549997512620-72eaff97494e5c220c505505fdfa11fb.jpg"
+                        :number="index+1"
                         >
                     </Project>
                 </div>
