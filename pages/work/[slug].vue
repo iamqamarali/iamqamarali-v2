@@ -30,7 +30,10 @@ useSeoMeta({
 useHead({
     link: [
         { rel: 'canonical', href: useAppConfig().APP_BASE_URL + route.path }
-    ]
+    ],
+    bodyAttrs: {
+        class: 'body-bg-white'
+    }
 })
 
 const getTags = (tags) => {

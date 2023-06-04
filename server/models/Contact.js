@@ -7,7 +7,10 @@ export default class Contact extends BaseModel {
     properties = [
         'name',
         'email',
-        'message'
+        'message',
+
+        'is_read'
+
     ];
 
     hidden = [
