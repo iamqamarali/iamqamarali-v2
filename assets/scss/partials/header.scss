@@ -127,19 +127,19 @@
 .site-header.text-white{
     .logo-svg{
         path{
-            fill: white;
+            fill: #f9f9f9;
         }
     }
 
     .nav-item{
-        color: white;
+        color: #b3b3b3;
     }
     .nav-item:hover{
-        color: var(--primary);
+        color: white;
     }
     .svg-icon{
         path{
-            fill: white;
+            fill: #f9f9f9;
         }
     }    
 

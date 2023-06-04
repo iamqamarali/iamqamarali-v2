@@ -15,7 +15,7 @@ export default class Post extends BaseModel{
         'featured',
         'published',
 
-        'images',
+        'images', // id, name, url
         'seo_data',
 
         'created_at',

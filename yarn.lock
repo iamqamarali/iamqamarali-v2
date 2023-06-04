@@ -5115,6 +5115,19 @@ util-deprecate@^1.0.1, util-deprecate@^1.0.2, util-deprecate@~1.0.1:
   resolved "https://registry.npmjs.org/util-deprecate/-/util-deprecate-1.0.2.tgz"
   integrity sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==
 
+v-viewer@^3.0.11:
+  version "3.0.11"
+  resolved "https://registry.npmjs.org/v-viewer/-/v-viewer-3.0.11.tgz"
+  integrity sha512-E8LOdAxhzuktt4HB3PswVCccQ1Q1sYHYnLsS6zaJISpb5EvmAFs5sYNfXnDLFxVb5DQ82v4ZlGxkYlseXwWRJw==
+  dependencies:
+    lodash "^4.17.21"
+    viewerjs "^1.9.0"
+
+viewerjs@^1.9.0:
+  version "1.11.3"
+  resolved "https://registry.npmjs.org/viewerjs/-/viewerjs-1.11.3.tgz"
+  integrity sha512-efG3U61Umuj/1x6JAtdvnY9m407C/RkrkFilsMcLEWKDivpjNU3/FeL+feCY1Vkur9aQeBJ+z6K4CCPP7hv6vA==
+
 vite-node@^0.30.1:
   version "0.30.1"
   resolved "https://registry.npmjs.org/vite-node/-/vite-node-0.30.1.tgz"

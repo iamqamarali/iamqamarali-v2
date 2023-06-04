@@ -57,7 +57,7 @@
 
 
     // header
-    --header-bg-color: #fff8ea;
+    --header-bg-color: var(--body-bg-color);
     --header-opposite-bg-color: #000;
     --header-text-color: #000;
     --header-text-hover-color: var(--primary-dark);

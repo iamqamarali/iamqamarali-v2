@@ -33,34 +33,55 @@ useHead({
     ]
 })
 
+const getTags = (tags) => {
+    if(tags && tags.length) 
+        return tags.split(',').map(tag => tag.trim())
+
+    return "";
+}
+
+
+let colors = [
+    '#ffd7a3',
+]
+
+const getRandomColor = () => {
+    return colors[Math.floor(Math.random() * colors.length)]
+}
+
+
 
 
 </script>
 
 <template>
-    <main class="article-page site-content" v-if="project">
-        <div class="container">
-            <div class="article-hero">
-                <div class="article-header">
-                    <h1 class="article-title">{{ project.title }}</h1>
-                    <div class="article-subtitle">
-                        <strong class="article-author mr-10">
-                            <img src="https://img.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg?w=100" alt="author image" class="author-image">
-                            <span class="author-name">Qamar Ali,</span>    
-                        </strong>
-                        <span class="article-date"> {{ dateUtil.diffForHumans(project.created_at) }}</span>
-                    </div>
+    <main class="project-page site-content" v-if="project">
+            <div class="project-hero">
+                <div class="project-header">
+                    <h1 class="project-title">{{ project.title }}</h1>
+                    <div class="project-description">{{ project.description }}</div>
+                    <div class="tags">
+                        <span class="tag"
+                            v-for="tag in getTags(project.tags)">
+                            {{ tag }}
+                        </span>
+                    </div>           
                 </div>
-
-                <div class="article-hero-image-container">
+                <div class="project-hero-image-container">
                     <img :src="project.main_image" alt="" >
+                    <div class="overlay"></div>
                 </div>
 
             </div>
 
-            <article class="article-body" v-html="project.body"></article>
+            <div class="project-body">    
 
-        </div>
+                <article class="article-body" v-html="project.body"></article>
+
+            </div>
+            
+
+
     </main>
 </template>
 

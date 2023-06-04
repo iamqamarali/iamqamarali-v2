@@ -8,8 +8,8 @@
     //color: white
 }
 .hero-simple-wrapper{
-    min-height: 60vh;
-    min-height: 60dvh;
+    min-height: 50vh;
+    min-height: 50dvh;
     padding: 7rem 0 ;
     height: 100%;
     
@@ -19,6 +19,7 @@
 }
 
 .hero-simple-content{
+    margin-top: 1.5rem;
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -77,6 +78,9 @@
 @media screen and (max-width: 540px){
     .hero-simple-wrapper{
         padding: 8rem 0 4rem;
+    }
+    .hero-simple-content{
+        margin-top: 0rem;
     }
 }
 
