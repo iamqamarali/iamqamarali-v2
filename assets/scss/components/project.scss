@@ -173,8 +173,6 @@
             top: auto;
             left: auto;
             width: auto;
-            max-width: 230px;
-            max-height: 200px;
             &:hover{
                 .project-image{
                     transform: none;
@@ -190,6 +188,8 @@
         .project-image{
             max-width: initial;
             width: 100%;
+            max-width: 230px;
+            max-height: 200px;
         }
         .project-number{
             display: none;
@@ -228,6 +228,11 @@
             .overlay{
                 opacity: 0.1;
             }
+        }
+        .project-image{
+            max-width: 100%;
+            width: 100%;
+            max-height: initial;
         }
         .project-image-wrapper-inner{
             max-height: 240px;
