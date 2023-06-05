@@ -64,7 +64,7 @@ watch(data, ()=>{
                     </tbody>
                 </table>
 
-                <button @click="page++" class="mt-75 float-right">Load More</button>
+                <button @click="page++" class="mt-75 float-right button button-black">Load More</button>
                 <div class="clear-both"></div>
 
             </div>
