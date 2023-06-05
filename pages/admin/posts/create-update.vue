@@ -97,7 +97,7 @@ const onImageUploaded = async ({ id, url, name }) => {
         add_image: true,
         image: { id, url, name }
     }).then(data => {
-        console.log("image uploaded", data)
+        console.log("image uploaded to database", data)
         post.value.images = data.post.images
     }).catch(err => console.error(err.response))
 }
@@ -110,7 +110,7 @@ const onImageDeleted = async (image) => {
         remove_image: true,
         image: image
     }).then(data => {
-        console.log(data);
+        console.log("file deleted from database", data);
         post.value.images = data.post.images
     }).catch(err => console.error(err.response))
 }

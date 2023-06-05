@@ -48,11 +48,11 @@ const uploadImage = async (image) => {
  * Remove Image
  */
 const removeImage = async function(image, index){
-    emit('fileDeleted', image)
     deleteFile({
         fileId: image.id,
         fileName: image.name
     }).then(() => {
+        emit('fileDeleted', image)
         allImages.value.splice(index, 1)
     }).catch((err) => console.error(err.response))
 }

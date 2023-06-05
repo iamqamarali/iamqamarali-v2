@@ -19,19 +19,11 @@ export default defineEventHandler(async (event)=>{
     let { fileId, fileName } = await readBody(event)
 
     
-    // Try Deleting the file
-    try{
-        const res = await b2.deleteFileVersion({
-            fileId: fileId,
-            fileName: fileName
-        });
+    const res = await b2.deleteFileVersion({
+        fileId: fileId,
+        fileName: fileName
+    });
 
-        return { message : "File removed successfully" };
-
-    }catch(e){
-        return e.response.data;
-    }
-
-    
+    return { message : "File removed successfully" };
 
 })

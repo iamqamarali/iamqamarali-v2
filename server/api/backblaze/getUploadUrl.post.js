@@ -26,13 +26,11 @@ export default defineEventHandler(async (event)=>{
     
     // get the url
     const res = await b2.getUploadUrl(options);
-
     
     return { 
         authorizationToken: res.data.authorizationToken,
         uploadUrl: res.data.uploadUrl, 
         fileName: fileName,
         fileUrl: process.env.BACK_BLAZE_BASE_URL + '/' + fileName,
-    };
-
+    };    
 })
