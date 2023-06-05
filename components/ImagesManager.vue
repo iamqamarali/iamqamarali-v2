@@ -52,7 +52,9 @@ const uploadImage = async (image) => {
 /**
  * Remove Image
  */
-const removeImage = async function(image, index){    
+const removeImage = async (image, index) => {    
+    console.log("trying to delete image")
+
     try{
         await deleteFile({
             fileId: image.id,
