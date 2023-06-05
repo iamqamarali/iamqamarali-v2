@@ -37,7 +37,10 @@ export default defineEventHandler(async (event)=>{
 
     }catch(e){
         setResponseStatus(event , 400)
-        return e.response
+        return { 
+            error : 'Backblaze error: ' + e.message ,
+            data: e.response.data
+        }
     }
     
 })

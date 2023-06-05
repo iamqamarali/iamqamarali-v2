@@ -81,7 +81,7 @@ const onImageChange = async (e) => {
     }
     e.target.value = "";
 
-    uploading.value = false;s
+    uploading.value = false;
 }
 
 

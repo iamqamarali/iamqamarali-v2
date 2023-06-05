@@ -26,7 +26,10 @@ export default defineEventHandler(async (event)=>{
         return { message : "File removed successfully" };        
     }catch(e){
         setResponseStatus(event , 400)
-        return { error : e.message }
+        return { 
+            error : 'Backblaze error: ' + e.message ,
+            data: e.response.data
+        }
     }
 
 })
