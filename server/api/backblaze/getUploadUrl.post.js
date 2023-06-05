@@ -15,22 +15,29 @@ export default defineEventHandler(async (event)=>{
         applicationKey: process.env.BACK_BLAZE_APPLICATION_KEY
     });
 
-    // authorize with B2
-    await b2.authorize(); 
-
-    const options = {
-        bucketId:  process.env.BUCKET_ID,
-        fileName: fileName,
-        contentType: contentType,        
-    };
     
     // get the url
-    const res = await b2.getUploadUrl(options);
+    try{
+        // authorize with B2
+        await b2.authorize(); 
+
+        const options = {
+            bucketId:  process.env.BUCKET_ID,
+            fileName: fileName,
+            contentType: contentType,        
+        };
+        const res = await b2.getUploadUrl(options);
+
+        return { 
+            authorizationToken: res.data.authorizationToken,
+            uploadUrl: res.data.uploadUrl, 
+            fileName: fileName,
+            fileUrl: process.env.BACK_BLAZE_BASE_URL + '/' + fileName,
+        };        
+
+    }catch(e){
+        setResponseStatus(event , 400)
+        return e.response
+    }
     
-    return { 
-        authorizationToken: res.data.authorizationToken,
-        uploadUrl: res.data.uploadUrl, 
-        fileName: fileName,
-        fileUrl: process.env.BACK_BLAZE_BASE_URL + '/' + fileName,
-    };    
 })

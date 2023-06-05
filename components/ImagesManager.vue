@@ -11,6 +11,7 @@ const props = defineProps({
     }
 })
 const emit = defineEmits(['fileUploaded', 'fileDeleted'])
+const uploading = ref(false)
 
 
 const { uploadFile, deleteFile } = useBackBlaze();
@@ -28,8 +29,10 @@ const uploadImage = async (image) => {
     const fileFullName = `${props.uploadUrlPrefix}_${fname}`;
     
     console.log("trying to upload image")
-    uploadFile(image, fileFullName)
-    .then(imageData => {
+
+    try{
+        const imageData = await uploadFile(image, fileFullName)
+
         const imageObj = {
             id: imageData.fileId,
             name: imageData.fileName,
@@ -41,38 +44,44 @@ const uploadImage = async (image) => {
         }
         emit('fileUploaded', imageObj)
 
-    }).catch((err) => console.error(err.response))
-
+    }catch(err){
+        console.error(err.response)
+    }
 }
 
 /**
  * Remove Image
  */
-const removeImage = async function(image, index){
-    console.log("trying to delete image");
-    deleteFile({
-        fileId: image.id,
-        fileName: image.name
-    }).then(() => {
+const removeImage = async function(image, index){    
+    try{
+        await deleteFile({
+            fileId: image.id,
+            fileName: image.name
+        })
         emit('fileDeleted', image)
         allImages.value.splice(index, 1)
-    }).catch((err) => console.error(err.response))
+    }catch(err){
+        console.error(err)
+    }
 }
 
 
 // when image input value is changed
-const onImageChange = (e) => {
-    const files = e.target.files || e.dataTransfer.files;
+const onImageChange = async (e) => {
+    let files = e.target.files || e.dataTransfer.files;
     if (!files.length)
         return;
-        
 
-    Array.from(files).forEach((file, index) => {
-        setTimeout(() => {
-            uploadImage(file)
-        }, 1000 * index);
-    })
+    uploading.value = true;
+    
+    files = Array.from(files);
+    for(let i = 0; i < files.length ; i++){
+        console.log(files[i])
+        await uploadImage(files[i])
+    }
     e.target.value = "";
+
+    uploading.value = false;s
 }
 
 
@@ -91,9 +100,13 @@ const onImageChange = (e) => {
             </div>
         </div>
         
-        <div class="input-group">
+        <div v-if="uploading">
+            {{  uploading ? 'Uploading...' : '' }}
+        </div>
+        <div class="input-group" v-else>
             <input type="file" multiple @change="onImageChange" />
         </div>
+
     </div>
 </template>
 
