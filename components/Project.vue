@@ -28,7 +28,8 @@ const getTags = (tags) => {
                 {{ project.description }}
             </p>
             <div class="project-skills">
-                <span v-for="tag in getTags(project.tags)" class="tag">{{ tag }}</span>
+                <!-- <span v-for="tag in getTags(project.tags)" class="tag">{{ tag }}</span> -->
+                <span v-for="tag in getTags(project.tags)" >{{ tag }}</span>
             </div>
         </div>
 

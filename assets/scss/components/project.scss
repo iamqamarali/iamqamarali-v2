@@ -124,12 +124,12 @@
     }
 
     .project-skills{
-        //display: flex;
-        // gap: 1rem;
-        // span{
-        //     font-size: 1rem;
-        //     font-weight: 600;
-        // }
+        display: flex;
+        gap: 1rem;
+        span{
+            font-size: 1rem;
+            font-weight: 600;
+        }
     }
     
 }
@@ -149,7 +149,7 @@
     .project-content{
     }
     .project-skills{
-        flex-direction: row-reverse;
+        justify-content: flex-end;
     }
 }
 
@@ -205,7 +205,7 @@
             padding: 0;
         }
         .project-skills{
-            flex-direction: row;
+            justify-content: flex-start;
         }
     }
 
