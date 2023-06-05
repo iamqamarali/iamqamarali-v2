@@ -99,7 +99,7 @@ const onImageUploaded = async ({ id, url, name }) => {
         image: { id, url, name }
     }).then(data => {
         post.value.images = data.post.images
-    }).catch(err => console.error(e.response))
+    }).catch(err => console.error(err.response))
 }
 
 /**
@@ -112,7 +112,7 @@ const onImageDeleted = async (image) => {
     }).then(data => {
         console.log(data);
         post.value.images = data.post.images
-    }).catch(err => console.error(e.response))
+    }).catch(err => console.error(err.response))
 }
 
 /**

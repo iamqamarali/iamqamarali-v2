@@ -40,7 +40,7 @@ const uploadImage = async (image) => {
         }
         emit('fileUploaded', imageObj)
 
-    }).catch(err => console.error(err.response))
+    }).catch((err) => console.error(err.response))
 
 }
 
