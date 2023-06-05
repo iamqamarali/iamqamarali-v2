@@ -7,7 +7,7 @@ useHead({
 })
 
 useSeoMeta({
-    title: "Qamar Ali | Work",
+    title: "Qamar Ali - Work",
     description: "Explore the most recent things i've built that live on the internet and serve thousands of users everyday.",
     robots: 'index, follow',
     ogTitle: "Qamar Ali | Work",

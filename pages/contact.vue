@@ -7,7 +7,7 @@ useHead({
 })
 
 useSeoMeta({
-    title: "Qamar Ali | Contact",
+    title: "Qamar Ali - Contact",
     description: "My inbox is always open for new opportunities, If you have a project that you want to get started, think you need my help with something or just fancy saying hey, then feel free to get in touch, I will try my best to get back to you ASAP.",
     robots: 'index, follow',
     ogTitle: "Qamar Ali | Full Stack Web Developer",

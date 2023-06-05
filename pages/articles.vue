@@ -6,7 +6,7 @@ useHead({
 })
 
 useSeoMeta({
-    title: "Qamar Ali | Articles",
+    title: "Qamar Ali - Articles",
     description: "Explore practical web development articles from my arsenal",
     robots: 'index, follow',
     ogTitle: "Qamar Ali | Full Stack Web Developer",

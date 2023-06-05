@@ -13,7 +13,7 @@ if(!project.value){
 }
 
 useSeoMeta({
-    title: 'Qamar Ali | ' + project.value.title,
+    title: 'Qamar Ali - ' + project.value.title,
     description: project.value.description,
     robots: 'index, follow',
 

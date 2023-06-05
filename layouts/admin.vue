@@ -1,6 +1,6 @@
 <script setup>
 useSeoMeta({
-    title: "Qamar Ali | Dashboard",
+    title: "Qamar Ali - Dashboard",
     robots: 'noindex, nofollow',
 })
 
