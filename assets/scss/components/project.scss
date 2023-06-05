@@ -26,7 +26,7 @@
     .project-image-wrapper{
         transform: translateY(-50%) scale(1);
         box-shadow: 0 1px 3px transparent,0 1px 2px rgba(0,0,0,.1);
-        box-shadow: 0 10px 20px -10px rgba(0,0,0,.3);
+        box-shadow: 0 20px 30px -15px rgba(0,0,0,.3);
         cursor: pointer;
         width: auto;
         height: auto;
@@ -114,7 +114,7 @@
         background-color: #ffefcf;
         color: var(--primary-lighter-text-color);
         transition: var(--skin-change-transition);
-
+        box-shadow: 0 20px 15px -15px rgba(0,0,0,.15);
 
         margin: 0rem 0 .2rem;
         padding: 1.5rem ;
@@ -201,6 +201,7 @@
         .project-description{
             color: var(--body-text-color);
             background-color: transparent;
+            box-shadow: none;
             font-size: 1.05rem;
             padding: 0;
         }
