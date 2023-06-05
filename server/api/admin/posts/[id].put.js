@@ -26,8 +26,12 @@ export default defineEventHandler(async (event) => {
     // add the image if this property is available
     if(body.add_image){
 
-        let oldImages = post.get('images') || null
-        oldImages = JSON.parse(oldImages) || []
+        let oldImages = null
+        try{
+            oldImages = JSON.parse(post.get('images'))
+        }catch(e){
+            oldImages = []
+        }
         const newImages = [
             ...oldImages,
             body.image
