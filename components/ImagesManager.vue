@@ -54,7 +54,7 @@ const removeImage = async function(image, index){
         fileName: image.name
     }).then(() => {
         allImages.value.splice(index, 1)
-    }).catch(e => console.error(e.response))
+    }).catch((err) => console.error(err.response))
 }
 
 
