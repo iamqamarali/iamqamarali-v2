@@ -8,7 +8,7 @@ useHead({
 <template>
   <NuxtLayout>
     <NuxtLoadingIndicator
-      color="#ffdb3a"
+      color="#000"
       :height="3"
     />
     <Preloader></Preloader>

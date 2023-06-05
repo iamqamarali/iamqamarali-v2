@@ -11,6 +11,17 @@ const props = defineProps({
 
     ctaText: String,
     ctaLink: String,
+
+
+    styles: {
+        type: Object,
+        default: () => ({})
+    },
+    overlay: {
+        type: Boolean,
+        default: false
+    }
+
 })
 const emit = defineEmits(['cta-click'])
 
@@ -49,8 +60,9 @@ onMounted(()=>{
 
 
 <template>
-    <section class="hero-simple" ref="hero">
+    <section class="hero-simple" ref="hero" :style="styles" >
         <RisingSquares  ></RisingSquares>
+        <div class="overlay" v-if="overlay"></div>
 
         <div class="container-small">            
             <div class="hero-simple-wrapper">

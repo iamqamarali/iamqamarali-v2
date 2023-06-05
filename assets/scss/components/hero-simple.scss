@@ -6,6 +6,18 @@
     position: relative;
     overflow: hidden;
     //color: white
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    .overlay{
+        position: absolute;
+        inset: 0;
+        background: #000000;
+        opacity: .5;
+    }
+
 }
 .hero-simple-wrapper{
     min-height: 50vh;

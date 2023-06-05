@@ -13,7 +13,7 @@ if(!project.value){
 }
 
 useSeoMeta({
-    title: project.value.title,
+    title: 'Qamar Ali | ' + project.value.title,
     description: project.value.description,
     robots: 'index, follow',
 
@@ -32,7 +32,7 @@ useHead({
         { rel: 'canonical', href: useAppConfig().APP_BASE_URL + route.path }
     ],
     bodyAttrs: {
-        class: 'body-bg-white'
+        //class: 'body-bg-white'
     }
 })
 
@@ -59,11 +59,26 @@ const getRandomColor = () => {
 
 <template>
     <main class="project-page site-content" v-if="project">
+        <!-- <HeroSimple
+        :background="`url(`+project.main_image+`)`"
+        :overlay="true"
+        :styles="{
+            color: 'white',
+            filter: 'grayscale(100%) contrast(1.1) brightness(80%)'
+    
+        }"
+
+        :title="project.title"
+        >
+        </HeroSimple> -->
+
+
         <div class="container">
             <div class="project-hero">
                 <div class="project-header">
                     <h1 class="project-title">{{ project.title }}</h1>
-                    <div class="project-description">{{ project.description }}</div>
+                    <!-- <h2 class="font-weight-semi-bold">Introduction</h2> -->
+                    <p class="project-description">{{ project.description }}</p>
                     <div class="tags">
                         <span class="tag"
                             v-for="tag in getTags(project.tags)">
