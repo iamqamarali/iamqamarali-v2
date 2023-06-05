@@ -12,6 +12,7 @@ export default defineEventHandler(async (event)=>{
         applicationKey: process.env.BACK_BLAZE_APPLICATION_KEY
     });
 
+    
     try{
         // authorize with B2
         await b2.authorize(); 
@@ -26,7 +27,7 @@ export default defineEventHandler(async (event)=>{
 
         return { message : "File removed successfully" };        
 
-        
+
     }catch(e){
         setResponseStatus(event , 400)
         return { 
