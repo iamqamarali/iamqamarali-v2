@@ -65,11 +65,12 @@ const onImageChange = (e) => {
     const files = e.target.files || e.dataTransfer.files;
     if (!files.length)
         return;
+        
 
     Array.from(files).forEach((file, index) => {
         setTimeout(() => {
             uploadImage(file)
-        }, 400 * index);
+        }, 1000 * index);
     })
     e.target.value = "";
 }

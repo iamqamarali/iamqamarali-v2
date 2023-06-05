@@ -33,7 +33,7 @@ export default defineEventHandler(async (event) => {
             oldImages = []
         }
     }
-    if(!typeof oldImages == 'object'){
+    if(typeof oldImages != 'object'){
         oldImages = []
     }
 
