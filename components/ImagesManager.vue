@@ -27,6 +27,7 @@ const uploadImage = async (image) => {
     const fname = `${Date.now()}_${Math.random()*10}.${fileExtension}`
     const fileFullName = `${props.uploadUrlPrefix}_${fname}`;
     
+    console.log("trying to upload image")
     uploadFile(image, fileFullName)
     .then(imageData => {
         const imageObj = {
@@ -68,7 +69,7 @@ const onImageChange = (e) => {
     Array.from(files).forEach((file, index) => {
         setTimeout(() => {
             uploadImage(file)
-        }, 200 * index);
+        }, 400 * index);
     })
     e.target.value = "";
 }
