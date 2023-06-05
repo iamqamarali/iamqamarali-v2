@@ -12,18 +12,21 @@ export default defineEventHandler(async (event)=>{
         applicationKey: process.env.BACK_BLAZE_APPLICATION_KEY
     });
 
-    // authorize with B2
-    await b2.authorize(); 
-
-    // get data from request body
-    let { fileId, fileName } = await readBody(event)
-
     try{
+        // authorize with B2
+        await b2.authorize(); 
+
+        // get data from request body
+        let { fileId, fileName } = await readBody(event)
+
         const res = await b2.deleteFileVersion({
             fileId: fileId,
             fileName: fileName
         });    
+
         return { message : "File removed successfully" };        
+
+        
     }catch(e){
         setResponseStatus(event , 400)
         return { 
