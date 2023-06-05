@@ -119,7 +119,6 @@ const onImageDeleted = async (image) => {
  * getImages
  */
 function getImages(post){
-    console.log(typeof post.images)
     if(typeof post.images == 'object'){
         return post.images
     }
