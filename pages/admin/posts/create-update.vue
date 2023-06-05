@@ -83,7 +83,6 @@ const createOrUpdatePost = async () => {
         isProjectPage.value = post.value.is_project
 
 
-        console.log(post.value)
         alert(data.message)
 
     }catch(err) {  console.error(err.response) }
@@ -98,6 +97,7 @@ const onImageUploaded = async ({ id, url, name }) => {
         add_image: true,
         image: { id, url, name }
     }).then(data => {
+        console.log("image uploaded", data)
         post.value.images = data.post.images
     }).catch(err => console.error(err.response))
 }
@@ -119,14 +119,14 @@ const onImageDeleted = async (image) => {
  * getImages
  */
 function getImages(post){
-    console.log(post.images)
+    console.log(typeof post.images)
     if(typeof post.images == 'object'){
         return post.images
     }
-
-    if(typeof post.images == 'string'){
+    else if(typeof post.images == 'string'){
         try{
-            return JSON.parse(post.images)
+            let imgs= JSON.parse(post.images)
+            return imgs
         }catch(err){
             return []
         }

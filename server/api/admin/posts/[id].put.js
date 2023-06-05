@@ -23,23 +23,24 @@ export default defineEventHandler(async (event) => {
     // get the body from event
     const body = await readBody(event);
 
+
+    // parse the old images
+    let oldImages = post.get('images')    
+    if(typeof oldImages == 'string'){
+        try{
+            oldImages = JSON.parse(oldImages)                
+        }catch(err){
+            oldImages = []
+        }
+    }
+    if(!typeof oldImages == 'object'){
+        oldImages = []
+    }
+
+
     // add the image if this property is available
     if(body.add_image){
         
-        let oldImages = post.get('images')
-    
-        if(typeof post.images == 'string'){
-            try{
-                oldImages = JSON.parse(post.images)
-            }catch(err){
-                oldImages = []
-            }
-        }
-
-        if(!Array.isArray(oldImages)){
-            oldImages = []
-        }
-
         const newImages = [
             ...oldImages,
             body.image
@@ -47,9 +48,6 @@ export default defineEventHandler(async (event) => {
         post.set('images', JSON.stringify(newImages) )
     }
     else if(body.remove_image){
-
-        let oldImages = post.get('images') || null
-        oldImages = JSON.parse(oldImages) || []
 
         const newImages = oldImages.filter(image => image.id !== body.image.id)
         post.set('images', JSON.stringify(newImages))
