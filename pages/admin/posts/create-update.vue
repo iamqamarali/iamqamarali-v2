@@ -115,6 +115,15 @@ const onImageDeleted = async (image) => {
     }).catch(err => console.error(e.response))
 }
 
+/**
+ * getImages
+ */
+function getImages(post){
+    return post.images ? JSON.parse(post.images) : []
+
+}
+
+
 onUnmounted(()=>{
     post.value = {}
 })
@@ -157,7 +166,7 @@ onUnmounted(()=>{
 
                         <!--  images -->
                         <ImagesManager v-if="post.id"
-                            :images="JSON.parse(post.images)"
+                            :images="getImages(post)"
                             :uploadUrlPrefix="`${post.id}/${post.slug}`"
                             @fileUploaded="onImageUploaded"
                             @fileDeleted="onImageDeleted"
