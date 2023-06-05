@@ -63,7 +63,7 @@ const removeImage = async (image, index) => {
         emit('fileDeleted', image)
         allImages.value.splice(index, 1)
     }catch(err){
-        console.error(err)
+        console.error(err.response)
     }
 }
 
