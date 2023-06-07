@@ -3,6 +3,8 @@ import { useEditor, EditorContent } from '@tiptap/vue-3'
 import StarterKit from '@tiptap/starter-kit'
 import Image from '@tiptap/extension-image'
 import Highlight from '@tiptap/extension-highlight'
+import Link from '@tiptap/extension-link'
+
 
 import Typography from '@tiptap/extension-typography'
 import { Extension, textInputRule } from '@tiptap/core'
@@ -149,7 +151,14 @@ const editor = useEditor({
         Image,
         Highlight,
         SmilieReplacer,
-        Typography
+        Typography,
+        Link.configure({
+          openOnClick: false,
+          HTMLAttributes: {
+            rel: ' ',
+            target: '_blank',
+          },
+        }),
     ],
     content: modelValue,
     onUpdate: () => {
@@ -159,11 +168,50 @@ const editor = useEditor({
 
 const addImage = () => {
   const url = window.prompt('URL')
+  const alt = window.prompt('Alt')
 
   if (url) {
-    editor.value.chain().focus().setImage({ src: url }).run()
+    editor.value.chain().focus().setImage({ 
+      src: url,
+      alt: alt,
+    }).run()
   }
 }
+
+
+const setLink = () => {
+      const previousUrl = editor.value.getAttributes('link').href
+      const url = window.prompt('URL', previousUrl)
+      const isButton = window.prompt('Is Button')
+
+      // cancelled
+      if (url === null) {
+        return
+      }
+
+      // empty
+      if (url === '') {
+        editor.value
+          .chain()
+          .focus()
+          .extendMarkRange('link')
+          .unsetLink()
+          .run()
+
+        return
+      }
+
+      // update link
+      editor.value
+        .chain()
+        .focus()
+        .extendMarkRange('link')
+        .setLink({ 
+          href: url,
+          class: isButton ? 'button button-black' : '',
+        })
+        .run()
+    }
 
 
 
@@ -193,6 +241,12 @@ const addImage = () => {
       </button>
       <button class="button control-button button-sm button-gray" @click="editor.chain().focus().clearNodes().run()">
         clear nodes
+      </button>
+      <button class="button control-button button-sm button-gray" @click="setLink" :class="{ 'is-active': editor.isActive('link') }">
+        setLink
+      </button>
+      <button class="button control-button button-sm button-gray" @click="editor.chain().focus().unsetLink().run()" :disabled="!editor.isActive('link')">
+        unsetLink
       </button>
       <button class="button control-button button-sm button-gray" @click="editor.chain().focus().setParagraph().run()" :class="{ 'is-active': editor.isActive('paragraph') }">
         paragraph
