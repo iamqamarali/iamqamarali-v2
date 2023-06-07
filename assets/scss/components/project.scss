@@ -123,6 +123,7 @@
 
     .project-skills{
         display: flex;
+        flex-wrap: wrap;
         gap: 1rem;
         span{
             font-size: 1rem;
@@ -238,9 +239,6 @@
             .project-image-wrapper-inner{
                 max-height: 240px;
             }        
-        }
-        .project-description{
-            display: none;
         }
         .project-image{
             max-width: 100%;
