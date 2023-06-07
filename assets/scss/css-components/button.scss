@@ -130,6 +130,15 @@
 * Button STYLES
 *
 */
+.button-borderless{
+    border: 0;
+    &:hover:not(:disabled),
+    &:focus:not(:disabled),
+    &:active:not(:disabled){
+        border: 0;
+        box-shadow: none !important;
+    }
+}
 .button-filled{
     color: var(--primary-text-color);
     background-color: var(--btn-primary-color);

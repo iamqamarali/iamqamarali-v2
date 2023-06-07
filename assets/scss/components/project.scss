@@ -79,7 +79,7 @@
         font-weight: bolder;
         color: var(--primary);
         position: absolute;
-        top: calc(-15% - 1rem);
+        top: calc(-13% - 1rem);
         left: auto;
         right: 3%;
         line-height: 1;
@@ -127,6 +127,13 @@
         span{
             font-size: 1rem;
             font-weight: 600;
+        }
+    }
+
+    .show-project{
+        .svg-icon{
+            width: 1.8rem;
+            height: 1.8rem;
         }
     }
     
@@ -207,6 +214,9 @@
         .project-skills{
             justify-content: flex-start;
         }
+        .show-project{
+            display: none;
+        }
     }
 
 }
@@ -229,6 +239,9 @@
                 max-height: 240px;
             }        
         }
+        .project-description{
+            display: none;
+        }
         .project-image{
             max-width: 100%;
             width: 100%;
@@ -237,6 +250,8 @@
 
         .project-number{
             display: block;
+            font-size: 4rem;
+            top: -13%;
         }
         .project-content{
             width: 100%;
