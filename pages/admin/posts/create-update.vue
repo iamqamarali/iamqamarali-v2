@@ -139,7 +139,6 @@ watch(form, debounce(async (newVal, oldVal) => {
     // auto save post
     try{
         const data = await updatePost(post.value.id, form);
-        console.log(data);
         console.log("Post auto saved");
     }catch(err) {  console.error(err.response); alert(err.message) }
 
