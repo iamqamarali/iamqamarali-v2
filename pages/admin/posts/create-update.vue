@@ -132,6 +132,19 @@ function getImages(post){
     }
 }
 
+// auto saves post when form changes
+watch(form, debounce(async (newVal, oldVal) => {
+    if(!post.value.id) return
+
+    // auto save post
+    try{
+        const data = await updatePost(post.value.id, form);
+        console.log(data);
+        console.log("Post auto saved");
+    }catch(err) {  console.error(err.response); alert(err.message) }
+
+}, 2000), { deep: true })
+
 
 onUnmounted(()=>{
     post.value = {}

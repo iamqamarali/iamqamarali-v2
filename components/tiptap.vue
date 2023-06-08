@@ -208,7 +208,7 @@ const setLink = () => {
         .extendMarkRange('link')
         .setLink({ 
           href: url,
-          class: isButton ? 'button button-black' : '',
+          class: isButton ? 'button button-black mr-5 ml-5' : '',
         })
         .run()
     }
