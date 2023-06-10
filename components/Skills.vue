@@ -42,12 +42,13 @@
                                         "Elevate your digital presence and bring your vision to life with my cutting-edge front-end skills."
                                     </p>
                                     <div class="skills-list">
-                                        <span class="tag">JavaScript (ES6)</span>
                                         <span class="tag">Vue 3</span>
                                         <span class="tag">CSS3</span>
+                                        <span class="tag">JavaScript (ES6)</span>
                                         <span class="tag">Scss</span>
                                         <span class="tag">Bootstrap</span>
-                                        <span class="tag">Bulma</span>
+                                        <span class="tag">Bulma.css</span>
+                                        <span class="tag">Animate.css</span>
                                         <span class="tag">AnimeJS</span>
                                         <span class="tag">Webpack</span>
                                     </div>
