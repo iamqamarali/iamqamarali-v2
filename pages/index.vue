@@ -86,7 +86,7 @@ useHead({
                         <div class="my-image-container">
                             <div class="my-image-wrapper-1">
                                 <div class="my-image-wrapper-2">
-                                    <img class="my-image" src="https://iamqamarali-1.web.app/images/my-pics/me3.jpg" alt="">
+                                    <img class="my-image" src="https://photos.qamarali.space/file/iamqamarali-blog/105/qamaralispace_1686434126285_3.87385404819536.jpg" alt="">
                                 </div>
                             </div>
                         </div>
