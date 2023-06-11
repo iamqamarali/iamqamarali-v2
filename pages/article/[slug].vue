@@ -53,7 +53,7 @@ useHead({
                 </div>
             </div>
 
-            <div class="article-hero-fullwidth-image-container" v-if="!post.fullscreen_hero">
+            <div class="article-hero-fullwidth-image-container" v-if="post.fullscreen_hero">
                 <img :src="post.main_image" alt="" >
             </div>
             <div class="container" v-else >

@@ -22,6 +22,8 @@ export default class Post extends BaseModel{
         'updated_at ',
 
         'is_project',
+        'fullscreen_hero',
+        
         'tags',
     ];
 

@@ -27,6 +27,7 @@ let form = reactive({
     main_image: post.value.main_image || '',
     featured: (post.value.featured ? true : false),
     is_project: (post.value.is_project ? true : false),
+    fullscreen_hero: (post.value.fullscreen_hero ? true : false),
     tags: post.value.tags || '',
 });
 
@@ -223,7 +224,16 @@ onUnmounted(()=>{
                             </div>
                             <div class="clear-both"></div>
                         </div>
+                        <div class="input-group ">
+                            <label for="">Fullscreen Hero </label>
+                            <div class="toggle-switch float-right">
+                                <input type="checkbox" v-model="form.fullscreen_hero" id="fullscreen_hero">
+                                <label for="fullscreen_hero"></label>
+                            </div>
+                            <div class="clear-both"></div>
+                        </div>
 
+                        
                         <div class="input-group">
                             <label for=""> 
                                 {{ isProjectPage ? 'Project' : 'Post'  }} Main Image
