@@ -45,7 +45,7 @@ useHead({
                     <h1 class="article-title">{{ post.title }}</h1>
                     <div class="article-subtitle">
                         <strong class="article-author mr-10">
-                            <img src="https://img.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg?w=100" alt="author image" class="author-image">
+                            <img src="https://photos.qamarali.space/file/iamqamarali-blog/105/qamaralispace_1686434126285_3.87385404819536.jpg" alt="author image" class="author-image">
                             <span class="author-name">Qamar Ali,</span>    
                         </strong>
                         <span class="article-date"> {{ dateUtil.diffForHumans(post.created_at) }}</span>
