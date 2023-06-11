@@ -1,18 +1,18 @@
 
 .page-enter-active {
-    transition: all .2s cubic-bezier(.5, 0, 0, .5);
+    transition: all .3s cubic-bezier(.5, 0, 0, .5);
 }
 
 .page-leave-active {
-    transition: all .2s cubic-bezier(.5, 0, 0, .5);
+    transition: all .3s cubic-bezier(.5, 0, 0, .5);
 }
 
 .page-enter-from{
-    transform: translateX(-20px);
+    transform: translateX(-30px);
     opacity: 0;
 }
 
 .page-leave-to {
-    transform: translateX(20px);
+    transform: translateX(-30px);
     opacity: 0;
 }
