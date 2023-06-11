@@ -17,6 +17,3 @@ useHead({
   </NuxtLayout>
 </template>
 
-<style lang="scss">
-
-</style>

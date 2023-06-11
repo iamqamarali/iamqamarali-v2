@@ -1,8 +1,8 @@
-export const useAuth = () => {
-    const router = useRouter()
 
+export const useAuth = () => {
+    
     const user = useState('user', () => null)
-    const counter  = useState(()=> 0)
+    const router = useRouter()
 
     const check = async () => {
         if(user.value ){
