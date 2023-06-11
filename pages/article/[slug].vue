@@ -39,8 +39,8 @@ useHead({
 
 <template>
     <main class="article-page site-content" v-if="post">
-        <div class="container">
-            <div class="article-hero">
+        <div class="article-hero">
+            <div class="container">
                 <div class="article-header">
                     <h1 class="article-title">{{ post.title }}</h1>
                     <div class="article-subtitle">
@@ -51,21 +51,25 @@ useHead({
                         <span class="article-date"> {{ dateUtil.diffForHumans(post.created_at) }}</span>
                     </div>
                 </div>
-
-                <div class="article-hero-image-container">
-                    <img :src="post.main_image" alt="" >
-                </div>
-
             </div>
 
-            <article class="article-body" v-html="post.body"></article>
+            <div class="article-hero-fullwidth-image-container" v-if="!post.fullscreen_hero">
+                <img :src="post.main_image" alt="" >
+            </div>
+            <div class="container" v-else >
+                <div class=" article-hero-image-container" >
+                    <img :src="post.main_image" alt="" >
+                </div>
+            </div>
+        </div> 
 
+        <div class="container">
+            <article class="article-body" v-html="post.body"></article>
 
             <!--  Create this section published by my picture and then some info about tme -->
             <!-- <div >
                 <h4>Published By</h4>
             </div> -->
-
         </div>
     </main>
 </template>
