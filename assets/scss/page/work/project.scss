@@ -1,5 +1,5 @@
 .project-page{
-    --article-max-width: 750px;
+    --article-max-width: 820px;
     --article-max-width-medium: 520px;
     --article-hero-large: 944px;
 
@@ -33,7 +33,7 @@
 
     }
     .project-header{
-        max-width: calc(var(--article-max-width) - 100px);
+        max-width: calc(var(--article-max-width) - 130px);
         margin: 0 auto;
         padding: calc(4rem + 2vw) 0 calc(4rem + 2vw);
     }
