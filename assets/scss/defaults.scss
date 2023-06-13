@@ -138,7 +138,7 @@ ol{
             background: var(--body-text-color);
         }
     }
-    li :is(p, strong, span){
+    li :is(p, strong, span){ 
         margin: 0;
     }
 }
