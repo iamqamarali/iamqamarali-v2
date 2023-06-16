@@ -109,7 +109,7 @@
 
     }
     .project-description{
-        background-color: #ffefcf;
+        background-color: var(--primary-lighter);
         color: var(--primary-lighter-text-color);
         transition: var(--skin-change-transition);
         box-shadow: 0 20px 15px -15px rgba(0,0,0,.15);
@@ -245,6 +245,9 @@
             width: 100%;
             max-height: initial;
         }
+        .project-name{
+            font-weight: 600;
+        }    
 
         .project-number{
             display: block;

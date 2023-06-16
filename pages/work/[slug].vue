@@ -73,32 +73,48 @@ const getRandomColor = () => {
         </HeroSimple> -->
 
 
-        <div class="container">
-            <div class="project-hero">
+        <div class="project-hero">
+            <div class="container">
                 <div class="project-header">
                     <h1 class="project-title">{{ project.title }}</h1>
                     <!-- <h2 class="font-weight-semi-bold">Introduction</h2> -->
                     <p class="project-description">{{ project.description }}</p>
-                    <div class="tags">
+                    <div class="tags"> 
                         <span class="tag"
                             v-for="tag in getTags(project.tags)">
                             {{ tag }}
                         </span>
                     </div>           
                 </div>
-                <div class="project-hero-image-container">
+            </div>
+
+            <div class="project-hero-fullwidth-image-container" v-if="project.fullscreen_hero">
+                <img :src="project.main_image" alt="" >
+            </div>
+            <div class="container" v-else >
+                <div class=" project-hero-image-container" >
                     <img :src="project.main_image" alt="" >
                     <div class="overlay"></div>
                 </div>
-
             </div>
+        </div>
 
+
+        <div class="container">
             <div class="project-body">    
 
                 <article class="article-body" v-html="project.body"></article>
 
             </div>
+
+            <div class="article-body-container">
+                <published-by ></published-by>
+
+            </div>
+
         </div>
+
+
             
 
 

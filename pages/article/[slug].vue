@@ -39,8 +39,10 @@ useHead({
 
 <template>
     <main class="article-page site-content" v-if="post">
+
+        <!-- Hero section -->
         <div class="article-hero">
-            <div class="container">
+            <header class="container">
                 <div class="article-header">
                     <h1 class="article-title">{{ post.title }}</h1>
                     <div class="article-subtitle">
@@ -51,7 +53,7 @@ useHead({
                         <span class="article-date"> {{ dateUtil.diffForHumans(post.created_at) }}</span>
                     </div>
                 </div>
-            </div>
+            </header>
 
             <div class="article-hero-fullwidth-image-container" v-if="post.fullscreen_hero">
                 <img :src="post.main_image" alt="" >
@@ -63,14 +65,20 @@ useHead({
             </div>
         </div> 
 
-        <div class="container">
+        <!--  article body -->
+        <section class="container">
             <article class="article-body" v-html="post.body"></article>
+        </section>
 
-            <!--  Create this section published by my picture and then some info about tme -->
-            <!-- <div >
-                <h4>Published By</h4>
-            </div> -->
-        </div>
+        <!-- publish section -->
+        <section class="container">
+            <div class="article-body-container">
+                
+                <published-by ></published-by>
+
+            </div>
+        </section>
+
     </main>
 </template>
 
