@@ -74,7 +74,7 @@ body{
     width: 100%;
     height: 100%;
     z-index:10;
-    background: #eaaf41;
+    background: var(--primary);
     display: flex;
     justify-content: center;
     align-items: center;

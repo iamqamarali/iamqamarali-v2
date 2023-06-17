@@ -13,19 +13,19 @@
 
 
     // PRIMARY COLORS
-    --primary-lighter: #ffedc9;
+    --primary-lighter: #ffedbd;
     --primary-lighter-text-color: #000;
 
-    --primary-light: #ffd478;
+    --primary-light: #ffe18f;
     --primary-light-text-color: #000;
 
-    //
-    --primary: #ffb921;
+
+    --primary: #ffce48;
     --primary-text-color: #000;
 
-    --primary-dark: #dd9613;
+    --primary-dark: #e5af1b;
     --primary-dark-text-color: #fff;
-    --primary-darker: #c5891b;
+    --primary-darker: #cc9c18;
 
     --secondary: #ffdb3a;
     
@@ -42,17 +42,17 @@
 
 
     // ANCHOR
-    --anchor-color: #cf8600;
-    --anchor-color-hover: var(--primary);
+    --anchor-color: #ba8e15;
+    --anchor-color-hover: var(--primary-dark);
     
 
 
     // selection
-    --selection-bg-color: #ffc680;    
+    --selection-bg-color: #ffe08a;    
     --selection-text-color: #000; 
 
     // mark
-    --mark-bg-color: #ffc680;    
+    --mark-bg-color: #ffde84;    
     --mark-text-color: #000; 
 
 
