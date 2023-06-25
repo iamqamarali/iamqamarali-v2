@@ -51,7 +51,7 @@ useHead({
             class="home-hero"
             title="Qamar Ali."
             subtitle="Full Stack Web Developer"
-            description="I'm a software enginner specializing in Developing & Deploying Full stack Web Applications and SAAS Products that scale to millions of users."
+            description="I am a software engineer who specializes in developing and deploying full-stack web applications and SAAS products that scale to millions of users."
             ctaText="Start a project"
             ctaLink="/contact"
             arrowDownTitle="About"
