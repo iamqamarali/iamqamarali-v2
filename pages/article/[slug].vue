@@ -1,4 +1,6 @@
 <script setup>
+import Prism from 'prismjs'
+
 const route = useRoute()
 const { slug } = route.params
 
@@ -33,6 +35,10 @@ useHead({
         { rel: 'canonical', href: useAppConfig().APP_BASE_URL + route.path }
     ]
 })
+
+
+
+
 
 
 </script>

@@ -31,6 +31,7 @@
   },
   "dependencies": {
     "gsap": "^3.11.5",
+    "prismjs": "^1.29.0",
     "tsparticles": "^2.9.3",
     "v-viewer": "^3.0.11",
     "vue3-particles": "^2.9.3"

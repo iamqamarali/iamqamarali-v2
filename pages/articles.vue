@@ -1,4 +1,5 @@
 <script setup>
+
 useHead({
     bodyAttrs: {
         class: 'has-fixed-header'

@@ -124,7 +124,7 @@ function getImages(post){
         return post.images
     }
     else if(typeof post.images == 'string'){
-        try{
+        try{ 
             let imgs= JSON.parse(post.images)
             return imgs
         }catch(err){
@@ -132,6 +132,7 @@ function getImages(post){
         }
     }
 }
+
 
 // auto saves post when form changes
 watch(form, debounce(async (newVal, oldVal) => {
@@ -149,6 +150,9 @@ watch(form, debounce(async (newVal, oldVal) => {
 onUnmounted(()=>{
     post.value = {}
 })
+
+
+
 
 
 </script>

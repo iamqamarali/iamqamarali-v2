@@ -4,7 +4,11 @@ import StarterKit from '@tiptap/starter-kit'
 import Image from '@tiptap/extension-image'
 import Highlight from '@tiptap/extension-highlight'
 import Link from '@tiptap/extension-link'
+import CodeBlock from '@tiptap/extension-code-block'
 
+CodeBlock.configure({
+  languageClassPrefix: 'language-',
+})
 
 import Typography from '@tiptap/extension-typography'
 import { Extension, textInputRule } from '@tiptap/core'
@@ -271,6 +275,7 @@ const setLink = () => {
       </button>
       <button class="button control-button button-sm button-gray" @click="editor.chain().focus().toggleBulletList().run()" :class="{ 'is-active': editor.isActive('bulletList') }">
         bullet list
+
       </button>
       <button class="button control-button button-sm button-gray" @click="editor.chain().focus().toggleOrderedList().run()" :class="{ 'is-active': editor.isActive('orderedList') }">
         ordered list
