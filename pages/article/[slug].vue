@@ -91,17 +91,7 @@ onMounted(() => {
 
         </section>
 
-        <!-- tags -->
-        <div class="container article-tags-container">
-            <div class="article-body-container">
-                <div class="tags"> 
-                    <span class="tag"
-                        v-for="tag in getTags(post.tags)">
-                        {{ tag }}
-                    </span>
-                </div>   
-            </div>
-        </div>
+
 
         <!-- publish section -->
         <section class="container">
@@ -111,6 +101,18 @@ onMounted(() => {
 
             </div>
         </section>
+
+                <!-- tags -->
+                <div class="container article-tags-container">
+            <div class="article-body-container">
+                <div class="tags"> 
+                    <span class="tag"
+                        v-for="tag in getTags(post.tags)">
+                        {{ tag }}
+                    </span>
+                </div>   
+            </div>
+        </div>
 
     </main>
 </template>
