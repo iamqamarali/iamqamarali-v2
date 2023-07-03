@@ -34,6 +34,7 @@
     "prismjs": "^1.29.0",
     "tsparticles": "^2.9.3",
     "v-viewer": "^3.0.11",
+    "vue-gtag": "^2.0.1",
     "vue3-particles": "^2.9.3"
   }
 }

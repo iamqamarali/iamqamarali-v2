@@ -10,4 +10,5 @@ let { skin } = useSkin();
         <slot></slot>
         <PartialsFooter />
     </div>
+
 </template>
