@@ -36,6 +36,15 @@ useHead({
     ]
 })
 
+
+const getTags = (tags) => {
+    if(tags && tags.length) 
+        return tags.split(',').map(tag => tag.trim())
+
+    return "";
+}
+
+
 onMounted(() => {
     setTimeout(() => {
         Prism.highlightAll()
@@ -79,7 +88,20 @@ onMounted(() => {
         <!--  article body -->
         <section class="container">
             <article class="article-body" v-html="post.body"></article>
+
         </section>
+
+        <!-- tags -->
+        <div class="container article-tags-container">
+            <div class="article-body-container">
+                <div class="tags"> 
+                    <span class="tag"
+                        v-for="tag in getTags(post.tags)">
+                        {{ tag }}
+                    </span>
+                </div>   
+            </div>
+        </div>
 
         <!-- publish section -->
         <section class="container">
