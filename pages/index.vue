@@ -24,7 +24,7 @@ const {data : projects } = await useFetch(`/api/projects`, {
 
 
 useSeoMeta({
-    title: "Qamar Ali - Web Developer",
+    title: "Qamar Ali - Full Stack Web Developer",
     description: "A software enginner/web developer specializing in Developing & Deploying Full Stack Web Applications that scale to millions of users.",
     robots: 'index, follow',
     ogTitle: "Qamar Ali | Full Stack Web Developer",
