@@ -36,6 +36,11 @@ useHead({
     ]
 })
 
+onMounted(() => {
+    setTimeout(() => {
+        Prism.highlightAll()
+    }, 700);
+})
 
 
 
