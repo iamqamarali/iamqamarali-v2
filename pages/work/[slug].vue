@@ -107,9 +107,19 @@ const getRandomColor = () => {
 
             </div>
 
+            <div class="article-tags-container">
+                <div class="article-body-container">
+                    <div class="tags"> 
+                        <span class="tag"
+                            v-for="tag in getTags(project.tags)">
+                            {{ tag }}
+                        </span>
+                    </div>
+                </div>
+            </div>
+
             <div class="article-body-container">
                 <published-by ></published-by>
-
             </div>
 
         </div>

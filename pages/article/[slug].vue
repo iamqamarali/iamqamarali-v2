@@ -92,18 +92,8 @@ onMounted(() => {
         </section>
 
 
-
-        <!-- publish section -->
-        <section class="container">
-            <div class="article-body-container">
-                
-                <published-by ></published-by>
-
-            </div>
-        </section>
-
-                <!-- tags -->
-                <div class="container article-tags-container">
+        <!-- tags -->
+        <div class="container article-tags-container">
             <div class="article-body-container">
                 <div class="tags"> 
                     <span class="tag"
@@ -113,6 +103,15 @@ onMounted(() => {
                 </div>   
             </div>
         </div>
+
+        <!-- publish section -->
+        <section class="container">
+            <div class="article-body-container">
+                
+                <published-by ></published-by>
+
+            </div>
+        </section>
 
     </main>
 </template>
