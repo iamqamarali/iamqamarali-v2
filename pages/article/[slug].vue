@@ -46,12 +46,11 @@ const getTags = (tags) => {
 
 
 onMounted(() => {
+    console.log("mounted")
     setTimeout(() => {
         Prism.highlightAll()
-    }, 700);
+    }, 1100);
 })
-
-
 
 
 
