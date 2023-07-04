@@ -97,7 +97,7 @@ const onImageChange = async (e) => {
             <div class="images-manager-image" v-for="(image, index) in allImages" :key="index">
                 <img :src="image.url" alt="">
 
-                <button class="close-button" @click="removeImage(image, index)">&times;</button>
+                <span class="close-button" @click="removeImage(image, index)">&times;</span>
                 <input type="text" class="image-url-input" :value="image.url">
             </div>
         </div>

@@ -20,7 +20,9 @@
             cursor: pointer;
         }
         .close-button{
-
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         .image-url-input{
             max-width: 100%;
