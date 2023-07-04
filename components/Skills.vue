@@ -59,7 +59,7 @@
                                         "I harness the power of backend technologies to build scalable foundations 
                                         and complex backend systems that power your digital ambitions."
                                     </p>
-                                    <div class="skills-list">
+                                    <div class="skills-list tags">
                                         <span class="tag">Node</span>
                                         <span class="tag">Nuxt 3</span>
                                         <span class="tag">Express</span>
@@ -78,7 +78,7 @@
                                     <p class="main-skill-description">
                                         "Like a conductor guiding an orchestra, my deployment skills orchestrate seamless transitions, deploying web applications with precision and minimal downtime."
                                     </p>
-                                    <div class="skills-list">
+                                    <div class="skills-list tags">
                                         <span class="tag">Git</span>
                                         <span class="tag">Docker</span>
                                         <span class="tag">Google Cloud Platform (GCP)</span>
