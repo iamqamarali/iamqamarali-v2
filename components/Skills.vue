@@ -41,7 +41,7 @@
                                     <p class="main-skill-description">
                                         "Elevate your digital presence and bring your vision to life with my cutting-edge front-end skills."
                                     </p>
-                                    <div class="skills-list">
+                                    <div class="skills-list tags">
                                         <span class="tag">Vue 3</span>
                                         <span class="tag">CSS3</span>
                                         <span class="tag">JavaScript (ES6)</span>
