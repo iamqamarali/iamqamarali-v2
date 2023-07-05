@@ -19,11 +19,10 @@
                             </h2>
                         </header>
                         <p>
-                            There are countless technologies and frameworks that one can use as a Web Developer 
-                            and i always try to stay on the bleeding-edge technologies, but to master something
-                            you cannot jump from one technology to another the next day. Mastering a technology requires time and practice 
-                            and below are the technologies that i can proudly say <strong>i've mastered in my 7 year career.</strong>
-                            To simplify (Vue.js, Nuxt.js, Laravel, Node).
+                            As a web developer, I have encountered countless technologies and frameworks that are available to us. I believe in staying at the forefront of technological advancements and continuously exploring bleeding-edge tools. However, I also recognize that true mastery cannot be achieved by hopping from one technology to another overnight. It requires dedicated time and consistent practice.
+                        </p>
+                        <p>
+                            Throughout my seven-year career, I have invested considerable effort into mastering several key technologies. I take great pride in my expertise in the following technologies: <b>(Vue.js, Nuxt.js, Laravel, Node).</b>
                         </p>
                     </div>
 

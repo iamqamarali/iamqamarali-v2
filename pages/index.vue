@@ -25,10 +25,10 @@ const {data : projects } = await useFetch(`/api/projects`, {
 
 useSeoMeta({
     title: "Qamar Ali - Full Stack Web Developer",
-    description: "A software enginner/web developer specializing in Developing & Deploying Full Stack Web Applications that scale to millions of users.",
+    description: "A computer scientist and an expert in developing and deploying the full-stack web applications and SaaS products that scale to handle millions of concurrent users.",
     robots: 'index, follow',
     ogTitle: "Qamar Ali | Full Stack Web Developer",
-    ogDescription: "A software enginner/web developer specializing in Developing & Deploying Full stack Web Applications that scale to millions of users.",
+    ogDescription: "A compiter scientist / web developer, expert in Developing & Deploying Full stack Web Applications that scale to millions of users.",
     ogUrl: useAppConfig().APP_BASE_URL ,
     ogType: 'website',
 })
@@ -51,7 +51,7 @@ useHead({
             class="home-hero"
             title="Qamar Ali."
             subtitle="Full Stack Web Developer"
-            description="I am a software engineer who specializes in developing and deploying full-stack web applications and SAAS products that scale to millions of users."
+            description="I am a computer scientist and an expert in developing and deploying the full-stack web applications and SaaS products that scale to handle millions of concurrent users."
             ctaText="Start a project"
             ctaLink="/contact"
             arrowDownTitle="About"
@@ -70,17 +70,17 @@ useHead({
                                 <span class="section-count">01.</span>About.
                             </h2>
                             <p>
-                                Hi, my name is Qamar, I’m a Sr. Full Stack Developer and I build things that live on the WEB.
+                                Hi, my name is Qamar, I’m a Sr. Full Stack Developer and I build things that live on the Web.
                             </p>
                             <p>
                                 My journey to web development started in 2016 when I saw a friend of mine trying to change the position of a button on a webpage, i thought of trying it out myself and i fall head first into the rabbit hole of web development and coding.
                             </p>
                             <p>
                                 Fast forward to today I’ve built web applications that gain traction from thousands of users ever day.
-                                These days i'm helping small businesses in cultivating a robust online presence, with my web development skills I empower entrepreneurs to expand their digital experiences and achieve remarkable growth in the ever-evolving online landscape.
+                                These days i'm helping small businesses in cultivating a robust online presence, with my web development skills I empower entrepreneurs to enhance their digital experiences and achieve remarkable growth in the ever-evolving online landscape.
                             </p>
                             <p>
-                                Other than that I occasionally contribute to open source on <a href="https://github.com/iamqamarali" target="_blank">GIthub</a>, and write <NuxtLink :to="'/articles'" target="_blank">articles</NuxtLink> about new and cool tech related stuff on my blog.
+                                Other than that I occasionally contribute to open source on <a href="https://github.com/iamqamarali" target="_blank">GIthub</a>, and write <NuxtLink :to="'/articles'" target="_blank">articles</NuxtLink> about new and exciting tech related stuff on my blog.
                             </p>
                         </div>
                         <div class="my-image-container">
