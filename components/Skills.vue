@@ -38,7 +38,7 @@
                                 <section class="main-skill tab-content" :class="{'active': activeTab == 0}" >
                                     <h5 class="main-skill-title mt-0">Font-End Development</h5>
                                     <p class="main-skill-description">
-                                        <!-- "Elevate your digital presence and bring your vision to life with my cutting-edge front-end skills." -->
+                                        Transform your digital vision into reality with my front-end expertise, delivering sleek and responsive designs that enhance user engagement and drive exceptional online experiences.
                                     </p>
                                     <div class="skills-list tags">
                                         <span class="tag">Vue 3</span>
@@ -55,8 +55,7 @@
                                 <section class="main-skill tab-content" :class="{'active': activeTab == 1}">
                                     <h5 class="main-skill-title mt-0">Back-End Development</h5>
                                     <p class="main-skill-description">
-                                        <!-- "I harness the power of backend technologies to build scalable foundations 
-                                        and complex backend systems that power your digital ambitions." -->
+                                        Empower your digital infrastructure with my back-end expertise, building robust and scalable systems that ensure data integrity, efficient functionality, and seamless integration for your business.
                                     </p>
                                     <div class="skills-list tags">
                                         <span class="tag">Node</span>
@@ -75,7 +74,7 @@
                                 <section class="main-skill tab-content" :class="{'active': activeTab == 2}">
                                     <h5 class="main-skill-title mt-0">Deployment & Other </h5>
                                     <p class="main-skill-description">
-                                        <!-- "Like a conductor guiding an orchestra, my deployment skills orchestrate seamless transitions, deploying web applications with precision and minimal downtime." -->
+                                        Simplify your software deployment process and ensure a successful launch with my expert guidance, meticulous attention to detail, and dedication to smooth implementation.
                                     </p>
                                     <div class="skills-list tags">
                                         <span class="tag">Git</span>
