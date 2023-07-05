@@ -19,10 +19,10 @@
                             </h2>
                         </header>
                         <p>
-                            As a web developer, I have encountered countless technologies and frameworks that are available to us. I believe in staying at the forefront of technological advancements and continuously exploring cutting-edge technologies. However, I also recognize that true mastery cannot be achieved by hopping from one technology to another overnight. It requires dedicated time and consistent practice.
-                        </p>
-                        <p>
-                            Throughout my seven-year career, I have invested considerable effort into mastering several key technologies. I take great pride in my expertise in the following technologies: <b>(Vue.js, Nuxt.js, Laravel, Node).</b>
+                            As a seasoned web developer, I have encountered countless technologies and frameworks that are available to us.
+                            I believe in staying at the forefront of technological advancements and continuously exploring cutting-edge technologies. 
+                            However, I also recognize that true mastery cannot be achieved by hopping from one technology to another every other night. 
+                            It requires dedicated time, consistancy and a lot of development experience to master a technology, and I can proudly say that throughout my seven-year career i've mastered the following technologies (Vue.js, Nuxt.js, Laravel, Node).
                         </p>
                     </div>
 
