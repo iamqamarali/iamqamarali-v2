@@ -62,7 +62,7 @@ useHead({
     
         <!-- About Section -->
         <div class="section about-section">
-            <div class="container-small">
+            <div class="container">
                 <div class="section-content">
                     <div class="two-columns-grid ">
                         <div class="left">
@@ -100,7 +100,7 @@ useHead({
 
         <!-- Projects Section -->
         <section class="section projects-section">
-            <div class="container-small">
+            <div class="container">
                 <header class="section-header">
                     <h2 class="section-title title-dashed">
                         <span>
@@ -132,7 +132,7 @@ useHead({
         
         <!-- Blog Section -->
         <section class="articles-section section" v-if="articles.length">
-            <div class="container-small">
+            <div class="container">
                 <header class="section-header section-header-small">
                     <h2 class="section-title title-dashed">
                         <span>
@@ -141,6 +141,8 @@ useHead({
                         </span>
                     </h2>
                 </header>
+            </div>
+            <div class="container-small">
                 <div class="two-columns-grid articles-grid">
                     <Article-link
                         v-for="article in articles" 
@@ -153,8 +155,7 @@ useHead({
                     <NuxtLink to="/articles" class="button button-black ">More Articles</NuxtLink>
                 </div>
 
-
-            </div>
+            </div>            
         </section>
 
     </main>

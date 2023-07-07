@@ -42,10 +42,11 @@
     .article-link-title{
         font-size: 1.5rem;
         font-weight: 500;
-        margin: 1.2rem 0 .6rem;
+        margin: 1.3rem 0 .8rem;
     }
     .article-link-description{
         font-size: 1.1rem;
+        line-height: 1.55;
         color: var(--gray-text-color);
         margin-bottom: 1em;
     }
@@ -59,7 +60,7 @@
 @media screen and (max-width: 1070px){
     .article-link{
         .article-image-container{
-            height: 250px;
+            height: 220px;
         }    
     }
 }
@@ -68,22 +69,59 @@
     .article-link{
         margin-bottom: 4.5em;
         .article-image-container{
-            height: 320px;
+            height: auto;
         }    
         .article-link-title{
+            font-size: 1.4rem;
+            font-weight: 600;
             margin-top: 1.7rem; 
         }
-    
     }
-
 }
 
-@media screen and (max-width: 540px){
+
+.three-columns-grid.articles-grid{
     .article-link{
+
+    }
+    .article-image-container{
+        height: 210px;
+    }
+    .article-link-title{
+        font-size: 1.4rem;
+        font-weight: 600;
+    }
+    .article-link-description{
+        font-size: 1.05rem;
+    }
+}
+
+
+
+/**
+* styling for 2 and 3 columns grid
+*/
+.three-columns-grid.articles-grid,
+.two-columns-grid.articles-grid{
+    @media screen and (max-width: 1070px){
+        grid-template-columns: 1fr 1fr;
         .article-image-container{
             height: 220px;
-        }        
+        }       
+    }
+    @media screen and (max-width: 735px){
+        .article-image-container{
+            height: 180px;
+        }       
+    }
+
+    @media screen and (max-width: 540px){
+        grid-template-columns: 1fr;
+        .article-image-container{
+            height: auto ;
+        }       
     }
 
 }
+
 

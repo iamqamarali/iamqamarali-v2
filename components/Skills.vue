@@ -5,7 +5,7 @@
 
 <template>
     <section class="section skills-section  ">
-        <div class="container-small">
+        <div class="container">
             <div class="section-content">
                 
 

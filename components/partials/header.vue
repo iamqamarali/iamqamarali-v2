@@ -17,7 +17,7 @@ onMounted(()=>{
 <template>
     <header class="site-header" :class="{ 'text-white' : hasWhiteText}">
         <div class="header-inner-wrapper">
-            <div class="container-small">
+            <div class="container">
                 <logo></logo>
                 <div class="nav">
                     <NuxtLink to="/articles" class="nav-item">Articles</NuxtLink>    

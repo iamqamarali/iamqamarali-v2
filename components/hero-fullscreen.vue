@@ -60,7 +60,7 @@ onMounted(()=>{
         <RisingSquares></RisingSquares>
         <HangingCat></HangingCat>
 
-        <div class="container-small">            
+        <div class="container">            
             <div class="hero-fullscreen-wrapper">
 
                 <header class="hero-fullscreen-content">

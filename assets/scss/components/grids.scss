@@ -2,10 +2,20 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 0rem 2rem; 
-}
-
-@media screen and (max-width: 735px){
-    .two-columns-grid{
+    @media screen and (max-width: 735px){
         grid-template-columns: 1fr;
     }
 }
+.three-columns-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 0rem 2rem; 
+
+    @media screen and (max-width: 735px){
+        grid-template-columns: 1fr 1fr;
+    }
+    @media screen and (max-width: 540px){
+        grid-template-columns: 1fr;
+    }
+}
+
