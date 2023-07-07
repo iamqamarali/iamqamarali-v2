@@ -10,7 +10,7 @@ const getTags = (tags) => {
 
 </script>
 
-<template>
+<template> 
     <div class="project" >
         <div class="project-image-wrapper">
             <div class="project-image-wrapper-inner">

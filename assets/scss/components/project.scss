@@ -14,11 +14,11 @@
     width: 100%;
     position: relative;
     min-height: 330px;
-    margin-bottom: 8rem;
+    margin-bottom: 9rem;
 
-    @media screen and (max-width: 960px){
-        min-height: 290px;
-        margin-bottom: 6rem;
+    @media screen and (max-width: 1070px){
+        min-height: 320px;
+        margin-bottom: 8rem;
     }    
 
 
@@ -34,6 +34,10 @@
         right: 0;
         top: 50%;
         max-width: 55%;
+
+        @media screen and (max-width: 1070px){
+            max-width: 65%;
+        }
 
         .project-image-wrapper-inner{
             overflow: hidden;
@@ -86,7 +90,7 @@
 
 
     .project-content{
-        max-width: clamp(300px, 60%, 500px);
+        max-width: clamp(300px, 55%, 600px);
         position: relative;
         z-index: 1;
         display: flex;

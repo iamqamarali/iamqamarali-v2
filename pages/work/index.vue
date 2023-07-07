@@ -70,7 +70,7 @@ onBeforeUnmount(()=>{
 
 
         <section class="articles-section section" >
-            <div class="container-small">
+            <div class="container">
                 <header class="section-header">
                 </header>
 
