@@ -142,7 +142,7 @@ useHead({
                     </h2>
                 </header>
             </div>
-            <div class="container">
+            <div class="container-small">
                 <div class="two-columns-grid articles-grid">
                     <Article-link
                         v-for="article in articles" 
