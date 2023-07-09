@@ -2,13 +2,13 @@
     display: block;
     margin-bottom: 6rem;
     text-decoration: none;
-    color: var(--body-text-color);
+    color: currentColor;
     cursor: pointer;
+    transform: scale(1);
+    transition: all 0.3s ease-in-out;
     &:hover{
-        color: var(--body-text-color);
-        .article-link-title{
-            color: var(--anchor-color);
-        }
+        transform: scale(1.04);
+        color: currentColor;
     }
     &:focus{
         .article-link-title{
@@ -17,12 +17,6 @@
         }
     }
     .article-image-container{
-        border-radius: 5px;
-        overflow: hidden;
-        box-shadow: 0 1px 3px transparent,0 1px 2px rgba(0,0,0,.2);
-        &:hover .article-image{            
-            transform: scale(1.05);
-        }
     }
     .article-image{
         width: 100%;
@@ -31,23 +25,26 @@
         object-position: center;
         transform: scale(1);
         transition: all 0.3s ease-in-out;
+        border-radius: 5px;
+        box-shadow: 0 1px 3px transparent,0 1px 2px rgba(0,0,0,.2);
+
         &:hover{
-            //filter: grayscale(100%);
+            // filter: grayscale(100%);
         }
     }
     .article-data{
 
     }
     .article-link-title{
-        font-size: 1.5rem;
-        font-weight: 500;
-        margin: 1.3rem 0 .8rem;
+        font-size: 1.4rem;
+        font-weight: 600;
+        margin: 1.4rem 0 1.3rem;
     }
     .article-link-description{
         font-size: 1.1rem;
-        line-height: 1.55;
+        line-height: 1.7;
         color: var(--gray-text-color);
-        margin-bottom: 1em;
+        margin-bottom: 1.4em;
     }
     .article-link-metadata{
         font-size: 0.9rem;
@@ -66,7 +63,7 @@
         .article-link-title{
             font-size: 1.4rem;
             font-weight: 600;
-            margin-top: 1.7rem; 
+            margin-top: 1.6rem; 
         }
     }
 }
@@ -77,31 +74,9 @@
     @media screen and (max-width: 1070px){
         grid-template-columns: 1fr 1fr;
     }        
-
-    .article-link{
-
-    }
-    .article-link-title{
-        font-size: 1.4rem;
-        font-weight: 600;
-    }
-    .article-link-description{
-        font-size: 1.05rem;
-    }
-
     @media screen and (max-width: 540px){
         grid-template-columns: 1fr;
     }        
-
-}
-
-
-
-/**
-* styling for 2 and 3 columns grid
-*/
-.three-columns-grid.articles-grid,
-.two-columns-grid.articles-grid{
 
 }
 

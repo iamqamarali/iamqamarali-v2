@@ -8,15 +8,17 @@
         border-radius: 50%;
     }
     .published-by-name{
+        color: var(--gray-800);
         font-weight: 600;
         font-size: 1.25rem;
         font-family: var(--lato);
-        align-self: center;
+        align-self: center; 
         margin: 0;
         margin-left: 1rem;
     }
     .published-by-description{
-        margin-top: .8rem;
+        color: var(--dark-gray-text-color);
+        margin-top: .6rem;
         margin-left: 1rem;
         grid-column: 2 / 3;
         font-size: 1rem;

@@ -1,4 +1,30 @@
 .base-skin{
+
+    // GRAY colors
+
+    --gray-100: #f8f9fa ;
+    --gray-200: #f0f0f0 ;
+    --gray-300: #e3e3e3 ;
+    --gray-400: #d8d8d8 ;
+    --gray-500: #bdbdbd ;
+    --gray-600: #7e7e7e ;
+    --gray-700: #565656 ;
+    --gray-800: #3d3d3d ;
+    --gray-900: #262626 ;
+    --gray-text-color: #838383;
+    --dark-gray-text-color: var(--gray-700);
+
+
+    // GRAY background
+    --gray-background-color: #ddd;
+    --light-gray-background-color: #ececec;
+
+    // BORDER Colors
+    --gray-border-color: #d5d5d5;
+    --dark-gray-border-color: #909090;
+    
+
+
     --dark-skin-color: #0a0f14;
     --dark-skin-text-color: #f5f5f5;
 
