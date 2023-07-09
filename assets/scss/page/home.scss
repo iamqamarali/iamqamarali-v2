@@ -25,21 +25,28 @@
         .show-more-button-wrapper{
             margin-top: -1.5rem;
         }
+        .section-content{
+            padding-top: 2.5rem;
+        }
+        @media screen and (max-width: 540px){
+            .section-content{
+                padding-top: 1rem;
+            }
+        }
     }
 
 
     .about-section{
-        padding: 7rem 0;
         .my-image-container{
             display: flex;
             justify-content: center;
             align-items: center;
         }
         @media screen and (max-width: 735px){
+            margin-bottom: 1rem;
             .my-image-container{
                 margin-top: 2rem;
-            }
-    
+            }    
         }
         .my-image-wrapper-1{
             position: relative;

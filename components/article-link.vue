@@ -19,7 +19,7 @@ defineProps({
             </div>
             <div class="article-data">
                 <h2 class="article-link-title" > {{ article.title }}</h2>
-                <p class="article-link-description">{{ article.description.substring(0, 100) }} </p>
+                <p class="article-link-description">{{ article.description }} </p>
                 <div class="article-link-metadata">
                     {{ dateUtil.diffForHumans(article.created_at) }}
                 </div>

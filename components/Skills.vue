@@ -11,7 +11,7 @@
 
                 <div class="two-colums-grid">
                     <div>
-                        <header class="">
+                        <header class="section-header">
                             <h2 class="section-title title-dashed">
                                 <span>
                                     <span class="section-count">03.</span> My Skills

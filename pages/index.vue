@@ -25,7 +25,7 @@ const {data : projects } = await useFetch(`/api/projects`, {
 
 useSeoMeta({
     title: "Qamar Ali - Full Stack Web Developer",
-    description: "A computer scientist and an expert in developing and deploying full-stack web applications and SaaS products that scale to handle millions of concurrent users.",
+    description: "I'm a computer scientist and I empower businesses to revolutionize their digital presence with scalable, cutting-edge full-stack web applications and SaaS products that scale to millions of users.",
     robots: 'index, follow',
     ogTitle: "Qamar Ali | Full Stack Web Developer",
     ogDescription: "A compiter scientist / web developer, expert in Developing & Deploying Full stack Web Applications that scale to millions of users.",
@@ -51,7 +51,7 @@ useHead({
             class="home-hero"
             title="Qamar Ali."
             subtitle="Full Stack Web Developer"
-            description="I am a computer scientist and an expert in developing and deploying full-stack web applications and SaaS products that scale to handle millions of concurrent users."
+            description="I'm a computer scientist and I empower businesses to revolutionize their digital presence with scalable, cutting-edge full-stack web applications and SaaS products that scale to millions of users."
             ctaText="Start a project"
             ctaLink="/contact"
             arrowDownTitle="About"
@@ -108,7 +108,7 @@ useHead({
                         </span>
                     </h2>
                 </header>
-                <div class="section-content ">
+                <div class="section-content">
                     <Project
                        v-for="(project, index) in projects" 
                         :key="project.id"
@@ -133,7 +133,7 @@ useHead({
         <!-- Blog Section -->
         <section class="articles-section section" v-if="articles.length">
             <div class="container">
-                <header class="section-header section-header-small">
+                <header class="section-header">
                     <h2 class="section-title title-dashed">
                         <span>
                             <span class="section-count">04.</span> 
@@ -142,8 +142,8 @@ useHead({
                     </h2>
                 </header>
             </div>
-            <div class="container-small">
-                <div class="two-columns-grid articles-grid">
+            <div class="container">
+                <div class="three-columns-grid articles-grid">
                     <Article-link
                         v-for="article in articles" 
                         :key="article.id"

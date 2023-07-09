@@ -65,10 +65,6 @@ body{
         top: 5%;
         left: 50%;
         transform: translateX(-50%);
-        .logo-svg{
-            width: 100px;
-        }
-
     }
 
     /**
