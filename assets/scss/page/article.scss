@@ -47,7 +47,7 @@
 .article-body{
     max-width: var(--article-max-width);
     margin: 0 auto;
-    margin-bottom: calc(3rem + 3vw);
+    margin-bottom: 3rem;
     font-size: 1.2rem;
     color: var(--articleText);
     img{
@@ -113,7 +113,7 @@
 }
 
 .article-tags-container{
-    margin-bottom: calc(2rem + 2vw);
+    margin-bottom: 2.3rem;
     .tag{
         font-weight: 500;
         font-size: 1rem;
