@@ -49,7 +49,7 @@ useHead({
         <!-- Hero Section -->
         <hero-fullscreen
             class="home-hero"
-            title="Qamar Ali."
+            title="Qamar Ali"
             subtitle="Full Stack Web Developer"
             description="I'm a computer scientist and I empower businesses to revolutionize their digital presence with scalable, cutting-edge full-stack web applications and SaaS products that scale to millions of users."
             ctaText="Start a project"

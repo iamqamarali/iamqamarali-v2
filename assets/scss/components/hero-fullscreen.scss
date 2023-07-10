@@ -40,21 +40,23 @@
 .hero-fullscreen-title{
     font-family: var(--poppins);
     font-weight: 600;
-    font-size: 3.5rem;
-    line-height: 1.1;
-    margin-bottom: 1rem;
+    font-size: 4rem;
+    line-height: 1;
+    margin-bottom: 1.4rem;
+    opacity: 0.9;
 }
 .hero-fullscreen-subtitle{
     font-family: var(--poppins);
-    font-weight: 600;
-    font-size: 1.35rem;
-    margin-bottom: .9rem;
-    opacity: .9;
+    font-weight: 500;
+    font-size: 1.4rem;   
+    line-height: 1;
+    margin-bottom: 1.3rem;
+    opacity: 0.9;
 }
 .hero-fullscreen-description{
-    font-weight: 500;
     font-size: 1.1rem;
-    margin-bottom: 1.2rem;
+    margin-bottom: 2.5rem;
+    opacity: 0.85;
 }
 
 @media screen and (max-width: 735px){
@@ -83,7 +85,7 @@
         }    
     }
     .hero-fullscreen-wrapper{
-        padding: 10rem 0 7rem;
+        padding: calc(10rem + 8vh) 0 7rem;
         align-items: flex-start;
     }
 }

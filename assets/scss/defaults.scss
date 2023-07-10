@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
 // import poppins font
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+//@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap');
 
 
 :root{
@@ -78,7 +79,7 @@ h1, h2, h3, h4 , h5, h6{
     font-family: var(--poppins);
     margin-bottom: 0.8em;
     font-weight: 800;
-    letter-spacing: -.02em;
+    letter-spacing: -.04em;
 }
 h1 { 
     font-size: 2.5rem;
