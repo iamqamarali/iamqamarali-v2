@@ -58,13 +58,13 @@
     }
 
     .tab:hover{
-        background-color: var(--primary-light);
-        color: var(--primary-light-text-color);
+        background-color: var(--primary-lighter);
+        color: var(--primary-lighter-text-color);
     }
 
     .tab.active{
-        background-color: var(--primary);
-        color: var(--primary-text-color);
+        background-color: var(--primary-light);
+        color: var(--primary-light-text-color);
     }
 
 }
