@@ -13,7 +13,7 @@ const { footerStyles, showAnimation, showContact } = useFooter();
             <div class="container">
                 <div class="footer-contact-inner">
                     <h3 class="start-a-project  text-body">Start a project</h3>
-                    <p>Interested in working together? Feel free to email me at <a href="mailto:get@qamarali.space" class="email text-body font-weight-semi-bold ">Get@qamarali.space</a> </p>
+                    <p>Interested in working together? Feel free to email me at <a href="mailto:hello@qamarali.space" class="email text-body font-weight-semi-bold ">hello@qamarali.space</a> </p>
                     <NuxtLink to="/contact" class="button button-lg  cto-button  button-black  ">Let's do this</NuxtLink>
                 </div>
             </div>

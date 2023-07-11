@@ -96,7 +96,9 @@ onBeforeUnmount(()=>{
 
                     <div class="two-columns-grid">
                         <div>
-                            <h4 class="mt-0">Get@qamarali.space</h4>
+                            <h4 class="mt-0">
+                                <a href="mailto:hello@qamarali.space" class="email link-default ">hello@qamarali.space</a>
+                            </h4>
                             <p>
                                 My inbox is always open for new opportunities,
                                 If you have a project that you want to get started, 
