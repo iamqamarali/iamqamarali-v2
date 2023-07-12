@@ -46,14 +46,16 @@ const animateHero = () => {
 
 
     // animate cat slide down
-    cat.value.$el.style.opacity = 0;
-    cat.value.$el.animate({
-        opacity: [0, 1],
-        transform: ['translateY(-200px)', 'translateY(0px)']
-    }, {
-        ...animations.slideUpConfig,
-        delay: stagger(elements.length + 1),
-    })
+    if(vat.value){
+        cat.value.$el.style.opacity = 0;
+        cat.value.$el.animate({
+            opacity: [0, 1],
+            transform: ['translateY(-400px)', 'translateY(0px)']
+        }, {
+            ...animations.slideUpConfig,
+            delay: stagger(elements.length + 1),
+        })
+    }
 
 }
 

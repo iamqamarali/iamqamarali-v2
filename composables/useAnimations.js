@@ -2,7 +2,7 @@
 
 
 export default (options = {}) => {
-    const initialPageLoaderDuration = ref(1300)
+    const initialPageLoaderDuration = ref(1200)
     const initialPageLoadDelay = useState('initial-page-load-delay', () => 1000)
     
     // stagger
