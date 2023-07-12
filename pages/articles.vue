@@ -26,9 +26,8 @@ useHead({
 const route = useRoute();
 
 const page = useState(() => route.query.page ? parseInt(route.query.page) : 1)
-const {data : articles } = await useFetch(`/api/posts`, {
+const {data : articles } = await useFetch(()=> `/api/posts?page=`+ page.value, {
     params:{
-        page: page,
         published: true,
     },
 })
@@ -36,9 +35,7 @@ const {data : articles } = await useFetch(`/api/posts`, {
 // change footer background color
 const { footerStyles } = useFooter();
 onMounted(()=>{
-    if(page.value !=  1){
-        page.value = 1;
-    }
+    page.value = 1;
     footerStyles.value = {
         background: '#e9c3b8',
     }
@@ -47,15 +44,13 @@ onBeforeUnmount(()=>{
     footerStyles.value = {}
 })
 
-onUpdated(() => {
+onUpdated((a) => {
     window.scrollTo({
         top: 50,
         behavior: 'smooth',
     })
     page.value = Number.parseInt(route.query.page) || 1
 })
-
-
 
 
 </script>

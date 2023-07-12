@@ -7,19 +7,25 @@ const loader = ref(null)
 
 nuxtApp.hook('page:finish', ()=>{
   if(initialPageLoad.value){
+
+    const { initialPageLoaderDuration, easings} = useAnimations();
+
+
     const animation = loader.value.animate({
         transform: ['translateY(0)', 'translateY(-100%)']
     }, {
-        delay: 0,
-        duration: 1500,
-        easing: 'cubic-bezier(.13,.01,.01,1)',
-        fill: 'forwards'
-    })
+        duration: initialPageLoaderDuration.value,
+        easing: easings.easeOut,
+        fill: 'forwards',
+    })    
+
     animation.onfinish = () => {
         initialPageLoad.value = false
-        // bring scrollbar back
-        document.body.style.overflow = 'auto'
     }
+
+    // bring scrollbar back in parallel
+    document.body.style.overflow = 'auto'
+
   }
 });
 

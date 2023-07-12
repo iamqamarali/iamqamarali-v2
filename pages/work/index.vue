@@ -27,10 +27,9 @@ const route = useRoute();
 const limit = useState(() => 10)
 
 const page = useState(() => route.query.page ? parseInt(route.query.page) : 1)
-const {data : projects } = await useFetch(`/api/projects`, {
+const {data : projects } = await useFetch(()=>`/api/projects?page=`+ page.value, {
     params:{
-        page: page,
-        limit: limit,
+        limit: limit.value,
         published: true,
     }
 })
@@ -38,9 +37,7 @@ const {data : projects } = await useFetch(`/api/projects`, {
 // change footer background color
 const { footerStyles, showAnimation } = useFooter();
 onMounted(()=>{
-    if(page.value !=  1){
-        page.value = 1;
-    }
+    page.value = 1;
     footerStyles.value = {
         background: '#f1dab1',
     }

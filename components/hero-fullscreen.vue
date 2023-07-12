@@ -25,9 +25,12 @@ const hero = ref(null)
  * 
  * animation
  */
+const {
+    animations,
+    stagger
+} = useAnimations();
 const content = ref(null);
 const cat = ref(null);
-const wait = 200;
 const animateHero = () => {
     let elements = content.value.children;
 
@@ -35,28 +38,21 @@ const animateHero = () => {
     Array.from(elements).forEach((element, index) => {
         element.style.opacity = 0;
         
-        let animation = element.animate([
-            { opacity: 0, transform: 'translateY(100px)' },
-            { opacity: 1, transform: 'translateY(0px)' }
-        ], {
-            duration: 2000,
-            easing: 'cubic-bezier(.13,.01,.01,1)',
-            fill: 'forwards',
-            delay: wait + (120 * index),
+        let animation = element.animate(animations.slideUp, {
+            ...animations.slideUpConfig,
+            delay: stagger(index),
         })
     })
 
 
-    // animate cat
+    // animate cat slide down
     cat.value.$el.style.opacity = 0;
-    cat.value.$el.animate([
-        { opacity: 0, transform: 'translateY(-200px) ' },
-        { opacity: 1, transform: 'translateY(0px) translateX(0px)' }
-    ], {
-        duration: 1800,
-        easing: 'cubic-bezier(.13,.01,.01,1)',
-        fill: 'forwards',
-        delay: wait + (160 * elements.length),
+    cat.value.$el.animate({
+        opacity: [0, 1],
+        transform: ['translateY(-200px)', 'translateY(0px)']
+    }, {
+        ...animations.slideUpConfig,
+        delay: stagger(elements.length + 1),
     })
 
 }

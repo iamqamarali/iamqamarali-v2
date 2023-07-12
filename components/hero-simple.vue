@@ -32,6 +32,10 @@ const hero = useState(() => null)
  * 
  * animation
  */
+ const {
+    animations,
+    stagger
+} = useAnimations();
 const content = ref( null);
 const wait = 200;
 const animateHeaderText = () => {
@@ -41,14 +45,9 @@ const animateHeaderText = () => {
     Array.from(elements).forEach((element, index) => {
         element.style.opacity = 0;
         
-        let animation = element.animate([
-            { opacity: 0, transform: 'translateY(100px)' },
-            { opacity: 1, transform: 'translateY(0px)' }
-        ], {
-            duration: 1500,
-            easing: 'cubic-bezier(.13,.01,.01,1)',
-            fill: 'forwards',
-            delay: wait + (100 * index),
+        let animation = element.animate(animations.slideUp, {
+            ...animations.slideUpConfig,
+            delay: stagger(index),
         })
     })
     
