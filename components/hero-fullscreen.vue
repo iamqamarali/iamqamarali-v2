@@ -73,10 +73,7 @@ onMounted(()=>{
 
 
 
-
-
 </script>
-
 
 <template>
     <section class="hero-fullscreen" ref="hero">

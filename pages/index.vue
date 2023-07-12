@@ -39,12 +39,58 @@ useHead({
 })
 
 
+/**
+ * 
+ * scroll animation on page
+ */
+const page = ref(null);
+const animatePage = () => {
+    const {
+        animations,
+        easings,
+        stagger
+    } = useAnimations();
+
+    // intersection observer
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry, index) => {
+            console.log(entry)
+            if (entry.isIntersecting ) {
+                if(!entry.target.classList.contains('animating')){
+                    entry.target.classList.add('animating')
+                    let animation = entry.target.animate(animations.slideUp, {
+                        ...animations.slideUpConfig,
+                        delay: stagger(index),
+                    })
+                }
+            }
+            else {
+                //entry.target.classList.remove('animating')
+            }
+        })
+    })
+    page.value.querySelectorAll('.animate-slide-up')
+    .forEach((elm) => {
+        elm.style.opacity = 0;
+        observer.observe(elm)
+    })
+}
+
+
+const animateElms = ref([]);
+
+
+onMounted(() => {
+    animatePage()
+
+    console.log(animateElms.value);
+})
 
 
 </script>
 
 <template>
-    <main class="home-page site-content ">
+    <main class="home-page site-content " ref="page">
 
         <!-- Hero Section -->
         <hero-fullscreen
@@ -65,7 +111,7 @@ useHead({
             <div class="container">
                 <div class="section-content">
                     <div class="two-columns-grid ">
-                        <div class="left">
+                        <div class="left " >
                             <h2 class="section-title title-dashed">
                                 <span class="section-count">01.</span>About.
                             </h2>
@@ -113,7 +159,7 @@ useHead({
                        v-for="(project, index) in projects" 
                         :key="project.id"
                         :project="project"  
-                        :class="{ 'project-right' : index % 2 == 0 }"
+                        :class="{ 'project-right' : index % 2 == 0, 'animate-slide-up': true }"
                         image="https://uploads.toptal.io/blog/image/129115/toptal-blog-image-1549997512620-72eaff97494e5c220c505505fdfa11fb.jpg"
                         :number="index+1"
                         >
@@ -148,6 +194,7 @@ useHead({
                         v-for="article in articles" 
                         :key="article.id"
                         :article="article" 
+                        class="animate-slide-up"
                     />
                 </div>
 

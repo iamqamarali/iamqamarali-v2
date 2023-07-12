@@ -2,8 +2,8 @@
 
 
 export default (options = {}) => {
-    const initialPageLoaderDuration = ref(1200)
-    const initialPageLoadDelay = useState('initial-page-load-delay', () => 1500)
+    const initialPageLoaderDuration = ref(900)
+    const initialPageLoadDelay = useState('initial-page-load-delay', () => 1200)
     
     // stagger
     const staggerDelay = ref(options.stagger? options.stagger: 200)
@@ -14,22 +14,21 @@ export default (options = {}) => {
 
     const easings = reactive({
         easeOut : 'cubic-bezier(0.17,0.84,0.44,1)',
-        easeInOut: 'cubic-bezier( 0.77, 0.11, 0.18, 0.88 )',
+        easeInOut: 'cubic-bezier( 0.81, 0.10, 0.16, 0.9 )',
     })
     const animations = reactive({    
         slideUp: {
             opacity: [0, 1],
-            transform: ['translateY(100px)', 'translateY(0px)']
+            transform: ['translateY(130px)', 'translateY(0px)']
         },
         slideUpConfig: {
-            duration: 1700,
+            duration: 1200,
             easing: easings.easeOut,
             fill: 'forwards',
             delay: initialPageLoadDelay.value
         }    
     })
  
-
        
     const initialPageLoad = useState('initial-page-load')
     watch(initialPageLoad, (value) => {
