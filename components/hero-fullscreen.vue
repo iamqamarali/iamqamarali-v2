@@ -27,6 +27,7 @@ const hero = ref(null)
  */
 const {
     animations,
+    easings,
     stagger
 } = useAnimations();
 const content = ref(null);
@@ -46,14 +47,14 @@ const animateHero = () => {
 
 
     // animate cat slide down
-    if(vat.value){
+    if(cat.value){
         cat.value.$el.style.opacity = 0;
         cat.value.$el.animate({
             opacity: [0, 1],
             transform: ['translateY(-400px)', 'translateY(0px)']
         }, {
             ...animations.slideUpConfig,
-            delay: stagger(elements.length + 1),
+            delay: stagger(2),
         })
     }
 

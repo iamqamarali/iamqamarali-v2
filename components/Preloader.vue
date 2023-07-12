@@ -15,7 +15,7 @@ nuxtApp.hook('page:finish', ()=>{
         transform: ['translateY(0)', 'translateY(-100%)']
     }, {
         duration: initialPageLoaderDuration.value,
-        easing: easings.easeOut,
+        easing: easings.easeInOut,
         fill: 'forwards',
         delay: 400
     })    

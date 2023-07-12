@@ -3,7 +3,7 @@
 
 export default (options = {}) => {
     const initialPageLoaderDuration = ref(1200)
-    const initialPageLoadDelay = useState('initial-page-load-delay', () => 1000)
+    const initialPageLoadDelay = useState('initial-page-load-delay', () => 1500)
     
     // stagger
     const staggerDelay = ref(options.stagger? options.stagger: 200)
@@ -14,6 +14,7 @@ export default (options = {}) => {
 
     const easings = reactive({
         easeOut : 'cubic-bezier(0.17,0.84,0.44,1)',
+        easeInOut: 'cubic-bezier( 0.77, 0.11, 0.18, 0.88 )',
     })
     const animations = reactive({    
         slideUp: {
