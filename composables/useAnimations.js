@@ -2,8 +2,8 @@
 
 
 export default (options = {}) => {
-    const initialPageLoaderDuration = ref(900)
-    const initialPageLoadDelay = useState('initial-page-load-delay', () => 1200)
+    const initialPageLoaderDuration = ref(1000)
+    const initialPageLoadDelay = useState('initial-page-load-delay', () => 1400)
     
     // stagger
     const staggerDelay = ref(options.stagger? options.stagger: 200)
@@ -22,7 +22,7 @@ export default (options = {}) => {
             transform: ['translateY(130px)', 'translateY(0px)']
         },
         slideUpConfig: {
-            duration: 1200,
+            duration: 1400,
             easing: easings.easeOut,
             fill: 'forwards',
             delay: initialPageLoadDelay.value

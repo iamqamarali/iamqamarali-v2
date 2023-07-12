@@ -10,7 +10,6 @@ nuxtApp.hook('page:finish', ()=>{
 
     const { initialPageLoaderDuration, easings} = useAnimations();
 
-
     const animation = loader.value.animate({
         transform: ['translateY(0)', 'translateY(-100%)']
     }, {
