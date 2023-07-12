@@ -53,10 +53,10 @@ const animateHero = () => {
         { opacity: 0, transform: 'translateY(-200px) ' },
         { opacity: 1, transform: 'translateY(0px) translateX(0px)' }
     ], {
-        duration: 1700,
+        duration: 1800,
         easing: 'cubic-bezier(.13,.01,.01,1)',
         fill: 'forwards',
-        delay: wait + (170 * elements.length),
+        delay: wait + (150 * elements.length),
     })
 
 }
