@@ -11,7 +11,7 @@ nuxtApp.hook('page:finish', ()=>{
         transform: ['translateY(0)', 'translateY(-100%)']
     }, {
         delay: 0,
-        duration: 1000,
+        duration: 1500,
         easing: 'cubic-bezier(.13,.01,.01,1)',
         fill: 'forwards'
     })
