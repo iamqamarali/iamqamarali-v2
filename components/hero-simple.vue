@@ -28,21 +28,35 @@ const emit = defineEmits(['cta-click'])
 
 const hero = useState(() => null)
 
+/**
+ * 
+ * animation
+ */
+const content = ref( null);
+const wait = 200;
 const animateHeaderText = () => {
-    let elements = hero.value.querySelectorAll('.animate')
-    Array.from(elements).forEach((el, index) => {
-        setTimeout(() => {
-            el.classList.add('animate-slide-bar')
-        }, index * 200)
-    })    
+    let elements = content.value.children;
+
+    // create fade and slide from down to up stagger animation using web animation api
+    Array.from(elements).forEach((element, index) => {
+        element.style.opacity = 0;
+        
+        let animation = element.animate([
+            { opacity: 0, transform: 'translateY(100px)' },
+            { opacity: 1, transform: 'translateY(0px)' }
+        ], {
+            duration: 1500,
+            easing: 'cubic-bezier(.13,.01,.01,1)',
+            fill: 'forwards',
+            delay: wait + (100 * index),
+        })
+    })
+    
 }
 
 
 onMounted(()=>{
-    const initialPageLoad = useState('initial-page-load')
-    setTimeout(() => {        
         animateHeaderText();
-    }, initialPageLoad.value ? 1100 : 0);
 
 })
 
@@ -67,15 +81,15 @@ onMounted(()=>{
         <div class="container">            
             <div class="hero-simple-wrapper">
 
-                <header class="hero-simple-content">
-                    <h1 class="hero-simple-title animate before-slide-bar"  v-if="title">
+                <header class="hero-simple-content" ref="content">
+                    <h1 class="hero-simple-title"  v-if="title">
                         {{ title }}
                     </h1>
-                    <p class="hero-simple-description animate before-slide-bar" v-if="description">
+                    <p class="hero-simple-description" v-if="description">
                         {{ description }}
                     </p>
 
-                    <NuxtLink :to="ctaLink" class="button button-lg button-black animate before-slide-bar" v-if="ctaText" @click="$emit('cta-click')" >
+                    <NuxtLink :to="ctaLink" class="button button-lg button-black" v-if="ctaText" @click="$emit('cta-click')" >
                         {{ ctaText }}
                     </NuxtLink>
 

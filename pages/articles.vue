@@ -42,7 +42,7 @@ onUpdated(() => {
 })
 
 // change footer background color
-const { footerStyles, showAnimation } = useFooter();
+const { footerStyles } = useFooter();
 onMounted(()=>{
     page.value = 1;
     footerStyles.value = {

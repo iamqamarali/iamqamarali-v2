@@ -21,31 +21,55 @@ const emit = defineEmits(['cta-click'])
 
 const hero = ref(null)
 
+/**
+ * 
+ * animation
+ */
+const content = ref(null);
+const cat = ref(null);
+const wait = 200;
+const animateHero = () => {
+    let elements = content.value.children;
 
-const animateHeaderText = () => {
-    let elements = hero.value.querySelectorAll('.animate')
-    Array.from(elements).forEach((el, index) => {
-        setTimeout(() => {
-            el.classList.add('animate-slide-bar')
-        }, index * 200)
-    })    
+    // create fade and slide from down to up stagger animation using web animation api
+    Array.from(elements).forEach((element, index) => {
+        element.style.opacity = 0;
+        
+        let animation = element.animate([
+            { opacity: 0, transform: 'translateY(100px)' },
+            { opacity: 1, transform: 'translateY(0px)' }
+        ], {
+            duration: 2000,
+            easing: 'cubic-bezier(.13,.01,.01,1)',
+            fill: 'forwards',
+            delay: wait + (100 * index),
+        })
+    })
+
+
+    // animate cat
+    cat.value.$el.style.opacity = 0;
+    cat.value.$el.animate([
+        { opacity: 0, transform: 'translateY(-200px) ' },
+        { opacity: 1, transform: 'translateY(0px) translateX(0px)' }
+    ], {
+        duration: 2000,
+        easing: 'cubic-bezier(.13,.01,.01,1)',
+        fill: 'forwards',
+        delay: wait + (200 * elements.length),
+    })
+
 }
 
 
 onMounted(()=>{
-    
-    const initialPageLoad = useState('initial-page-load')
-    setTimeout(() => {        
-        animateHeaderText();
-    }, initialPageLoad.value ? 1100 : 0);
-
-})
-
-// set background if provided
-onMounted(()=>{
+    // set background if provided
     if(props.background){
         hero.value.style.background = props.background
     }
+
+    // animate hero
+    animateHero();
 })
 
 
@@ -58,23 +82,23 @@ onMounted(()=>{
 <template>
     <section class="hero-fullscreen" ref="hero">
         <RisingSquares></RisingSquares>
-        <HangingCat></HangingCat>
+        <HangingCat ref="cat" ></HangingCat>
 
         <div class="container">            
             <div class="hero-fullscreen-wrapper">
 
-                <header class="hero-fullscreen-content">
-                    <h1 class="hero-fullscreen-title"  :class="shouldAnimate ? 'animate before-slide-bar' : '' " v-if="title">
+                <header class="hero-fullscreen-content" ref="content">
+                    <h1 class="hero-fullscreen-title" v-if="title">
                         {{ title }}
                     </h1>
-                    <h3 class="hero-fullscreen-subtitle" :class="shouldAnimate ? 'animate before-slide-bar' : '' " v-if="subtitle">
+                    <h3 class="hero-fullscreen-subtitle"  v-if="subtitle">
                         {{ subtitle }}
                     </h3>
-                    <p class="hero-fullscreen-description " :class="shouldAnimate ? 'animate before-slide-bar' : '' " v-if="description">
+                    <p class="hero-fullscreen-description " v-if="description">
                         {{ description }}
                     </p>
 
-                    <NuxtLink :to="ctaLink" class="button button-lg button-black " :class="shouldAnimate ? 'animate before-slide-bar' : '' " v-if="ctaText" @click="$emit('cta-click')" >
+                    <NuxtLink :to="ctaLink" class="button button-lg button-black " v-if="ctaText" @click="$emit('cta-click')" >
                         {{ ctaText }}
                     </NuxtLink>
 
