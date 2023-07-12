@@ -30,7 +30,21 @@ const {data : articles } = await useFetch(`/api/posts`, {
     params:{
         page: page,
         published: true,
+    },
+})
+
+// change footer background color
+const { footerStyles } = useFooter();
+onMounted(()=>{
+    if(page.value !=  1){
+        page.value = 1;
     }
+    footerStyles.value = {
+        background: '#e9c3b8',
+    }
+})
+onBeforeUnmount(()=>{
+    footerStyles.value = {}
 })
 
 onUpdated(() => {
@@ -41,17 +55,6 @@ onUpdated(() => {
     page.value = Number.parseInt(route.query.page) || 1
 })
 
-// change footer background color
-const { footerStyles } = useFooter();
-onMounted(()=>{
-    page.value = 1;
-    footerStyles.value = {
-        background: '#e9c3b8',
-    }
-})
-onBeforeUnmount(()=>{
-    footerStyles.value = {}
-})
 
 
 

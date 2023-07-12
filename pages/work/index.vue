@@ -35,24 +35,26 @@ const {data : projects } = await useFetch(`/api/projects`, {
     }
 })
 
-onUpdated(() => {
-    window.scrollTo({
-        top: 50,
-        behavior: 'smooth',
-    })
-    page.value = Number.parseInt(route.query.page) || 1
-})
-
 // change footer background color
 const { footerStyles, showAnimation } = useFooter();
 onMounted(()=>{
-    page.value = 1;
+    if(page.value !=  1){
+        page.value = 1;
+    }
     footerStyles.value = {
         background: '#f1dab1',
     }
 })
 onBeforeUnmount(()=>{
     footerStyles.value = {}
+})
+
+onUpdated(() => {
+    window.scrollTo({
+        top: 50,
+        behavior: 'smooth',
+    })
+    page.value = Number.parseInt(route.query.page) || 1
 })
 
 
