@@ -17,7 +17,7 @@ nuxtApp.hook('page:finish', ()=>{
         duration: initialPageLoaderDuration.value,
         easing: easings.easeOut,
         fill: 'forwards',
-        delay: 500
+        delay: 400
     })    
 
     animation.onfinish = () => {
