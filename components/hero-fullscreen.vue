@@ -42,7 +42,7 @@ const animateHero = () => {
             duration: 2000,
             easing: 'cubic-bezier(.13,.01,.01,1)',
             fill: 'forwards',
-            delay: wait + (100 * index),
+            delay: wait + (120 * index),
         })
     })
 
@@ -56,7 +56,7 @@ const animateHero = () => {
         duration: 1800,
         easing: 'cubic-bezier(.13,.01,.01,1)',
         fill: 'forwards',
-        delay: wait + (150 * elements.length),
+        delay: wait + (160 * elements.length),
     })
 
 }
