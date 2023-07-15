@@ -4,8 +4,12 @@
 export default (options = {}) => {
     const initialPageLoaderDuration = ref(1000)
 
-    // for animations that that first happens after page load
-    const initialPageLoadDelay = useState('initial-page-load-delay', () => 1400)
+    // for animations that  first happens after page load
+    const initialPageLoadDelay = useState('initial-page-load-delay', () => 900)
+    // for animations that  happen after page change
+    const pageChangeDelay = ref(600);
+    // delay between each staggered animation
+    const staggerDelay = ref(options.stagger? options.stagger: 150)
 
     /**
      * change initial page load delay to 0 after first page is loaded
@@ -25,28 +29,33 @@ export default (options = {}) => {
     }) 
        
 
-
     // stagger
-    const staggerDelay = ref(options.stagger? options.stagger: 150)
-    const stagger = (index) => {
-        return initialPageLoadDelay.value + (staggerDelay.value * index)
+    const stagger = (index, addPageChangeDelay) => {
+        return initialPageLoadDelay.value 
+                + (staggerDelay.value * index) 
+                + (addPageChangeDelay ? pageChangeDelay.value : 0)
     }
     
 
     /**
      * create fade slide up animation
      */
-    const createFadeSlideUp = (el,index = 0, ops, conf = {}) => {
+    const createFadeSlideUp = (el, ops = { staggerIndex : 1 } , animation = {}, conf = {}) => {
+        // if ops is number
+        if(typeof ops == 'number'){
+            ops = { staggerIndex : ops }
+        }
+        
         return el.animate({
             opacity: [0, 1],
             transform: ['translateY(100px)', 'translateY(0px)'],
-            ...ops
+            ...animation
         }, 
         {
             duration: 1400,
             easing: easings.easeOut,
             fill: 'forwards',
-            delay: stagger(index),
+            delay: stagger(ops.staggerIndex, ops.addPageChangeDelay),
             ...conf
         })
     }
@@ -54,17 +63,22 @@ export default (options = {}) => {
     /**
      * create fade slide up animation
      */
-    const createFadeSlideDown = (el,index = 0, ops = {}, conf = {}) => {
+    const createFadeSlideDown = (el, ops = { staggerIndex : 1 } , animation = {}, conf = {}) => {
+        // if ops is number
+        if(typeof ops == 'number'){
+            ops = { staggerIndex : ops }
+        }
+
         return el.animate({
             opacity: [0, 1],
             transform: ['translateY(-100px)', 'translateY(0px)'],
-            ...ops
+            ...animation
         }, 
         {
             duration: 1400,
             easing: easings.easeOut,
             fill: 'forwards',
-            delay: stagger(index),
+            delay: stagger(ops.staggerIndex, ops.addPageChangeDelay),
             ...conf
         })
     }
@@ -73,7 +87,8 @@ export default (options = {}) => {
     return {
         initialPageLoaderDuration,
         initialPageLoadDelay,
-
+        pageChangeDelay,
+        
         easings,
         staggerDelay,
         stagger,

@@ -3,9 +3,7 @@
     background: #ffb254;  
     background: -webkit-radial-gradient( #ffdb3a, #ffb254);  
     background: var(--primary-gradient); 
-
-
-        
+    background: #7CA982;
 
     position: relative;
     overflow: hidden;
@@ -15,6 +13,12 @@
         position: absolute;
         top: 13%;
         right: 26%;
+    }
+
+    .rising-squares-area{
+        .circles li{
+            background: rgba(255,255,255,.4);
+        }
     }
 }
 .hero-fullscreen-wrapper{
@@ -40,21 +44,21 @@
 .hero-fullscreen-title{
     font-family: var(--poppins);
     font-weight: 600;
-    font-size: 4rem;
+    font-size: 5rem;
     line-height: 1;
-    margin-bottom: 1.4rem;
+    margin-bottom: 0rem;
     opacity: 0.9;
 }
 .hero-fullscreen-subtitle{
     font-family: var(--poppins);
-    font-weight: 500;
-    font-size: 1.4rem;   
+    font-weight: 600;
+    font-size: 5rem;
     line-height: 1;
     margin-bottom: 1.3rem;
     opacity: 0.9;
 }
 .hero-fullscreen-description{
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     margin-bottom: 1.5rem;
     opacity: 0.85;
 }

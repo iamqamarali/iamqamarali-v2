@@ -48,7 +48,6 @@ const animatePage = () => {
     const { createFadeSlideUp } = useAnimations();
 
     // intersection observer
-
     const observerOptions = {
         rootMargin: '0px 0px -30% 0px'
     }
@@ -86,23 +85,28 @@ onMounted(() => {
             title="Qamar Ali"
             subtitle="Full Stack Web Developer"
             description="I'm a computer scientist and I empower businesses to revolutionize their digital presence with scalable, cutting-edge full-stack web applications and SaaS products that scale to millions of users."
-            ctaText="Start a project"
-            ctaLink="/contact"
             arrowDownTitle="About"
         >
         </hero-fullscreen>
 
+        <!-- ctaText="Start a project"
+            ctaLink="/contact" -->
+
+
         <!-- subtitle="Sr. Full Stack Web Developer" -->
-    
+
         <!-- About Section -->
         <div class="section about-section">
             <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title text-center font-size-7xl">
+                        <span class="section-count">01.</span>About.
+                    </h2>
+                </div>
+
                 <div class="section-content">
                     <div class="two-columns-grid ">
-                        <div class="left " >
-                            <h2 class="section-title title-dashed">
-                                <span class="section-count">01.</span>About.
-                            </h2>
+                        <div class="left fade-slide-up" >
                             <p>
                                 Hi, my name is Qamar, I’m a Sr. Full Stack Developer and I build things that live on the Web.
                             </p>
@@ -117,7 +121,7 @@ onMounted(() => {
                                 Other than that I occasionally contribute to open source on <a href="https://github.com/iamqamarali" target="_blank">GIthub</a>, and write <NuxtLink :to="'/articles'" target="_blank">articles</NuxtLink> about new and exciting tech related stuff on my blog.
                             </p>
                         </div>
-                        <div class="my-image-container">
+                        <div class="my-image-container fade-slide-up">
                             <div class="my-image-wrapper-1">
                                 <div class="my-image-wrapper-2">
                                     <img class="my-image" src="https://photos.qamarali.space/file/iamqamarali-blog/105/qamaralispace_1686434126285_3.87385404819536.jpg" alt="">
@@ -168,7 +172,7 @@ onMounted(() => {
         <section class="articles-section section" v-if="articles.length">
             <div class="container">
                 <header class="section-header">
-                    <h2 class="section-title title-dashed">
+                    <h2 class="section-title text-center font-size-7xl">
                         <span>
                             <span class="section-count">04.</span> 
                             Blog
@@ -177,7 +181,7 @@ onMounted(() => {
                 </header>
             </div>
             <div class="container">
-                <div class="four-columns-grid articles-grid">
+                <div class="three-columns-grid articles-grid">
                     <Article-link
                         v-for="article in articles" 
                         :key="article.id"

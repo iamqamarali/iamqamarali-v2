@@ -22,9 +22,9 @@ onMounted(()=>{
                 <div class="nav">
                     <NuxtLink to="/articles" class="nav-item">Articles</NuxtLink>    
                     <NuxtLink href="/work" class="nav-item">Work</NuxtLink>   
-                    <NuxtLink href="/contact" class="nav-item">Contact</NuxtLink>   
-                     
-                    <div class="nav-item" v-if="false">
+                    <NuxtLink href="/contact" class=" button button-black">Start a project</NuxtLink>   
+
+                    <!-- <div class="nav-item" v-if="false">
 
 
                         <svg version="1.0" 
@@ -99,7 +99,8 @@ onMounted(()=>{
                             </g>
                         </svg>
 
-                    </div>
+                    </div> -->
+
                 </div>
             </div>
         </div>        

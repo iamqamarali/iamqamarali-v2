@@ -28,22 +28,27 @@ const hero = ref(null)
 const content = ref(null);
 const cat = ref(null);
 const animateHero = () => {
-    const { createFadeSlideUp, createFadeSlideDown } = useAnimations();
+    const { createFadeSlideUp, stagger, createFadeSlideDown, pageChangeDelay } = useAnimations();
 
     let elements = content.value.children;
 
     // create fade and slide from down to up stagger animation using web animation api
     Array.from(elements).forEach((element, index) => {
         element.style.opacity = 0;
-        let animation = createFadeSlideUp(element, index)
+        let animation = createFadeSlideUp(element, {
+            staggerIndex : index,
+            addPageChangeDelay : true
+        })
     })
 
 
     // animate cat slide down
     if(cat.value){
         cat.value.$el.style.opacity = 0;
-
-        createFadeSlideDown(cat.value.$el, 2, {
+        createFadeSlideDown(cat.value.$el, {
+            staggerIndex : 2,
+            addPageChangeDelay : true
+        },{
             transform: ['translateY(-400px)', 'translateY(0px)']
         })
     }
@@ -57,8 +62,7 @@ onMounted(()=>{
         hero.value.style.background = props.background
     }
 
-    // animate hero
-    animateHero();
+    animateHero();        
 })
 
 
@@ -93,6 +97,7 @@ onMounted(()=>{
 
             </div>
         </div>  
+
 
 
         <ScrollDownArrow v-if="arrowDownTitle" :title="arrowDownTitle"></ScrollDownArrow>
