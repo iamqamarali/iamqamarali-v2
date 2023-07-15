@@ -25,36 +25,26 @@ const hero = ref(null)
  * 
  * animation
  */
-const {
-    animations,
-    easings,
-    stagger
-} = useAnimations();
 const content = ref(null);
 const cat = ref(null);
 const animateHero = () => {
+    const { createFadeSlideUp, createFadeSlideDown } = useAnimations();
+
     let elements = content.value.children;
 
     // create fade and slide from down to up stagger animation using web animation api
     Array.from(elements).forEach((element, index) => {
         element.style.opacity = 0;
-        
-        let animation = element.animate(animations.slideUp, {
-            ...animations.slideUpConfig,
-            delay: stagger(index),
-        })
+        let animation = createFadeSlideUp(element, index)
     })
 
 
     // animate cat slide down
     if(cat.value){
         cat.value.$el.style.opacity = 0;
-        cat.value.$el.animate({
-            opacity: [0, 1],
+
+        createFadeSlideDown(cat.value.$el, 2, {
             transform: ['translateY(-400px)', 'translateY(0px)']
-        }, {
-            ...animations.slideUpConfig,
-            delay: stagger(2),
         })
     }
 

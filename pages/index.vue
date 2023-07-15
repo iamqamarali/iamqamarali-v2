@@ -45,31 +45,24 @@ useHead({
  */
 const page = ref(null);
 const animatePage = () => {
-    const {
-        animations,
-        easings,
-        stagger
-    } = useAnimations();
+    const { createFadeSlideUp } = useAnimations();
 
     // intersection observer
+
+    const observerOptions = {
+        rootMargin: '0px 0px -30% 0px'
+    }
+
     const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry, index) => {
-            console.log(entry)
             if (entry.isIntersecting ) {
-                if(!entry.target.classList.contains('animating')){
-                    entry.target.classList.add('animating')
-                    let animation = entry.target.animate(animations.slideUp, {
-                        ...animations.slideUpConfig,
-                        delay: stagger(index),
-                    })
-                }
-            }
-            else {
-                //entry.target.classList.remove('animating')
+                let animation = createFadeSlideUp(entry.target, index)
+                observer.unobserve(entry.target)
             }
         })
-    })
-    page.value.querySelectorAll('.animate-slide-up')
+    }, observerOptions)
+
+    page.value.querySelectorAll('.fade-slide-up')
     .forEach((elm) => {
         elm.style.opacity = 0;
         observer.observe(elm)
@@ -77,13 +70,8 @@ const animatePage = () => {
 }
 
 
-const animateElms = ref([]);
-
-
 onMounted(() => {
     animatePage()
-
-    console.log(animateElms.value);
 })
 
 
@@ -159,7 +147,7 @@ onMounted(() => {
                        v-for="(project, index) in projects" 
                         :key="project.id"
                         :project="project"  
-                        :class="{ 'project-right' : index % 2 == 0, 'animate-slide-up': true }"
+                        :class="{ 'project-right' : index % 2 == 0, 'fade-slide-up': true }"
                         image="https://uploads.toptal.io/blog/image/129115/toptal-blog-image-1549997512620-72eaff97494e5c220c505505fdfa11fb.jpg"
                         :number="index+1"
                         >
@@ -174,7 +162,7 @@ onMounted(() => {
         </section>
 
         <!-- Skills Section -->
-        <Skills></Skills>
+        <Skills class="fade-slide-up"></Skills>
         
         <!-- Blog Section -->
         <section class="articles-section section" v-if="articles.length">
@@ -189,13 +177,14 @@ onMounted(() => {
                 </header>
             </div>
             <div class="container">
-                <div class="three-columns-grid articles-grid">
+                <div class="four-columns-grid articles-grid">
                     <Article-link
                         v-for="article in articles" 
                         :key="article.id"
                         :article="article" 
-                        class="animate-slide-up"
+                        class="fade-slide-up"
                     />
+
                 </div>
 
                 <div class="text-center show-more-button-wrapper">

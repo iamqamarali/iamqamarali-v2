@@ -32,31 +32,22 @@ const hero = useState(() => null)
  * 
  * animation
  */
- const {
-    animations,
-    stagger
-} = useAnimations();
 const content = ref( null);
-const wait = 200;
 const animateHeaderText = () => {
+    const { createFadeSlideUp, createFadeSlideDown } = useAnimations();
+
     let elements = content.value.children;
 
     // create fade and slide from down to up stagger animation using web animation api
     Array.from(elements).forEach((element, index) => {
-        element.style.opacity = 0;
-        
-        let animation = element.animate(animations.slideUp, {
-            ...animations.slideUpConfig,
-            delay: stagger(index),
-        })
-    })
-    
+        element.style.opacity = 0;        
+        let animation = createFadeSlideUp(element, index)
+    })    
 }
 
 
 onMounted(()=>{
-        animateHeaderText();
-
+    animateHeaderText();
 })
 
 // set background if provided
