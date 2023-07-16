@@ -24,6 +24,11 @@
     .project-image-wrapper{
         cursor: pointer;
         flex: 1.4;
+
+        overflow: hidden;
+        border-radius: 5px;
+        border: 1.5px solid black;
+
     
         .project-image-wrapper-inner{
             position: relative;
@@ -56,9 +61,7 @@
             height: 100%;
             filter: grayscale(20%) ;
             transition: all .2s linear ;
-            border-radius: 5px;
             display: block;
-            border: 1.5px solid black;
         }
     }
 
