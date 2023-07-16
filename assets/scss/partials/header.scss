@@ -2,10 +2,10 @@
 .site-header{
     isolation: isolate;
     position: relative;
+    color: var(--header-text-color);    
 
     .header-inner-wrapper{
         position: relative;
-
         padding: 1rem 0 ;
         background-color: var(--header-bg-color);
         transition: var(--skin-change-transition);
@@ -27,13 +27,20 @@
         justify-content: space-between;
         align-items: center;
     }
+
+    .logo-svg{
+        path{
+            fill: var(--header-opposite-bg-color);
+        }
+    }
+
     .nav{
         gap: 3rem;
     }
     .nav-item{
         padding: 1rem 0;
-        color: var(--header-text-color);
-        font-size: .94rem;
+        color: currentColor;
+        font-size: 0.93rem;
         text-decoration: none;
         text-transform: uppercase;   
         cursor: pointer;
@@ -44,17 +51,15 @@
         color: var(--header-text-hover-color);
     }
     .button{
-        height: 65px;
-        font-size: 1.1rem;
-        border-radius: 50px;
-    }
-
-    .svg-icon{
-        path{
-            fill: var(--header-text-color);
+        height: 60px;
+        font-size: 1rem;
+        color: currentColor;
+        border-color: currentColor;
+        &:hover{
+            color: currentColor;
+            border-color: currentColor;
+            box-shadow: 2px 2px 0 currentColor;    
         }
-        width: 3.5rem;
-        height: 3.5rem;
     }
 
 }
@@ -87,11 +92,6 @@
         .nav{
             gap: 1.5rem;
         }    
-        .svg-icon{
-            width: 2.5rem;
-            height: 2.5rem;
-        }
-
     }
 }
 
@@ -100,54 +100,34 @@
     position: absolute;
     z-index: 1;
     width: 100%;
+    color: var(--fixed-header-text-color);
 
     .header-inner-wrapper{
         background-color: transparent;
+    }
+    .logo-svg{
+        path{
+            fill: var(--fixed-header-text-color);
+        }
     }
 
     // HIDE THE Black BG On Small screens;
     &:before{
         display: none;
     }
-    .logo-svg{
-        path{
-            fill: var(--fixed-header-text-color);
-        }
-    }
-    .nav-item{
-        color: var(--fixed-header-text-color);
-    }
     .nav-item:hover{
         color: var(--fixed-header-text-hover-color);
     }
-    .svg-icon{
-        path{
-            fill: var(--fixed-header-text-color);
-        }
-    }    
-
 }
 
 
 .site-header.text-white{
+    color: #dedede;
     .logo-svg{
         path{
-            fill: #f2f2f2;
+            fill: #dedede;
         }
     }
-
-    .nav-item{
-        color: #b3b3b3;
-    }
-    .nav-item:hover{
-        color: white;
-    }
-    .svg-icon{
-        path{
-            fill: #f2f2f2;
-        }
-    }    
-
 }
 
 

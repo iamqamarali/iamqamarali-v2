@@ -98,9 +98,6 @@ onMounted(()=>{
         </div>  
 
 
-
-        <ScrollDownArrow v-if="arrowDownTitle" :title="arrowDownTitle"></ScrollDownArrow>
-
     </section>
 </template>
 

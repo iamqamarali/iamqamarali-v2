@@ -30,20 +30,19 @@
 
 
     .about-section{
+        --about-color: #eee;
+        background: black;
+        color: #eee;
+
         .my-image-container{
             display: flex;
             justify-content: center;
             align-items: center;
         }
-        @media screen and (max-width: 735px){
-            margin-bottom: 1rem;
-            .my-image-container{
-                margin-top: 2rem;
-            }    
-        }
         .my-image-wrapper-1{
             position: relative;
             isolation: isolate;
+
             &:after{
                 z-index: -1;
                 content: '';
@@ -52,7 +51,7 @@
                 height: 100%;
                 top: 5%;
                 left: 5%;
-                border: 2px solid black;
+                border: 2px solid var(--about-color);
             }
         }
         .my-image-wrapper-2{
@@ -66,31 +65,17 @@
             scale: 1.2;
         }
 
-        @media screen and (max-width: 900px){
+        @media screen and (max-width: 1070px){
+            padding-bottom: 5rem;
+            .my-image-container{
+                margin-top: 2rem;
+            }    
             .my-image{
                 width: 250px;
                 height: 250px;
             }
     
         }
-    }
-
-
-    .about-section{
-        background: #111;
-        color: white;
-        .container{
-        }
-    }
-    .projects-section{
-        //background: #FDF4F5;
-    }
-    .skills-section{
-        //background: #fcf5cb;
-        //color: white;
-
-        // border-top: 2px solid black;
-        // border-bottom: 2px solid black;
     }
 
 }

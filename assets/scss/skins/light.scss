@@ -9,7 +9,7 @@
     --primary-light-text-color: #000;
 
 
-    --primary: #ffb254;
+    --primary: #eaa610;
     --primary-text-color: #000;
 
     --primary-dark: #e5af1b;
@@ -18,11 +18,11 @@
     --secondary: #ffdb3a;
     
     // GRADIents
-    --primary-gradient: radial-gradient( #ffd06b, #eaa610);
+    --primary-gradient: radial-gradient( #ffd16d, #eaa610);
 
 
     // BODY COLORS
-    --body-bg-color: #f1f0ea;
+    --body-bg-color: white;
     --body-text-color: #111;
 
     // logo color
@@ -30,8 +30,8 @@
 
 
     // ANCHOR
-    --anchor-color: #ba8e15;
-    --anchor-color-hover: var(--primary-dark);
+    --anchor-color: var(--primary);
+    --anchor-color-hover: var(--primary-light);
     
 
 

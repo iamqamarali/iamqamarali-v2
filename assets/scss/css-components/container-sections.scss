@@ -3,7 +3,7 @@
     width: 100%;
     max-width: 1500px;
     margin: 0 auto;
-    padding: 0 120px;
+    padding: 0 100px;
 }
 .container-small{
     max-width: 1000px;
@@ -23,6 +23,7 @@
 @media screen and (max-width: 1070px){
     .container, .container-small{
         padding: 0 3rem;
+        max-width: 830px;
     }
 }
 @media screen and (max-width: 735px){

@@ -171,7 +171,7 @@ onMounted(() => {
 
 
         <!-- Services Section -->
-        <section class="services-section section" v-if="articles.length">
+        <!-- <section class="services-section section" v-if="articles.length">
             <div class="container">
                 <header class="section-header section-header-small">
                     <h2 class="section-title ">
@@ -195,7 +195,7 @@ onMounted(() => {
                     </div>
                 </div>
             </div>            
-        </section>
+        </section> -->
         
         <!-- Blog Section -->
         <section class="articles-section section" v-if="articles.length">
