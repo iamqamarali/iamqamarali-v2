@@ -2,6 +2,8 @@
     background: var(--footer-bg-color);
     //color: var(--dark-gray-text-color);
 
+    background: #eaa610;
+    //color: white;
     
     display: flex;
     flex-direction: column;
@@ -78,10 +80,9 @@
             font-weight: 900;
             font-size: .95rem;
             text-decoration: underline;
-            color: var(--body-text-color);
+            color: currentColor;
             &:hover{
                 color: var(--anchor-color-hover);
-                text-decoration: none;
             }
         }
     }

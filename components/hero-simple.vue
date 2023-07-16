@@ -71,7 +71,7 @@ onMounted(()=>{
         <RisingSquares  ></RisingSquares>
         <div class="overlay" v-if="overlay"></div>
 
-        <div class="container">            
+        <div class="container-small">            
             <div class="hero-simple-wrapper">
 
                 <header class="hero-simple-content" ref="content">

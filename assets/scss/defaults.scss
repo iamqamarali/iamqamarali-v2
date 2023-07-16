@@ -14,7 +14,7 @@
     --breakpoint-small: 735px;
     --breakpoint-xsmall: 540px;
 
-    font-size: 16px;
+    font-size: 17px;
     text-rendering: optimizeLegibility; 
 }
 ::selection{
@@ -25,6 +25,12 @@
 body{
     font-family: 'Lato', sans-serif;
     font-size: 1.15rem;
+}
+
+@media screen and (max-width: 1300px){
+    :root{
+        font-size: 16px;
+    }
 }
 
 @media screen and (max-width: 735px){

@@ -4,64 +4,51 @@
 
 
 .project{
-    --project-image-overlay-color: var(--primary-gradient);
-    //--project-image-overlay-color: transparent;
+    --project-image-overlay-color: #eaa610;
+    --project-number-color: #F8CBA6;
 
-    color: var(--body-text-color);
-    transition: var(--skin-change-transition);
     text-decoration: none;
     display: flex;
     width: 100%;
     position: relative;
-    min-height: 330px;
-    margin-bottom: 9rem;
+    margin: 5rem 0;
 
     @media screen and (max-width: 1070px){
-        min-height: 320px;
         margin-bottom: 8rem;
     }    
-
+    .project-image-wrapper,
+    .project-content{
+        flex: 1;
+    }
 
     .project-image-wrapper{
-        transform: translateY(-50%) scale(1);
-        box-shadow: 0 1px 3px transparent,0 1px 2px rgba(0,0,0,.1);
-        box-shadow: 0 20px 30px -15px rgba(0,0,0,.3);
         cursor: pointer;
-        width: auto;
-        height: auto;
-
-        position: absolute;
-        right: 0;
-        top: 50%;
-        max-width: 55%;
-
-        @media screen and (max-width: 1070px){
-            max-width: 65%;
-        }
+        flex: 1.2;
 
         .project-image-wrapper-inner{
+            position: relative;
             overflow: hidden;
-            border-radius: 5px;
         }
 
         .overlay{
             content: "";
             display: block;
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            transition: all .2s linear ;
             background: var(--project-image-overlay-color);
-            opacity: .1;
+            opacity: 0;
+            height: 30px;
+            width: 30px;
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            translate: -50%, -50%;
+            scale: 1;
+            transition: all .5s ease-in-out;
         }
         &:hover{
-            .project-image{
-                transform: scale(1.05);
-            }
             .overlay{
-                opacity: 0;
+                scale: 50;
+                opacity: 1;
             }
         }
         .project-image{
@@ -71,7 +58,7 @@
             transition: all .2s linear ;
             border-radius: 5px;
             display: block;
-
+            border: 2px solid black;
         }
     }
 
@@ -80,7 +67,7 @@
         font-family: var(--poppins);
         font-size: calc(5rem + 2vw);
         font-weight: bolder;
-        color: var(--primary);
+        color: var(--project-number-color);
         position: absolute;
         top: calc(-13% - 1rem);
         left: auto;
@@ -90,13 +77,13 @@
 
 
     .project-content{
-        max-width: clamp(300px, 55%, 600px);
         position: relative;
         z-index: 1;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        gap: 1rem;
+        gap: 1.5rem;
+        padding-right: 3.5rem;
 
         // background-color: var(--primary-lighter);
         // color: var(--primary-lighter-text-color);
@@ -107,21 +94,20 @@
     }
 
     .project-name{
+        font-size: 2rem;
         display: block;
         margin: 0;
-
+        font-weight: 600;
     }
     .project-description{
-        background-color: var(--primary-lighter);
-        color: var(--primary-lighter-text-color);
-        transition: var(--skin-change-transition);
-        box-shadow: 0 20px 15px -15px rgba(0,0,0,.15);
+        // background-color: var(--primary-lighter);
+        // color: var(--primary-lighter-text-color);
+        // transition: var(--skin-change-transition);
 
-        margin: 0rem 0 .2rem;
-        padding: 1.5rem ;
-        border-radius: 4px;
-        font-size: 1rem;
-        line-height: 1.6;
+        // background-color: #F4F2DE;
+        // padding: 2rem;
+        // border-radius: 4px;
+        margin-bottom: 0;
     }
 
     .project-skills{
@@ -135,6 +121,7 @@
     }
 
     .show-project{
+        margin-top: .5rem;
         .svg-icon{
             width: 1.8rem;
             height: 1.8rem;
@@ -146,7 +133,7 @@
 
 .project.project-right{
     flex-direction: row-reverse;
-    text-align: right;
+    //text-align: right;
     .project-image-wrapper{
         left: 0;
         right: auto;
@@ -156,9 +143,10 @@
         left: 3%;
     }
     .project-content{
+        padding-left: 3.5rem;
+        padding-right: 0rem;
     }
     .project-skills{
-        justify-content: flex-end;
     }
 }
 
@@ -166,103 +154,21 @@
 @media screen and (max-width: 735px){
     .project,
     .project.project-right{
-        display: flex;
-        align-items: flex-start;
-        text-align: left;
-        flex-direction: row;
-        gap: 2rem;
-        min-height: initial;
-        margin-bottom: 5rem;
-        
-
-        .project-image-wrapper{
-            position: relative;
-            transform: none;
-            box-shadow: none;
-            top: auto;
-            left: auto;
-            width: auto;
-            &:hover{
-                .project-image{
-                    transform: none;
-                }    
-                transform: none;
-            }
-
-            &:hover .overlay,
-            .overlay{
-                opacity: .2;
-            }
-        }
-        .project-image{
-            max-width: initial;
-            width: 230px;
-            max-width: 230px;
-            max-height: 200px;
-        }
-        .project-number{
-            display: none;
-        }
-
-        .project-content{
-            padding: 0;
-            flex: 1;
-        }    
-        .project-description{
-            color: var(--body-text-color);
-            background-color: transparent;
-            box-shadow: none;
-            font-size: 1.05rem;
-            padding: 0;
-        }
-        .project-skills{
-            justify-content: flex-start;
-        }
-        .show-project{
-            display: none;
-        }
-    }
-
-}
-
-
-@media screen and (max-width: 540px){
-    .project,
-    .project.project-right{
-        flex-direction: column;
+        flex-direction: column-reverse;
         gap: 1.5rem;
-        
-        .project-image-wrapper{
-            max-width: 100%;
-            width: 100%;
-            &:hover .overlay,
-            .overlay{
-                opacity: 0.1;
-            }
-            .project-image-wrapper-inner{
-                max-height: 240px;
-            }        
-        }
-        .project-image{
-            max-width: 100%;
-            width: 100%;
-            max-height: initial;
-        }
-        .project-name{
-            font-weight: 600;
-        }    
-
+        margin-bottom: 6rem;
         .project-number{
             display: block;
-            font-size: 5rem;
-            top: -15%;
+            font-size: 6rem;
+            top: -8%;
         }
         .project-content{
-            width: 100%;
-            max-width: 100%;
             padding: 0;
-            gap: .8rem;
+            gap: 1rem;
         }    
+        .project-name{
+            font-size: 1.5rem;
+        }
     }
 
 }

@@ -82,8 +82,7 @@ onMounted(() => {
         <!-- Hero Section -->
         <hero-fullscreen
             class="home-hero"
-            title="Qamar Ali"
-            subtitle="Full Stack Web Developer"
+            title="Qamar Ali <br/> Full Stack Web Developer"
             description="I'm a computer scientist and I empower businesses to revolutionize their digital presence with scalable, cutting-edge full-stack web applications and SaaS products that scale to millions of users."
             arrowDownTitle="About"
         >
@@ -99,8 +98,8 @@ onMounted(() => {
         <div class="section about-section">
             <div class="container">
                 <div class="section-header">
-                    <h2 class="section-title text-center font-size-7xl">
-                        <span class="section-count">01.</span>About.
+                    <h2 class="section-title ">
+                         About
                     </h2>
                 </div>
 
@@ -140,15 +139,17 @@ onMounted(() => {
         <section class="section projects-section">
             <div class="container">
                 <header class="section-header">
-                    <h2 class="section-title title-dashed">
+                    <h2 class="section-title">
                         <span>
-                            <span class="section-count">02.</span> Things I've Built
+                            Things I've Built
                         </span>
                     </h2>
                 </header>
-                <div class="section-content">
+            </div>
+            <div class="section-content">
+                <div class="container">
                     <Project
-                       v-for="(project, index) in projects" 
+                        v-for="(project, index) in projects" 
                         :key="project.id"
                         :project="project"  
                         :class="{ 'project-right' : index % 2 == 0, 'fade-slide-up': true }"
@@ -160,7 +161,6 @@ onMounted(() => {
                     <div class="text-center show-more-button-wrapper">
                         <NuxtLink to="/work" class="button button-black ">More Projects</NuxtLink>
                     </div>
-
                 </div>
             </div>
         </section>
@@ -171,12 +171,9 @@ onMounted(() => {
         <!-- Blog Section -->
         <section class="articles-section section" v-if="articles.length">
             <div class="container">
-                <header class="section-header">
-                    <h2 class="section-title text-center font-size-7xl">
-                        <span>
-                            <span class="section-count">04.</span> 
-                            Blog
-                        </span>
+                <header class="section-header section-header-small">
+                    <h2 class="section-title ">
+                        Explore Practical Software Development Articles.
                     </h2>
                 </header>
             </div>

@@ -9,7 +9,7 @@
     --primary-light-text-color: #000;
 
 
-    --primary: #D5CAD6;
+    --primary: #ffb254;
     --primary-text-color: #000;
 
     --primary-dark: #e5af1b;
@@ -19,10 +19,11 @@
     
     // GRADIents
     --primary-gradient: radial-gradient( #ffdb3a, #ffb254);
+    --primary-gradient: #f1f0ea;
 
 
     // BODY COLORS
-    --body-bg-color: #F1F7ED;
+    --body-bg-color: #f1f0ea;
     --body-text-color: #111;
 
     // logo color
@@ -52,7 +53,7 @@
 
 
     // footer
-    --footer-bg-color: #F1F7ED; 
+    --footer-bg-color: var(--primary-gradient); ; 
 
     // article page
     --articleText: #28343a;

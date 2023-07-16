@@ -3,7 +3,11 @@
     background: #ffb254;  
     background: -webkit-radial-gradient( #ffdb3a, #ffb254);  
     background: var(--primary-gradient); 
-    background: #7CA982;
+    background: black;
+    color: white;
+
+    // margin-top: -100px;
+    // transform: skewY(-2deg);
 
     position: relative;
     overflow: hidden;
@@ -17,11 +21,13 @@
 
     .rising-squares-area{
         .circles li{
-            background: rgba(255,255,255,.4);
+            background: rgba(100,100,100,.3);
         }
     }
 }
 .hero-fullscreen-wrapper{
+    //transform: skewY(2deg);
+
     min-height: 100vh;
     min-height: 100dvh;
     padding: 7rem 0;
@@ -43,24 +49,18 @@
 
 .hero-fullscreen-title{
     font-family: var(--poppins);
-    font-weight: 600;
-    font-size: 5rem;
-    line-height: 1;
-    margin-bottom: 0rem;
-    opacity: 0.9;
+    font-weight: 500;
+    font-size: calc(3.7rem + 1vw);
+    line-height: 1.1;
+    margin-bottom: 1.2rem;
 }
 .hero-fullscreen-subtitle{
     font-family: var(--poppins);
-    font-weight: 600;
-    font-size: 5rem;
-    line-height: 1;
     margin-bottom: 1.3rem;
-    opacity: 0.9;
 }
 .hero-fullscreen-description{
     font-size: 1.3rem;
     margin-bottom: 1.5rem;
-    opacity: 0.85;
 }
 
 @media screen and (max-width: 735px){

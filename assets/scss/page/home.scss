@@ -23,10 +23,8 @@
 
     .projects-section{
         .show-more-button-wrapper{
-            margin-top: -1.5rem;
         }
         .section-content{
-            padding-top: 2.5rem;
         }
         @media screen and (max-width: 540px){
             .section-content{
@@ -83,11 +81,25 @@
     }
 
 
+    .about-section{
+        background: #eaa610;
+        //color: white;
+        transform: skewY(-3deg);
+        .container{
+            transform: skewY(3deg);
+        }
+    }
+    .projects-section{
+        //background: #FDF4F5;
+    }
     .skills-section{
-        background: #243E36;
+        background: black;
+        color: white;
+
+        // border-top: 2px solid black;
+        // border-bottom: 2px solid black;
     }
     .articles-section{
-        background: #E0EEC6;
     }
 
 

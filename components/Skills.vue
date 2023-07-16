@@ -7,17 +7,15 @@
     <section class="section skills-section  ">
         <div class="container">
             <div class="section-content">
-                
-
+                <header class="section-header">
+                    <h2 class="section-title">
+                        <span>
+                            My Skills
+                        </span>
+                    </h2>
+                </header>
                 <div class="two-colums-grid">
-                    <div>
-                        <header class="section-header">
-                            <h2 class="section-title title-dashed">
-                                <span>
-                                    <span class="section-count">03.</span> My Skills
-                                </span>
-                            </h2>
-                        </header>
+                    <div class="">
                         <p>
                             As a seasoned web developer, I have encountered countless technologies and frameworks that are available to us.
                             I believe in staying at the forefront of technological advancements and continuously exploring cutting-edge technologies. 
@@ -25,7 +23,6 @@
                             It requires dedicated time, consistancy and a lot of development experience to master a technology, and I can proudly say that throughout my seven-year career i've mastered the following technologies (Vue.js, Nuxt.js, Laravel, Node).
                         </p>
                     </div>
-
                     <div class="skills">
                         <Tabs
                             :tabs="[

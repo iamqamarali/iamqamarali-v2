@@ -78,8 +78,7 @@ onMounted(()=>{
             <div class="hero-fullscreen-wrapper">
 
                 <header class="hero-fullscreen-content" ref="content">
-                    <h1 class="hero-fullscreen-title" v-if="title">
-                        {{ title }}
+                    <h1 class="hero-fullscreen-title" v-if="title" v-html="title">
                     </h1>
                     <h3 class="hero-fullscreen-subtitle"  v-if="subtitle">
                         {{ subtitle }}
