@@ -1,6 +1,6 @@
 .logo-image,
 .logo-svg{
-    width: 130px;
+    width: 140px;
     path {
         fill: var(--logo-color);
         transition: var(--skin-change-transition);
@@ -9,11 +9,7 @@
 @media screen and (max-width: 735px){
     .logo-image,
     .logo-svg{
-        width: 100px;
-        path {
-            fill: var(--logo-color);
-        }
-    
+        width: 100px;    
     }    
 }
 
@@ -21,7 +17,11 @@
 .logo-svg-primary{
     path {
         fill: var(--primary);
-        transition: var(--primary);
+    }
+}
+.logo-svg-white{
+    path {
+        fill: #f2f2f2;
     }
 }
 

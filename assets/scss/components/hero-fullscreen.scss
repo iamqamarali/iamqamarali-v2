@@ -1,10 +1,10 @@
 .hero-fullscreen{
 
     background: #ffb254;  
-    background: -webkit-radial-gradient( #ffdb3a, #ffb254);  
+    background: -webkit-radial-gradient( #ffdb3a, #eaa610);  
     background: var(--primary-gradient); 
-    background: black;
-    color: white;
+    //background: #eaa610;
+
 
     // margin-top: -100px;
     // transform: skewY(-2deg);
@@ -21,7 +21,7 @@
 
     .rising-squares-area{
         .circles li{
-            background: rgba(100,100,100,.3);
+            background: rgba(255,255,255,.3);
         }
     }
 }
@@ -50,7 +50,7 @@
 .hero-fullscreen-title{
     font-family: var(--poppins);
     font-weight: 500;
-    font-size: calc(3.7rem + 1vw);
+    font-size: calc(3.5rem + 1vw);
     line-height: 1.1;
     margin-bottom: 1.2rem;
 }

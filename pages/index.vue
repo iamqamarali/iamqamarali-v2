@@ -99,7 +99,7 @@ onMounted(() => {
             <div class="container">
                 <div class="section-header">
                     <h2 class="section-title ">
-                         About
+                         About Me
                     </h2>
                 </div>
 
@@ -165,8 +165,37 @@ onMounted(() => {
             </div>
         </section>
 
+        
         <!-- Skills Section -->
         <Skills class="fade-slide-up"></Skills>
+
+
+        <!-- Services Section -->
+        <section class="services-section section" v-if="articles.length">
+            <div class="container">
+                <header class="section-header section-header-small">
+                    <h2 class="section-title ">
+                        Services
+                    </h2>
+                </header>
+            </div>
+            <div class="container-small">
+                <div class="three-columns-grid articles-grid">
+                    <div class="service">
+                        <div class="service-title">Front-End Development</div>
+
+                    </div>
+                    <div class="service">
+                        <div class="service-title">Back-End Development</div>
+
+                    </div>
+                    <div class="service">
+                        <div class="service-title">Full-Stack Development</div>
+
+                    </div>
+                </div>
+            </div>            
+        </section>
         
         <!-- Blog Section -->
         <section class="articles-section section" v-if="articles.length">
@@ -194,6 +223,35 @@ onMounted(() => {
 
             </div>            
         </section>
+
+
+
+
+        <!-- Start a project Section -->
+        <!-- <section class="contact-section section" >
+            <div class="container-small">
+                <header class="section-header section-header-small">
+                    <h2 class="section-title ">
+                        Start A Project
+                    </h2>
+                </header>
+
+                <div class="section-content">
+                    <p>
+                        My inbox is always open for new opportunities,
+                        If you have a project that you want to get started, 
+                        think you need my help with something or just fancy saying hey, 
+                        then feel free to get in touch, I will try my best to get back to you ASAP!
+                    </p>
+
+                    <div class="text-center">
+                        <NuxtLink class="button button-lg button-black">Send A Message</NuxtLink>    
+                    </div>
+
+                </div>
+            </div>            
+        </section> -->
+
 
     </main>
 </template>

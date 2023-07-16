@@ -14,8 +14,9 @@
     --breakpoint-small: 735px;
     --breakpoint-xsmall: 540px;
 
-    font-size: 17px;
     text-rendering: optimizeLegibility; 
+    font-size: 16px;
+
 }
 ::selection{
     background-color: var(--selection-bg-color);
@@ -28,9 +29,8 @@ body{
 }
 
 @media screen and (max-width: 1300px){
-    :root{
-        font-size: 16px;
-    }
+
+    
 }
 
 @media screen and (max-width: 735px){
@@ -84,35 +84,35 @@ label{
 h1, h2, h3, h4 , h5, h6{
     font-family: var(--poppins);
     margin-bottom: 0.8em;
-    font-weight: 800;
+    font-weight: 600;
     letter-spacing: -.04em;
 }
 h1 { 
-    font-size: 2.5rem;
+    font-size: 3rem;
     line-height: 1.2em;
 }
 h2 { 
-    font-size: 2.1rem; 
+    font-size: 2.5rem; 
     line-height: 1.333em;
     margin: 1rem 0 0.6rem;
 }
 h3 { 
-    font-size: 1.8rem;
+    font-size: 2.2rem;
     line-height: 1.45;
     margin: 1.2rem 0 0.6rem;
 }
 h4{
-    font-size: 1.6rem;
+    font-size: 1.9rem;
     line-height: 1.5;
     margin: 1.4rem 0 0.6rem;
 }
 h5 { 
-    font-size: 1.4rem;
+    font-size: 1.7rem;
     line-height: 1.55;
     margin: 1.7rem 0 0.6rem;
 }
 h6 { 
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     line-height: 1.75;
     margin: 2rem 0 0.6rem;
 }

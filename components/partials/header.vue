@@ -15,10 +15,11 @@ onMounted(()=>{
 
 </script>
 <template>
-    <header class="site-header" :class="{ 'text-white' : hasWhiteText}">
+    <!-- hasWhiteText -->
+    <header class="site-header" :class="{ 'text-white' : hasWhiteText }">
         <div class="header-inner-wrapper">
             <div class="container">
-                <logo></logo>
+                <logo class="logo-svg-white"></logo>
                 <div class="nav">
                     <NuxtLink to="/articles" class="nav-item">Articles</NuxtLink>    
                     <NuxtLink href="/work" class="nav-item">Work</NuxtLink>   

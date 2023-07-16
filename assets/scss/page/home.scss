@@ -26,11 +26,6 @@
         }
         .section-content{
         }
-        @media screen and (max-width: 540px){
-            .section-content{
-                padding-top: 1rem;
-            }
-        }
     }
 
 
@@ -82,25 +77,20 @@
 
 
     .about-section{
-        background: #eaa610;
-        //color: white;
-        transform: skewY(-3deg);
+        background: #111;
+        color: white;
         .container{
-            transform: skewY(3deg);
         }
     }
     .projects-section{
         //background: #FDF4F5;
     }
     .skills-section{
-        background: black;
-        color: white;
+        //background: #fcf5cb;
+        //color: white;
 
         // border-top: 2px solid black;
         // border-bottom: 2px solid black;
     }
-    .articles-section{
-    }
-
 
 }

@@ -11,7 +11,7 @@
     display: flex;
     width: 100%;
     position: relative;
-    margin: 5rem 0;
+    margin: calc(6rem + 2vw) 0;
 
     @media screen and (max-width: 1070px){
         margin-bottom: 8rem;
@@ -23,8 +23,8 @@
 
     .project-image-wrapper{
         cursor: pointer;
-        flex: 1.2;
-
+        flex: 1.4;
+    
         .project-image-wrapper-inner{
             position: relative;
             overflow: hidden;
@@ -58,7 +58,7 @@
             transition: all .2s linear ;
             border-radius: 5px;
             display: block;
-            border: 2px solid black;
+            //border: 2px solid black;
         }
     }
 
@@ -94,7 +94,7 @@
     }
 
     .project-name{
-        font-size: 2rem;
+        font-size: 1.8rem;
         display: block;
         margin: 0;
         font-weight: 600;
@@ -107,6 +107,7 @@
         // background-color: #F4F2DE;
         // padding: 2rem;
         // border-radius: 4px;
+        font-size: 1.1rem;
         margin-bottom: 0;
     }
 
@@ -129,6 +130,7 @@
     }
     
 }
+ 
 
 
 .project.project-right{
@@ -151,12 +153,14 @@
 }
 
 
-@media screen and (max-width: 735px){
+
+
+@media screen and (max-width: 1070px){
     .project,
     .project.project-right{
         flex-direction: column-reverse;
         gap: 1.5rem;
-        margin-bottom: 6rem;
+        margin: calc(3rem + 3vw) 0 calc(3rem + 5vw) ;
         .project-number{
             display: block;
             font-size: 6rem;

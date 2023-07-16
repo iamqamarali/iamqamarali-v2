@@ -33,7 +33,7 @@
     .nav-item{
         padding: 1rem 0;
         color: var(--header-text-color);
-        font-size: 1rem;
+        font-size: .94rem;
         text-decoration: none;
         text-transform: uppercase;   
         cursor: pointer;
@@ -42,6 +42,11 @@
     }
     .nav-item:hover{
         color: var(--header-text-hover-color);
+    }
+    .button{
+        height: 65px;
+        font-size: 1.1rem;
+        border-radius: 50px;
     }
 
     .svg-icon{
@@ -127,7 +132,7 @@
 .site-header.text-white{
     .logo-svg{
         path{
-            fill: #f9f9f9;
+            fill: #f2f2f2;
         }
     }
 
@@ -139,7 +144,7 @@
     }
     .svg-icon{
         path{
-            fill: #f9f9f9;
+            fill: #f2f2f2;
         }
     }    
 
