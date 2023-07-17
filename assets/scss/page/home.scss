@@ -2,24 +2,18 @@
 
 .home-page{
 
-    // .home-hero{
-    //     background: radial-gradient(#ffed9a, #ffc561);
-    //     .hanging-cat{
-    //         top: -20px;
-    //     }
-    //     .hero-fullscreen-wrapper{
-    //         min-height: 75vh;
-    //     }
-    //     .scrolldown-arrow{
-    //         display: none;
-    //     }
-    //     .hero-fullscreen-content{
-    //         margin-top: 2rem;
-    //     }
-    //     .hero-fullscreen-subtitle{
-    //         display: none;
-    //     }
-    // }
+    .home-hero{
+        .hanging-cat{
+            top: 2%;
+        }
+        .hero-fullscreen-wrapper{
+            min-height: 68vh;
+            min-height: 68dvh;
+        }
+        .hero-fullscreen-content{
+            margin-top: 3rem;
+        }
+    }
 
     .projects-section{
         .show-more-button-wrapper{
@@ -30,9 +24,9 @@
 
 
     .about-section{
-        --about-color: #eee;
-        background: black;
-        color: #eee;
+        --about-color: #111;
+        // background: black;
+        // color: #eee;
 
         .my-image-container{
             display: flex;

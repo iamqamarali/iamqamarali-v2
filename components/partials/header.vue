@@ -23,7 +23,7 @@ onMounted(()=>{
                 <div class="nav">
                     <NuxtLink to="/articles" class="nav-item">Articles</NuxtLink>    
                     <NuxtLink href="/work" class="nav-item">Work</NuxtLink>   
-                    <NuxtLink href="/contact" class=" button ">Start a project</NuxtLink> 
+                    <NuxtLink href="/contact" class="button button-filled   ">Start A Project</NuxtLink> 
 
                 </div>
             </div>

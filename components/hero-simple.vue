@@ -12,6 +12,11 @@ const props = defineProps({
     ctaText: String,
     ctaLink: String,
 
+    align:{
+        type: String,
+        default: 'center'
+    },
+
 
     styles: {
         type: Object,
@@ -71,15 +76,13 @@ onMounted(()=>{
         <RisingSquares  ></RisingSquares>
         <div class="overlay" v-if="overlay"></div>
 
-        <div class="container-small">            
+        <div class="container-small text-left">            
             <div class="hero-simple-wrapper">
 
                 <header class="hero-simple-content" ref="content">
-                    <h1 class="hero-simple-title"  v-if="title">
-                        {{ title }}
+                    <h1 class="hero-simple-title"  v-if="title" v-html="title">
                     </h1>
-                    <p class="hero-simple-description" v-if="description">
-                        {{ description }}
+                    <p class="hero-simple-description" v-if="description" v-html="description">                        
                     </p>
 
                     <NuxtLink :to="ctaLink" class="button button-lg button-black" v-if="ctaText" @click="$emit('cta-click')" >

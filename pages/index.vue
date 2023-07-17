@@ -49,7 +49,7 @@ const animatePage = () => {
 
     // intersection observer
     const observerOptions = {
-        rootMargin: '0px 0px -30% 0px'
+        rootMargin: '0px 0px -40% 0px'
     }
 
     const observer = new IntersectionObserver((entries) => {
@@ -80,11 +80,11 @@ onMounted(() => {
     <main class="home-page site-content " ref="page">
 
         <!-- Hero Section -->
+
         <hero-fullscreen
             class="home-hero"
             title="Qamar Ali <br/> Full Stack Web Developer"
             description="I'm a computer scientist and I empower businesses to revolutionize their digital presence with scalable, cutting-edge full-stack web applications and SaaS products that scale to millions of users."
-            arrowDownTitle="About"
         >
         </hero-fullscreen>
 
