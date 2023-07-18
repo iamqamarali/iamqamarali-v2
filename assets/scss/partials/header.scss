@@ -50,18 +50,6 @@
     .nav-item:hover{
         color: var(--header-text-hover-color);
     }
-    .button{
-        height: 60px;
-        font-size: 1rem;
-        color: currentColor;
-        border-color: currentColor;
-        &:hover{
-            color: currentColor;
-            border-color: currentColor;
-            box-shadow: 2px 2px 0 currentColor;    
-        }
-    }
-
 }
 
 

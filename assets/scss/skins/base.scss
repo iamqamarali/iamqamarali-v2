@@ -1,7 +1,6 @@
 .base-skin{
 
     // GRAY colors
-
     --gray-100: #f8f9fa ;
     --gray-200: #f0f0f0 ;
     --gray-300: #e3e3e3 ;
@@ -14,6 +13,13 @@
     --gray-text-color: #838383;
     --dark-gray-text-color: var(--gray-700);
 
+    // COLORS
+    --light-pink: #e6c2b1;
+    --pink: #d6a692;
+    --light-orange: #ffd16d;
+    --orange: #eaa610;
+
+    --skin-change-transition: background-color 0.3s linear , color  0.3s linear, fill .3s linear;
 
     // GRAY background
     --gray-background-color: #ddd;
@@ -23,27 +29,75 @@
     --gray-border-color: #d5d5d5;
     --dark-gray-border-color: #909090;
     
-
-
-    --dark-skin-color: #0a0f14;
-    --dark-skin-text-color: #f5f5f5;
-
     // fixed Header
     --fixed-header-text-color: #000;
     --fixed-header-text-hover-color: white;
 
+    // logo color
+    --logo-color: #111;
+
+    // ANCHOR
+    --anchor-color: #bf860b;
+    --anchor-color-hover: #111;
+        
+    // BODY COLORS
+    --body-bg-color: white;
+    --body-text-color: #111;
+
+    // header
+    --header-bg-color: var(--body-bg-color);
+    --header-opposite-bg-color: #000;
+    --header-text-color: #000;
+    --header-text-hover-color: var(--primary-dark);
+
+    // footer
+    --footer-bg-color: var(--primary-gradient);
+    
+    // article page
+    --articleText: #28343a;
     // article
     --article-max-width: 700px;
     --article-max-width-medium: 520px;
     --article-hero-large: 944px;
+    
 
+
+    --primary: var(--orange);
+    --primary-text-color: #000;
+    
+    // gradients
+    --primary-gradient: radial-gradient(var(--light-orange) , var(--orange));
+    
+
+    // selection
+    --selection-bg-color: var(--light-orange);    
+    --selection-text-color: #111; 
+
+    // mark
+    --mark-bg-color: var(--orange);    
+    --mark-text-color: #111; 
 
 
     // forms
     // input
     --input-height: 60px;
+    --input-background-color: var(--body-bg-color);
+    --input-border-color: var(--gray-border-color);
+    --input-border-color-focus: var(--primary);
+    --input-text-color: #111;
+
     // button
     --btn-height: 60px;
+    --btn-primary-color: var(--primary);
+    --btn-primary-color-hover: var(--primary);
+    --btn-primary-text-color: var(--primary-text-color);
 
-    --skin-change-transition: background-color 0.3s linear , color  0.3s linear, fill .3s linear;
+    // code
+    --code-bg-color: #e4e4e4;
+    --code-text-color: #000;
+
+    --pre-bg-color: #dedede7a;
+    --pre-text-color: #000;
+
+
 }

@@ -4,8 +4,8 @@
 
 
 .project{
-    --project-image-overlay-color: #eaa610;
-    --project-number-color: #F8CBA6;
+    --project-image-overlay-color: var(--orange);
+    --project-number-color: #151515;
 
     text-decoration: none;
     display: flex;
@@ -128,7 +128,7 @@
         //display: none;
     }
     .show-project{
-        margin-top: .5rem;
+        margin-top: .5rem; 
         .svg-icon{
             width: 1.8rem;
             height: 1.8rem;

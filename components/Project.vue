@@ -23,7 +23,7 @@ const getTags = (tags) => {
                 <!-- <span v-for="tag in getTags(project.tags)" class="tag">{{ tag }}</span> -->
                 <span v-for="tag in getTags(project.tags)" >{{ tag }}</span>
             </div>
-            <div class="project-links">
+            <!-- <div class="project-links">
                 <NuxtLink :to="'/work/'+project.slug" class="show-project button button-black ">
                     <span class="mr-15">Cast Study</span>
                     <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
@@ -41,7 +41,7 @@ const getTags = (tags) => {
                     </svg>
 
                 </NuxtLink>
-            </div>
+            </div> -->
 
         </div>
 

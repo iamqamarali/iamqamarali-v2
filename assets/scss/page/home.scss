@@ -18,8 +18,8 @@
 
     .about-section{
         --about-color: #111;
-        // background: black;
-        // color: #eee;
+        background: var(--light-pink) ;
+
 
         .my-image-container{
             display: flex;
@@ -65,12 +65,19 @@
         }
     }
 
-
     .projects-section{
         .show-more-button-wrapper{
         }
         .section-content{
         }
+    }
+
+    .skills-section{
+        background: var(--light-pink) ;
+
+    }
+
+    .articles-section{
     }
 
 }

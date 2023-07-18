@@ -51,6 +51,7 @@
     font-size: 1.2rem;
     color: var(--articleText);
     img{
+        border-radius: 5px; 
         display: block;
         margin: 2rem 0 3rem;
     }
@@ -115,8 +116,7 @@
 .article-tags-container{
     margin-bottom: 2.3rem;
     .tag{
-        font-weight: 500;
-        font-size: 1rem;
+        
     }
 }
 

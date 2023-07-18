@@ -21,16 +21,19 @@
     cursor: pointer;
 
     background-color: transparent;
-    border: 2px solid var(--btn-primary-color);
+    border-width: 2px;
+    border-style: solid;
+    border-color: var(--btn-primary-color);
     color: var(--btn-primary-color);
     transition: all 0.1s ease-in-out;
-    box-shadow: 0;
+    box-shadow: none;
 
     &:hover:not(:disabled),
     &:focus:not(:disabled),
     &:active:not(:disabled){
         outline: none;
-        border: 2px solid var(--btn-primary-color);
+        border-width: 2px;
+        border-style: solid;    
         color: var(--btn-primary-color);
         box-shadow: var(--button-box-shadow-hover) var(--btn-primary-color);
     }
@@ -38,37 +41,6 @@
     &:disabled{
         opacity: .5;
         cursor: not-allowed;
-    }
-}
-
-
-
-/**
-* Button COLORS
-*
-*/
-
-.button.button-light-primary{
-    border-color: var(--primary-light);
-    color: var(--primary-light);
-    &:hover:not(:disabled),
-    &:focus:not(:disabled),
-    &:active:not(:disabled){
-        border-color: var(--primary-light);
-        color: var(--primary-light-text-color);
-        box-shadow: var(--button-box-shadow-hover) var(--primary-light);
-
-    }
-}
-.button.button-dark-primary{
-    border-color: var(--primary-dark);
-    color: var(--primary-dark);
-    &:hover:not(:disabled),
-    &:focus:not(:disabled),
-    &:active:not(:disabled){
-        border-color: var(--primary-dark);
-        color: var(--primary-dark);
-        box-shadow: var(--button-box-shadow-hover) var(--primary-dark);
     }
 }
 
@@ -140,18 +112,15 @@
     }
 }
 .button-filled{
-    color: var(--primary-text-color);
+    color: var(--btn-primary-text-color);
     background-color: var(--btn-primary-color);
-    border-color: var(--primary-text-color);
+    border-color: var(--btn-primary-text-color);
     &:hover:not(:disabled),
     &:focus:not(:disabled),
     &:active:not(:disabled){
-
-        color: var(--primary-text-color);
+        color: var(--btn-primary-text-color);
         background-color: var(--btn-primary-color-hover);
-        border-color: var(--primary-text-color);
-        box-shadow: var(--button-box-shadow-hover) var(--primary-text-color);
-
+        box-shadow: var(--button-box-shadow-hover) var(--btn-primary-text-color);;
     }
 }
 
@@ -166,9 +135,9 @@
     font-size: .87rem;
 }
 .button-lg{
-    height: 60px;
+    height: 70px;
     padding: 0 2.5rem;
-    font-size: 1.05rem;
+    font-size: 1.1rem;
 }
 
 .close-button{
