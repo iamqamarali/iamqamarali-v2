@@ -1,6 +1,9 @@
 import Post from '../../models/Post'
 
 export default defineEventHandler(async (event) => {
+
+    let db = Post.getConnection();
+
     let { page, limit, published, featured } = getQuery(event)
     page = parseInt(page) || 1
     page--
@@ -11,6 +14,7 @@ export default defineEventHandler(async (event) => {
         limit = parseInt(limit)
     }
 
+
     let queryParams = { is_project: false }
     if(published){
         queryParams.published = true
@@ -20,5 +24,6 @@ export default defineEventHandler(async (event) => {
     }
 
     const posts = await Post.latest(page * limit, limit, queryParams)
+    
     return  posts.map(post => post.except([]))
 })

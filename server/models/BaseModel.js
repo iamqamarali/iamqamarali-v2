@@ -172,17 +172,15 @@ export default class BaseModel {
      */
     static async latest(skip = 0, limit = 10, conditions = null){
 
-        let sql = 'SELECT * FROM '+ this.getTable() +' ORDER BY id DESC LIMIT ?,?';
+        let sql = 'SELECT * FROM '+ this.getTable() +' ORDER BY id DESC LIMIT '+ skip +',' + limit;
         if(conditions){
             let where = this.createWhereClause(conditions);
             sql = `SELECT * FROM ${this.getTable()} 
-                    WHERE ${where} ORDER BY id DESC LIMIT ?,?`;
+                    WHERE ${where} ORDER BY id DESC LIMIT `+ skip +`,` + limit;
         }
 
         const params = [ 
             ...this.getValues(conditions ? conditions : {}), 
-            skip, 
-            limit
         ]
         const [rows, fields] = await this.getConnection().execute(sql, params);
         for (let i = 0; i < rows.length; i++) {
