@@ -107,14 +107,14 @@ onMounted(() => {
                     <div class="two-columns-grid ">
                         <div class="left fade-slide-up" >
                             <p>
-                                Hi, my name is Qamar, I’m a Sr. Full Stack Developer and I build things that live on the Web.
+                                Hi, my name is Qamar, I’m a Senior Full Stack Developer with a passion for building impactful web applications.
                             </p>
                             <p>
-                                My journey to web development started in 2016 when I saw a friend of mine trying to change the position of a button on a webpage, i thought of trying it out myself and i fall head first into the rabbit hole of web development and coding.
+                                My journey into web development began in 2017 when I first dabbled with changing a button's position on a webpage—and I’ve been hooked ever since. What started as curiosity has transformed into a fulfilling career where I design and develop applications that engage thousands of users daily.
+
                             </p>
                             <p>
-                                Fast forward to today I’ve built web applications that gain traction from thousands of users ever day.
-                                These days i'm helping small businesses in cultivating a robust online presence, with my web development skills I empower entrepreneurs to enhance their digital experiences and achieve remarkable growth in the ever-evolving online landscape.
+                                Today, I focus on empowering small businesses to establish a strong digital presence. Through my expertise in web development, I help entrepreneurs enhance their digital experiences and achieve remarkable growth in an ever-evolving online landscape.
                             </p>
                             <p>
                                 Other than that I occasionally contribute to open source on <a href="https://github.com/iamqamarali" target="_blank">GIthub</a>, and write <NuxtLink :to="'/articles'" target="_blank">articles</NuxtLink> about new and exciting tech related stuff on my blog.
