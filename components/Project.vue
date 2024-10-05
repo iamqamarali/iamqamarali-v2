@@ -17,7 +17,7 @@ const getTags = (tags) => {
                 <NuxtLink :to="'/work/'+project.slug" class="link-default">{{ project.title }}</NuxtLink>
             </h4>
             <p class="project-description">
-                {{ project.description ? project.description.substring(0, 100)  : '' }}...
+                {{ project.description ? project.description.substring(0, 130)  : '' }}...
             </p>
             <div class="project-skills">
                 <!-- <span v-for="tag in getTags(project.tags)" class="tag">{{ tag }}</span> -->
